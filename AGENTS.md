@@ -33,8 +33,13 @@ npm run format:check
 - Catálogo de productos: se construirá después desde JSON local en `src/data/` con generación estática; su esquema no está definido, no lo inventes.
 - Salida estática, sin adaptador de servidor. GSAP (con ScrollTrigger incluido en el mismo paquete) para animaciones; no añadir otros motores de scroll.
 
+## Git y remoto
+
+- Repo Git activo en `main`, rastrea `UchihaBarberWeb/main` (https://github.com/DavidColillaMartinez/UchihaBarberWeb). `push.autoSetupRemote` activado (push de ramas nuevas sin `--set-upstream`).
+- Historial inicial: `8389229 Initial commit` (creado en GitHub web) → `06dec92 StackInicialUchihaBarberWeb` (base técnica completa; rebase sobre el remoto con conflicto README.md resuelto conservando el README del proyecto).
+- Commit solo cuando se pida, tras inspeccionar `git status`/`git diff`; mensajes cortos en español sin tipo ni ámbito (p. ej. `StackInicialUchihaBarberWeb`). Nunca forzar (`--force`).
+
 ## Estado del repo
 
-- Sin `git init` todavía: no crear commits ni remotos sin instrucción explícita.
 - Varias carpetas del esqueleto (`src/components/*`, `src/features/*`, `src/styles`, `src/data`, `src/config`, `src/assets`) están vacías a propósito; Git no conserva directorios vacíos.
 - Archivos generados/locales excluidos de formato en `.prettierignore` y de Git en `.gitignore`.
