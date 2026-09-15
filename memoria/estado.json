@@ -2,8 +2,8 @@
   "schema": 1,
   "proyecto": "UchihaBarberWeb",
   "faseActiva": "UB-003",
-  "ultimoRelevo": "memoria/sesiones/SES-003-cierre-ub002.md",
-  "alcanceActual": "Cimientos cerrados (UB-002 aprobada); UB-003 en definición: esqueleto navegable de inicio y página provisional de productos, por cambio OpenSpec. La web detallada no se implementa hasta su turno.",
+  "ultimoRelevo": "memoria/sesiones/SES-004-propuesta-esqueleto.md",
+  "alcanceActual": "Cimientos cerrados (UB-002 aprobada); UB-003 con propuesta OpenSpec completa (esqueleto-inicio-productos) pendiente de autorización para aplicar. La web detallada no se implementa hasta su turno.",
   "pendientesDeDecision": [
     "Sessions: confirmar inclusión y ubicación.",
     "Diseños y comportamientos definitivos se concretan por sección; ver PRODUCT.md."
@@ -47,16 +47,16 @@
     {
       "id": "UB-003",
       "titulo": "Esqueleto de inicio y enlace provisional a productos",
-      "estado": "pendiente",
+      "estado": "definicion",
       "dependeDe": ["UB-002"],
-      "autorizacion": null,
-      "openspec": null,
+      "autorizacion": "Petición directa de cerrar cimientos y planificar el esqueleto por flujo OpenSpec; la aplicación requiere indicación posterior.",
+      "openspec": "openspec/changes/esqueleto-inicio-productos/proposal.md",
       "criterios": [
         "El usuario autoriza y concreta el alcance del esqueleto y comportamiento general.",
         "Inicio compone las secciones acordadas y acceso provisional a productos sin datos inventados.",
         "Verificación técnica y revisión del usuario documentadas."
       ],
-      "evidencias": []
+      "evidencias": ["memoria/sesiones/SES-004-propuesta-esqueleto.md"]
     },
     {
       "id": "UB-004",

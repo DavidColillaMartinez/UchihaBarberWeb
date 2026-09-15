@@ -135,6 +135,12 @@
       ],
       "archivos": [
         "openspec/changes/archive/.gitkeep",
+        "openspec/changes/esqueleto-inicio-productos/.openspec.yaml",
+        "openspec/changes/esqueleto-inicio-productos/design.md",
+        "openspec/changes/esqueleto-inicio-productos/proposal.md",
+        "openspec/changes/esqueleto-inicio-productos/specs/home-skeleton/spec.md",
+        "openspec/changes/esqueleto-inicio-productos/specs/products-page/spec.md",
+        "openspec/changes/esqueleto-inicio-productos/tasks.md",
         "openspec/specs/.gitkeep"
       ]
     },
@@ -163,7 +169,8 @@
         "memoria/roadmap.md",
         "memoria/sesiones/SES-001-preparacion.md",
         "memoria/sesiones/SES-002-ensayo-local.md",
-        "memoria/sesiones/SES-003-cierre-ub002.md"
+        "memoria/sesiones/SES-003-cierre-ub002.md",
+        "memoria/sesiones/SES-004-propuesta-esqueleto.md"
       ]
     }
   ]

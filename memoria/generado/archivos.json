@@ -299,8 +299,8 @@
     {
       "ruta": "memoria/estado.json",
       "tipo": "archivo",
-      "bytes": 4475,
-      "sha256": "b25b7a647b201ecc174d55244e3cc1279b9b7c787220b2b041e21ce141cd1216"
+      "bytes": 4712,
+      "sha256": "2b6fb1603e1169608539d80b60c904a7fd3502b69a3e71c40e4c7ebfa39ced04"
     },
     {
       "ruta": "memoria/herramientas.md",
@@ -363,10 +363,52 @@
       "sha256": "ea0548578fe044ce30dfbb1572fb93eb9881a52e0270bd24854e808cff2aa19e"
     },
     {
+      "ruta": "memoria/sesiones/SES-004-propuesta-esqueleto.md",
+      "tipo": "archivo",
+      "bytes": 2408,
+      "sha256": "7e5eaa36fbc1cbee03739cab6e0fe602146e0aa2bf60c52090c820821fdb95e8"
+    },
+    {
       "ruta": "openspec/changes/archive/.gitkeep",
       "tipo": "archivo",
       "bytes": 0,
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "ruta": "openspec/changes/esqueleto-inicio-productos/.openspec.yaml",
+      "tipo": "archivo",
+      "bytes": 40,
+      "sha256": "7cbda91d0db42e7f3a4c0edd23a86fbf0cb02498c21edb9ec0b20199c529e618"
+    },
+    {
+      "ruta": "openspec/changes/esqueleto-inicio-productos/design.md",
+      "tipo": "archivo",
+      "bytes": 5446,
+      "sha256": "c0dbcde34dc2ed25c936b4585ff3b5ccb1aac57a90c7361d7f4975a7a1d44444"
+    },
+    {
+      "ruta": "openspec/changes/esqueleto-inicio-productos/proposal.md",
+      "tipo": "archivo",
+      "bytes": 2604,
+      "sha256": "386676f75a3f4d706ff8d6fb87e1685533747b75ef8e7f44cb3e228d1f3f8151"
+    },
+    {
+      "ruta": "openspec/changes/esqueleto-inicio-productos/specs/home-skeleton/spec.md",
+      "tipo": "archivo",
+      "bytes": 4049,
+      "sha256": "f0955a5f84d1c3727e6318928b793a2c0ecfb1233c46855c4b6002bd22d0814f"
+    },
+    {
+      "ruta": "openspec/changes/esqueleto-inicio-productos/specs/products-page/spec.md",
+      "tipo": "archivo",
+      "bytes": 2062,
+      "sha256": "a41f87f6c31413d156a35cc482c21f3af3ee43f8e4e2f35f030f04e7e18900a7"
+    },
+    {
+      "ruta": "openspec/changes/esqueleto-inicio-productos/tasks.md",
+      "tipo": "archivo",
+      "bytes": 3110,
+      "sha256": "5e9a217da3979aac59b8480298cdb09ec4bf678213a3e7ebe5d7f8b81de6519a"
     },
     {
       "ruta": "openspec/config.yaml",
