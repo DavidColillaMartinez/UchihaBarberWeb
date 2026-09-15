@@ -257,14 +257,14 @@
     {
       "ruta": "AGENTS.md",
       "tipo": "archivo",
-      "bytes": 6224,
-      "sha256": "9c85a61fa6f17c72084135e2480211948c6fda3c2298878f819db7c419f1ed12"
+      "bytes": 6282,
+      "sha256": "65b191956ec818b2867bb9b9df22e0efdf84e7bce7327d390bdab446ca6dcb2f"
     },
     {
       "ruta": "PRODUCT.md",
       "tipo": "archivo",
-      "bytes": 10549,
-      "sha256": "1af57d1b20d7b463ab66eae279da85a8bc30f91db9be2934b91aedf4ddc59c68"
+      "bytes": 10625,
+      "sha256": "000e15c1907d9b4e638ced84aaa8001c88e2a18b0ccafda7c0f21042a92a2262"
     },
     {
       "ruta": "README.md",
@@ -281,8 +281,8 @@
     {
       "ruta": "memoria/README.md",
       "tipo": "archivo",
-      "bytes": 3083,
-      "sha256": "66d5f245912134cc07afc2f81912b7a13f81548d6ea61c2ea65494015d1633a7"
+      "bytes": 3133,
+      "sha256": "2cc96c2aec72c47c9f661c7e842fdd3b24d5b2de077a5914be2d34efb8f7dbc0"
     },
     {
       "ruta": "memoria/aplicacion.md",
@@ -299,8 +299,8 @@
     {
       "ruta": "memoria/estado.json",
       "tipo": "archivo",
-      "bytes": 4299,
-      "sha256": "6ed0605cd51dbc7c2d1622fcadb7cffef5b3c302a223a25fce77d22b9c646ffb"
+      "bytes": 4475,
+      "sha256": "b25b7a647b201ecc174d55244e3cc1279b9b7c787220b2b041e21ce141cd1216"
     },
     {
       "ruta": "memoria/herramientas.md",
@@ -311,8 +311,8 @@
     {
       "ruta": "memoria/integraciones.md",
       "tipo": "archivo",
-      "bytes": 2982,
-      "sha256": "81819fc35b61bfcb3924d5afde8f7232986783bfefe365c852f24c60aeed4ec4"
+      "bytes": 2981,
+      "sha256": "a1ada19e72653f8702f1f23c7b5cfaf300e67dbeec74031c5e2f48737fee3ec5"
     },
     {
       "ruta": "memoria/mapa.md",
@@ -329,8 +329,8 @@
     {
       "ruta": "memoria/protocolo.md",
       "tipo": "archivo",
-      "bytes": 4743,
-      "sha256": "be8ebbb09644390a0dab98cf69ed83f40f45b9699839604eca556ea7fbb400ac"
+      "bytes": 5167,
+      "sha256": "b1e44045d001491367e1aabdc69f76aa0b6190ebae6f5c5ced0f534a0b2fbd5d"
     },
     {
       "ruta": "memoria/relaciones.json",
@@ -341,8 +341,8 @@
     {
       "ruta": "memoria/roadmap.md",
       "tipo": "archivo",
-      "bytes": 2356,
-      "sha256": "299852e999e404950cf0ff7d6373893dbf4362bd9eb83c4e65c586f708129bf7"
+      "bytes": 2374,
+      "sha256": "57b1d3c7c12f4f73a3877ecbd1e09bc40b0ca044368e80cb4acec5781dfd58ca"
     },
     {
       "ruta": "memoria/sesiones/SES-001-preparacion.md",
@@ -355,6 +355,12 @@
       "tipo": "archivo",
       "bytes": 3972,
       "sha256": "af7a22c641d72f2b2e2335cb58ff9af2de58f9acd3b4d20907b932f39f64f0f3"
+    },
+    {
+      "ruta": "memoria/sesiones/SES-003-cierre-ub002.md",
+      "tipo": "archivo",
+      "bytes": 2984,
+      "sha256": "ea0548578fe044ce30dfbb1572fb93eb9881a52e0270bd24854e808cff2aa19e"
     },
     {
       "ruta": "openspec/changes/archive/.gitkeep",

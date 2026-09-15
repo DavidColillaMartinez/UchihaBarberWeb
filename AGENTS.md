@@ -62,4 +62,4 @@ Diseño de escritorio primero y móvil después, conservando estructura adaptabl
 
 Los nombres de página previstos en features son `home` y `products`. El estado vigente está en `memoria/estado.json`; las carpetas vacías no prueban implementación. No añadir dependencias sin necesidad del alcance actual.
 
-No publicar credenciales, consentimientos ni rutas personales en Git o relevos. No asumir que el remoto se llama origin. El ZIP no demuestra sincronización remota; el primer commit/push solicitado está delegado a OpenCode en `memoria/primer-commit.md`. No reescribir historia, forzar pushes, descartar cambios o hacer commits no solicitados.
+No publicar credenciales, consentimientos ni rutas personales en Git o relevos. No asumir que el remoto se llama origin. El primer commit/push del ensayo de continuidad está completado y confirmado (`memoria/sesiones/SES-003-cierre-ub002.md`); los commit/push siguientes se hacen solo con autorización expresa. No reescribir historia, forzar pushes, descartar cambios o hacer commits no solicitados.

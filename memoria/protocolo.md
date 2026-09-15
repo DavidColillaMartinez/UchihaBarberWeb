@@ -6,6 +6,8 @@ Leer las fuentes del índice y comprobar Git real. Registrar agente, objetivo, f
 
 Conservar cambios ajenos y leer sus relevos. Releer una ruta antes de editar cuando pueda haber cambiado. Para trabajo simultáneo usar ramas/worktrees independientes y ámbitos acotados. Resolver conflictos leyendo ambos cambios, no eligiendo por fecha. El estado documental no funciona como bloqueo distribuido.
 
+La continuidad no depende de conversaciones separadas: al comenzar otro bloque de trabajo, retomar una tarea o continuar tras compactar el contexto, releer `memoria/estado.json` y el relevo de `ultimoRelevo` y comprobar diferencias con `memoria:check`. Al terminar cada bloque de trabajo —aunque siga la misma conversación—, registrar decisiones, pruebas y pendientes en memoria, sin esperar a que el usuario lo pida.
+
 Sin Git, commits o documentos indispensables, indicar **no verificable** y qué falta. Se puede leer o preparar una propuesta, pero no afirmar equivalencia con GitHub. Un check desactualizado no impide repararlo dentro del alcance autorizado.
 
 ## Trabajo

@@ -21,4 +21,4 @@ Relacionar criterios con pruebas/relevos reales. Separar verificación técnica 
 
 `openspec` es null mientras no exista cambio real; después es ruta real de su propuesta/artefacto de entrada y se actualiza tras archivar. Los criterios no se consideran satisfechos sin evidencia.
 
-La primera prueba: aplicar la entrega, comprobar memoria y contexto OpenSpec, revisar cambios, commit y push solicitado a OpenCode. Permanece pendiente hasta tener resultados, aunque los archivos ya existan.
+La primera prueba de continuidad (aplicar la entrega, comprobar memoria y contexto OpenSpec, revisar cambios, commit y push) está completada y cerrada: ver `estado.json` (UB-002) y `memoria/sesiones/SES-003-cierre-ub002.md`.

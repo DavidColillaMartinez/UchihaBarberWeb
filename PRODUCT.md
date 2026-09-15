@@ -30,7 +30,7 @@ Identidad visual reconocible y propia: no es una plantilla genérica de barberí
 - Si se detecta un problema de legibilidad, rendimiento, accesibilidad o viabilidad: explicarlo y proponer un ajuste que preserve la intención original.
 - La dirección detallada por sección (resumida en Capabilities and Constraints) fue descrita por el responsable; las ambigüedades se consultarán al llegar el momento de implementar cada sección.
 - OpenCode y las skills OpenSpec ya tienen archivos inicializados en este repositorio. Conservar su generación oficial; `AGENTS.md`, `openspec/config.yaml` y `memoria/integraciones.md` conectan las reglas sin duplicar tareas ni alterar skills por defecto. Impeccable conserva este documento como contexto de producto; su configuración local no se comparte.
-- La memoria compartida se mantiene en `memoria/`, con protocolo, estado, mapa, relevos e inventario SHA-256. Su primera validación local está pendiente. Git transporta los cambios; no hay sincronización automática entre agentes. Leer `memoria/README.md` antes de trabajar.
+- La memoria compartida se mantiene en `memoria/`, con protocolo, estado, mapa, relevos e inventario SHA-256. Su primer ensayo real (aplicación, revisión, commit y push) está confirmado; el registro está en `memoria/sesiones/`. Git transporta los cambios; no hay sincronización automática entre agentes. Leer `memoria/README.md` antes de trabajar.
 
 ## Capabilities and Constraints
 

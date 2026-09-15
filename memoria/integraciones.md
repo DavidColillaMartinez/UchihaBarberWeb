@@ -22,8 +22,8 @@ El usuario dirige el diseño. Una auditoría no autoriza rediseños; mostrar ubi
 
 El original contiene consentimiento local y hooks de Codex con rutas de máquina. Eso no prueba que Impeccable esté operativo en todos los entornos. Se conservan localmente y se excluyen de Git. Cada equipo usa la inicialización oficial cuando su propietario lo solicite; no trasladar consentimientos ni inventar rutas.
 
-## Prueba local pendiente
+## Prueba local
 
-En OpenCode: leer fuentes, explicar el alcance, ejecutar controles de memoria y `openspec context --json`; confirmar que el contexto devuelto incluye estas referencias. Si la versión no admite campos, consultar su ayuda/esquema y corregir la incompatibilidad dentro del mantenimiento autorizado. No afirmar integración probada solo por YAML válido.
+Comprobado en el equipo del usuario: la CLI 1.13.0 resuelve la raíz correcta y, en la generación del primer cambio real, las instrucciones de artefactos incorporan el `context` del `config.yaml`. El ciclo `apply`/`archive` completo se observa en el primer cambio y sus conclusiones se registran en memoria. No declarar probado Impeccable: no se ha ejecutado.
 
 No se añaden hooks ni otra configuración de proveedor: se evita duplicar reglas y modificar consentimientos. Si una herramienta no carga AGENTS, pedir expresamente su lectura y la del índice de memoria.

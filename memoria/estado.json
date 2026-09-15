@@ -1,9 +1,9 @@
 {
   "schema": 1,
   "proyecto": "UchihaBarberWeb",
-  "faseActiva": "UB-002",
-  "ultimoRelevo": "memoria/sesiones/SES-002-ensayo-local.md",
-  "alcanceActual": "Aplicar y verificar las fases 1.5–2. No implementar la web todavía.",
+  "faseActiva": "UB-003",
+  "ultimoRelevo": "memoria/sesiones/SES-003-cierre-ub002.md",
+  "alcanceActual": "Cimientos cerrados (UB-002 aprobada); UB-003 en definición: esqueleto navegable de inicio y página provisional de productos, por cambio OpenSpec. La web detallada no se implementa hasta su turno.",
   "pendientesDeDecision": [
     "Sessions: confirmar inclusión y ubicación.",
     "Diseños y comportamientos definitivos se concretan por sección; ver PRODUCT.md."
@@ -28,7 +28,7 @@
     {
       "id": "UB-002",
       "titulo": "Fase 2: memoria y primer ensayo de continuidad",
-      "estado": "en_revision",
+      "estado": "aprobada",
       "dependeDe": ["UB-001"],
       "autorizacion": "Petición directa de crear y modificar documentación/herramientas y entregar ZIP; primer commit/push delegado a OpenCode.",
       "openspec": null,
@@ -40,7 +40,8 @@
       ],
       "evidencias": [
         "memoria/sesiones/SES-001-preparacion.md",
-        "memoria/sesiones/SES-002-ensayo-local.md"
+        "memoria/sesiones/SES-002-ensayo-local.md",
+        "memoria/sesiones/SES-003-cierre-ub002.md"
       ]
     },
     {
