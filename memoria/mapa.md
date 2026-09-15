@@ -2,24 +2,24 @@
 
 ## Implementado en esta entrega
 
-| Ruta                                                                                     | Función actual                                                         |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
-| `src/pages/index.astro`                                                                  | Inicio: compone navegación + secciones provisionales en su orden       |
-| `src/pages/productos/index.astro`                                                        | Página provisional de productos (`/productos`), destino del enlace     |
-| `src/layouts/BaseLayout.astro`                                                           | HTML español, fundamentos globales, skip link y `description` opcional |
-| `src/styles/global.css`                                                                  | Base/reset, variables mínimas, foco visible y movimiento reducido      |
-| `src/components/navigation/SiteNav.astro`                                                | Navegación compartida con anclas, `/productos` y reservas              |
-| `src/components/ui/ProvisionalNote.astro`                                                | Aviso provisional compartido por secciones                             |
-| `src/features/home/{cabecera,servicios,galeria,acceso-productos,opiniones,informacion}/` | Secciones provisionales de inicio (Astro + CSS Module)                 |
-| `src/features/products/provisional/`                                                     | Contenido provisional de la página de productos                        |
-| `public/`                                                                                | Favicons iniciales, no identidad final validada                        |
-| `astro.config.mjs`, `tsconfig.json`                                                      | Configuración estática, TS estricto y alias                            |
-| `package.json`, `package-lock.json`                                                      | Dependencias y comandos                                                |
-| `AGENTS.md`, `PRODUCT.md`                                                                | Comportamiento de agentes y visión                                     |
-| `openspec/config.yaml`                                                                   | Contexto y reglas SDD compartidas                                      |
-| `openspec/specs/`, `openspec/changes/`                                                   | Specs sin consolidar; cambio `esqueleto-inicio-productos` en curso     |
-| `.agents/skills/`, `.opencode/`                                                          | Skills/comandos instalados; configuración local no portable excluida   |
-| `memoria/`, `scripts/memoria/`                                                           | Continuidad, inventario y verificaciones                               |
+| Ruta                                                                                     | Función actual                                                                        |
+| ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `src/pages/index.astro`                                                                  | Inicio: compone navegación + secciones provisionales en su orden                      |
+| `src/pages/productos/index.astro`                                                        | Página provisional de productos (`/productos`), destino del enlace                    |
+| `src/layouts/BaseLayout.astro`                                                           | HTML español, fundamentos globales, skip link y `description` opcional                |
+| `src/styles/global.css`                                                                  | Base/reset, variables mínimas, foco visible y movimiento reducido                     |
+| `src/components/navigation/SiteNav.astro`                                                | Navegación compartida con anclas, `/productos` y reservas                             |
+| `src/components/ui/ProvisionalNote.astro`                                                | Aviso provisional compartido por secciones                                            |
+| `src/features/home/{cabecera,servicios,galeria,acceso-productos,opiniones,informacion}/` | Secciones provisionales de inicio (Astro + CSS Module)                                |
+| `src/features/products/provisional/`                                                     | Contenido provisional de la página de productos                                       |
+| `public/`                                                                                | Favicons iniciales, no identidad final validada                                       |
+| `astro.config.mjs`, `tsconfig.json`                                                      | Configuración estática, TS estricto y alias                                           |
+| `package.json`, `package-lock.json`                                                      | Dependencias y comandos                                                               |
+| `AGENTS.md`, `PRODUCT.md`                                                                | Comportamiento de agentes y visión                                                    |
+| `openspec/config.yaml`                                                                   | Contexto y reglas SDD compartidas                                                     |
+| `openspec/specs/`, `openspec/changes/`                                                   | Specs consolidadas (`home-skeleton`, `products-page`); cambio del esqueleto archivado |
+| `.agents/skills/`, `.opencode/`                                                          | Skills/comandos instalados; configuración local no portable excluida                  |
+| `memoria/`, `scripts/memoria/`                                                           | Continuidad, inventario y verificaciones                                              |
 
 Dependencia de código observada: inicio y productos → BaseLayout → fundamentos globales; inicio → SiteNav + secciones de `features/home`; productos → SiteNav + `features/products/provisional`. `generado/archivos.json` da el inventario exacto; `generado/dependencias.json` calcula relaciones documentales por área desde `relaciones.json`, sin analizar imports.
 

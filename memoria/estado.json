@@ -2,8 +2,8 @@
   "schema": 1,
   "proyecto": "UchihaBarberWeb",
   "faseActiva": "UB-003",
-  "ultimoRelevo": "memoria/sesiones/SES-005-implementacion-esqueleto.md",
-  "alcanceActual": "UB-003 implementada y verificada técnicamente (esqueleto de inicio y productos); pendiente de aceptación del usuario. La web detallada y las animaciones no se implementan hasta su turno.",
+  "ultimoRelevo": "memoria/sesiones/SES-006-aceptacion-esqueleto.md",
+  "alcanceActual": "UB-003 aprobada: esqueleto de inicio y productos implementado, aceptado y cambio archivado. UB-004 pendiente de instrucción del usuario para el diseño de la cabecera y el resto de secciones.",
   "pendientesDeDecision": [
     "Sessions: confirmar inclusión y ubicación.",
     "Diseños y comportamientos definitivos se concretan por sección; ver PRODUCT.md."
@@ -47,10 +47,10 @@
     {
       "id": "UB-003",
       "titulo": "Esqueleto de inicio y enlace provisional a productos",
-      "estado": "en_revision",
+      "estado": "aprobada",
       "dependeDe": ["UB-002"],
-      "autorizacion": "Petición directa de cerrar cimientos e implementar el esqueleto por flujo OpenSpec; la aceptación visual es del usuario.",
-      "openspec": "openspec/changes/esqueleto-inicio-productos/proposal.md",
+      "autorizacion": "Implementado y aceptado; el cambio OpenSpec se archivó tras la aceptación.",
+      "openspec": "openspec/changes/archive/2026-09-15-esqueleto-inicio-productos/proposal.md",
       "criterios": [
         "El usuario autoriza y concreta el alcance del esqueleto y comportamiento general.",
         "Inicio compone las secciones acordadas y acceso provisional a productos sin datos inventados.",
@@ -58,7 +58,8 @@
       ],
       "evidencias": [
         "memoria/sesiones/SES-004-propuesta-esqueleto.md",
-        "memoria/sesiones/SES-005-implementacion-esqueleto.md"
+        "memoria/sesiones/SES-005-implementacion-esqueleto.md",
+        "memoria/sesiones/SES-006-aceptacion-esqueleto.md"
       ]
     },
     {

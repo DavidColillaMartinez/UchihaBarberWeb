@@ -24,6 +24,6 @@ El original contiene consentimiento local y hooks de Codex con rutas de máquina
 
 ## Prueba local
 
-Comprobado en el equipo del usuario: la CLI 1.13.0 resuelve la raíz correcta y, en la generación del primer cambio real, las instrucciones de artefactos incorporan el `context` del `config.yaml`. El ciclo `apply`/`archive` completo se observa en el primer cambio y sus conclusiones se registran en memoria. No declarar probado Impeccable: no se ha ejecutado.
+Confirmado en el equipo del usuario: la CLI 1.13.0 resuelve la raíz correcta; las instrucciones de artefactos incorporan el `context` del `config.yaml`; y el primer cambio real completó el ciclo `apply`/`archive` con specs consolidadas (`home-skeleton`, `products-page`), ver SES-006. No declarar probado Impeccable: no se ha ejecutado.
 
 No se añaden hooks ni otra configuración de proveedor: se evita duplicar reglas y modificar consentimientos. Si una herramienta no carga AGENTS, pedir expresamente su lectura y la del índice de memoria.

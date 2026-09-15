@@ -24,4 +24,4 @@
 
 - [x] 5.1 Verificación técnica completa: `npm run build` sin errores, enlaces internos válidos, teclado y movimiento reducido comprobados, CSS Modules por sección (comprobación: build + revisión manual registrada)
 - [x] 5.2 Actualizar memoria: mapa, estado, relevo con lo implementado y lo provisional, tras revisión del diff (comprobación: `npm run memoria:check` vigente)
-- [ ] 5.3 Presentar al responsable la forma de revisar el esqueleto y esperar su aceptación antes de marcarlo aprobado; diferenciar validación técnica de aceptación (comprobación: aceptación registrada en relevo)
+- [x] 5.3 Presentar al responsable la forma de revisar el esqueleto y esperar su aceptación antes de marcarlo aprobado; diferenciar validación técnica de aceptación (comprobación: aceptación registrada en relevo)

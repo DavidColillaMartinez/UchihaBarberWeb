@@ -155,13 +155,15 @@
       ],
       "archivos": [
         "openspec/changes/archive/.gitkeep",
-        "openspec/changes/esqueleto-inicio-productos/.openspec.yaml",
-        "openspec/changes/esqueleto-inicio-productos/design.md",
-        "openspec/changes/esqueleto-inicio-productos/proposal.md",
-        "openspec/changes/esqueleto-inicio-productos/specs/home-skeleton/spec.md",
-        "openspec/changes/esqueleto-inicio-productos/specs/products-page/spec.md",
-        "openspec/changes/esqueleto-inicio-productos/tasks.md",
-        "openspec/specs/.gitkeep"
+        "openspec/changes/archive/2026-09-15-esqueleto-inicio-productos/.openspec.yaml",
+        "openspec/changes/archive/2026-09-15-esqueleto-inicio-productos/design.md",
+        "openspec/changes/archive/2026-09-15-esqueleto-inicio-productos/proposal.md",
+        "openspec/changes/archive/2026-09-15-esqueleto-inicio-productos/specs/home-skeleton/spec.md",
+        "openspec/changes/archive/2026-09-15-esqueleto-inicio-productos/specs/products-page/spec.md",
+        "openspec/changes/archive/2026-09-15-esqueleto-inicio-productos/tasks.md",
+        "openspec/specs/.gitkeep",
+        "openspec/specs/home-skeleton/spec.md",
+        "openspec/specs/products-page/spec.md"
       ]
     },
     {
@@ -191,7 +193,8 @@
         "memoria/sesiones/SES-002-ensayo-local.md",
         "memoria/sesiones/SES-003-cierre-ub002.md",
         "memoria/sesiones/SES-004-propuesta-esqueleto.md",
-        "memoria/sesiones/SES-005-implementacion-esqueleto.md"
+        "memoria/sesiones/SES-005-implementacion-esqueleto.md",
+        "memoria/sesiones/SES-006-aceptacion-esqueleto.md"
       ]
     }
   ]

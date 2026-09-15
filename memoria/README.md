@@ -34,4 +34,4 @@ No se crea un `DESIGN.md` global que duplique `PRODUCT.md`. El `design.md` de ca
 
 Scripts Node estándar, sin dependencias ni hooks. `scan` escribe solo `generado/`; `check` y `changes` son de lectura. Ninguno modifica Git. El protocolo depende de que cada IA lo siga; no es un bloqueo de seguridad ni una sincronización automática. Para una IA que no carga AGENTS, adjuntar estos documentos y pedir su lectura.
 
-El mapa de dependencias es declarado por áreas, no un análisis AST. Los hashes detectan cambios de bytes, no corrección semántica. La primera ejecución de OpenCode y la compatibilidad de la CLI OpenSpec en el equipo local están comprobadas; el ciclo completo `apply`/`archive` de un cambio real se observa en su primer uso.
+El mapa de dependencias es declarado por áreas, no un análisis AST. Los hashes detectan cambios de bytes, no corrección semántica. La primera ejecución de OpenCode, la compatibilidad de la CLI OpenSpec y el ciclo completo `apply`/`archive` de un cambio real están confirmados en el equipo local.

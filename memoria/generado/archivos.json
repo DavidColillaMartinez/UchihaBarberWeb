@@ -281,8 +281,8 @@
     {
       "ruta": "memoria/README.md",
       "tipo": "archivo",
-      "bytes": 3133,
-      "sha256": "2cc96c2aec72c47c9f661c7e842fdd3b24d5b2de077a5914be2d34efb8f7dbc0"
+      "bytes": 3105,
+      "sha256": "e0f73798639d171270f8f734cb14173a60e4cbc18773ab50673af6cc72ebb30d"
     },
     {
       "ruta": "memoria/aplicacion.md",
@@ -299,8 +299,8 @@
     {
       "ruta": "memoria/estado.json",
       "tipo": "archivo",
-      "bytes": 4782,
-      "sha256": "0df299b0af2a6e813d97cafb5c9bc41c42fca5966af81adfcad59aee97b5093e"
+      "bytes": 4812,
+      "sha256": "4a2a9b7ac60d8616c04809dbe6753ec4b288d81a8b9e22ad5f7f2a2145d314a1"
     },
     {
       "ruta": "memoria/herramientas.md",
@@ -311,14 +311,14 @@
     {
       "ruta": "memoria/integraciones.md",
       "tipo": "archivo",
-      "bytes": 2981,
-      "sha256": "a1ada19e72653f8702f1f23c7b5cfaf300e67dbeec74031c5e2f48737fee3ec5"
+      "bytes": 2959,
+      "sha256": "adefe71769231f47276d5afad2549267b79e62c18b82d8a548dd0774880c83fa"
     },
     {
       "ruta": "memoria/mapa.md",
       "tipo": "archivo",
-      "bytes": 4236,
-      "sha256": "4d015a6c6c4a9fa884b2c5c2aa3c350873b81a965378b51ade0889eb6b19d02e"
+      "bytes": 4506,
+      "sha256": "786d35cae4ee4b06dcbca79ffbc1b1ee9e84763e158f6cbc814be3b7e6aea4ed"
     },
     {
       "ruta": "memoria/primer-commit.md",
@@ -375,46 +375,52 @@
       "sha256": "279c65d9072a92f42ab03bb03d280a49122bd1c7cae4c13e554c99b10663a056"
     },
     {
+      "ruta": "memoria/sesiones/SES-006-aceptacion-esqueleto.md",
+      "tipo": "archivo",
+      "bytes": 4071,
+      "sha256": "8e00fb19203de03edb9beb5a1b50aef20c892f27778d88fb6245a564b35a435f"
+    },
+    {
       "ruta": "openspec/changes/archive/.gitkeep",
       "tipo": "archivo",
       "bytes": 0,
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
-      "ruta": "openspec/changes/esqueleto-inicio-productos/.openspec.yaml",
+      "ruta": "openspec/changes/archive/2026-09-15-esqueleto-inicio-productos/.openspec.yaml",
       "tipo": "archivo",
       "bytes": 40,
       "sha256": "7cbda91d0db42e7f3a4c0edd23a86fbf0cb02498c21edb9ec0b20199c529e618"
     },
     {
-      "ruta": "openspec/changes/esqueleto-inicio-productos/design.md",
+      "ruta": "openspec/changes/archive/2026-09-15-esqueleto-inicio-productos/design.md",
       "tipo": "archivo",
       "bytes": 5446,
       "sha256": "c0dbcde34dc2ed25c936b4585ff3b5ccb1aac57a90c7361d7f4975a7a1d44444"
     },
     {
-      "ruta": "openspec/changes/esqueleto-inicio-productos/proposal.md",
+      "ruta": "openspec/changes/archive/2026-09-15-esqueleto-inicio-productos/proposal.md",
       "tipo": "archivo",
       "bytes": 2604,
       "sha256": "386676f75a3f4d706ff8d6fb87e1685533747b75ef8e7f44cb3e228d1f3f8151"
     },
     {
-      "ruta": "openspec/changes/esqueleto-inicio-productos/specs/home-skeleton/spec.md",
+      "ruta": "openspec/changes/archive/2026-09-15-esqueleto-inicio-productos/specs/home-skeleton/spec.md",
       "tipo": "archivo",
       "bytes": 4049,
       "sha256": "f0955a5f84d1c3727e6318928b793a2c0ecfb1233c46855c4b6002bd22d0814f"
     },
     {
-      "ruta": "openspec/changes/esqueleto-inicio-productos/specs/products-page/spec.md",
+      "ruta": "openspec/changes/archive/2026-09-15-esqueleto-inicio-productos/specs/products-page/spec.md",
       "tipo": "archivo",
       "bytes": 2062,
       "sha256": "a41f87f6c31413d156a35cc482c21f3af3ee43f8e4e2f35f030f04e7e18900a7"
     },
     {
-      "ruta": "openspec/changes/esqueleto-inicio-productos/tasks.md",
+      "ruta": "openspec/changes/archive/2026-09-15-esqueleto-inicio-productos/tasks.md",
       "tipo": "archivo",
       "bytes": 3110,
-      "sha256": "fbf33745e7e388afb427ae425cd0b68d610d3c60ecf830b0bec299bc8f6c7551"
+      "sha256": "ead7f22f8252b112ea6526182e894de49dafc40532f50d539aaf2129f65e82c7"
     },
     {
       "ruta": "openspec/config.yaml",
@@ -427,6 +433,18 @@
       "tipo": "archivo",
       "bytes": 0,
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "ruta": "openspec/specs/home-skeleton/spec.md",
+      "tipo": "archivo",
+      "bytes": 4050,
+      "sha256": "afb3ad0660027164d17c05d88721aed29c2064110f6471c1d57c048ee1171254"
+    },
+    {
+      "ruta": "openspec/specs/products-page/spec.md",
+      "tipo": "archivo",
+      "bytes": 2063,
+      "sha256": "634128382a908d8dfebb2e5e2463ad8ad7cfdaef72134aa9410ed4f5683688ea"
     },
     {
       "ruta": "package-lock.json",
