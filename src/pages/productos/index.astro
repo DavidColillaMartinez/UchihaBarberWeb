@@ -1,0 +1,12 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import SiteNav from "@/components/navigation/SiteNav.astro";
+import Provisional from "@/features/products/provisional/Provisional.astro";
+---
+
+<BaseLayout title="Productos · Uchiha Barber">
+  <SiteNav currentPage="products" />
+  <main id="contenido">
+    <Provisional />
+  </main>
+</BaseLayout>

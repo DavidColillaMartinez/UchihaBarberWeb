@@ -1,7 +1,22 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
+import SiteNav from "@/components/navigation/SiteNav.astro";
+import Cabecera from "@/features/home/cabecera/Cabecera.astro";
+import Servicios from "@/features/home/servicios/Servicios.astro";
+import Galeria from "@/features/home/galeria/Galeria.astro";
+import AccesoProductos from "@/features/home/acceso-productos/AccesoProductos.astro";
+import Opiniones from "@/features/home/opiniones/Opiniones.astro";
+import Informacion from "@/features/home/informacion/Informacion.astro";
 ---
 
 <BaseLayout title="Uchiha Barber">
-  <main></main>
+  <SiteNav isHomePage currentPage="home" />
+  <main id="contenido">
+    <Cabecera />
+    <Servicios />
+    <Galeria />
+    <AccesoProductos />
+    <Opiniones />
+    <Informacion />
+  </main>
 </BaseLayout>

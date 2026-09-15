@@ -34,8 +34,28 @@
         "astro.config.mjs",
         "public/favicon.ico",
         "public/favicon.svg",
+        "src/components/navigation/SiteNav.astro",
+        "src/components/navigation/SiteNav.module.css",
+        "src/components/ui/ProvisionalNote.astro",
+        "src/components/ui/ProvisionalNote.module.css",
+        "src/features/home/acceso-productos/AccesoProductos.astro",
+        "src/features/home/acceso-productos/AccesoProductos.module.css",
+        "src/features/home/cabecera/Cabecera.astro",
+        "src/features/home/cabecera/Cabecera.module.css",
+        "src/features/home/galeria/Galeria.astro",
+        "src/features/home/galeria/Galeria.module.css",
+        "src/features/home/informacion/Informacion.astro",
+        "src/features/home/informacion/Informacion.module.css",
+        "src/features/home/opiniones/Opiniones.astro",
+        "src/features/home/opiniones/Opiniones.module.css",
+        "src/features/home/servicios/Servicios.astro",
+        "src/features/home/servicios/Servicios.module.css",
+        "src/features/products/provisional/Provisional.astro",
+        "src/features/products/provisional/Provisional.module.css",
         "src/layouts/BaseLayout.astro",
         "src/pages/index.astro",
+        "src/pages/productos/index.astro",
+        "src/styles/global.css",
         "tsconfig.json"
       ]
     },
@@ -170,7 +190,8 @@
         "memoria/sesiones/SES-001-preparacion.md",
         "memoria/sesiones/SES-002-ensayo-local.md",
         "memoria/sesiones/SES-003-cierre-ub002.md",
-        "memoria/sesiones/SES-004-propuesta-esqueleto.md"
+        "memoria/sesiones/SES-004-propuesta-esqueleto.md",
+        "memoria/sesiones/SES-005-implementacion-esqueleto.md"
       ]
     }
   ]

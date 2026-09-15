@@ -1,0 +1,24 @@
+---
+import styles from "./AccesoProductos.module.css";
+import ProvisionalNote from "@/components/ui/ProvisionalNote.astro";
+---
+
+<section
+  id="productos"
+  class={styles.acceso}
+  aria-labelledby="productos-titulo"
+>
+  <div class={styles.contenido}>
+    <h2 id="productos-titulo" class={styles.titulo}>
+      Productos
+    </h2>
+    <!-- Pendiente: descripción breve real y vídeo del bloque; no inventar textos. -->
+    <p class={styles.aviso}>
+      <a href="/productos">Conócelos</a>
+    </p>
+  </div>
+  <div class={styles.visor} aria-hidden="true"></div>
+  <ProvisionalNote>
+    Acceso provisional · pendiente de vídeo y descripción
+  </ProvisionalNote>
+</section>

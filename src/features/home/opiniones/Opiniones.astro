@@ -1,0 +1,19 @@
+---
+import styles from "./Opiniones.module.css";
+import ProvisionalNote from "@/components/ui/ProvisionalNote.astro";
+---
+
+<section
+  id="opiniones"
+  class={styles.opiniones}
+  aria-labelledby="opiniones-titulo"
+>
+  <h2 id="opiniones-titulo" class={styles.titulo}>
+    Opiniones
+  </h2>
+  <!-- Pendiente: reseñas reales; no inventar valoraciones, puntuaciones ni textos. -->
+  <div class={styles.lista} aria-hidden="true"></div>
+  <ProvisionalNote>
+    Opiniones provisional · pendiente de reseñas reales
+  </ProvisionalNote>
+</section>

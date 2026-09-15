@@ -1,0 +1,53 @@
+---
+import styles from "./SiteNav.module.css";
+
+interface Props {
+  isHomePage?: boolean;
+  currentPage?: "home" | "products";
+}
+
+const { isHomePage = false, currentPage = "home" } = Astro.props;
+
+/* URL confirmada del sistema externo de reservas (PRODUCT.md).
+   Enlace simple: no se asumen API, embeds ni parámetros de Yeasy. */
+const bookingUrl =
+  "https://yeasy.io/commerce/7b8627f1-9c5e-46a6-ab95-ef6e0e1b87da";
+
+const anchor = (id: string) => (isHomePage ? `#${id}` : `/#${id}`);
+---
+
+<nav class={styles.nav} aria-label="Navegación principal">
+  <ul class={styles.list}>
+    <li>
+      <a
+        href={isHomePage ? "#contenido" : "/"}
+        aria-current={currentPage === "home" ? "page" : undefined}
+      >
+        Uchiha Barber
+      </a>
+    </li>
+    <li>
+      <a href={anchor("servicios")}>Servicios</a>
+    </li>
+    <li>
+      <a
+        href="/productos"
+        aria-current={currentPage === "products" ? "page" : undefined}
+      >
+        Productos
+      </a>
+    </li>
+    <li>
+      <a href={anchor("opiniones")}>Opiniones</a>
+    </li>
+    <li>
+      <a href={anchor("info")}>Información</a>
+    </li>
+    <li>
+      <!-- Texto funcional provisional; se ajustará con el responsable. -->
+      <a class={styles.booking} href={bookingUrl}>
+        Pedir cita
+      </a>
+    </li>
+  </ul>
+</nav>

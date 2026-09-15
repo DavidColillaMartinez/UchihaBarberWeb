@@ -1,0 +1,18 @@
+---
+import styles from "./Provisional.module.css";
+import ProvisionalNote from "@/components/ui/ProvisionalNote.astro";
+---
+
+<section class={styles.catalogo} aria-labelledby="productos-titulo">
+  <h1 id="productos-titulo" class={styles.titulo}>
+    Productos
+  </h1>
+  <p class={styles.volver}>
+    <a href="/">Volver a inicio</a>
+  </p>
+  <!-- Pendiente: catálogo y fichas desde datos JSON locales con generación estática.
+       Sin datos, precios ni funciones de venta por inventar. -->
+  <ProvisionalNote>
+    Catálogo provisional · pendiente de datos reales
+  </ProvisionalNote>
+</section>

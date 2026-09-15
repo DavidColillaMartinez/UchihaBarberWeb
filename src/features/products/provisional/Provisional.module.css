@@ -1,0 +1,15 @@
+.catalogo {
+  display: grid;
+  gap: 1rem;
+  padding: 4rem 1.5rem;
+}
+
+.titulo {
+  margin: 0;
+  font-size: clamp(2.5rem, 8vw, 6rem);
+  line-height: 1;
+}
+
+.volver {
+  margin: 0;
+}

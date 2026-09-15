@@ -1,0 +1,27 @@
+.acceso {
+  display: grid;
+  gap: 1rem;
+  padding: 4rem 1.5rem;
+  border-top: 1px solid var(--color-fg);
+}
+
+.contenido {
+  display: grid;
+  gap: 1rem;
+  max-width: 40%;
+}
+
+.titulo {
+  margin: 0;
+  font-size: clamp(2rem, 6vw, 4rem);
+  line-height: 1;
+}
+
+.aviso {
+  margin: 0;
+}
+
+.visor {
+  min-height: 30vh;
+  border: 1px solid var(--color-fg);
+}

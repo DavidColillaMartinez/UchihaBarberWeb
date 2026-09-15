@@ -299,8 +299,8 @@
     {
       "ruta": "memoria/estado.json",
       "tipo": "archivo",
-      "bytes": 4712,
-      "sha256": "2b6fb1603e1169608539d80b60c904a7fd3502b69a3e71c40e4c7ebfa39ced04"
+      "bytes": 4782,
+      "sha256": "0df299b0af2a6e813d97cafb5c9bc41c42fca5966af81adfcad59aee97b5093e"
     },
     {
       "ruta": "memoria/herramientas.md",
@@ -317,8 +317,8 @@
     {
       "ruta": "memoria/mapa.md",
       "tipo": "archivo",
-      "bytes": 2520,
-      "sha256": "12c295085d3e170593b0f964509101d5dd6ecf0ce3a9d146b7cafb67a4f1e793"
+      "bytes": 4236,
+      "sha256": "4d015a6c6c4a9fa884b2c5c2aa3c350873b81a965378b51ade0889eb6b19d02e"
     },
     {
       "ruta": "memoria/primer-commit.md",
@@ -369,6 +369,12 @@
       "sha256": "7e5eaa36fbc1cbee03739cab6e0fe602146e0aa2bf60c52090c820821fdb95e8"
     },
     {
+      "ruta": "memoria/sesiones/SES-005-implementacion-esqueleto.md",
+      "tipo": "archivo",
+      "bytes": 3751,
+      "sha256": "279c65d9072a92f42ab03bb03d280a49122bd1c7cae4c13e554c99b10663a056"
+    },
+    {
       "ruta": "openspec/changes/archive/.gitkeep",
       "tipo": "archivo",
       "bytes": 0,
@@ -408,7 +414,7 @@
       "ruta": "openspec/changes/esqueleto-inicio-productos/tasks.md",
       "tipo": "archivo",
       "bytes": 3110,
-      "sha256": "5e9a217da3979aac59b8480298cdb09ec4bf678213a3e7ebe5d7f8b81de6519a"
+      "sha256": "fbf33745e7e388afb427ae425cd0b68d610d3c60ecf830b0bec299bc8f6c7551"
     },
     {
       "ruta": "openspec/config.yaml",
@@ -471,16 +477,136 @@
       "sha256": "4abba123cf28092d81d81d978c07f522cda4d1b0c5fc4d8e7afb246d7ec4b883"
     },
     {
+      "ruta": "src/components/navigation/SiteNav.astro",
+      "tipo": "archivo",
+      "bytes": 1322,
+      "sha256": "fd21153b04e79e74ba9ac122fc2a2bff523bc22b6db21b82b684d7afe3f14490"
+    },
+    {
+      "ruta": "src/components/navigation/SiteNav.module.css",
+      "tipo": "archivo",
+      "bytes": 326,
+      "sha256": "4b613438465be7fff03b0de1f83bf568cebf0e824a58b8823601837763bb3533"
+    },
+    {
+      "ruta": "src/components/ui/ProvisionalNote.astro",
+      "tipo": "archivo",
+      "bytes": 100,
+      "sha256": "e45a397a618e1af5b2f8e0b7f0720ab4a76e309a5b09416ecb0ef3c227160e33"
+    },
+    {
+      "ruta": "src/components/ui/ProvisionalNote.module.css",
+      "tipo": "archivo",
+      "bytes": 117,
+      "sha256": "78eccd686d5341cfd24b4d2b7d4be59b34e1e410525306d18f1dd780df8121d5"
+    },
+    {
+      "ruta": "src/features/home/acceso-productos/AccesoProductos.astro",
+      "tipo": "archivo",
+      "bytes": 675,
+      "sha256": "d7ec938b2be7577f47809ef3aa949852e63825ec1fcc556d07128dc931aaf6ab"
+    },
+    {
+      "ruta": "src/features/home/acceso-productos/AccesoProductos.module.css",
+      "tipo": "archivo",
+      "bytes": 346,
+      "sha256": "542b441e8047065634dbea088595244f31fe1f6498520147a573ddb193fa9d4c"
+    },
+    {
+      "ruta": "src/features/home/cabecera/Cabecera.astro",
+      "tipo": "archivo",
+      "bytes": 473,
+      "sha256": "74d04ab69a02558eefd11c830acac0f89488c1fb31f11b126cedd0c500437d4c"
+    },
+    {
+      "ruta": "src/features/home/cabecera/Cabecera.module.css",
+      "tipo": "archivo",
+      "bytes": 151,
+      "sha256": "f6c0acb26616ada8200f8e897178f42b0374561f905f79ae7078a7f4c5e7ce6c"
+    },
+    {
+      "ruta": "src/features/home/galeria/Galeria.astro",
+      "tipo": "archivo",
+      "bytes": 614,
+      "sha256": "e4f01c553e0c25bc8b827feebfcd9e70e06366246962c9e099efed02f697917e"
+    },
+    {
+      "ruta": "src/features/home/galeria/Galeria.module.css",
+      "tipo": "archivo",
+      "bytes": 258,
+      "sha256": "8b3197e6a320aa164f191cb7209422f13c1150b0392e053fd13d0a2ca1e823f6"
+    },
+    {
+      "ruta": "src/features/home/informacion/Informacion.astro",
+      "tipo": "archivo",
+      "bytes": 952,
+      "sha256": "642f0cc04b03bdd57287989283c5712104e5228c002e89c84b3ddd8ffd4e6698"
+    },
+    {
+      "ruta": "src/features/home/informacion/Informacion.module.css",
+      "tipo": "archivo",
+      "bytes": 232,
+      "sha256": "3bfe440f1a37e1dd3e0a6c9e8869da45f9609cebbfae7e5e67240d66cbc1f0bd"
+    },
+    {
+      "ruta": "src/features/home/opiniones/Opiniones.astro",
+      "tipo": "archivo",
+      "bytes": 541,
+      "sha256": "45dc2a868c1e8bebbdf5d28f5183ce949334b92ad9836de7967600171941537f"
+    },
+    {
+      "ruta": "src/features/home/opiniones/Opiniones.module.css",
+      "tipo": "archivo",
+      "bytes": 260,
+      "sha256": "cea3f7a04395b0d9d9b85f63fa35dc9a12e789e8d3e72cca7bb3981d5e19ada2"
+    },
+    {
+      "ruta": "src/features/home/servicios/Servicios.astro",
+      "tipo": "archivo",
+      "bytes": 570,
+      "sha256": "9e1566016116cae4ca8c3a7f2749b8bbfea0c89a0d5b24afbf3b240aff6365cd"
+    },
+    {
+      "ruta": "src/features/home/servicios/Servicios.module.css",
+      "tipo": "archivo",
+      "bytes": 191,
+      "sha256": "2868e66930b277e896d6cc9773bda11ef04626c6828dc69b756280a6e28e4f5a"
+    },
+    {
+      "ruta": "src/features/products/provisional/Provisional.astro",
+      "tipo": "archivo",
+      "bytes": 600,
+      "sha256": "5b3b71a39765e18a0505db25e961669347b4c616eef493061d9deba90979bb84"
+    },
+    {
+      "ruta": "src/features/products/provisional/Provisional.module.css",
+      "tipo": "archivo",
+      "bytes": 177,
+      "sha256": "ed941577b69b4ac8f53f88bccf82fd94c33b9319f1e44d8d7048dfd1b1403bfb"
+    },
+    {
       "ruta": "src/layouts/BaseLayout.astro",
       "tipo": "archivo",
-      "bytes": 466,
-      "sha256": "ab65eb930ae2bdfd79d4a502f80e85b18f35f178524e05e633a13a4148fe4136"
+      "bytes": 776,
+      "sha256": "9df2096ec8c16542c92449ef6c8b07dcdb8c26fe67053ceb0cdda757814b7ca5"
     },
     {
       "ruta": "src/pages/index.astro",
       "tipo": "archivo",
-      "bytes": 127,
-      "sha256": "2163208512a17cb712f42a9bb9e8a1896d7e9e3cf0193450f68fd92484120b8b"
+      "bytes": 781,
+      "sha256": "daaf7b5699dd84d682a60dfef30805bc8321f62df2c86ab6e5a7f8beff408494"
+    },
+    {
+      "ruta": "src/pages/productos/index.astro",
+      "tipo": "archivo",
+      "bytes": 353,
+      "sha256": "e5c0c5c75e8376e213b6125ea62e94fe5498a56219af31515b2837105796b67c"
+    },
+    {
+      "ruta": "src/styles/global.css",
+      "tipo": "archivo",
+      "bytes": 1092,
+      "sha256": "594f9d78e2bd36442ac61b2ff16ce7d09f6c797a396f16cd45ed612fcde4e647"
     },
     {
       "ruta": "tsconfig.json",

@@ -1,0 +1,16 @@
+---
+import styles from "./Galeria.module.css";
+import ProvisionalNote from "@/components/ui/ProvisionalNote.astro";
+---
+
+<section id="galeria" class={styles.galeria} aria-labelledby="galeria-titulo">
+  <h2 id="galeria-titulo" class={styles.titulo}>
+    Galería
+  </h2>
+  <!-- Pendiente: material audiovisual/fotográfico real desde el VPS; no usar stock
+       como identidad definitiva. Contenedor preparado para la tira de Servicios a Productos. -->
+  <div class={styles.visor} aria-hidden="true"></div>
+  <ProvisionalNote>
+    Galería provisional · pendiente de material real
+  </ProvisionalNote>
+</section>
