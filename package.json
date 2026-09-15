@@ -12,7 +12,11 @@
     "preview": "astro preview",
     "format": "prettier . --write",
     "format:check": "prettier . --check",
-    "astro": "astro"
+    "astro": "astro",
+    "memoria:scan": "node scripts/memoria/cli.mjs scan",
+    "memoria:check": "node scripts/memoria/cli.mjs check",
+    "memoria:changes": "node scripts/memoria/cli.mjs changes",
+    "memoria:test": "node --test scripts/memoria/core.test.mjs"
   },
   "dependencies": {
     "astro": "^7.3.2"

@@ -1,0 +1,169 @@
+{
+  "schema": 1,
+  "metodo": "areas-declaradas-no-ast",
+  "areas": [
+    {
+      "id": "vision",
+      "prefijos": [
+        "PRODUCT.md"
+      ],
+      "documentos": [
+        "AGENTS.md",
+        "memoria/estado.json",
+        "memoria/integraciones.md",
+        "openspec/config.yaml"
+      ],
+      "archivos": [
+        "PRODUCT.md"
+      ]
+    },
+    {
+      "id": "arquitectura",
+      "prefijos": [
+        "src/",
+        "public/",
+        "astro.config.mjs",
+        "tsconfig.json"
+      ],
+      "documentos": [
+        "memoria/mapa.md",
+        "PRODUCT.md",
+        "memoria/estado.json"
+      ],
+      "archivos": [
+        "astro.config.mjs",
+        "public/favicon.ico",
+        "public/favicon.svg",
+        "src/layouts/BaseLayout.astro",
+        "src/pages/index.astro",
+        "tsconfig.json"
+      ]
+    },
+    {
+      "id": "herramientas",
+      "prefijos": [
+        "scripts/",
+        "package.json",
+        "package-lock.json",
+        ".nvmrc",
+        ".gitignore",
+        ".prettierignore"
+      ],
+      "documentos": [
+        "AGENTS.md",
+        "memoria/herramientas.md",
+        "memoria/mapa.md"
+      ],
+      "archivos": [
+        ".gitignore",
+        ".nvmrc",
+        ".prettierignore",
+        "package-lock.json",
+        "package.json",
+        "scripts/memoria/cli.mjs",
+        "scripts/memoria/core.mjs",
+        "scripts/memoria/core.test.mjs"
+      ]
+    },
+    {
+      "id": "agentes",
+      "prefijos": [
+        "AGENTS.md",
+        ".agents/",
+        ".opencode/",
+        "skills-lock.json",
+        "openspec/config.yaml"
+      ],
+      "documentos": [
+        "memoria/integraciones.md",
+        "PRODUCT.md",
+        "memoria/protocolo.md"
+      ],
+      "archivos": [
+        ".agents/skills/.openspec-target",
+        ".agents/skills/accessibility/SKILL.md",
+        ".agents/skills/accessibility/references/A11Y-PATTERNS.md",
+        ".agents/skills/accessibility/references/WCAG.md",
+        ".agents/skills/astro/SKILL.md",
+        ".agents/skills/frontend-design/LICENSE.txt",
+        ".agents/skills/frontend-design/SKILL.md",
+        ".agents/skills/gsap-core/SKILL.md",
+        ".agents/skills/gsap-frameworks/SKILL.md",
+        ".agents/skills/gsap-performance/SKILL.md",
+        ".agents/skills/gsap-plugins/SKILL.md",
+        ".agents/skills/gsap-scrolltrigger/SKILL.md",
+        ".agents/skills/gsap-timeline/SKILL.md",
+        ".agents/skills/gsap-utils/SKILL.md",
+        ".agents/skills/nodejs-backend-patterns/SKILL.md",
+        ".agents/skills/nodejs-backend-patterns/references/advanced-patterns.md",
+        ".agents/skills/nodejs-best-practices/SKILL.md",
+        ".agents/skills/openspec-apply-change/SKILL.md",
+        ".agents/skills/openspec-archive-change/SKILL.md",
+        ".agents/skills/openspec-explore/SKILL.md",
+        ".agents/skills/openspec-propose/SKILL.md",
+        ".agents/skills/openspec-sync-specs/SKILL.md",
+        ".agents/skills/openspec-update-change/SKILL.md",
+        ".agents/skills/seo/SKILL.md",
+        ".agents/skills/typescript-advanced-types/SKILL.md",
+        ".opencode/commands/opsx-apply.md",
+        ".opencode/commands/opsx-archive.md",
+        ".opencode/commands/opsx-explore.md",
+        ".opencode/commands/opsx-propose.md",
+        ".opencode/commands/opsx-sync.md",
+        ".opencode/commands/opsx-update.md",
+        ".opencode/skills/openspec-apply-change/SKILL.md",
+        ".opencode/skills/openspec-archive-change/SKILL.md",
+        ".opencode/skills/openspec-explore/SKILL.md",
+        ".opencode/skills/openspec-propose/SKILL.md",
+        ".opencode/skills/openspec-sync-specs/SKILL.md",
+        ".opencode/skills/openspec-update-change/SKILL.md",
+        "AGENTS.md",
+        "openspec/config.yaml",
+        "skills-lock.json"
+      ]
+    },
+    {
+      "id": "sdd",
+      "prefijos": [
+        "openspec/specs/",
+        "openspec/changes/"
+      ],
+      "documentos": [
+        "memoria/estado.json",
+        "memoria/mapa.md",
+        "memoria/integraciones.md"
+      ],
+      "archivos": [
+        "openspec/changes/archive/.gitkeep",
+        "openspec/specs/.gitkeep"
+      ]
+    },
+    {
+      "id": "memoria",
+      "prefijos": [
+        "memoria/"
+      ],
+      "documentos": [
+        "AGENTS.md",
+        "memoria/README.md",
+        "memoria/estado.json",
+        "memoria/protocolo.md"
+      ],
+      "archivos": [
+        "memoria/README.md",
+        "memoria/aplicacion.md",
+        "memoria/decisiones/DEC-001-continuidad-y-autoridad.md",
+        "memoria/estado.json",
+        "memoria/herramientas.md",
+        "memoria/integraciones.md",
+        "memoria/mapa.md",
+        "memoria/primer-commit.md",
+        "memoria/protocolo.md",
+        "memoria/relaciones.json",
+        "memoria/roadmap.md",
+        "memoria/sesiones/SES-001-preparacion.md",
+        "memoria/sesiones/SES-002-ensayo-local.md"
+      ]
+    }
+  ]
+}

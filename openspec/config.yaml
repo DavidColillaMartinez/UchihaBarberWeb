@@ -1,32 +1,48 @@
 schema: spec-driven
 
-# Project context (optional)
-# This is shown to AI when creating artifacts.
-# Add your tech stack, conventions, style guides, domain knowledge, etc.
-# Example:
-#   context: |
-#     Tech stack: TypeScript, React, Node.js
-#     We use conventional commits
-#     Domain: e-commerce platform
+context: |
+  Uchiha Barber: identidad para clientes actuales, español de España.
+  Astro estático, TypeScript estricto, CSS Modules por sección, npm y GSAP/ScrollTrigger.
+  Vercel para web; audiovisuales desde VPS existente. Catálogo JSON y fichas estáticas,
+  sin ecommerce ni base de datos. Versiones reales en package.json y package-lock.json.
+  Antes de trabajar leer AGENTS.md, PRODUCT.md, memoria/README.md,
+  memoria/protocolo.md, memoria/integraciones.md y memoria/estado.json en la raíz
+  seleccionada por la CLI. Leer el relevo y archivos pertinentes al cambio.
+  El usuario dirige el diseño; conocer la visión no autoriza a construirla.
+  No anticipar secciones ni inventar datos, assets, fuentes o integraciones.
+  Impeccable y otras skills asesoran dentro del alcance autorizado, no lo amplían.
+  Secciones en src/features/<pagina>/<seccion>/; compartidos en src/components/.
+  Consultar memoria:check y memoria:changes antes de regenerar el inventario.
+  Memoria registra roadmap y relevos; OpenSpec gobierna specs y tareas del cambio.
+  No duplicar tareas ni alterar artefactos generados para eludir el flujo.
+  Contexto y reglas no sustituyen los estados ni instrucciones de la CLI.
 
-# Per-artifact rules (optional)
-# Add custom rules for specific artifacts.
-# Example:
-#   rules:
-#     proposal:
-#       - Keep proposals under 500 words
-#       - Always include a "Non-goals" section
-#     tasks:
-#       - Break tasks into chunks of max 2 hours
+rules:
+  proposal:
+    - Referenciar el ID del roadmap y delimitar alcance autorizado y fuera de alcance.
+    - Separar hechos, decisiones del usuario, propuestas y cuestiones pendientes.
+    - Preparar artefactos no equivale a aprobación visual ni permiso de implementación.
+  specs:
+    - Especificar solo el alcance actual; mantener la visión pendiente en PRODUCT.md.
+    - Usar requisitos y escenarios verificables según el esquema devuelto por la CLI.
+    - Distinguir aceptación técnica y aprobación visual del usuario.
+  design:
+    - Leer PRODUCT.md y justificar decisiones técnicas preservando la composición solicitada.
+    - Identificar archivos, aislamiento CSS, accesibilidad, movimiento y coste audiovisual pertinentes.
+    - No convertir recomendaciones de Impeccable en decisiones visuales aprobadas.
+  tasks:
+    - Mantener aquí la lista detallada; el roadmap solo referencia el cambio.
+    - Incluir verificación proporcional y actualización de memoria, mapa y relevo afectados.
+    - No marcar como completado trabajo parcial, diferido o sin evidencia.
 
-# Per-operation guidance (optional)
-# Add advisory guidance for how apply and archive work should be conducted.
-# This is separate from artifact rules above.
-# Example:
-#   operations:
-#     apply:
-#       guidance:
-#         - Keep test summaries concise
-#     archive:
-#       guidance:
-#         - Summarize the archive outcome before finishing
+operations:
+  apply:
+    guidance:
+      - Seguir AGENTS.md y memoria/protocolo.md al iniciar y cerrar, dentro del alcance autorizado.
+      - Inspeccionar diferencias antes de memoria:scan; escanear no equivale a revisar.
+      - Registrar pruebas realmente ejecutadas; no afirmar aprobación visual automática.
+  archive:
+    guidance:
+      - Verificar tareas y sincronización de specs según la CLI antes de archivar.
+      - Actualizar en memoria la referencia al archivo y evidencia real, sin duplicar tareas.
+      - Archivar no autoriza la siguiente sección ni implica commit o push.

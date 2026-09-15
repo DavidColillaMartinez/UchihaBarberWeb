@@ -29,3 +29,14 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# Configuración privada de cada equipo y salidas locales
+*.local.*
+.codex/hooks.json
+.vercel/
+coverage/
+test-results/
+playwright-report/
+*.pem
+*.key
+.npmrc

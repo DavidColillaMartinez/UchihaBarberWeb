@@ -1,0 +1,116 @@
+{
+  "schema": 1,
+  "proyecto": "UchihaBarberWeb",
+  "faseActiva": "UB-002",
+  "ultimoRelevo": "memoria/sesiones/SES-002-ensayo-local.md",
+  "alcanceActual": "Aplicar y verificar las fases 1.5–2. No implementar la web todavía.",
+  "pendientesDeDecision": [
+    "Sessions: confirmar inclusión y ubicación.",
+    "Diseños y comportamientos definitivos se concretan por sección; ver PRODUCT.md."
+  ],
+  "fases": [
+    {
+      "id": "UB-001",
+      "titulo": "Fase 1.5: alinear reglas y herramientas",
+      "estado": "aprobada",
+      "dependeDe": [],
+      "autorizacion": "Petición directa de crear y modificar documentación/herramientas y entregar ZIP; primer commit/push delegado a OpenCode.",
+      "openspec": null,
+      "criterios": [
+        "Fuentes canónicas coherentes con PRODUCT y autoridad del usuario.",
+        "OpenCode confirma lectura y contexto efectivo de OpenSpec en el equipo local."
+      ],
+      "evidencias": [
+        "memoria/sesiones/SES-001-preparacion.md",
+        "memoria/sesiones/SES-002-ensayo-local.md"
+      ]
+    },
+    {
+      "id": "UB-002",
+      "titulo": "Fase 2: memoria y primer ensayo de continuidad",
+      "estado": "en_revision",
+      "dependeDe": ["UB-001"],
+      "autorizacion": "Petición directa de crear y modificar documentación/herramientas y entregar ZIP; primer commit/push delegado a OpenCode.",
+      "openspec": null,
+      "criterios": [
+        "Inventario determinista, detección de cambios y pruebas correctas.",
+        "Archivos personales fuera del índice sin borrarlos localmente.",
+        "OpenCode revisa cambios, deja relevo y verifica check antes y después del commit.",
+        "Commit y push reales confirmados; SHA incorporado en el siguiente relevo."
+      ],
+      "evidencias": [
+        "memoria/sesiones/SES-001-preparacion.md",
+        "memoria/sesiones/SES-002-ensayo-local.md"
+      ]
+    },
+    {
+      "id": "UB-003",
+      "titulo": "Esqueleto de inicio y enlace provisional a productos",
+      "estado": "pendiente",
+      "dependeDe": ["UB-002"],
+      "autorizacion": null,
+      "openspec": null,
+      "criterios": [
+        "El usuario autoriza y concreta el alcance del esqueleto y comportamiento general.",
+        "Inicio compone las secciones acordadas y acceso provisional a productos sin datos inventados.",
+        "Verificación técnica y revisión del usuario documentadas."
+      ],
+      "evidencias": []
+    },
+    {
+      "id": "UB-004",
+      "titulo": "Desarrollo individual de las secciones de inicio",
+      "estado": "pendiente",
+      "dependeDe": ["UB-003"],
+      "autorizacion": null,
+      "openspec": null,
+      "criterios": [
+        "El usuario define el turno y alcance de cada sección.",
+        "Aislamiento CSS, componentes compartidos y comportamiento acordado.",
+        "Cada sección se revisa y acepta antes de pasar a la siguiente."
+      ],
+      "evidencias": []
+    },
+    {
+      "id": "UB-005",
+      "titulo": "Catálogo y fichas estáticas de productos",
+      "estado": "pendiente",
+      "dependeDe": ["UB-004"],
+      "autorizacion": null,
+      "openspec": null,
+      "criterios": [
+        "Datos y alcance facilitados y validados por el usuario.",
+        "Escaparate y fichas estáticas sin funciones de venta.",
+        "Criterios visuales y técnicos concretados en su cambio, al llegar esta fase."
+      ],
+      "evidencias": []
+    },
+    {
+      "id": "UB-006",
+      "titulo": "Adaptación móvil",
+      "estado": "pendiente",
+      "dependeDe": ["UB-005"],
+      "autorizacion": null,
+      "openspec": null,
+      "criterios": [
+        "El usuario define adaptación fiel a las composiciones de escritorio.",
+        "Revisión táctil, teclado, movimiento y tamaños acordados."
+      ],
+      "evidencias": []
+    },
+    {
+      "id": "UB-007",
+      "titulo": "Material profesional y revisión final",
+      "estado": "pendiente",
+      "dependeDe": ["UB-006"],
+      "autorizacion": null,
+      "openspec": null,
+      "criterios": [
+        "Sustitución de demos autorizada y encuadres revisados.",
+        "Comprobaciones de contenido, enlaces, rendimiento y accesibilidad según alcance final.",
+        "Publicación de la web solo mediante autorización correspondiente."
+      ],
+      "evidencias": []
+    }
+  ]
+}

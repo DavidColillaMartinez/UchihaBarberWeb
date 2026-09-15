@@ -1,0 +1,66 @@
+{
+  "schema": 1,
+  "areas": [
+    {
+      "id": "vision",
+      "prefijos": ["PRODUCT.md"],
+      "documentos": [
+        "AGENTS.md",
+        "memoria/estado.json",
+        "memoria/integraciones.md",
+        "openspec/config.yaml"
+      ]
+    },
+    {
+      "id": "arquitectura",
+      "prefijos": ["src/", "public/", "astro.config.mjs", "tsconfig.json"],
+      "documentos": ["memoria/mapa.md", "PRODUCT.md", "memoria/estado.json"]
+    },
+    {
+      "id": "herramientas",
+      "prefijos": [
+        "scripts/",
+        "package.json",
+        "package-lock.json",
+        ".nvmrc",
+        ".gitignore",
+        ".prettierignore"
+      ],
+      "documentos": ["AGENTS.md", "memoria/herramientas.md", "memoria/mapa.md"]
+    },
+    {
+      "id": "agentes",
+      "prefijos": [
+        "AGENTS.md",
+        ".agents/",
+        ".opencode/",
+        "skills-lock.json",
+        "openspec/config.yaml"
+      ],
+      "documentos": [
+        "memoria/integraciones.md",
+        "PRODUCT.md",
+        "memoria/protocolo.md"
+      ]
+    },
+    {
+      "id": "sdd",
+      "prefijos": ["openspec/specs/", "openspec/changes/"],
+      "documentos": [
+        "memoria/estado.json",
+        "memoria/mapa.md",
+        "memoria/integraciones.md"
+      ]
+    },
+    {
+      "id": "memoria",
+      "prefijos": ["memoria/"],
+      "documentos": [
+        "AGENTS.md",
+        "memoria/README.md",
+        "memoria/estado.json",
+        "memoria/protocolo.md"
+      ]
+    }
+  ]
+}
