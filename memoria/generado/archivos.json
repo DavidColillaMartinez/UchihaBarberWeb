@@ -239,8 +239,8 @@
     {
       "ruta": ".prettierignore",
       "tipo": "archivo",
-      "bytes": 113,
-      "sha256": "845f8969dfbf8e5f3156380d908a549ccc541ad32a1d0844a1f49b24d17b3d40"
+      "bytes": 203,
+      "sha256": "e30319e1f85c6e84a7a77791dfdce1c68cc0aa1c63456b371268e31b734acbe3"
     },
     {
       "ruta": ".prettierrc",
