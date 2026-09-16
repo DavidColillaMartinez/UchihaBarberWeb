@@ -311,8 +311,8 @@
     {
       "ruta": "memoria/estado.json",
       "tipo": "archivo",
-      "bytes": 5916,
-      "sha256": "4d9a67fdb7b4c69173a246dee88971f148ce6175791866300e2574974655a0c1"
+      "bytes": 6315,
+      "sha256": "d3663bab0de83383b8d9c93c4fe43b323ef48c245ee1f3a3c6e3fa3b24b8a836"
     },
     {
       "ruta": "memoria/herramientas.md",
@@ -329,8 +329,8 @@
     {
       "ruta": "memoria/mapa.md",
       "tipo": "archivo",
-      "bytes": 5543,
-      "sha256": "e7267ede622474bf16f7e770a5df19a5fcc63287351071c2a0914a1d4a827146"
+      "bytes": 5784,
+      "sha256": "30bd8bef9507efd2ff3c9b43b03c91026eb40162a95fcb5e8cbe92f57429259c"
     },
     {
       "ruta": "memoria/primer-commit.md",
@@ -401,14 +401,20 @@
     {
       "ruta": "memoria/sesiones/SES-007-nav-scroll.md",
       "tipo": "archivo",
-      "bytes": 4262,
-      "sha256": "c850a86b4cd066a4dbb71bbe585304b49251d5a5f149b817d13abdb729af76b0"
+      "bytes": 5322,
+      "sha256": "c403e288a56a733846089ab7826135f55bbe7a6d2c6568d3e6662cc3d0a38a67"
     },
     {
       "ruta": "memoria/sesiones/SES-008-servicios.md",
       "tipo": "archivo",
       "bytes": 4220,
       "sha256": "b24d838d071e0d9806b582be13fcfa8a27816141a362fef6e3f9ef6880c16e0d"
+    },
+    {
+      "ruta": "memoria/sesiones/SES-009-intro-entrada.md",
+      "tipo": "archivo",
+      "bytes": 6521,
+      "sha256": "fc17edf1be4cdcb042938c78cb4bd81e1514936a2c373e9907abb5f78d8cc29a"
     },
     {
       "ruta": "openspec/changes/archive/.gitkeep",
@@ -569,14 +575,14 @@
     {
       "ruta": "src/components/navigation/SiteNav.astro",
       "tipo": "archivo",
-      "bytes": 2547,
-      "sha256": "82af736ac0798defa8df63d2218fc2358feec10709eb621c29c45acd335cf7ed"
+      "bytes": 4029,
+      "sha256": "bebb6506de3c3253cdc9ea017d6fa6dc34ffd15d5dc1d7fc43e6846a397d9cc4"
     },
     {
       "ruta": "src/components/navigation/SiteNav.module.css",
       "tipo": "archivo",
-      "bytes": 753,
-      "sha256": "408c2bf16044e6b413f589cd3e76470e3befc666382600e7bfdd87b94a5747df"
+      "bytes": 980,
+      "sha256": "557eee821cb5ba5114790373b9cf8d1cddfe1515c8cc7283e4fc57e819b86c86"
     },
     {
       "ruta": "src/components/ui/ProvisionalNote.astro",
@@ -611,8 +617,8 @@
     {
       "ruta": "src/features/home/cabecera/Cabecera.module.css",
       "tipo": "archivo",
-      "bytes": 1596,
-      "sha256": "b682ceb106e47e017467d48034fdf035c9a7131db9f23621d3ce7cfa8b3ee303"
+      "bytes": 1887,
+      "sha256": "8cf19881d0361070c418d20e1485e6532e40bd65e5a505f25beb0dd7d09fdba0"
     },
     {
       "ruta": "src/features/home/galeria/Galeria.astro",
@@ -637,6 +643,24 @@
       "tipo": "archivo",
       "bytes": 232,
       "sha256": "3bfe440f1a37e1dd3e0a6c9e8869da45f9609cebbfae7e5e67240d66cbc1f0bd"
+    },
+    {
+      "ruta": "src/features/home/intro/Intro.astro",
+      "tipo": "archivo",
+      "bytes": 986,
+      "sha256": "d9be29e0dab073c000071093677f5897ca81cbedab0a247c3b0cbbe84a7040e3"
+    },
+    {
+      "ruta": "src/features/home/intro/Intro.module.css",
+      "tipo": "archivo",
+      "bytes": 968,
+      "sha256": "13fbb7590b7b39e9e8b7f377a04c566592527213f55fb369ca74915df332915d"
+    },
+    {
+      "ruta": "src/features/home/intro/intro.ts",
+      "tipo": "archivo",
+      "bytes": 10683,
+      "sha256": "ffc2979ddd63a6a35ecd80c275bcf0f39d24671ff8c2a13dc09bd019d29ea28f"
     },
     {
       "ruta": "src/features/home/opiniones/Opiniones.astro",
@@ -677,14 +701,14 @@
     {
       "ruta": "src/layouts/BaseLayout.astro",
       "tipo": "archivo",
-      "bytes": 776,
-      "sha256": "9df2096ec8c16542c92449ef6c8b07dcdb8c26fe67053ceb0cdda757814b7ca5"
+      "bytes": 1803,
+      "sha256": "29aacb32f7587acebaa19002ac85f1747b10e10dbacf3d37ab300b2f2a45c73f"
     },
     {
       "ruta": "src/pages/index.astro",
       "tipo": "archivo",
-      "bytes": 847,
-      "sha256": "d10490c6270efc040d640bdc545636b8ee3dc92f0365e4337869bfa36b5bf019"
+      "bytes": 929,
+      "sha256": "520fe44a6fded7842ef88b0d4e132b70c86e54ee9e162a089b530f2f99f356ce"
     },
     {
       "ruta": "src/pages/index.module.css",

@@ -47,6 +47,9 @@
         "src/features/home/galeria/Galeria.module.css",
         "src/features/home/informacion/Informacion.astro",
         "src/features/home/informacion/Informacion.module.css",
+        "src/features/home/intro/Intro.astro",
+        "src/features/home/intro/Intro.module.css",
+        "src/features/home/intro/intro.ts",
         "src/features/home/opiniones/Opiniones.astro",
         "src/features/home/opiniones/Opiniones.module.css",
         "src/features/home/servicios/Servicios.astro",
@@ -205,7 +208,8 @@
         "memoria/sesiones/SES-006-aceptacion-esqueleto.md",
         "memoria/sesiones/SES-007-cabecera.md",
         "memoria/sesiones/SES-007-nav-scroll.md",
-        "memoria/sesiones/SES-008-servicios.md"
+        "memoria/sesiones/SES-008-servicios.md",
+        "memoria/sesiones/SES-009-intro-entrada.md"
       ]
     }
   ]

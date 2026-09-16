@@ -60,6 +60,52 @@ const anchor = (id: string) => (isHomePage ? `#${id}` : `/#${id}`);
     'nav[aria-label="Navegación principal"]',
   );
   if (nav) {
+    const UMBRAL_LUMINANCIA = 128;
+
+    /* Luminancia del fondo real bajo el nav, subiendo por los ancestros
+       hasta encontrar un color opaco. Evita depender del blend y funciona
+       igual sobre vídeo o fondos que cambien de color por sección. */
+    const fondoEsClaro = (elemento: Element | null): boolean => {
+      let actual: Element | null = elemento;
+      while (actual) {
+        const fondo = getComputedStyle(actual).backgroundColor;
+        const coincidencia = /rgba?\(([^)]+)\)/.exec(fondo);
+        if (coincidencia) {
+          const [r, g, b, a = "1"] = coincidencia[1]
+            .split(",")
+            .map((valor) => parseFloat(valor));
+          if (parseFloat(a) > 0.5) {
+            return 0.2126 * r + 0.7152 * g + 0.0722 * b > UMBRAL_LUMINANCIA;
+          }
+        }
+        actual = actual.parentElement;
+      }
+      return true;
+    };
+
+    const seccionBajoNav = (): Element | null => {
+      const contenedor = document.querySelector("main#contenido");
+      if (!contenedor) return null;
+      for (const hijo of Array.from(contenedor.children)) {
+        const caja = hijo.getBoundingClientRect();
+        if (caja.top <= 1 && caja.bottom > 1) return hijo;
+      }
+      return null;
+    };
+
+    const actualizarTema = () => {
+      nav.dataset.theme = fondoEsClaro(seccionBajoNav()) ? "light" : "dark";
+    };
+
+    actualizarTema();
+    window.addEventListener("resize", actualizarTema);
+    ScrollTrigger.create({
+      start: 0,
+      end: "max",
+      onUpdate: actualizarTema,
+      onRefresh: actualizarTema,
+    });
+
     const media = gsap.matchMedia();
 
     /* Movimiento reducido: el nav permanece siempre visible. */
@@ -91,10 +137,6 @@ const anchor = (id: string) => (isHomePage ? `#${id}` : `/#${id}`);
           }
         },
       });
-
-      return () => {
-        ScrollTrigger.getAll().forEach((t) => t.kill());
-      };
     });
   }
 </script>

@@ -3,10 +3,9 @@
   top: 0;
   left: 0;
   right: 0;
-  z-index: 50;
+  z-index: 100;
   display: flex;
   justify-content: center;
-  mix-blend-mode: difference;
 }
 
 .list {
@@ -19,20 +18,36 @@
   list-style: none;
 }
 
+.list li {
+  display: flex;
+}
+
 .list a {
+  display: flex;
+  align-items: center;
+  padding: 1.4rem 0.6rem;
   color: #fff;
   text-decoration: none;
-  padding: 1.5rem 0.5rem;
   transition:
     background-color 0.2s ease,
     color 0.2s ease;
 }
 
-/* El pill blanco + texto negro se invierten solos con el difference del nav:
-   sobre fondo claro queda pill oscuro con texto claro; sobre oscuro, al revés.
-   El bloque de hover arranca en el borde superior de la pantalla. */
+/* Tema oscuro (por defecto y pre-JS): letras blancas; al hover, inversión
+   sólida a fondo blanco con letras negras, como el CTA de la cabecera. */
 .list a:hover,
 .list a:focus-visible {
   background-color: #fff;
   color: #000;
+}
+
+/* Tema claro (secciones blancas): letras negras; al hover, fondo negro. */
+.nav[data-theme="light"] .list a {
+  color: #000;
+}
+
+.nav[data-theme="light"] .list a:hover,
+.nav[data-theme="light"] .list a:focus-visible {
+  background-color: #000;
+  color: #fff;
 }
