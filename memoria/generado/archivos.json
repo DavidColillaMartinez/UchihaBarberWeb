@@ -155,8 +155,14 @@
     {
       "ruta": ".gitignore",
       "tipo": "archivo",
-      "bytes": 516,
-      "sha256": "1adbd7d032c1787104482f229c6a0ed5cc63bc2fde12d674f5d13c3cb1e8ff14"
+      "bytes": 599,
+      "sha256": "15263373d800be7360308433c45ee0d8c3f34ff06864d619f7455c4146d724e8"
+    },
+    {
+      "ruta": ".impeccable/surfaces/src-features-home-cabecera-cabecera-astro.md",
+      "tipo": "archivo",
+      "bytes": 1148,
+      "sha256": "ff384d44b12e11ba4f665f1978cb5e4e184ce02d84c0e08401b290b8baf52706"
     },
     {
       "ruta": ".nvmrc",
@@ -299,8 +305,8 @@
     {
       "ruta": "memoria/estado.json",
       "tipo": "archivo",
-      "bytes": 4812,
-      "sha256": "4a2a9b7ac60d8616c04809dbe6753ec4b288d81a8b9e22ad5f7f2a2145d314a1"
+      "bytes": 5360,
+      "sha256": "278f445d9775977a5e24d0f4688944e16496a92c387d7f95ba37739f8fec3b2e"
     },
     {
       "ruta": "memoria/herramientas.md",
@@ -381,6 +387,18 @@
       "sha256": "8e00fb19203de03edb9beb5a1b50aef20c892f27778d88fb6245a564b35a435f"
     },
     {
+      "ruta": "memoria/sesiones/SES-007-cabecera.md",
+      "tipo": "archivo",
+      "bytes": 4512,
+      "sha256": "9b7f6b347044d61e754f0b5418175dad08296f8175198b6aea76fdb67d931b3c"
+    },
+    {
+      "ruta": "memoria/sesiones/SES-007-nav-scroll.md",
+      "tipo": "archivo",
+      "bytes": 3159,
+      "sha256": "fcb3f52d27cc50d71908ef273b950691d96f9b294d7c126995163cf67fcec4da"
+    },
+    {
       "ruta": "openspec/changes/archive/.gitkeep",
       "tipo": "archivo",
       "bytes": 0,
@@ -421,6 +439,42 @@
       "tipo": "archivo",
       "bytes": 3110,
       "sha256": "ead7f22f8252b112ea6526182e894de49dafc40532f50d539aaf2129f65e82c7"
+    },
+    {
+      "ruta": "openspec/changes/nav-scroll-inicio/.openspec.yaml",
+      "tipo": "archivo",
+      "bytes": 40,
+      "sha256": "50c36dfa766b2fc52e8a7d270b1d67cc487bcd95d1b4c8a5f929d62738e3c77e"
+    },
+    {
+      "ruta": "openspec/changes/nav-scroll-inicio/design.md",
+      "tipo": "archivo",
+      "bytes": 4720,
+      "sha256": "eefbcc0904fa34d84ecd578174a7c1b39eacedaf5a324000941bf0c73bc3b634"
+    },
+    {
+      "ruta": "openspec/changes/nav-scroll-inicio/proposal.md",
+      "tipo": "archivo",
+      "bytes": 2547,
+      "sha256": "bce527bb276f3294c82540a5f6bac2f829390b16e10ed9a3039fac354782bf7c"
+    },
+    {
+      "ruta": "openspec/changes/nav-scroll-inicio/specs/home-skeleton/spec.md",
+      "tipo": "archivo",
+      "bytes": 2560,
+      "sha256": "1350c70d8b5407d796dc0bddb3c3d01277a3017463b075455ea8656e9d497524"
+    },
+    {
+      "ruta": "openspec/changes/nav-scroll-inicio/specs/site-navigation/spec.md",
+      "tipo": "archivo",
+      "bytes": 2804,
+      "sha256": "7c6fd657f68ce2a070bb01cb735cee2b96be7b2217caef83dd196eda075b5d0c"
+    },
+    {
+      "ruta": "openspec/changes/nav-scroll-inicio/tasks.md",
+      "tipo": "archivo",
+      "bytes": 1753,
+      "sha256": "9444b27e744a5212b4bfe84d5bb46a1ffa4c11978598a7ba49165ccc0656c381"
     },
     {
       "ruta": "openspec/config.yaml",
@@ -471,6 +525,12 @@
       "sha256": "2d7a310283d6f9cc753210d83224cd6db6348cb82a5536348884e5831d46203f"
     },
     {
+      "ruta": "public/videos/Video_Head.mp4",
+      "tipo": "archivo",
+      "bytes": 7661458,
+      "sha256": "77559f6b854bf1134518b9bc6f99eada490a0a49cde76224ade7331317ab3a26"
+    },
+    {
       "ruta": "scripts/memoria/cli.mjs",
       "tipo": "archivo",
       "bytes": 629,
@@ -497,14 +557,14 @@
     {
       "ruta": "src/components/navigation/SiteNav.astro",
       "tipo": "archivo",
-      "bytes": 1322,
-      "sha256": "fd21153b04e79e74ba9ac122fc2a2bff523bc22b6db21b82b684d7afe3f14490"
+      "bytes": 2584,
+      "sha256": "4f274d246205aa5cde9cfa8df0d09a35eca5e7ca86e3411a8226dadb44027e25"
     },
     {
       "ruta": "src/components/navigation/SiteNav.module.css",
       "tipo": "archivo",
-      "bytes": 326,
-      "sha256": "4b613438465be7fff03b0de1f83bf568cebf0e824a58b8823601837763bb3533"
+      "bytes": 450,
+      "sha256": "2b193cf5bc0e0608269865c6c523dbc2ae74768c0ef1e11d20835de471e7aa44"
     },
     {
       "ruta": "src/components/ui/ProvisionalNote.astro",
@@ -533,14 +593,14 @@
     {
       "ruta": "src/features/home/cabecera/Cabecera.astro",
       "tipo": "archivo",
-      "bytes": 473,
-      "sha256": "74d04ab69a02558eefd11c830acac0f89488c1fb31f11b126cedd0c500437d4c"
+      "bytes": 1269,
+      "sha256": "13455fd6f758a4468ead976c61117595bc506fa0aa76a66ac2db5aa3711a7df2"
     },
     {
       "ruta": "src/features/home/cabecera/Cabecera.module.css",
       "tipo": "archivo",
-      "bytes": 151,
-      "sha256": "f6c0acb26616ada8200f8e897178f42b0374561f905f79ae7078a7f4c5e7ce6c"
+      "bytes": 1594,
+      "sha256": "5b3707fb31d7a4c98c318bc013764f5b40b820dc2897580e8d9d835a220030e3"
     },
     {
       "ruta": "src/features/home/galeria/Galeria.astro",
@@ -611,8 +671,14 @@
     {
       "ruta": "src/pages/index.astro",
       "tipo": "archivo",
-      "bytes": 781,
-      "sha256": "daaf7b5699dd84d682a60dfef30805bc8321f62df2c86ab6e5a7f8beff408494"
+      "bytes": 847,
+      "sha256": "d10490c6270efc040d640bdc545636b8ee3dc92f0365e4337869bfa36b5bf019"
+    },
+    {
+      "ruta": "src/pages/index.module.css",
+      "tipo": "archivo",
+      "bytes": 248,
+      "sha256": "fb603e030bdda0f73dccb2b11b477ca15108d6a5f8e7a17e544e52b4ca5f63df"
     },
     {
       "ruta": "src/pages/productos/index.astro",
@@ -623,8 +689,8 @@
     {
       "ruta": "src/styles/global.css",
       "tipo": "archivo",
-      "bytes": 1092,
-      "sha256": "594f9d78e2bd36442ac61b2ff16ce7d09f6c797a396f16cd45ed612fcde4e647"
+      "bytes": 1274,
+      "sha256": "66193d8db533bf349609bf173d8eaea12e2869715d371847e3436576c1bede4e"
     },
     {
       "ruta": "tsconfig.json",

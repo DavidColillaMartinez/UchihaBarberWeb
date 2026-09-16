@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import SiteNav from "@/components/navigation/SiteNav.astro";
+import styles from "./index.module.css";
 import Cabecera from "@/features/home/cabecera/Cabecera.astro";
 import Servicios from "@/features/home/servicios/Servicios.astro";
 import Galeria from "@/features/home/galeria/Galeria.astro";
@@ -11,7 +12,7 @@ import Informacion from "@/features/home/informacion/Informacion.astro";
 
 <BaseLayout title="Uchiha Barber">
   <SiteNav isHomePage currentPage="home" />
-  <main id="contenido">
+  <main id="contenido" class={styles.contenido}>
     <Cabecera />
     <Servicios />
     <Galeria />

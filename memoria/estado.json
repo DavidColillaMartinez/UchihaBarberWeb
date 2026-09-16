@@ -1,9 +1,9 @@
 {
   "schema": 1,
   "proyecto": "UchihaBarberWeb",
-  "faseActiva": "UB-003",
-  "ultimoRelevo": "memoria/sesiones/SES-006-aceptacion-esqueleto.md",
-  "alcanceActual": "UB-003 aprobada: esqueleto de inicio y productos implementado, aceptado y cambio archivado. UB-004 pendiente de instrucción del usuario para el diseño de la cabecera y el resto de secciones.",
+  "faseActiva": "UB-004",
+  "ultimoRelevo": "memoria/sesiones/SES-007-nav-scroll.md",
+  "alcanceActual": "UB-004 en curso, dos bloques paralelos: cabecera implementada con vídeo demo (SES-007-cabecera, sin commit) y nav fusionado + recorrido con ajuste por secciones (SES-007-nav-scroll, cambio nav-scroll-inicio). Ambos pendientes de aceptación visual; el resto de secciones espera su turno.",
   "pendientesDeDecision": [
     "Sessions: confirmar inclusión y ubicación.",
     "Diseños y comportamientos definitivos se concretan por sección; ver PRODUCT.md."
@@ -65,16 +65,19 @@
     {
       "id": "UB-004",
       "titulo": "Desarrollo individual de las secciones de inicio",
-      "estado": "pendiente",
+      "estado": "en_curso",
       "dependeDe": ["UB-003"],
-      "autorizacion": null,
-      "openspec": null,
+      "autorizacion": "Instrucción directa del usuario (SES-007): diseñar la cabecera, no tocar otras secciones, con hueco de vídeo preparado; turno 2 autorizado para integrar el vídeo demo desde ContenidoDemo. Bloque paralelo autorizado (SES-007-nav-scroll): nav fusionado y comportamiento de scroll de la index, sin tocar la cabecera.",
+      "openspec": "openspec/changes/nav-scroll-inicio/proposal.md",
       "criterios": [
         "El usuario define el turno y alcance de cada sección.",
         "Aislamiento CSS, componentes compartidos y comportamiento acordado.",
         "Cada sección se revisa y acepta antes de pasar a la siguiente."
       ],
-      "evidencias": []
+      "evidencias": [
+        "memoria/sesiones/SES-007-cabecera.md",
+        "memoria/sesiones/SES-007-nav-scroll.md"
+      ]
     },
     {
       "id": "UB-005",

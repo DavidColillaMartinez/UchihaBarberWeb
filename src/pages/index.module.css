@@ -1,0 +1,7 @@
+/* Composición de la página de inicio: las secciones son espacios de scroll
+   a pantalla completa y puntos de ajuste del snap. Sin estilos de sección. */
+.contenido > * {
+  min-height: 100vh;
+  min-height: 100svh;
+  scroll-snap-align: start;
+}

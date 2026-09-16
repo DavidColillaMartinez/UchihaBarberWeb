@@ -21,6 +21,12 @@ body {
   padding: 0;
 }
 
+/* Recorrido libre con ajuste por proximidad al límite de sección.
+   Los puntos de ajuste los definen las secciones de cada página. */
+html {
+  scroll-snap-type: y proximity;
+}
+
 body {
   background: var(--color-bg);
   color: var(--color-fg);

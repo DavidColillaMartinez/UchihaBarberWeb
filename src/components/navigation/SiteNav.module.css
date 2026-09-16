@@ -1,18 +1,26 @@
 .nav {
-  border-bottom: 1px solid var(--color-fg);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  display: flex;
+  justify-content: center;
+  mix-blend-mode: difference;
 }
 
 .list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 1rem 1.5rem;
   margin: 0;
-  padding: 1rem 1.5rem;
+  padding: 1.25rem 1.5rem;
   list-style: none;
 }
 
 .list a {
-  color: inherit;
+  color: #fff;
   text-decoration: none;
 }
 
