@@ -28,7 +28,8 @@
       "documentos": [
         "memoria/mapa.md",
         "PRODUCT.md",
-        "memoria/estado.json"
+        "memoria/estado.json",
+        "memoria/bloques.json"
       ],
       "archivos": [
         "astro.config.mjs",
@@ -93,7 +94,8 @@
       "documentos": [
         "AGENTS.md",
         "memoria/herramientas.md",
-        "memoria/mapa.md"
+        "memoria/mapa.md",
+        "memoria/cierre.md"
       ],
       "archivos": [
         ".gitignore",
@@ -102,8 +104,11 @@
         "package-lock.json",
         "package.json",
         "scripts/memoria/cli.mjs",
+        "scripts/memoria/coherencia.mjs",
+        "scripts/memoria/coherencia.test.mjs",
         "scripts/memoria/core.mjs",
-        "scripts/memoria/core.test.mjs"
+        "scripts/memoria/core.test.mjs",
+        "scripts/memoria/relevo.mjs"
       ]
     },
     {
@@ -118,7 +123,8 @@
       "documentos": [
         "memoria/integraciones.md",
         "PRODUCT.md",
-        "memoria/protocolo.md"
+        "memoria/protocolo.md",
+        "memoria/cierre.md"
       ],
       "archivos": [
         ".agents/skills/.openspec-target",
@@ -172,7 +178,8 @@
       "documentos": [
         "memoria/estado.json",
         "memoria/mapa.md",
-        "memoria/integraciones.md"
+        "memoria/integraciones.md",
+        "memoria/bloques.json"
       ],
       "archivos": [
         "openspec/changes/archive/.gitkeep",
@@ -204,6 +211,7 @@
         "openspec/specs/home-cabecera/spec.md",
         "openspec/specs/home-galeria/spec.md",
         "openspec/specs/home-intro/spec.md",
+        "openspec/specs/home-servicios/spec.md",
         "openspec/specs/home-skeleton/spec.md",
         "openspec/specs/products-page/spec.md",
         "openspec/specs/site-navigation/spec.md"
@@ -218,12 +226,16 @@
         "AGENTS.md",
         "memoria/README.md",
         "memoria/estado.json",
-        "memoria/protocolo.md"
+        "memoria/protocolo.md",
+        "memoria/bloques.json"
       ],
       "archivos": [
         "memoria/README.md",
         "memoria/aplicacion.md",
+        "memoria/bloques.json",
+        "memoria/cierre.md",
         "memoria/decisiones/DEC-001-continuidad-y-autoridad.md",
+        "memoria/decisiones/DEC-002-cierre-coherente.md",
         "memoria/estado.json",
         "memoria/herramientas.md",
         "memoria/integraciones.md",
@@ -231,6 +243,8 @@
         "memoria/primer-commit.md",
         "memoria/protocolo.md",
         "memoria/relaciones.json",
+        "memoria/relevos-legado.json",
+        "memoria/revision.json",
         "memoria/roadmap.md",
         "memoria/sesiones/SES-001-preparacion.md",
         "memoria/sesiones/SES-002-ensayo-local.md",
@@ -254,7 +268,9 @@
         "memoria/sesiones/SES-017-galeria-carrusel.md",
         "memoria/sesiones/SES-018-cierre-galeria.md",
         "memoria/sesiones/SES-019-archivo-galeria.md",
-        "memoria/sesiones/SES-020-validacion-visual.md"
+        "memoria/sesiones/SES-020-validacion-visual.md",
+        "memoria/sesiones/SES-021.md",
+        "memoria/sesiones/SES-022.md"
       ]
     }
   ]

@@ -1,0 +1,156 @@
+{
+  "schema": 1,
+  "bloques": [
+    {
+      "id": "navegacion",
+      "nombre": "Navegación",
+      "fase": "UB-004",
+      "estado": "aprobado",
+      "rutas": ["src/components/navigation/"],
+      "specs": [
+        "openspec/specs/site-navigation/spec.md",
+        "openspec/specs/home-skeleton/spec.md"
+      ],
+      "cambios": [
+        "openspec/changes/archive/2026-09-16-nav-scroll-inicio/proposal.md"
+      ],
+      "aceptacion": [
+        "memoria/sesiones/SES-007-nav-scroll.md",
+        "memoria/sesiones/SES-020-validacion-visual.md"
+      ],
+      "pendientes": [
+        "Material/familia definitiva según PRODUCT; aprobación actual limitada a la versión demo."
+      ]
+    },
+    {
+      "id": "cabecera",
+      "nombre": "Cabecera",
+      "fase": "UB-004",
+      "estado": "aprobado",
+      "rutas": ["src/features/home/cabecera/"],
+      "specs": ["openspec/specs/home-cabecera/spec.md"],
+      "cambios": [
+        "openspec/changes/archive/2026-09-16-cabecera-entrada-portada/proposal.md"
+      ],
+      "aceptacion": [
+        "memoria/sesiones/SES-010-cierre-cabecera.md",
+        "memoria/sesiones/SES-020-validacion-visual.md"
+      ],
+      "pendientes": [
+        "Material/familia definitiva según PRODUCT; aprobación actual limitada a la versión demo."
+      ]
+    },
+    {
+      "id": "entrada",
+      "nombre": "Cruce de entrada",
+      "fase": "UB-004",
+      "estado": "aprobado",
+      "rutas": ["src/features/home/intro/"],
+      "specs": ["openspec/specs/home-intro/spec.md"],
+      "cambios": [
+        "openspec/changes/archive/2026-09-16-cabecera-entrada-portada/proposal.md"
+      ],
+      "aceptacion": [
+        "memoria/sesiones/SES-010-cierre-cabecera.md",
+        "memoria/sesiones/SES-020-validacion-visual.md"
+      ],
+      "pendientes": [
+        "Material/familia definitiva según PRODUCT; aprobación actual limitada a la versión demo."
+      ]
+    },
+    {
+      "id": "servicios",
+      "nombre": "Servicios",
+      "fase": "UB-004",
+      "estado": "aprobado",
+      "rutas": ["src/features/home/servicios/"],
+      "specs": [
+        "openspec/specs/home-servicios/spec.md",
+        "openspec/specs/home-skeleton/spec.md"
+      ],
+      "cambios": [],
+      "aceptacion": [
+        "memoria/sesiones/SES-013-cierre-servicios.md",
+        "memoria/sesiones/SES-020-validacion-visual.md"
+      ],
+      "pendientes": [
+        "Material/familia definitiva según PRODUCT; aprobación actual limitada a la versión demo.",
+        "Validación de la consolidación documental home-servicios con la CLI local al aplicar esta entrega.",
+        "Elección definitiva de reproducción del vídeo; el bucle actual no responde al servicio."
+      ]
+    },
+    {
+      "id": "galeria",
+      "nombre": "Galería",
+      "fase": "UB-004",
+      "estado": "aprobado",
+      "rutas": ["src/features/home/galeria/"],
+      "specs": [
+        "openspec/specs/home-galeria/spec.md",
+        "openspec/specs/home-skeleton/spec.md"
+      ],
+      "cambios": [
+        "openspec/changes/archive/2026-09-16-home-galeria/proposal.md"
+      ],
+      "aceptacion": [
+        "memoria/sesiones/SES-018-cierre-galeria.md",
+        "memoria/sesiones/SES-020-validacion-visual.md"
+      ],
+      "pendientes": [
+        "Material/familia definitiva según PRODUCT; aprobación actual limitada a la versión demo."
+      ]
+    },
+    {
+      "id": "acceso-productos",
+      "nombre": "Acceso a Productos",
+      "fase": "UB-004",
+      "estado": "provisional",
+      "rutas": ["src/features/home/acceso-productos/"],
+      "specs": ["openspec/specs/home-skeleton/spec.md"],
+      "cambios": [],
+      "aceptacion": [],
+      "pendientes": [
+        "Desarrollo y aceptación pendientes del turno del usuario."
+      ]
+    },
+    {
+      "id": "opiniones",
+      "nombre": "Opiniones",
+      "fase": "UB-004",
+      "estado": "provisional",
+      "rutas": ["src/features/home/opiniones/"],
+      "specs": ["openspec/specs/home-skeleton/spec.md"],
+      "cambios": [],
+      "aceptacion": [],
+      "pendientes": [
+        "Desarrollo y aceptación pendientes del turno del usuario."
+      ]
+    },
+    {
+      "id": "informacion",
+      "nombre": "Información",
+      "fase": "UB-004",
+      "estado": "provisional",
+      "rutas": ["src/features/home/informacion/"],
+      "specs": ["openspec/specs/home-skeleton/spec.md"],
+      "cambios": [],
+      "aceptacion": [],
+      "pendientes": [
+        "Desarrollo y aceptación pendientes del turno del usuario."
+      ]
+    },
+    {
+      "id": "catalogo",
+      "nombre": "Catálogo y fichas",
+      "fase": "UB-005",
+      "estado": "provisional",
+      "rutas": ["src/features/products/"],
+      "specs": ["openspec/specs/products-page/spec.md"],
+      "cambios": [],
+      "aceptacion": [],
+      "pendientes": [
+        "Desarrollo y aceptación pendientes del turno del usuario."
+      ]
+    }
+  ]
+}

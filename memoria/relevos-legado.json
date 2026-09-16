@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "motivo": "Colisiones anteriores a esta corrección. Se conservan rutas históricas; no se permiten nuevos miembros en estos grupos.",
+  "duplicados": {
+    "007": [
+      "memoria/sesiones/SES-007-cabecera.md",
+      "memoria/sesiones/SES-007-nav-scroll.md"
+    ],
+    "010": [
+      "memoria/sesiones/SES-010-cierre-cabecera.md",
+      "memoria/sesiones/SES-010-servicios-ajustes-hover.md"
+    ],
+    "009": [
+      "memoria/sesiones/SES-009-intro-entrada.md",
+      "memoria/sesiones/SES-009-servicios-ajustes.md"
+    ]
+  }
+}

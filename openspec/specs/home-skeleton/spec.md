@@ -8,12 +8,12 @@ Estructura navegable y provisional de la página de inicio de Uchiha Barber: sec
 
 ### Requirement: Composición de secciones en orden acordado
 
-La página de inicio SHALL renderizar, en este orden, las secciones provisionales: navegación, cabecera de inicio, Servicios, Galería, acceso a Productos, Opiniones e Información. Cada sección SHALL ser identificable de forma independiente para permitir su revisión de orden y estructura, con una presentación provisional mínima que no aparente diseño definitivo. Como espacio de recorrido, cada sección SHALL ocupar la altura del viewport (estructura general de la página, independiente de su contenido definitivo).
+La página de inicio SHALL renderizar, en este orden, las secciones: navegación, cabecera de inicio, Servicios, Galería, acceso a Productos, Opiniones e Información. Cada sección SHALL ser identificable de forma independiente. Las secciones aún no desarrolladas SHALL conservar una presentación provisional; las desarrolladas SHALL seguir sus specs propias y las decisiones aceptadas. Como espacio de recorrido, cada sección SHALL ocupar la altura del viewport (estructura general de la página, independiente de su contenido definitivo).
 
 #### Scenario: Carga de la página de inicio
 
 - **WHEN** se solicita `/` en una compilación válida
-- **THEN** la respuesta contiene, en el orden indicado, un contenedor por sección con su denominación reconocible y presentación provisional
+- **THEN** la respuesta contiene, en el orden indicado, un contenedor por sección con su denominación reconocible y la presentación vigente de cada bloque
 
 #### Scenario: Sin datos reales disponibles
 
@@ -23,7 +23,7 @@ La página de inicio SHALL renderizar, en este orden, las secciones provisionale
 #### Scenario: Espacio de viewport
 
 - **WHEN** se revisa la estructura de las secciones de inicio
-- **THEN** cada sección ocupa como mínimo la altura del viewport sin que su contenido definitivo esté maquetado
+- **THEN** cada sección ocupa como mínimo la altura del viewport respetando la composición vigente y permitiendo crecimiento por contenido
 
 ### Requirement: Navegación y enlaces internos funcionales
 
@@ -73,7 +73,7 @@ Cada sección SHALL llevar sus estilos en un CSS Module propio dentro de su carp
 
 ### Requirement: Recorrido con ajuste por sección
 
-El scroll de la página SHALL permanecer libre, y al aproximarse al límite de una sección la página SHALL ajustar (snap por proximidad) la vista al punto de alineación de esa sección, con su inicio anclado a la parte superior del viewport como en el salto de las anclas. La Galería SHALL encajarse como el resto del recorrido; la excepción prevista de ajuste centrado tipo banner queda descartada: su contenido se desarrolló como carrusel continuo con snap (cambio `home-galeria`).
+El scroll de la página SHALL permanecer libre, y al aproximarse al límite de una sección la página SHALL ajustar (snap por proximidad) la vista al punto de alineación de esa sección cuando tenga snap habilitado, con su inicio anclado a la parte superior del viewport como en el salto de las anclas. Servicios MUST NOT aplicar snap de sección: el despliegue de sus filas no debe provocar reajustes de página (véase `home-servicios`). La Galería SHALL encajarse como el resto del recorrido; la excepción prevista de ajuste centrado tipo banner queda descartada: su contenido se desarrolló como carrusel continuo con snap (cambio `home-galeria`).
 
 #### Scenario: Scroll libre
 
@@ -82,15 +82,20 @@ El scroll de la página SHALL permanecer libre, y al aproximarse al límite de u
 
 #### Scenario: Ajuste al límite de sección
 
-- **WHEN** el scroll se aproxima al límite entre dos secciones
+- **WHEN** el scroll se aproxima al punto de ajuste de una sección con snap habilitado
 - **THEN** la vista se asienta con el inicio de la sección siguiente anclado a la parte superior, igual que el salto por ancla
 
 #### Scenario: Coherencia con las anclas
 
 - **WHEN** se activa un enlace de navegación hacia una sección
-- **THEN** el punto de llegada coincide con el punto de ajuste del snap de esa sección
+- **THEN** el punto de llegada coincide con el punto de ajuste para las secciones con snap; el ancla de Servicios llega a su inicio sin habilitar snap
 
 #### Scenario: Galería en el recorrido
 
 - **WHEN** el recorrido alcanza la Galería, ya desarrollada como carrusel continuo
 - **THEN** la sección se encaja igual que el resto y no aplica excepción de ajuste
+
+#### Scenario: Excepción de Servicios
+
+- **WHEN** se recorre Servicios o cambia la altura de sus filas
+- **THEN** la sección no introduce ajuste de snap ni anclaje de scroll por ese crecimiento, manteniendo la excepción aprobada sin alterar el snap de Galería

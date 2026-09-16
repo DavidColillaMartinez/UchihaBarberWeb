@@ -14,7 +14,7 @@ Los comandos `/opsx-*` están en `.opencode/commands/`; hay skills OpenSpec en `
 4. Verificar tareas y actualizar memoria/relevo. Las tareas viven solo en OpenSpec; marcar casillas cuando se complete su comportamiento.
 5. Sincronizar specs y archivar mediante sus flujos cuando proceda; actualizar referencias al archivo. No reemplazar specs consolidadas por un delta ni archivar trabajo parcial para silenciarlo.
 
-Concretar criterios de una sección al llegar su turno; no diseñarlas todas ahora. Esta entrega es mantenimiento directo autorizado de documentación/herramientas: no se ha fabricado un historial OpenSpec. La prueba local es el primer ensayo real de la conexión.
+Concretar criterios al llegar el turno de cada sección. El esqueleto completó el primer ciclo real de OpenSpec. El mantenimiento documental directo debe identificarse como tal, sin inventar un cambio previo; no dar por terminado un bloque si sus specs vigentes contradicen decisiones aprobadas.
 
 ## Impeccable
 
@@ -24,6 +24,12 @@ El original contiene consentimiento local y hooks de Codex con rutas de máquina
 
 ## Prueba local
 
-Confirmado en el equipo del usuario: la CLI 1.13.0 resuelve la raíz correcta; las instrucciones de artefactos incorporan el `context` del `config.yaml`; y el primer cambio real completó el ciclo `apply`/`archive` con specs consolidadas (`home-skeleton`, `products-page`), ver SES-006. No declarar probado Impeccable: no se ha ejecutado.
+Confirmado en el equipo del usuario: la CLI 1.13.0 resuelve la raíz correcta; las instrucciones de artefactos incorporan el `context` del `config.yaml`; y el primer cambio real completó el ciclo `apply`/`archive` con specs consolidadas (`home-skeleton`, `products-page`), ver SES-006. Los relevos de Servicios y Galería registran ejecuciones del detector mecánico de Impeccable sin hallazgos. Esa evidencia se limita a las ejecuciones allí indicadas; no sustituye revisión visual ni demuestra disponibilidad en otro equipo.
 
 No se añaden hooks ni otra configuración de proveedor: se evita duplicar reglas y modificar consentimientos. Si una herramienta no carga AGENTS, pedir expresamente su lectura y la del índice de memoria.
+
+## Coherencia al cerrar y retomar
+
+Aplicar `memoria/cierre.md` y consultar `memoria/bloques.json` en cada bloque, también tras compactar. Antes de declarar terminado un bloque, contrastar decisiones vigentes, implementación, PRODUCT, mapa, specs y evidencia de aceptación. Registrar el relevo y la revisión real; después escanear y comprobar. Los hashes del inventario no sustituyen esa revisión.
+
+La aprobación visual y el cierre documental son hechos separados: conservar una aprobación recibida aunque falte consolidar documentación, pero registrar ese pendiente y no presentar el bloque como completamente cerrado. El registro por bloques referencia las tareas de OpenSpec, no las copia. Los identificadores los gestiona la IA sin pedir al usuario que los memorice.

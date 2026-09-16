@@ -14,9 +14,12 @@
     "format:check": "prettier . --check",
     "astro": "astro",
     "memoria:scan": "node scripts/memoria/cli.mjs scan",
-    "memoria:check": "node scripts/memoria/cli.mjs check",
+    "memoria:check": "node scripts/memoria/cli.mjs check && node scripts/memoria/coherencia.mjs check",
     "memoria:changes": "node scripts/memoria/cli.mjs changes",
-    "memoria:test": "node --test scripts/memoria/core.test.mjs"
+    "memoria:test": "node --test scripts/memoria/core.test.mjs scripts/memoria/coherencia.test.mjs",
+    "memoria:coherencia": "node scripts/memoria/coherencia.mjs check",
+    "memoria:revision": "node scripts/memoria/coherencia.mjs registrar",
+    "memoria:relevo": "node scripts/memoria/relevo.mjs"
   },
   "dependencies": {
     "astro": "^7.3.2"

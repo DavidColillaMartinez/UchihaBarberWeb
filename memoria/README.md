@@ -35,3 +35,7 @@ No se crea un `DESIGN.md` global que duplique `PRODUCT.md`. El `design.md` de ca
 Scripts Node estándar, sin dependencias ni hooks. `scan` escribe solo `generado/`; `check` y `changes` son de lectura. Ninguno modifica Git. El protocolo depende de que cada IA lo siga; no es un bloqueo de seguridad ni una sincronización automática. Para una IA que no carga AGENTS, adjuntar estos documentos y pedir su lectura.
 
 El mapa de dependencias es declarado por áreas, no un análisis AST. Los hashes detectan cambios de bytes, no corrección semántica. La primera ejecución de OpenCode, la compatibilidad de la CLI OpenSpec y el ciclo completo `apply`/`archive` de un cambio real están confirmados en el equipo local.
+
+## Control de coherencia
+
+Consultar `bloques.json` para el estado y las fuentes de cada sección y `cierre.md` para el procedimiento. `revision.json` vincula la última revisión declarada a una huella de código y documentación; `memoria:check` comprueba también ese registro. Crear relevos mediante `memoria:relevo`: `relevos-legado.json` conserva únicamente las colisiones históricas conocidas. Estos controles detectan ausencias y cambios pendientes de revisar; no comprenden automáticamente las decisiones de diseño.

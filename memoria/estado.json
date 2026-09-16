@@ -2,8 +2,8 @@
   "schema": 1,
   "proyecto": "UchihaBarberWeb",
   "faseActiva": "UB-004",
-  "ultimoRelevo": "memoria/sesiones/SES-020-validacion-visual.md",
-  "alcanceActual": "UB-004 en curso con los bloques de cabecera, cruce de entrada, nav + recorrido, Servicios y Galería desarrollados, publicados (HEAD 25fdb47) y con la revisión visual validada por el responsable (SES-020). Pendientes de su turno dentro de UB-004: acceso a Productos, Opiniones e Información; Sessions sin confirmar. La página provisional /productos espera la fase del catálogo (UB-005).",
+  "ultimoRelevo": "memoria/sesiones/SES-022.md",
+  "alcanceActual": "Parche de coherencia documental y controles de cierre aplicado con los recursos locales; cinco bloques demo (cabecera, entrada, navegación, Servicios, Galería) aprobados. Acceso a Productos, Opiniones e Información pendientes de turno; catálogo y Sessions sin confirmar. Estado por bloque en memoria/bloques.json; el cierre debe seguir memoria/cierre.md.",
   "pendientesDeDecision": [
     "Sessions: confirmar inclusión y ubicación.",
     "Familia tipográfica definitiva: Inter (titulares) y Archivo (interfaz) adoptadas de forma provisional por indicación del responsable, a falta del visto bueno del cliente (supreme/off-white/apple); el reparto por elemento se concreta en cada sección.",
@@ -69,7 +69,7 @@
       "estado": "en_curso",
       "dependeDe": ["UB-003"],
       "autorizacion": "Instrucción directa del usuario (SES-007): diseñar la cabecera, no tocar otras secciones, con hueco de vídeo preparado; turno 2 autorizado para integrar el vídeo demo desde ContenidoDemo; turno 3 autorizado para centrar el h1 y reducirlo un 15%. Bloque paralelo autorizado (SES-007-nav-scroll): nav fusionado y comportamiento de scroll de la index, sin tocar la cabecera. Turno autorizado (SES-008): primer diseño de la sección Servicios con Impeccable, escritura solo dentro de servicios; datos reales de servicios tomados de la página pública de Yeasy por indicación del usuario. Turno autorizado (SES-009): implementar el cruce de entrada en la web según el prototipo aprobado, revisando las integraciones en curso para no romperlas; y turno 2 autorizado para que el cruce se repita en cada carga en lugar de una vez por sesión. Turno autorizado (SES-012): primer diseño de la Galería con la tira de los 12 clips de ContenidoDemo (sin Video_Head), movimiento ligado al scroll, altura ~35–40 % y transición de fondo 50 % reversible; copia de los vídeos a public/videos confirmada por el responsable. Turno autorizado (SES-014): ronda 2 de Galería —navegación de la tira con flechas en los extremos (8 % de ancho, altura completa), vidrio con chevron tenue en reposo, hover blanco semitransparente, aparición fundida al entrar la sección y paso de un panel por clic manteniendo el scrub como fuente de verdad; decisiones confirmadas (tenue siempre, un panel). Turno autorizado (SES-017): ronda 4 — reformulación del carrusel según el responsable: snap de página en la Galería, movimiento lateral activado por el scroll de entrada/salida y por dos flechas que mueven solo el carrusel, continuidad sin saltos al alternar y noria circular por ambos extremos.",
-      "openspec": "openspec/changes/archive/2026-09-16-nav-scroll-inicio/proposal.md",
+      "openspec": null,
       "criterios": [
         "El usuario define el turno y alcance de cada sección.",
         "Aislamiento CSS, componentes compartidos y comportamiento acordado.",
@@ -92,9 +92,11 @@
         "memoria/sesiones/SES-016-galeria-snap.md",
         "memoria/sesiones/SES-019-archivo-galeria.md",
         "memoria/sesiones/SES-018-cierre-galeria.md",
-        "memoria/sesiones/SES-019-archivo-galeria.md",
-        "memoria/sesiones/SES-020-validacion-visual.md"
-      ]
+        "memoria/sesiones/SES-020-validacion-visual.md",
+        "memoria/sesiones/SES-021.md",
+        "memoria/sesiones/SES-022.md"
+      ],
+      "notaOpenSpec": "Esta fase agrupa varios bloques: consultar sus referencias individuales en memoria/bloques.json."
     },
     {
       "id": "UB-005",

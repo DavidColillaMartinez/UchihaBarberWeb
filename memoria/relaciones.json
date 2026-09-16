@@ -14,7 +14,12 @@
     {
       "id": "arquitectura",
       "prefijos": ["src/", "public/", "astro.config.mjs", "tsconfig.json"],
-      "documentos": ["memoria/mapa.md", "PRODUCT.md", "memoria/estado.json"]
+      "documentos": [
+        "memoria/mapa.md",
+        "PRODUCT.md",
+        "memoria/estado.json",
+        "memoria/bloques.json"
+      ]
     },
     {
       "id": "herramientas",
@@ -26,7 +31,12 @@
         ".gitignore",
         ".prettierignore"
       ],
-      "documentos": ["AGENTS.md", "memoria/herramientas.md", "memoria/mapa.md"]
+      "documentos": [
+        "AGENTS.md",
+        "memoria/herramientas.md",
+        "memoria/mapa.md",
+        "memoria/cierre.md"
+      ]
     },
     {
       "id": "agentes",
@@ -40,7 +50,8 @@
       "documentos": [
         "memoria/integraciones.md",
         "PRODUCT.md",
-        "memoria/protocolo.md"
+        "memoria/protocolo.md",
+        "memoria/cierre.md"
       ]
     },
     {
@@ -49,7 +60,8 @@
       "documentos": [
         "memoria/estado.json",
         "memoria/mapa.md",
-        "memoria/integraciones.md"
+        "memoria/integraciones.md",
+        "memoria/bloques.json"
       ]
     },
     {
@@ -59,7 +71,8 @@
         "AGENTS.md",
         "memoria/README.md",
         "memoria/estado.json",
-        "memoria/protocolo.md"
+        "memoria/protocolo.md",
+        "memoria/bloques.json"
       ]
     }
   ]

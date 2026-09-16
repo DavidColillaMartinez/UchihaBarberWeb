@@ -18,3 +18,15 @@ Las relaciones por área se editan en `memoria/relaciones.json`. Los prefijos ac
 El validador detecta IDs/estados inválidos, múltiples fases en curso, dependencias inexistentes/cíclicas, falta de referencias y cierta ausencia de evidencia declarada. No interpreta si la evidencia demuestra de verdad los criterios: eso corresponde a la revisión. Tampoco comprueba la versión instalada de OpenSpec, imports ni el remoto.
 
 El escaneo usa el árbol de trabajo; no sustituye `git diff --cached` ni asegura que todo esté incluido en el commit. Archivos nuevos deben añadirse explícitamente al índice al publicar. Tras merge/rebase o cambio de finales de línea, revisar divergencias y regenerar si procede, sin falsear la procedencia.
+
+## Coherencia y relevos
+
+`memoria:check` ahora ejecuta primero el inventario y después `memoria:coherencia`. Este segundo control valida `bloques.json`, las referencias, los duplicados y `revision.json`. Salida 0 indica una revisión registrada para la versión actual; 1 indica cambios posteriores a revisar; 2 indica estructura inválida o datos ausentes. No interpreta el significado del contenido.
+
+`memoria:relevo -- "Nombre"` crea exclusivamente el siguiente `SES-NNN.md` disponible como borrador, sin cambiar estado ni revisión. Completarlo antes de enlazarlo como relevo vigente. La creación exclusiva evita colisiones entre llamadas en la misma carpeta; entre ramas diferentes la integración sigue requiriendo resolverlas.
+
+`memoria:revision -- --relevo <ruta> --resumen "Contraste realizado"` registra la declaración del agente y la huella del código/documentación después de su revisión real. Exige el último relevo y no acepta un borrador recién creado. No aprueba fases, no consolida specs y no renueva el inventario. Escanear tampoco modifica la revisión: son controles distintos. Ver `cierre.md`.
+
+Las pruebas incluyen cambios tras la revisión, specs/aceptación ausentes, secciones sin registrar, duplicados, referencias inseguras y creación concurrente de relevos. No se añaden dependencias. `public/` se mantiene en el inventario general; la huella de revisión cubre archivos textuales de trabajo, no valida el contenido audiovisual.
+
+`memoria/revision.json` se genera con formato determinista y está excluida de Prettier; permanece versionada. No editar su huella manualmente.

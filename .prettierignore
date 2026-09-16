@@ -10,3 +10,6 @@ memoria/generado/
 # Skills y comandos generados por sus herramientas (no se formatean)
 .agents/
 .opencode/
+
+# Registro de revisión generado con formato determinista
+memoria/revision.json

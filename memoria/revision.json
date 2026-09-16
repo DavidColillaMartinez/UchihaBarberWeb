@@ -1,1062 +1,637 @@
 {
   "schema": 1,
-  "algoritmo": "sha256-bytes",
+  "relevo": "memoria/sesiones/SES-022.md",
+  "resumen": "Contrastados código,PRODUCT,mapa,specs y bloques: parche aplicado,spec home-servicios consolidada y excepción de Servicios reflejada en las fuentes.",
+  "alcance": "codigo-y-documentacion-no-aprobacion-visual",
   "archivos": [
     {
       "ruta": ".agents/skills/.openspec-target",
-      "tipo": "archivo",
-      "bytes": 7,
       "sha256": "38700dfad5711976e2f7aeab31013f04aed8c83118a1ef892f6d23bdfe944602"
     },
     {
       "ruta": ".agents/skills/accessibility/SKILL.md",
-      "tipo": "archivo",
-      "bytes": 12321,
       "sha256": "65021e9ccab70165539db82070257d4e2e2c7d7b0f857825299da2e4a7a8704c"
     },
     {
       "ruta": ".agents/skills/accessibility/references/A11Y-PATTERNS.md",
-      "tipo": "archivo",
-      "bytes": 6036,
       "sha256": "f10e238dd4dd3c4f51134c2056bc02d3dd4f8fb6ccc9145c2c1ba7aab4d58140"
     },
     {
       "ruta": ".agents/skills/accessibility/references/WCAG.md",
-      "tipo": "archivo",
-      "bytes": 9079,
       "sha256": "16683e025e3833d931c9d880645d98a448827f97e10189b6c8f12c832e7a2361"
     },
     {
       "ruta": ".agents/skills/astro/SKILL.md",
-      "tipo": "archivo",
-      "bytes": 4138,
       "sha256": "64b0cfb9774b1dae0c7c86cc186508822588f903e8d6165ddd4e699e1c2710a8"
     },
     {
       "ruta": ".agents/skills/frontend-design/LICENSE.txt",
-      "tipo": "archivo",
-      "bytes": 10174,
       "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
     },
     {
       "ruta": ".agents/skills/frontend-design/SKILL.md",
-      "tipo": "archivo",
-      "bytes": 4440,
       "sha256": "b81e2ff87ed8fa4d6c377ccb127a7254c9e6a77e3ae94f21e6b514f7bb2945a0"
     },
     {
       "ruta": ".agents/skills/gsap-core/SKILL.md",
-      "tipo": "archivo",
-      "bytes": 14792,
       "sha256": "3887b47e050ab5afbe2a9a820f23d39fa02ab785e06a343be44c6f91d84d12b3"
     },
     {
       "ruta": ".agents/skills/gsap-frameworks/SKILL.md",
-      "tipo": "archivo",
-      "bytes": 10621,
       "sha256": "842d9d3659ec3ddc8abbdc524708f8facf81f468ac25d0577f48c759c4fa31e6"
     },
     {
       "ruta": ".agents/skills/gsap-performance/SKILL.md",
-      "tipo": "archivo",
-      "bytes": 4139,
       "sha256": "cb5408d6fba707aabcbfe3320317a14c1f8fca6070074e5261047930f50d441e"
     },
     {
       "ruta": ".agents/skills/gsap-plugins/SKILL.md",
-      "tipo": "archivo",
-      "bytes": 21579,
       "sha256": "5838b856c74c07fbc9fa99b6dfd1eee34ea554c3e530c30e0d58014b707d70a4"
     },
     {
       "ruta": ".agents/skills/gsap-scrolltrigger/SKILL.md",
-      "tipo": "archivo",
-      "bytes": 18390,
       "sha256": "9351b6666a4749c0740406ea363aaccb99a087ff45cc5e8b99a0f367facf3ef4"
     },
     {
       "ruta": ".agents/skills/gsap-timeline/SKILL.md",
-      "tipo": "archivo",
-      "bytes": 4394,
       "sha256": "1a8b0f39cc4be3ed3d834b89672e4ae2f151b901dc3450bebf10bbc45379fe02"
     },
     {
       "ruta": ".agents/skills/gsap-utils/SKILL.md",
-      "tipo": "archivo",
-      "bytes": 12093,
       "sha256": "1927bcc4ea95b38203404ad5ea1d060b15c4a886c65ae53e885ff1793aabe0ba"
     },
     {
       "ruta": ".agents/skills/nodejs-backend-patterns/SKILL.md",
-      "tipo": "archivo",
-      "bytes": 16802,
       "sha256": "bfa843d97934e8a44686575219825ac21009949b684bf59a96d82b23ca75ec86"
     },
     {
       "ruta": ".agents/skills/nodejs-backend-patterns/references/advanced-patterns.md",
-      "tipo": "archivo",
-      "bytes": 9405,
       "sha256": "f5f0036b4990badcd241263298b4f9ef3d358d94e3db5d08307d5b80369ed584"
     },
     {
       "ruta": ".agents/skills/nodejs-best-practices/SKILL.md",
-      "tipo": "archivo",
-      "bytes": 8772,
       "sha256": "555466f9a68554c1d965f0fbf9b335cf4fa37fff4bce46145a3781a17fc2a17f"
     },
     {
       "ruta": ".agents/skills/openspec-apply-change/SKILL.md",
-      "tipo": "archivo",
-      "bytes": 8222,
       "sha256": "0a948dcdbded11b9e7b2101cc16fca2f5da9c83dfa62ec6593743993d8c9398c"
     },
     {
       "ruta": ".agents/skills/openspec-archive-change/SKILL.md",
-      "tipo": "archivo",
-      "bytes": 10680,
       "sha256": "c9fefae73635876634432270b57ffdcdd24d0f8aa727d12f1a03c81603d8204c"
     },
     {
       "ruta": ".agents/skills/openspec-explore/SKILL.md",
-      "tipo": "archivo",
-      "bytes": 19325,
       "sha256": "c46c348c91cba294474e8ea9121976ccd38a476a435284e12d4017c22d425b0c"
     },
     {
       "ruta": ".agents/skills/openspec-propose/SKILL.md",
-      "tipo": "archivo",
-      "bytes": 14022,
       "sha256": "16aca75376b079b26764e845625555f9db0f15a1b8aee2dbc1fb2d8951cd4ef7"
     },
     {
       "ruta": ".agents/skills/openspec-sync-specs/SKILL.md",
-      "tipo": "archivo",
-      "bytes": 12507,
       "sha256": "b2ab0a3e06c41ea32e2e8fba9c37320f65c993d17bdc9a9ac344b75c38c41a6f"
     },
     {
       "ruta": ".agents/skills/openspec-update-change/SKILL.md",
-      "tipo": "archivo",
-      "bytes": 6949,
       "sha256": "ebac1f0f3bc965a7c216e65c0b7ec653bb5e9762d762512a0cbf0be4c1f50aec"
     },
     {
       "ruta": ".agents/skills/seo/SKILL.md",
-      "tipo": "archivo",
-      "bytes": 11251,
       "sha256": "f3e546112a3168515486c533d13156a1d4dcd9402f3d116730cef573a20e2804"
     },
     {
       "ruta": ".agents/skills/typescript-advanced-types/SKILL.md",
-      "tipo": "archivo",
-      "bytes": 16806,
       "sha256": "c142f64de35a7c7518e62d4a5c5b18800bbe4391be14ba45a5d049adfcf01c57"
     },
     {
       "ruta": ".gitignore",
-      "tipo": "archivo",
-      "bytes": 693,
       "sha256": "49ae30d9f781b7fa6c7df7e0cfa0ecbe5b303b53864fe53a9a0dbbeeb8477fa4"
     },
     {
       "ruta": ".nvmrc",
-      "tipo": "archivo",
-      "bytes": 8,
       "sha256": "ccb4022e91abb8575a29d306d7aff041f578bb86eb1180d69475bb86a5c4512c"
     },
     {
       "ruta": ".opencode/commands/opsx-apply.md",
-      "tipo": "archivo",
-      "bytes": 7953,
       "sha256": "204af2b352d1f81bd065408645abdc4ca9ad03edc9b2a22dd18f3f25412d81db"
     },
     {
       "ruta": ".opencode/commands/opsx-archive.md",
-      "tipo": "archivo",
-      "bytes": 11405,
       "sha256": "abddc58eff5cbb50dba1479798d1ff54f6ad590af3ec698d96ae5e79880f4a71"
     },
     {
       "ruta": ".opencode/commands/opsx-explore.md",
-      "tipo": "archivo",
-      "bytes": 16344,
       "sha256": "e82f9f853a27c95607cd958ddd009e3443152bdb6d6cfeddb07cddcdbfb7f059"
     },
     {
       "ruta": ".opencode/commands/opsx-propose.md",
-      "tipo": "archivo",
-      "bytes": 13704,
       "sha256": "503e36321090f0cd77f6c3ca8774b493d6dff1e47c556ce20c536fcb0a98e1d2"
     },
     {
       "ruta": ".opencode/commands/opsx-sync.md",
-      "tipo": "archivo",
-      "bytes": 12296,
       "sha256": "78c7e600b3f1cc33ab8ccf1d7a98d810ca10ddfa4c733347dfb8a238f8b5812c"
     },
     {
       "ruta": ".opencode/commands/opsx-update.md",
-      "tipo": "archivo",
-      "bytes": 6574,
       "sha256": "c69f013b9c6561c1a5c0da0be61adb2f565e55a1b43d165b5058399b92573d92"
     },
     {
       "ruta": ".opencode/skills/openspec-apply-change/SKILL.md",
-      "tipo": "archivo",
-      "bytes": 8178,
       "sha256": "b80c29659d4231142c27fd8173960f62fbc2d54d7e995210c66567c259115926"
     },
     {
       "ruta": ".opencode/skills/openspec-archive-change/SKILL.md",
-      "tipo": "archivo",
-      "bytes": 10669,
       "sha256": "1d586c114817251597fa5107ce1a83aff238f51173d2de3d06a63c576cdb5618"
     },
     {
       "ruta": ".opencode/skills/openspec-explore/SKILL.md",
-      "tipo": "archivo",
-      "bytes": 19321,
       "sha256": "b7355db4283fa1e3fe0c83f35c5eded08cd2defdafb41956595f6e3499083193"
     },
     {
       "ruta": ".opencode/skills/openspec-propose/SKILL.md",
-      "tipo": "archivo",
-      "bytes": 14011,
       "sha256": "c9f69ebd2504f81334c79b59c5578dec4a9e2c2e67faf3d7248e2c2df36c8862"
     },
     {
       "ruta": ".opencode/skills/openspec-sync-specs/SKILL.md",
-      "tipo": "archivo",
-      "bytes": 12497,
       "sha256": "f64c75518f7f93ed2512cb22ff8af35cc6a4476a050cee786244aeb4dd83ab68"
     },
     {
       "ruta": ".opencode/skills/openspec-update-change/SKILL.md",
-      "tipo": "archivo",
-      "bytes": 6828,
       "sha256": "5fb22f8868c10ec02de7be32bea0d30803889407b04a7bc59d35c24b4fb16a76"
     },
     {
       "ruta": ".prettierignore",
-      "tipo": "archivo",
-      "bytes": 284,
       "sha256": "874f5b1f1581fdcd2bd3a90c43108b19c8a9b0db8c2aad3c17bd5fd3a28a5444"
     },
     {
       "ruta": ".prettierrc",
-      "tipo": "archivo",
-      "bytes": 156,
       "sha256": "4d92ae8f8353f4f8d583c328ca386e00870ca74f09dd03829be4d6009929e3ea"
     },
     {
-      "ruta": ".vscode/extensions.json",
-      "tipo": "archivo",
-      "bytes": 87,
-      "sha256": "cc8f4bcdc3c31be539aa67fbdacaaac4c9fcccb55b02048acf02f56e623ef682"
-    },
-    {
       "ruta": "AGENTS.md",
-      "tipo": "archivo",
-      "bytes": 8400,
       "sha256": "2b7367adeed7a57fa9e0fa8d331283f35d8f11ec93aaaaf0015da3e620037301"
     },
     {
       "ruta": "PRODUCT.md",
-      "tipo": "archivo",
-      "bytes": 11548,
       "sha256": "586bd0989fff85e5f7c10b5d48c04db7cb590826626734cff75b7000bdf138fa"
     },
     {
       "ruta": "README.md",
-      "tipo": "archivo",
-      "bytes": 1111,
       "sha256": "7b7cbe270f34f614439a9cb73f66d2d77521b8c2e8c05ab4788d46dc78321a9b"
     },
     {
       "ruta": "astro.config.mjs",
-      "tipo": "archivo",
-      "bytes": 122,
       "sha256": "21245c15f4a733e4b4c347551b5393f4061ad90fda7d2f27bb686fad106e740c"
     },
     {
       "ruta": "memoria/README.md",
-      "tipo": "archivo",
-      "bytes": 3634,
       "sha256": "f8d04fe7e8485ba4c5168b635999f0a47d9e44590b871b6df7ec0f4fbed4dc7b"
     },
     {
       "ruta": "memoria/aplicacion.md",
-      "tipo": "archivo",
-      "bytes": 3056,
       "sha256": "95bcc2bec7d74715d70a899bb3f2b748a1ddce7fac9071992bdc6e83fe738339"
     },
     {
       "ruta": "memoria/bloques.json",
-      "tipo": "archivo",
-      "bytes": 4892,
       "sha256": "e9c6a89cf3375f05ac49c1200c1c0b41f90be2af2a1e9eb029f8ae4fee0d3209"
     },
     {
       "ruta": "memoria/cierre.md",
-      "tipo": "archivo",
-      "bytes": 4934,
       "sha256": "e175ca6ecda45dccfa07abc785ea106a374431a1e892c7727f8ee68dea364485"
     },
     {
       "ruta": "memoria/decisiones/DEC-001-continuidad-y-autoridad.md",
-      "tipo": "archivo",
-      "bytes": 1508,
       "sha256": "73cacabbe04aa5a97ef644616f861ad5b11768ef2b04e832885f9f558af815ce"
     },
     {
       "ruta": "memoria/decisiones/DEC-002-cierre-coherente.md",
-      "tipo": "archivo",
-      "bytes": 1643,
       "sha256": "c173c28bc2741f44ab929cc5791cb1de20cff2ac31ee14be75b9095e42635ad6"
     },
     {
       "ruta": "memoria/estado.json",
-      "tipo": "archivo",
-      "bytes": 8175,
       "sha256": "4988d25e732faca46011bb5daf8ec28d95dae3b872505ecd537bae340c3e87fb"
     },
     {
       "ruta": "memoria/herramientas.md",
-      "tipo": "archivo",
-      "bytes": 4569,
       "sha256": "ae7c8853922b7679c5e0e54d83e07511225ae659f7cf44a417e846616e489f53"
     },
     {
       "ruta": "memoria/integraciones.md",
-      "tipo": "archivo",
-      "bytes": 3962,
       "sha256": "62dbed2450fecf59f4b0543aa8a741eabe0c16c05d9d36b574a8fc6e0790e15d"
     },
     {
       "ruta": "memoria/mapa.md",
-      "tipo": "archivo",
-      "bytes": 8985,
       "sha256": "938589123564cf4b9b7481bdf3037beb18f7820dee5cb3ad7c71faae37bb90e3"
     },
     {
       "ruta": "memoria/primer-commit.md",
-      "tipo": "archivo",
-      "bytes": 5147,
       "sha256": "2e86bd2e4bdcf856e4d2a2c801f1a832860d1723b835575cb236dced1dc710c8"
     },
     {
       "ruta": "memoria/protocolo.md",
-      "tipo": "archivo",
-      "bytes": 5947,
       "sha256": "8c13552551effe4fe4e82ac966c5044a8216f6ba901f4a6cd3de45ce40dba039"
     },
     {
       "ruta": "memoria/relaciones.json",
-      "tipo": "archivo",
-      "bytes": 1685,
       "sha256": "7175b92cf3c50b804c5ed5b4a157c2546549bec44dcbf9d6da89d31e980ea2b4"
     },
     {
       "ruta": "memoria/relevos-legado.json",
-      "tipo": "archivo",
-      "bytes": 548,
       "sha256": "905190c6f807a2262ea1c7f9877e617855482b45de87d0dece4fd6a55b23cf38"
     },
     {
-      "ruta": "memoria/revision.json",
-      "tipo": "archivo",
-      "bytes": 24741,
-      "sha256": "d07ad7f3c2cecf7a11b32522c95a6191e6a22969872e940947bbb14b1d2fa061"
-    },
-    {
       "ruta": "memoria/roadmap.md",
-      "tipo": "archivo",
-      "bytes": 3154,
       "sha256": "ed51863e4d8cc5c058ee981eda27554a7f0afc816615d7de2efeda42be7ada37"
     },
     {
       "ruta": "memoria/sesiones/SES-001-preparacion.md",
-      "tipo": "archivo",
-      "bytes": 3788,
       "sha256": "f41c0ee4bdcdb033ccf4552ca0ee82f40bf37894eadafa7a9debe863096f441c"
     },
     {
       "ruta": "memoria/sesiones/SES-002-ensayo-local.md",
-      "tipo": "archivo",
-      "bytes": 3972,
       "sha256": "af7a22c641d72f2b2e2335cb58ff9af2de58f9acd3b4d20907b932f39f64f0f3"
     },
     {
       "ruta": "memoria/sesiones/SES-003-cierre-ub002.md",
-      "tipo": "archivo",
-      "bytes": 2984,
       "sha256": "ea0548578fe044ce30dfbb1572fb93eb9881a52e0270bd24854e808cff2aa19e"
     },
     {
       "ruta": "memoria/sesiones/SES-004-propuesta-esqueleto.md",
-      "tipo": "archivo",
-      "bytes": 2408,
       "sha256": "7e5eaa36fbc1cbee03739cab6e0fe602146e0aa2bf60c52090c820821fdb95e8"
     },
     {
       "ruta": "memoria/sesiones/SES-005-implementacion-esqueleto.md",
-      "tipo": "archivo",
-      "bytes": 3751,
       "sha256": "279c65d9072a92f42ab03bb03d280a49122bd1c7cae4c13e554c99b10663a056"
     },
     {
       "ruta": "memoria/sesiones/SES-006-aceptacion-esqueleto.md",
-      "tipo": "archivo",
-      "bytes": 4071,
       "sha256": "8e00fb19203de03edb9beb5a1b50aef20c892f27778d88fb6245a564b35a435f"
     },
     {
       "ruta": "memoria/sesiones/SES-007-cabecera.md",
-      "tipo": "archivo",
-      "bytes": 5370,
       "sha256": "0aa948bbe830e0489e779b0961316a509f47874ebb0a2aad6f73d548cb3794e5"
     },
     {
       "ruta": "memoria/sesiones/SES-007-nav-scroll.md",
-      "tipo": "archivo",
-      "bytes": 7090,
       "sha256": "feaf916fc540a5d7ac16cccc0abbd150b2ed0d903886e0c87f534554cd210fe8"
     },
     {
       "ruta": "memoria/sesiones/SES-008-servicios.md",
-      "tipo": "archivo",
-      "bytes": 4220,
       "sha256": "b24d838d071e0d9806b582be13fcfa8a27816141a362fef6e3f9ef6880c16e0d"
     },
     {
       "ruta": "memoria/sesiones/SES-009-intro-entrada.md",
-      "tipo": "archivo",
-      "bytes": 8365,
       "sha256": "c004afce114d0955f274d387ab46d95feb174016feff45cace60e1012d7b17f4"
     },
     {
       "ruta": "memoria/sesiones/SES-009-servicios-ajustes.md",
-      "tipo": "archivo",
-      "bytes": 3222,
       "sha256": "6c54ad6521754f63092b9edf5ff593f7b86218f9d361409de4bd50614cc741b3"
     },
     {
       "ruta": "memoria/sesiones/SES-010-cierre-cabecera.md",
-      "tipo": "archivo",
-      "bytes": 3305,
       "sha256": "3fb4e70a27d181ac67b7bbff1d4d2b39c0dd934c00a18ce557575e4c4f40017f"
     },
     {
       "ruta": "memoria/sesiones/SES-010-servicios-ajustes-hover.md",
-      "tipo": "archivo",
-      "bytes": 4659,
       "sha256": "3cc65b1f2f2ccd8b3998fb2995f929ff21ab41dfbd49c165ea70555372578759"
     },
     {
       "ruta": "memoria/sesiones/SES-011-correccion-enlaces.md",
-      "tipo": "archivo",
-      "bytes": 2751,
       "sha256": "606334382ecd94d327efe5030d4568df0943af7b95e983958f2f2a1c3ad91fa4"
     },
     {
       "ruta": "memoria/sesiones/SES-012-galeria.md",
-      "tipo": "archivo",
-      "bytes": 4255,
       "sha256": "4b7507e0c18eedc05356ba488bced80162a5096b27cff70cb9b5404e8944f628"
     },
     {
       "ruta": "memoria/sesiones/SES-013-cierre-servicios.md",
-      "tipo": "archivo",
-      "bytes": 4376,
       "sha256": "39b344d76958ee73d5642e0674d3679e00cf308a08f8dfdc4de02754b4010d2d"
     },
     {
       "ruta": "memoria/sesiones/SES-014-galeria-navegacion.md",
-      "tipo": "archivo",
-      "bytes": 3648,
       "sha256": "9a6aa23e2ab9a9667d66f90c7367df52fb1029ae8652a6af1034763e2d68ccb1"
     },
     {
       "ruta": "memoria/sesiones/SES-015-galeria-correcciones.md",
-      "tipo": "archivo",
-      "bytes": 3678,
       "sha256": "804f2cffc8be04162b1884d71eebf35935d9e90d2c8ff15365b946be69653103"
     },
     {
       "ruta": "memoria/sesiones/SES-016-galeria-snap.md",
-      "tipo": "archivo",
-      "bytes": 2940,
       "sha256": "f408fbd6334122e22907112ab4a028fc7eb15d6a81582f537946a24817c57ff1"
     },
     {
       "ruta": "memoria/sesiones/SES-017-galeria-carrusel.md",
-      "tipo": "archivo",
-      "bytes": 4232,
       "sha256": "9f2be37359977f3feaba4ade2f3bdd32ac988e55428665f2f1843fe4b0342b90"
     },
     {
       "ruta": "memoria/sesiones/SES-018-cierre-galeria.md",
-      "tipo": "archivo",
-      "bytes": 2944,
       "sha256": "4a06a15dc0f4ee507a92408e7aacdab216b4919179118047a8b007570fdc26bc"
     },
     {
       "ruta": "memoria/sesiones/SES-019-archivo-galeria.md",
-      "tipo": "archivo",
-      "bytes": 2970,
       "sha256": "81656e2ec19a442966ef499d8bea7cce18eeb0c4a4f7075380be7558cc544c6a"
     },
     {
       "ruta": "memoria/sesiones/SES-020-validacion-visual.md",
-      "tipo": "archivo",
-      "bytes": 2142,
       "sha256": "c1432b364668037b2c7bab21fccba0262e8bb59be531dad73aa8862551efe4d5"
     },
     {
       "ruta": "memoria/sesiones/SES-021.md",
-      "tipo": "archivo",
-      "bytes": 2595,
       "sha256": "99b194ac9985cc4308c9508f373fc1228bb99384b0e7a32c18ab7139107033fe"
     },
     {
       "ruta": "memoria/sesiones/SES-022.md",
-      "tipo": "archivo",
-      "bytes": 4855,
       "sha256": "430578de7fe7bacf3f149c63c31ffd8c6c84700bc864ad62a3ca23823e48c70a"
     },
     {
       "ruta": "openspec/changes/archive/.gitkeep",
-      "tipo": "archivo",
-      "bytes": 0,
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
       "ruta": "openspec/changes/archive/2026-09-15-esqueleto-inicio-productos/.openspec.yaml",
-      "tipo": "archivo",
-      "bytes": 40,
       "sha256": "7cbda91d0db42e7f3a4c0edd23a86fbf0cb02498c21edb9ec0b20199c529e618"
     },
     {
       "ruta": "openspec/changes/archive/2026-09-15-esqueleto-inicio-productos/design.md",
-      "tipo": "archivo",
-      "bytes": 5446,
       "sha256": "c0dbcde34dc2ed25c936b4585ff3b5ccb1aac57a90c7361d7f4975a7a1d44444"
     },
     {
       "ruta": "openspec/changes/archive/2026-09-15-esqueleto-inicio-productos/proposal.md",
-      "tipo": "archivo",
-      "bytes": 2604,
       "sha256": "386676f75a3f4d706ff8d6fb87e1685533747b75ef8e7f44cb3e228d1f3f8151"
     },
     {
       "ruta": "openspec/changes/archive/2026-09-15-esqueleto-inicio-productos/specs/home-skeleton/spec.md",
-      "tipo": "archivo",
-      "bytes": 4049,
       "sha256": "f0955a5f84d1c3727e6318928b793a2c0ecfb1233c46855c4b6002bd22d0814f"
     },
     {
       "ruta": "openspec/changes/archive/2026-09-15-esqueleto-inicio-productos/specs/products-page/spec.md",
-      "tipo": "archivo",
-      "bytes": 2062,
       "sha256": "a41f87f6c31413d156a35cc482c21f3af3ee43f8e4e2f35f030f04e7e18900a7"
     },
     {
       "ruta": "openspec/changes/archive/2026-09-15-esqueleto-inicio-productos/tasks.md",
-      "tipo": "archivo",
-      "bytes": 3110,
       "sha256": "ead7f22f8252b112ea6526182e894de49dafc40532f50d539aaf2129f65e82c7"
     },
     {
       "ruta": "openspec/changes/archive/2026-09-16-cabecera-entrada-portada/.openspec.yaml",
-      "tipo": "archivo",
-      "bytes": 40,
       "sha256": "50c36dfa766b2fc52e8a7d270b1d67cc487bcd95d1b4c8a5f929d62738e3c77e"
     },
     {
       "ruta": "openspec/changes/archive/2026-09-16-cabecera-entrada-portada/design.md",
-      "tipo": "archivo",
-      "bytes": 6444,
       "sha256": "d210322bea885b9e0b1eedd1a0beb94a56afae6716478952c47db297f8c40376"
     },
     {
       "ruta": "openspec/changes/archive/2026-09-16-cabecera-entrada-portada/proposal.md",
-      "tipo": "archivo",
-      "bytes": 3726,
       "sha256": "7db44ecbc6b91223cfc7cbf11dc71c38dd28d79ab2858ae8df83febb73034886"
     },
     {
       "ruta": "openspec/changes/archive/2026-09-16-cabecera-entrada-portada/specs/home-cabecera/spec.md",
-      "tipo": "archivo",
-      "bytes": 2292,
       "sha256": "3ff5033ff72d7e7c55583817381df1e5b4ee39735557eae75d5b2a17b24c9486"
     },
     {
       "ruta": "openspec/changes/archive/2026-09-16-cabecera-entrada-portada/specs/home-intro/spec.md",
-      "tipo": "archivo",
-      "bytes": 2560,
       "sha256": "5ff9805482eb1fb4afb12ae879bd0ef654b442b455efdac13e2d30cd7bd4912a"
     },
     {
       "ruta": "openspec/changes/archive/2026-09-16-cabecera-entrada-portada/tasks.md",
-      "tipo": "archivo",
-      "bytes": 3640,
       "sha256": "dfc4024dbc306e3710205ad320dd18dce2c15bfe83e562a547806d5fd994fd9d"
     },
     {
       "ruta": "openspec/changes/archive/2026-09-16-home-galeria/.openspec.yaml",
-      "tipo": "archivo",
-      "bytes": 40,
       "sha256": "50c36dfa766b2fc52e8a7d270b1d67cc487bcd95d1b4c8a5f929d62738e3c77e"
     },
     {
       "ruta": "openspec/changes/archive/2026-09-16-home-galeria/design.md",
-      "tipo": "archivo",
-      "bytes": 7100,
       "sha256": "875e63de752bb1beb9b364e5910fbc9c9534bea8418f87ec4b2c3f62991703bf"
     },
     {
       "ruta": "openspec/changes/archive/2026-09-16-home-galeria/proposal.md",
-      "tipo": "archivo",
-      "bytes": 3104,
       "sha256": "d7128c68d946ed09523fdfb16ad701ded4177e951d3d86eee69700b4d785a1c6"
     },
     {
       "ruta": "openspec/changes/archive/2026-09-16-home-galeria/specs/home-galeria/spec.md",
-      "tipo": "archivo",
-      "bytes": 7606,
       "sha256": "348a978a91ae6fdab414c5a221684db831df8ef4f6611bd0d05bd5727957a636"
     },
     {
       "ruta": "openspec/changes/archive/2026-09-16-home-galeria/specs/home-skeleton/spec.md",
-      "tipo": "archivo",
-      "bytes": 1385,
       "sha256": "ee289f4d1c1b889fb77c8ac6678f86cc33f587aa31e8cb9f2cf3b3306c74a00a"
     },
     {
       "ruta": "openspec/changes/archive/2026-09-16-home-galeria/tasks.md",
-      "tipo": "archivo",
-      "bytes": 4092,
       "sha256": "8fc9b196b1d90fc326731e98de05e86dac910546a3e077dc3ab134ab306147e9"
     },
     {
       "ruta": "openspec/changes/archive/2026-09-16-nav-scroll-inicio/.openspec.yaml",
-      "tipo": "archivo",
-      "bytes": 40,
       "sha256": "50c36dfa766b2fc52e8a7d270b1d67cc487bcd95d1b4c8a5f929d62738e3c77e"
     },
     {
       "ruta": "openspec/changes/archive/2026-09-16-nav-scroll-inicio/design.md",
-      "tipo": "archivo",
-      "bytes": 4720,
       "sha256": "eefbcc0904fa34d84ecd578174a7c1b39eacedaf5a324000941bf0c73bc3b634"
     },
     {
       "ruta": "openspec/changes/archive/2026-09-16-nav-scroll-inicio/proposal.md",
-      "tipo": "archivo",
-      "bytes": 2547,
       "sha256": "bce527bb276f3294c82540a5f6bac2f829390b16e10ed9a3039fac354782bf7c"
     },
     {
       "ruta": "openspec/changes/archive/2026-09-16-nav-scroll-inicio/specs/home-skeleton/spec.md",
-      "tipo": "archivo",
-      "bytes": 2560,
       "sha256": "1350c70d8b5407d796dc0bddb3c3d01277a3017463b075455ea8656e9d497524"
     },
     {
       "ruta": "openspec/changes/archive/2026-09-16-nav-scroll-inicio/specs/site-navigation/spec.md",
-      "tipo": "archivo",
-      "bytes": 2804,
       "sha256": "7c6fd657f68ce2a070bb01cb735cee2b96be7b2217caef83dd196eda075b5d0c"
     },
     {
       "ruta": "openspec/changes/archive/2026-09-16-nav-scroll-inicio/tasks.md",
-      "tipo": "archivo",
-      "bytes": 1753,
       "sha256": "68254adf40dfaa16e6759c1d6fed26b6935e329402f53b8f563d8f1cd8a21cb5"
     },
     {
       "ruta": "openspec/config.yaml",
-      "tipo": "archivo",
-      "bytes": 3452,
       "sha256": "8e84058ddc5089ba0015c92aaa925adce988046cd27d60b74fc3b079498aba5d"
     },
     {
       "ruta": "openspec/specs/.gitkeep",
-      "tipo": "archivo",
-      "bytes": 0,
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
       "ruta": "openspec/specs/home-cabecera/spec.md",
-      "tipo": "archivo",
-      "bytes": 2318,
       "sha256": "290a148c9f365e330bfe8802ba7bebe373a3a23b8cb5fa1952f4e121a113eadb"
     },
     {
       "ruta": "openspec/specs/home-galeria/spec.md",
-      "tipo": "archivo",
-      "bytes": 7630,
       "sha256": "29cf4ef17f1c1608d5070c8ce2a8461c702534de9306d829348729efbd9a0a4a"
     },
     {
       "ruta": "openspec/specs/home-intro/spec.md",
-      "tipo": "archivo",
-      "bytes": 2572,
       "sha256": "abb09f3c4dfbaea3327bdbe598534e2611e105d00a01bf5e6257fe0904e0537f"
     },
     {
       "ruta": "openspec/specs/home-servicios/spec.md",
-      "tipo": "archivo",
-      "bytes": 4000,
       "sha256": "164c23990f987401a6abf0abb2ea66d004de7052e00f173e541952f2f1cb6376"
     },
     {
       "ruta": "openspec/specs/home-skeleton/spec.md",
-      "tipo": "archivo",
-      "bytes": 6357,
       "sha256": "480015b22b4f7148cdc03349011e8c4b8a9f4ffe10a35e1e33a0e5e72537af91"
     },
     {
       "ruta": "openspec/specs/products-page/spec.md",
-      "tipo": "archivo",
-      "bytes": 2063,
       "sha256": "634128382a908d8dfebb2e5e2463ad8ad7cfdaef72134aa9410ed4f5683688ea"
     },
     {
       "ruta": "openspec/specs/site-navigation/spec.md",
-      "tipo": "archivo",
-      "bytes": 2805,
       "sha256": "0468d148206da2021aa36315ceb1cac40665851f90ec30d1f2f7b22d2e9dc690"
     },
     {
       "ruta": "package-lock.json",
-      "tipo": "archivo",
-      "bytes": 182469,
       "sha256": "6de994b32fec81c47e94586af922786ea969ff6d1d0387609ba0b16c6438dab3"
     },
     {
       "ruta": "package.json",
-      "tipo": "archivo",
-      "bytes": 1162,
       "sha256": "b2befcdf823aff817be05289edaa356df0440fea46d8b7bb458625470c70b33a"
     },
     {
-      "ruta": "public/favicon.ico",
-      "tipo": "archivo",
-      "bytes": 655,
-      "sha256": "09d2ac08d8cca9b6e1f90221f345a8c4dd0371c64a0dc52b6f96fc589b1e3d67"
-    },
-    {
-      "ruta": "public/favicon.svg",
-      "tipo": "archivo",
-      "bytes": 749,
-      "sha256": "2d7a310283d6f9cc753210d83224cd6db6348cb82a5536348884e5831d46203f"
-    },
-    {
-      "ruta": "public/fonts/archivo-600.woff2",
-      "tipo": "archivo",
-      "bytes": 13820,
-      "sha256": "d9e8c29fdd348edde2a4f9aae438e569dd165bbbdebda78495824a2d9aaa67e8"
-    },
-    {
-      "ruta": "public/fonts/inter-800.woff2",
-      "tipo": "archivo",
-      "bytes": 24400,
-      "sha256": "a7d0a50f15d389cad679238466bdb5fc9787aa0715719064ce25abaff042820d"
-    },
-    {
-      "ruta": "public/videos/Corte+barba.mp4",
-      "tipo": "archivo",
-      "bytes": 3010776,
-      "sha256": "5911e796b715381d716d918192b0fcf43183ca7c1479107216825ced23325165"
-    },
-    {
-      "ruta": "public/videos/CorteDePelo1.mp4",
-      "tipo": "archivo",
-      "bytes": 1372340,
-      "sha256": "54bf10fbd9a4635d77c7b9237197f76050c9ddf8a46117226a5ee7b5f58d9156"
-    },
-    {
-      "ruta": "public/videos/CorteDePelo10.mp4",
-      "tipo": "archivo",
-      "bytes": 1360084,
-      "sha256": "0ae47007c652b0404bce12462d9c16ed5df573cd83ab043898406b9c812e7b44"
-    },
-    {
-      "ruta": "public/videos/CorteDePelo11.mp4",
-      "tipo": "archivo",
-      "bytes": 1546790,
-      "sha256": "5bd9a2b160b006cbd7b0100e6b98c8c65d7e9776924d88e16847a7de7f5c1f2d"
-    },
-    {
-      "ruta": "public/videos/CorteDePelo2.mp4",
-      "tipo": "archivo",
-      "bytes": 1477324,
-      "sha256": "417991521ed55603e4e70574c0d5ea701a812d0fc1ab6c28f7614b0f74d4443a"
-    },
-    {
-      "ruta": "public/videos/CorteDePelo3.mp4",
-      "tipo": "archivo",
-      "bytes": 848374,
-      "sha256": "980b781e09b98d3d4d4fcc4404c7011d8e355cc4ee9d7135796ae541c340054c"
-    },
-    {
-      "ruta": "public/videos/CorteDePelo4.mp4",
-      "tipo": "archivo",
-      "bytes": 1416267,
-      "sha256": "94a374fa3823ce1dfdb77fcabe72fcf3aa0ed5671b7a7ac40ce664e2c635640d"
-    },
-    {
-      "ruta": "public/videos/CorteDePelo5.mp4",
-      "tipo": "archivo",
-      "bytes": 751626,
-      "sha256": "b75e30a58842547f1b9b3e022a2fab2ef7348f3c962825773c6249b48d74e63a"
-    },
-    {
-      "ruta": "public/videos/CorteDePelo6.mp4",
-      "tipo": "archivo",
-      "bytes": 968606,
-      "sha256": "5d1b4c30907f03b36e1c2c8388c74f54b2a2b26296b03bc78b1052e933d7d7e5"
-    },
-    {
-      "ruta": "public/videos/CorteDePelo7.mp4",
-      "tipo": "archivo",
-      "bytes": 1425319,
-      "sha256": "0a1276f1d89a95bce92a13791d9e808369f5bccbbbac5953b1c0ca0ac8ad380c"
-    },
-    {
-      "ruta": "public/videos/CorteDePelo8.mp4",
-      "tipo": "archivo",
-      "bytes": 998083,
-      "sha256": "4369cfdf2efa1d67381613408dab7e83d7aceba1e76e1f5f17292bbb93f70c36"
-    },
-    {
-      "ruta": "public/videos/CorteDePelo9.mp4",
-      "tipo": "archivo",
-      "bytes": 1388489,
-      "sha256": "92a77a0666fd3aea0d3efdbb4ed6084497d2ab424cbc54787364b67c32e40aa8"
-    },
-    {
-      "ruta": "public/videos/Video_Head.mp4",
-      "tipo": "archivo",
-      "bytes": 7661458,
-      "sha256": "77559f6b854bf1134518b9bc6f99eada490a0a49cde76224ade7331317ab3a26"
-    },
-    {
       "ruta": "scripts/memoria/cli.mjs",
-      "tipo": "archivo",
-      "bytes": 629,
       "sha256": "68b7f43ef40c6e0a13eeea0d8e10fa7b53a33d516aa85c5b992d141a2fa7d7eb"
     },
     {
       "ruta": "scripts/memoria/coherencia.mjs",
-      "tipo": "archivo",
-      "bytes": 9765,
       "sha256": "a3248d4699403273cfe491c913c0e28ff18afa749f3a2eee8cf752470dae4964"
     },
     {
       "ruta": "scripts/memoria/coherencia.test.mjs",
-      "tipo": "archivo",
-      "bytes": 6777,
       "sha256": "28ff1c0721edd421c3ca8ee4bdcfc611aaa2dc0591b3f10c8bb3487271674727"
     },
     {
       "ruta": "scripts/memoria/core.mjs",
-      "tipo": "archivo",
-      "bytes": 12328,
       "sha256": "ad5fd0791795b77d89c6e1dbe22d7839f0dd3bd13b385a709522171891a0f999"
     },
     {
       "ruta": "scripts/memoria/core.test.mjs",
-      "tipo": "archivo",
-      "bytes": 6518,
       "sha256": "5998fa82e4b1134d5c45ce0e8768cef49fcf4db6022d7f2f8d693a185eab986e"
     },
     {
       "ruta": "scripts/memoria/relevo.mjs",
-      "tipo": "archivo",
-      "bytes": 2047,
       "sha256": "1f126aab8bba17d77000f12007d28c92e060b1d0eabf130f276ab0e802e0a584"
     },
     {
       "ruta": "skills-lock.json",
-      "tipo": "archivo",
-      "bytes": 2912,
       "sha256": "4abba123cf28092d81d81d978c07f522cda4d1b0c5fc4d8e7afb246d7ec4b883"
     },
     {
       "ruta": "src/components/navigation/SiteNav.astro",
-      "tipo": "archivo",
-      "bytes": 3983,
       "sha256": "9db820dc515c69f6b2caf5eaa713f0dde8182b77c28fa4fb2bdcf64265f322d6"
     },
     {
       "ruta": "src/components/navigation/SiteNav.module.css",
-      "tipo": "archivo",
-      "bytes": 1336,
       "sha256": "8b88fe63fc44aeaba60472b6fa430f216ef93663ea69a697aa780d420542cdae"
     },
     {
       "ruta": "src/components/ui/BookingLink.astro",
-      "tipo": "archivo",
-      "bytes": 704,
       "sha256": "bc6ba422de2bd8638a22a8f8585ab04dca11061839101c3fe634d49a06b4e757"
     },
     {
       "ruta": "src/components/ui/BookingLink.module.css",
-      "tipo": "archivo",
-      "bytes": 324,
       "sha256": "23ea19d1b6fa75915093d15f5dcc074363b9f772b379a4cd11f934b35114473f"
     },
     {
       "ruta": "src/components/ui/ProvisionalNote.astro",
-      "tipo": "archivo",
-      "bytes": 100,
       "sha256": "e45a397a618e1af5b2f8e0b7f0720ab4a76e309a5b09416ecb0ef3c227160e33"
     },
     {
       "ruta": "src/components/ui/ProvisionalNote.module.css",
-      "tipo": "archivo",
-      "bytes": 117,
       "sha256": "78eccd686d5341cfd24b4d2b7d4be59b34e1e410525306d18f1dd780df8121d5"
     },
     {
       "ruta": "src/features/home/acceso-productos/AccesoProductos.astro",
-      "tipo": "archivo",
-      "bytes": 675,
       "sha256": "d7ec938b2be7577f47809ef3aa949852e63825ec1fcc556d07128dc931aaf6ab"
     },
     {
       "ruta": "src/features/home/acceso-productos/AccesoProductos.module.css",
-      "tipo": "archivo",
-      "bytes": 346,
       "sha256": "542b441e8047065634dbea088595244f31fe1f6498520147a573ddb193fa9d4c"
     },
     {
       "ruta": "src/features/home/cabecera/Cabecera.astro",
-      "tipo": "archivo",
-      "bytes": 1165,
       "sha256": "393f860660d95647821896b722c64f2640c361bda4d925289667feb318a23590"
     },
     {
       "ruta": "src/features/home/cabecera/Cabecera.module.css",
-      "tipo": "archivo",
-      "bytes": 1976,
       "sha256": "4f6cb97e487712e374fd22392b356e760fae3b0873c4b50dccf9eb12853387ef"
     },
     {
       "ruta": "src/features/home/galeria/Galeria.astro",
-      "tipo": "archivo",
-      "bytes": 9460,
       "sha256": "a6b11de2329693f1273d31a8ba852299f7e65c90b03a3dcbc695dc09120171c6"
     },
     {
       "ruta": "src/features/home/galeria/Galeria.module.css",
-      "tipo": "archivo",
-      "bytes": 2515,
       "sha256": "5cc864ecf93ed178819b23c84b9674db38c81ce81ec384870e71919db6db3e15"
     },
     {
       "ruta": "src/features/home/informacion/Informacion.astro",
-      "tipo": "archivo",
-      "bytes": 860,
       "sha256": "f34711af2241355355b834169a80f0716fc0ad8cfc0415291613dd7ae6c27567"
     },
     {
       "ruta": "src/features/home/informacion/Informacion.module.css",
-      "tipo": "archivo",
-      "bytes": 232,
       "sha256": "3bfe440f1a37e1dd3e0a6c9e8869da45f9609cebbfae7e5e67240d66cbc1f0bd"
     },
     {
       "ruta": "src/features/home/intro/Intro.astro",
-      "tipo": "archivo",
-      "bytes": 986,
       "sha256": "d9be29e0dab073c000071093677f5897ca81cbedab0a247c3b0cbbe84a7040e3"
     },
     {
       "ruta": "src/features/home/intro/Intro.module.css",
-      "tipo": "archivo",
-      "bytes": 968,
       "sha256": "13fbb7590b7b39e9e8b7f377a04c566592527213f55fb369ca74915df332915d"
     },
     {
       "ruta": "src/features/home/intro/intro.ts",
-      "tipo": "archivo",
-      "bytes": 10985,
       "sha256": "16715318cedb200652e056a058f0fbfa54ba69199f837f61cab8b088cf063fdb"
     },
     {
       "ruta": "src/features/home/opiniones/Opiniones.astro",
-      "tipo": "archivo",
-      "bytes": 541,
       "sha256": "45dc2a868c1e8bebbdf5d28f5183ce949334b92ad9836de7967600171941537f"
     },
     {
       "ruta": "src/features/home/opiniones/Opiniones.module.css",
-      "tipo": "archivo",
-      "bytes": 260,
       "sha256": "cea3f7a04395b0d9d9b85f63fa35dc9a12e789e8d3e72cca7bb3981d5e19ada2"
     },
     {
       "ruta": "src/features/home/servicios/Servicios.astro",
-      "tipo": "archivo",
-      "bytes": 7359,
       "sha256": "c948d58d6c7c1b4d2a13051dcd20ebcced19300021bf837bd3369aa5e6bcbc98"
     },
     {
       "ruta": "src/features/home/servicios/Servicios.module.css",
-      "tipo": "archivo",
-      "bytes": 5605,
       "sha256": "0099d429c2b7f9d11bf2b4405dabae23c1d994f6d59b749c79850620d6795961"
     },
     {
       "ruta": "src/features/products/provisional/Provisional.astro",
-      "tipo": "archivo",
-      "bytes": 600,
       "sha256": "5b3b71a39765e18a0505db25e961669347b4c616eef493061d9deba90979bb84"
     },
     {
       "ruta": "src/features/products/provisional/Provisional.module.css",
-      "tipo": "archivo",
-      "bytes": 177,
       "sha256": "ed941577b69b4ac8f53f88bccf82fd94c33b9319f1e44d8d7048dfd1b1403bfb"
     },
     {
       "ruta": "src/layouts/BaseLayout.astro",
-      "tipo": "archivo",
-      "bytes": 1803,
       "sha256": "29aacb32f7587acebaa19002ac85f1747b10e10dbacf3d37ab300b2f2a45c73f"
     },
     {
       "ruta": "src/pages/index.astro",
-      "tipo": "archivo",
-      "bytes": 929,
       "sha256": "520fe44a6fded7842ef88b0d4e132b70c86e54ee9e162a089b530f2f99f356ce"
     },
     {
       "ruta": "src/pages/index.module.css",
-      "tipo": "archivo",
-      "bytes": 248,
       "sha256": "fb603e030bdda0f73dccb2b11b477ca15108d6a5f8e7a17e544e52b4ca5f63df"
     },
     {
       "ruta": "src/pages/productos/index.astro",
-      "tipo": "archivo",
-      "bytes": 353,
       "sha256": "e5c0c5c75e8376e213b6125ea62e94fe5498a56219af31515b2837105796b67c"
     },
     {
       "ruta": "src/styles/global.css",
-      "tipo": "archivo",
-      "bytes": 2066,
       "sha256": "c8b8fac3305c724d3943217158ab96760eafda1e374347a4a0f9c770e510999f"
     },
     {
       "ruta": "tsconfig.json",
-      "tipo": "archivo",
-      "bytes": 201,
       "sha256": "98e1484cb0954ac7306a850cdbf03c8140e2fd32e65fa6c213b19343dfdc6d43"
     }
-  ]
+  ],
+  "huella": "ba1a1e2a6014bbffbc97c4a2d1f4c783b6df88364d87d15b3180ffaa2c4d67eb"
 }

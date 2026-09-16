@@ -41,8 +41,8 @@ npm run format:check
 
 ## Estado del repo
 
-- Varias carpetas del esqueleto (`src/components/*`, `src/features/*`, `src/styles`, `src/data`, `src/config`, `src/assets`) están vacías a propósito; Git no conserva directorios vacíos.
-- Archivos generados/locales excluidos de formato en `.prettierignore` y de Git en `.gitignore`.
+- La estructura actual está en `memoria/mapa.md`; el estado de cada sección y sus fuentes están en `memoria/bloques.json`. El inicio tiene bloques desarrollados y bloques provisionales; `/productos` sigue provisional. Git no conserva directorios vacíos.
+- Los archivos locales se excluyen mediante `.gitignore`. `memoria/generado/` permanece versionada y excluida de su propio inventario y del formato automático.
 
 ## Continuidad obligatoria para todas las IAs
 
@@ -63,3 +63,15 @@ Diseño de escritorio primero y móvil después, conservando estructura adaptabl
 Los nombres de página previstos en features son `home` y `products`. El estado vigente está en `memoria/estado.json`; las carpetas vacías no prueban implementación. No añadir dependencias sin necesidad del alcance actual.
 
 No publicar credenciales, consentimientos ni rutas personales en Git o relevos. No asumir que el remoto se llama origin. El primer commit/push del ensayo de continuidad está completado y confirmado (`memoria/sesiones/SES-003-cierre-ub002.md`); los commit/push siguientes se hacen solo con autorización expresa. No reescribir historia, forzar pushes, descartar cambios o hacer commits no solicitados.
+
+## Cierre coherente de cada bloque
+
+Estas obligaciones se aplican sin que el usuario las recuerde, también al retomar o compactar una conversación. Los IDs los administra la IA; al usuario se le habla por nombres de secciones.
+
+- Leer `memoria/bloques.json` para el alcance actual y `memoria/cierre.md` para el control de coherencia. `PRODUCT.md` distingue visión pendiente de decisiones vigentes; las specs gobiernan el comportamiento concretado.
+- Registrar cada sección nueva antes de darla por terminada. Una sección aprobada requiere especificaciones vigentes y referencia a su aceptación real; las tareas OpenSpec no se duplican.
+- Comparar el cambio con PRODUCT, mapa, specs, registro de bloques y relevos. Una excepción autorizada (por ejemplo Servicios sin snap) debe aparecer en las specs generales que afecte, además de su relevo. No corregir el diseño para ajustarlo a documentación antigua.
+- Crear nuevos relevos con `npm run memoria:relevo -- "Nombre del bloque"`. El comando asigna un número; completar el contenido y enlazarlo al estado. Los nombres históricos con números repetidos se conservan como legado explícito.
+- Tras la revisión real, registrar su evidencia con `npm run memoria:revision -- --relevo <ruta> --resumen "Qué se contrastó y resolvió"`. No ejecutar ese comando solo para conseguir un resultado verde: su huella acredita la versión examinada, no entiende el significado del texto.
+- Después ejecutar `npm run memoria:scan` y `npm run memoria:check`. Check incluye el control de coherencia. Ante un fallo, examinar su causa; no rebajar los controles, borrar evidencia ni regenerar una revisión sin hacerla.
+- No cerrar un bloque como completo con contradicciones conocidas. Si una regla de una herramienta impide consolidar specs en ese turno, guardar el código si procede y registrar el cierre documental pendiente; no inventar un ciclo OpenSpec anterior. No pedir al usuario que gestione IDs o recuerde actualizar la memoria.

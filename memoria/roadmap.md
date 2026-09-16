@@ -22,3 +22,9 @@ Relacionar criterios con pruebas/relevos reales. Separar verificación técnica 
 `openspec` es null mientras no exista cambio real; después es ruta real de su propuesta/artefacto de entrada y se actualiza tras archivar. Los criterios no se consideran satisfechos sin evidencia.
 
 La primera prueba de continuidad (aplicar la entrega, comprobar memoria y contexto OpenSpec, revisar cambios, commit y push) está completada y cerrada: ver `estado.json` (UB-002) y `memoria/sesiones/SES-003-cierre-ub002.md`.
+
+## Coherencia al cerrar y retomar
+
+Aplicar `memoria/cierre.md` y consultar `memoria/bloques.json` en cada bloque, también tras compactar. Antes de declarar terminado un bloque, contrastar decisiones vigentes, implementación, PRODUCT, mapa, specs y evidencia de aceptación. Registrar el relevo y la revisión real; después escanear y comprobar. Los hashes del inventario no sustituyen esa revisión.
+
+La aprobación visual y el cierre documental son hechos separados: conservar una aprobación recibida aunque falte consolidar documentación, pero registrar ese pendiente y no presentar el bloque como completamente cerrado. El registro por bloques referencia las tareas de OpenSpec, no las copia. Los identificadores los gestiona la IA sin pedir al usuario que los memorice.

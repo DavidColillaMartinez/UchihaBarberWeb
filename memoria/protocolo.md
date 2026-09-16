@@ -39,3 +39,9 @@ Los SHA de commits terminados se anotan en el siguiente relevo o se obtienen con
 ## Sincronización
 
 Con checkout, inspeccionar ramas/remoto y, cuando corresponda al trabajo autorizado, hacer fetch y comparar historiales. No hacer pull sobre cambios sin resolver ni asumir `origin`. Sin acceso a otra copia o GitHub, señalarlo. Un snapshot sirve para analizar ese momento; hace falta una copia nueva o acceso al repo para conocer cambios posteriores.
+
+## Coherencia al cerrar y retomar
+
+Aplicar `memoria/cierre.md` y consultar `memoria/bloques.json` en cada bloque, también tras compactar. Antes de declarar terminado un bloque, contrastar decisiones vigentes, implementación, PRODUCT, mapa, specs y evidencia de aceptación. Registrar el relevo y la revisión real; después escanear y comprobar. Los hashes del inventario no sustituyen esa revisión.
+
+La aprobación visual y el cierre documental son hechos separados: conservar una aprobación recibida aunque falte consolidar documentación, pero registrar ese pendiente y no presentar el bloque como completamente cerrado. El registro por bloques referencia las tareas de OpenSpec, no las copia. Los identificadores los gestiona la IA sin pedir al usuario que los memorice.

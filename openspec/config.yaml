@@ -14,6 +14,10 @@ context: |
   Secciones en src/features/<pagina>/<seccion>/; compartidos en src/components/.
   Consultar memoria:check y memoria:changes antes de regenerar el inventario.
   Memoria registra roadmap y relevos; OpenSpec gobierna specs y tareas del cambio.
+  Leer memoria/bloques.json y memoria/cierre.md para el alcance y su cierre coherente.
+  Antes de cerrar, reconciliar decisiones vigentes, código, PRODUCT, mapa y specs.
+  Registrar la revisión real antes de memoria:scan; memoria:check incluye coherencia.
+  El usuario no tiene que recordar pedir relevos ni gestionar identificadores.
   No duplicar tareas ni alterar artefactos generados para eludir el flujo.
   Contexto y reglas no sustituyen los estados ni instrucciones de la CLI.
 
@@ -34,6 +38,7 @@ rules:
     - Mantener aquí la lista detallada; el roadmap solo referencia el cambio.
     - Incluir verificación proporcional y actualización de memoria, mapa y relevo afectados.
     - No marcar como completado trabajo parcial, diferido o sin evidencia.
+    - Incluir revisión de coherencia documental y actualización del registro del bloque afectado.
 
 operations:
   apply:
@@ -46,3 +51,4 @@ operations:
       - Verificar tareas y sincronización de specs según la CLI antes de archivar.
       - Actualizar en memoria la referencia al archivo y evidencia real, sin duplicar tareas.
       - Archivar no autoriza la siguiente sección ni implica commit o push.
+      - Reflejar las excepciones aprobadas en todas las specs afectadas y comprobar memoria:coherencia.
