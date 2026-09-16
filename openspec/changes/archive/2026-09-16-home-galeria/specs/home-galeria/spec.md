@@ -1,3 +1,7 @@
+## Purpose
+
+Define la Galería de la portada de Uchiha Barber: carrusel continuo de material audiovisual a sangre entre Servicios y el acceso a Productos, con snap de página, movimiento lateral alimentado por el scroll y por flechas propias, bucle circular por ambos extremos, fundido reversible del fondo y reproducción contenida.
+
 ## ADDED Requirements
 
 ### Requirement: Tira o banner de extremo a extremo

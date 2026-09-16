@@ -20,11 +20,11 @@
 - [x] 5.1 Reformular el carrusel: posición compartida alimentada por el scroll (ScrollTrigger sin tween, una vuelta por cruce de sección) y por las flechas (± un panel, página quieta), con suavizado en `gsap.ticker` y normalización módulo una vuelta; tira duplicada para el bucle tipo noria en ambos sentidos (comprobación: script generado con `ticker`, sin ScrollToPlugin, 24 paneles en `dist/index.html`)
 - [x] 5.2 Restaurar el snap de la Galería y retirar el desplazamiento de página de las flechas (comprobación: CSS generado sin `scroll-snap-align: none` y bundle sin `scrollTo`)
 - [x] 5.3 Reproducción limitada a los paneles cercanos al hueco visible (margen de precarga) y primer fotograma cargado con movimiento reducido (comprobación: lógica de reproducción en el script generado)
-- [ ] 5.4 Verificar en navegador: snap en la sección, flechas sin mover la página, continuidad sin saltos al alternar scroll/flechas y noria por ambos extremos (pendiente del responsable)
+- [x] 5.4 Verificar en navegador: snap en la sección, flechas sin mover la página, continuidad sin saltos al alternar scroll/flechas y noria por ambos extremos (comprobación: confirmación del responsable «todo listo», registrada en `SES-018-cierre-galeria`)
 
 ## 6. Verificación y cierre
 
 - [x] 6.1 Verificación técnica: `npm run build` correcto, detector mecánico Impeccable sin hallazgos sobre los archivos tocados y Prettier aplicado (comprobación: comandos ejecutados en el relevo)
 - [x] 6.2 Revisar la salida generada: la tira y sus vídeos están en `dist/`, el resto de secciones queda intacta (comprobación: `dist/index.html` y CSS generado)
-- [ ] 6.3 Registrar la revisión visual del responsable y el ajuste fino del punto de disparo (pendiente de su revisión)
-- [ ] 6.4 Actualizar memoria afectada (relevo, estado y mapa) y dejar `memoria:check` vigente (comprobación: `npm run memoria:check`)
+- [x] 6.3 Registrar la revisión visual del responsable y el ajuste fino del punto de disparo (comprobación: aceptación visual registrada en `SES-018-cierre-galeria`; el punto de disparo del 50 % quedó aprobado tal cual)
+- [x] 6.4 Actualizar memoria afectada (relevo, estado y mapa) y dejar `memoria:check` vigente (comprobación: commits `000a4e1` y `8e256b7`, `npm run memoria:check` vigente)

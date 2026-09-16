@@ -73,7 +73,7 @@ Cada sección SHALL llevar sus estilos en un CSS Module propio dentro de su carp
 
 ### Requirement: Recorrido con ajuste por sección
 
-El scroll de la página SHALL permanecer libre, y al aproximarse al límite de una sección la página SHALL ajustar (snap por proximidad) la vista al punto de alineación de esa sección, con su inicio anclado a la parte superior del viewport como en el salto de las anclas. La Galería SHALL conservar este comportamiento genérico hasta que se trabaje su contenido, momento en el que adoptará el ajuste centrado tipo banner previsto.
+El scroll de la página SHALL permanecer libre, y al aproximarse al límite de una sección la página SHALL ajustar (snap por proximidad) la vista al punto de alineación de esa sección, con su inicio anclado a la parte superior del viewport como en el salto de las anclas. La Galería SHALL encajarse como el resto del recorrido; la excepción prevista de ajuste centrado tipo banner queda descartada: su contenido se desarrolló como carrusel continuo con snap (cambio `home-galeria`).
 
 #### Scenario: Scroll libre
 
@@ -89,3 +89,8 @@ El scroll de la página SHALL permanecer libre, y al aproximarse al límite de u
 
 - **WHEN** se activa un enlace de navegación hacia una sección
 - **THEN** el punto de llegada coincide con el punto de ajuste del snap de esa sección
+
+#### Scenario: Galería en el recorrido
+
+- **WHEN** el recorrido alcanza la Galería, ya desarrollada como carrusel continuo
+- **THEN** la sección se encaja igual que el resto y no aplica excepción de ajuste
