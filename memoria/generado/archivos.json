@@ -311,8 +311,8 @@
     {
       "ruta": "memoria/estado.json",
       "tipo": "archivo",
-      "bytes": 5360,
-      "sha256": "278f445d9775977a5e24d0f4688944e16496a92c387d7f95ba37739f8fec3b2e"
+      "bytes": 5916,
+      "sha256": "4d9a67fdb7b4c69173a246dee88971f148ce6175791866300e2574974655a0c1"
     },
     {
       "ruta": "memoria/herramientas.md",
@@ -329,8 +329,8 @@
     {
       "ruta": "memoria/mapa.md",
       "tipo": "archivo",
-      "bytes": 4506,
-      "sha256": "786d35cae4ee4b06dcbca79ffbc1b1ee9e84763e158f6cbc814be3b7e6aea4ed"
+      "bytes": 5543,
+      "sha256": "e7267ede622474bf16f7e770a5df19a5fcc63287351071c2a0914a1d4a827146"
     },
     {
       "ruta": "memoria/primer-commit.md",
@@ -395,14 +395,20 @@
     {
       "ruta": "memoria/sesiones/SES-007-cabecera.md",
       "tipo": "archivo",
-      "bytes": 4512,
-      "sha256": "9b7f6b347044d61e754f0b5418175dad08296f8175198b6aea76fdb67d931b3c"
+      "bytes": 5370,
+      "sha256": "0aa948bbe830e0489e779b0961316a509f47874ebb0a2aad6f73d548cb3794e5"
     },
     {
       "ruta": "memoria/sesiones/SES-007-nav-scroll.md",
       "tipo": "archivo",
-      "bytes": 3789,
-      "sha256": "6966e13b22101f70d5bc25a6e630d832f82e9400e6930aa06b9fb36aafb8e7af"
+      "bytes": 4262,
+      "sha256": "c850a86b4cd066a4dbb71bbe585304b49251d5a5f149b817d13abdb729af76b0"
+    },
+    {
+      "ruta": "memoria/sesiones/SES-008-servicios.md",
+      "tipo": "archivo",
+      "bytes": 4220,
+      "sha256": "b24d838d071e0d9806b582be13fcfa8a27816141a362fef6e3f9ef6880c16e0d"
     },
     {
       "ruta": "openspec/changes/archive/.gitkeep",
@@ -569,8 +575,8 @@
     {
       "ruta": "src/components/navigation/SiteNav.module.css",
       "tipo": "archivo",
-      "bytes": 696,
-      "sha256": "8a9d9ccfe253e1beca286077f8044789d114343160575d38827b11ccb21dde0e"
+      "bytes": 753,
+      "sha256": "408c2bf16044e6b413f589cd3e76470e3befc666382600e7bfdd87b94a5747df"
     },
     {
       "ruta": "src/components/ui/ProvisionalNote.astro",
@@ -605,8 +611,8 @@
     {
       "ruta": "src/features/home/cabecera/Cabecera.module.css",
       "tipo": "archivo",
-      "bytes": 1594,
-      "sha256": "5b3707fb31d7a4c98c318bc013764f5b40b820dc2897580e8d9d835a220030e3"
+      "bytes": 1596,
+      "sha256": "b682ceb106e47e017467d48034fdf035c9a7131db9f23621d3ce7cfa8b3ee303"
     },
     {
       "ruta": "src/features/home/galeria/Galeria.astro",

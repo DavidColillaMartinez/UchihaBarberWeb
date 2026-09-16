@@ -13,23 +13,24 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1rem 1.5rem;
+  gap: 0 1.5rem;
   margin: 0;
-  padding: 1.25rem 1.5rem;
+  padding: 0 1.5rem;
   list-style: none;
 }
 
 .list a {
   color: #fff;
   text-decoration: none;
-  padding: 0.25rem 0.5rem;
+  padding: 1.5rem 0.5rem;
   transition:
     background-color 0.2s ease,
     color 0.2s ease;
 }
 
 /* El pill blanco + texto negro se invierten solos con el difference del nav:
-   sobre fondo claro queda pill oscuro con texto claro; sobre oscuro, al revés. */
+   sobre fondo claro queda pill oscuro con texto claro; sobre oscuro, al revés.
+   El bloque de hover arranca en el borde superior de la pantalla. */
 .list a:hover,
 .list a:focus-visible {
   background-color: #fff;
