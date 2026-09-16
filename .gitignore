@@ -30,6 +30,12 @@ pnpm-debug.log*
 # jetbrains setting folder
 .idea/
 
+# Material audiovisual demo (se sustituirá por contenido del VPS)
+ContenidoDemo/
+
+# Salidas locales de las skills de diseño (incluye configuración de máquina)
+.impeccable/
+
 # Configuración privada de cada equipo y salidas locales
 *.local.*
 .codex/hooks.json
