@@ -20,14 +20,19 @@ Plan primero y luego implementación, con estas correcciones (confirmadas en la 
   - `.precio`, `.llamada`: abarcan las dos filas (`grid-area: 1 / 2 / span 2`) y quedan centradas con el li desplegado. `.llamada` con `border: 1px solid currentColor` y padding `0.4rem 1.1rem` (rectangular).
 - `Servicios.astro` (script): `fijarTitulo()` mide la altura de la escena en reposo y fija el `top` del título en píxeles (`centro + altura/2`, compatible con el `translateY(-50%)`); se recalcula en `resize` y `document.fonts.ready`, y en móvil limpia el valor. La transformación al scroll pasa a ser **solo de escala** (origen `left center`), eliminando el tween de `y` y su fórmula.
 
+### Corrección posterior de la misma ronda
+
+- Defecto reportado por el responsable: al pasar el título a `position: absolute` salió del flujo del grid de `.escena`, y la lista (único elemento en flujo) caía por auto-placement en la **columna izquierda** junto al título — se rompía la composición título izquierda / lista derecha.
+- Corrección: `.lista` con `grid-row: 1; grid-column: 2` (colocación explícita en la mitad derecha). Sin cambios en HTML, script ni snap. Verificado en el CSS compilado: `grid-area: 1/2` en la lista, regla de snap local vigente, `scaleY(1)` de hover y borde de la llamada intactos; regla móvil de `tituloBloque` estático también presente.
+
 ## No tocado
 
 Resto de secciones, navegación y configuración global del snap (`global.css`, `index.module.css`): intactos. Otros agentes siguen con cambios sin commit en cabecera, nav, layout y global; no se han tocado.
 
 ## Comprobaciones
 
-- `npm run build`: correcto (astro check sin errores ni avisos; 2 páginas).
-- CSS compilado verificado: `scroll-snap-align: none` local después de la regla de la página, `scaleY(1)` en hover y borde/padding de `.llamada` presentes.
+- `npm run build`: correcto (astro check sin errores ni avisos; 2 páginas), repetido tras la corrección de la columna.
+- CSS compilado verificado: `scroll-snap-align: none` local después de la regla de la página, lista en `grid-area: 1/2` (columna derecha), `scaleY(1)` en hover y borde/padding de `.llamada` presentes; regla móvil de `tituloBloque` estático presente.
 - Detector mecánico Impeccable (`detect --json`): sin hallazgos.
 - Prettier: archivos de servicios formateados y correctos.
 - Capturas visuales: no verificables en este entorno (sin navegador); pendiente la revisión visual del responsable (centrado fijo, hover y comportamiento del scroll dentro de la sección sin snap).

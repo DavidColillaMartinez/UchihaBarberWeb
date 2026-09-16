@@ -299,8 +299,8 @@
     {
       "ruta": "memoria/estado.json",
       "tipo": "archivo",
-      "bytes": 7543,
-      "sha256": "c4c1a26ea50c3482595e7ea5319fa5eaf8ceb05ada2c5d4094b2d70feae39a71"
+      "bytes": 8471,
+      "sha256": "c6cedd4de0cc14809feb4a3ec4fa366c99f0ca5c9f698d469499f094a15e2db2"
     },
     {
       "ruta": "memoria/herramientas.md",
@@ -317,8 +317,8 @@
     {
       "ruta": "memoria/mapa.md",
       "tipo": "archivo",
-      "bytes": 6089,
-      "sha256": "763195cf6cc9036aafdade2976b64f1f99eb8275769cc8a539827ab27ae46ff4"
+      "bytes": 6813,
+      "sha256": "5965c81e7ea1381b37134bbf6e6849849fc514bb89bd6167943454a07e64ecd9"
     },
     {
       "ruta": "memoria/primer-commit.md",
@@ -419,8 +419,20 @@
     {
       "ruta": "memoria/sesiones/SES-010-servicios-ajustes-hover.md",
       "tipo": "archivo",
-      "bytes": 3831,
-      "sha256": "dd5682e6748b954387449f18c5afef568938df84558eaf794cd1de792c4435cb"
+      "bytes": 4659,
+      "sha256": "3cc65b1f2f2ccd8b3998fb2995f929ff21ab41dfbd49c165ea70555372578759"
+    },
+    {
+      "ruta": "memoria/sesiones/SES-011-correccion-enlaces.md",
+      "tipo": "archivo",
+      "bytes": 2751,
+      "sha256": "606334382ecd94d327efe5030d4568df0943af7b95e983958f2f2a1c3ad91fa4"
+    },
+    {
+      "ruta": "memoria/sesiones/SES-012-galeria.md",
+      "tipo": "archivo",
+      "bytes": 4255,
+      "sha256": "4b7507e0c18eedc05356ba488bced80162a5096b27cff70cb9b5404e8944f628"
     },
     {
       "ruta": "openspec/changes/archive/.gitkeep",
@@ -537,6 +549,36 @@
       "sha256": "68254adf40dfaa16e6759c1d6fed26b6935e329402f53b8f563d8f1cd8a21cb5"
     },
     {
+      "ruta": "openspec/changes/home-galeria/.openspec.yaml",
+      "tipo": "archivo",
+      "bytes": 40,
+      "sha256": "50c36dfa766b2fc52e8a7d270b1d67cc487bcd95d1b4c8a5f929d62738e3c77e"
+    },
+    {
+      "ruta": "openspec/changes/home-galeria/design.md",
+      "tipo": "archivo",
+      "bytes": 3400,
+      "sha256": "58a2992e5c33e82ab066238a84d727b543bd343d5d7d13fd8a6629058f8fa20f"
+    },
+    {
+      "ruta": "openspec/changes/home-galeria/proposal.md",
+      "tipo": "archivo",
+      "bytes": 3104,
+      "sha256": "d7128c68d946ed09523fdfb16ad701ded4177e951d3d86eee69700b4d785a1c6"
+    },
+    {
+      "ruta": "openspec/changes/home-galeria/specs/home-galeria/spec.md",
+      "tipo": "archivo",
+      "bytes": 3086,
+      "sha256": "3ddf32994b8ed69c32f6c908221c5d72733968d66e2dad54ad101c1116f230cb"
+    },
+    {
+      "ruta": "openspec/changes/home-galeria/tasks.md",
+      "tipo": "archivo",
+      "bytes": 1956,
+      "sha256": "1b4f064d1c1771d5c333f4255e3e0858f2552231aa72787f1ebe7698585c3764"
+    },
+    {
       "ruta": "openspec/config.yaml",
       "tipo": "archivo",
       "bytes": 2911,
@@ -615,6 +657,78 @@
       "sha256": "a7d0a50f15d389cad679238466bdb5fc9787aa0715719064ce25abaff042820d"
     },
     {
+      "ruta": "public/videos/Corte+barba.mp4",
+      "tipo": "archivo",
+      "bytes": 3010776,
+      "sha256": "5911e796b715381d716d918192b0fcf43183ca7c1479107216825ced23325165"
+    },
+    {
+      "ruta": "public/videos/CorteDePelo1.mp4",
+      "tipo": "archivo",
+      "bytes": 1372340,
+      "sha256": "54bf10fbd9a4635d77c7b9237197f76050c9ddf8a46117226a5ee7b5f58d9156"
+    },
+    {
+      "ruta": "public/videos/CorteDePelo10.mp4",
+      "tipo": "archivo",
+      "bytes": 1360084,
+      "sha256": "0ae47007c652b0404bce12462d9c16ed5df573cd83ab043898406b9c812e7b44"
+    },
+    {
+      "ruta": "public/videos/CorteDePelo11.mp4",
+      "tipo": "archivo",
+      "bytes": 1546790,
+      "sha256": "5bd9a2b160b006cbd7b0100e6b98c8c65d7e9776924d88e16847a7de7f5c1f2d"
+    },
+    {
+      "ruta": "public/videos/CorteDePelo2.mp4",
+      "tipo": "archivo",
+      "bytes": 1477324,
+      "sha256": "417991521ed55603e4e70574c0d5ea701a812d0fc1ab6c28f7614b0f74d4443a"
+    },
+    {
+      "ruta": "public/videos/CorteDePelo3.mp4",
+      "tipo": "archivo",
+      "bytes": 848374,
+      "sha256": "980b781e09b98d3d4d4fcc4404c7011d8e355cc4ee9d7135796ae541c340054c"
+    },
+    {
+      "ruta": "public/videos/CorteDePelo4.mp4",
+      "tipo": "archivo",
+      "bytes": 1416267,
+      "sha256": "94a374fa3823ce1dfdb77fcabe72fcf3aa0ed5671b7a7ac40ce664e2c635640d"
+    },
+    {
+      "ruta": "public/videos/CorteDePelo5.mp4",
+      "tipo": "archivo",
+      "bytes": 751626,
+      "sha256": "b75e30a58842547f1b9b3e022a2fab2ef7348f3c962825773c6249b48d74e63a"
+    },
+    {
+      "ruta": "public/videos/CorteDePelo6.mp4",
+      "tipo": "archivo",
+      "bytes": 968606,
+      "sha256": "5d1b4c30907f03b36e1c2c8388c74f54b2a2b26296b03bc78b1052e933d7d7e5"
+    },
+    {
+      "ruta": "public/videos/CorteDePelo7.mp4",
+      "tipo": "archivo",
+      "bytes": 1425319,
+      "sha256": "0a1276f1d89a95bce92a13791d9e808369f5bccbbbac5953b1c0ca0ac8ad380c"
+    },
+    {
+      "ruta": "public/videos/CorteDePelo8.mp4",
+      "tipo": "archivo",
+      "bytes": 998083,
+      "sha256": "4369cfdf2efa1d67381613408dab7e83d7aceba1e76e1f5f17292bbb93f70c36"
+    },
+    {
+      "ruta": "public/videos/CorteDePelo9.mp4",
+      "tipo": "archivo",
+      "bytes": 1388489,
+      "sha256": "92a77a0666fd3aea0d3efdbb4ed6084497d2ab424cbc54787364b67c32e40aa8"
+    },
+    {
       "ruta": "public/videos/Video_Head.mp4",
       "tipo": "archivo",
       "bytes": 7661458,
@@ -657,6 +771,18 @@
       "sha256": "8b88fe63fc44aeaba60472b6fa430f216ef93663ea69a697aa780d420542cdae"
     },
     {
+      "ruta": "src/components/ui/BookingLink.astro",
+      "tipo": "archivo",
+      "bytes": 704,
+      "sha256": "bc6ba422de2bd8638a22a8f8585ab04dca11061839101c3fe634d49a06b4e757"
+    },
+    {
+      "ruta": "src/components/ui/BookingLink.module.css",
+      "tipo": "archivo",
+      "bytes": 324,
+      "sha256": "23ea19d1b6fa75915093d15f5dcc074363b9f772b379a4cd11f934b35114473f"
+    },
+    {
       "ruta": "src/components/ui/ProvisionalNote.astro",
       "tipo": "archivo",
       "bytes": 100,
@@ -683,8 +809,8 @@
     {
       "ruta": "src/features/home/cabecera/Cabecera.astro",
       "tipo": "archivo",
-      "bytes": 1269,
-      "sha256": "13455fd6f758a4468ead976c61117595bc506fa0aa76a66ac2db5aa3711a7df2"
+      "bytes": 1165,
+      "sha256": "393f860660d95647821896b722c64f2640c361bda4d925289667feb318a23590"
     },
     {
       "ruta": "src/features/home/cabecera/Cabecera.module.css",
@@ -695,20 +821,20 @@
     {
       "ruta": "src/features/home/galeria/Galeria.astro",
       "tipo": "archivo",
-      "bytes": 614,
-      "sha256": "e4f01c553e0c25bc8b827feebfcd9e70e06366246962c9e099efed02f697917e"
+      "bytes": 4287,
+      "sha256": "99e9247e38baffa6438315b62e5616a8b2ca4c1fcb61f076ccfeb01c10fd5ca6"
     },
     {
       "ruta": "src/features/home/galeria/Galeria.module.css",
       "tipo": "archivo",
-      "bytes": 258,
-      "sha256": "8b3197e6a320aa164f191cb7209422f13c1150b0392e053fd13d0a2ca1e823f6"
+      "bytes": 969,
+      "sha256": "3f41633ac72cdfa86b7e55a1ff901587bb899e13d22c09bce8772b68aa03bb77"
     },
     {
       "ruta": "src/features/home/informacion/Informacion.astro",
       "tipo": "archivo",
-      "bytes": 952,
-      "sha256": "642f0cc04b03bdd57287989283c5712104e5228c002e89c84b3ddd8ffd4e6698"
+      "bytes": 860,
+      "sha256": "f34711af2241355355b834169a80f0716fc0ad8cfc0415291613dd7ae6c27567"
     },
     {
       "ruta": "src/features/home/informacion/Informacion.module.css",
@@ -749,14 +875,14 @@
     {
       "ruta": "src/features/home/servicios/Servicios.astro",
       "tipo": "archivo",
-      "bytes": 7573,
-      "sha256": "ebe82808dbeebef041be69374d0a806a1a4a9009b57dce2b3cbdfc11c87c63f5"
+      "bytes": 7347,
+      "sha256": "55f96d37d73545ced0196b686915777e7d1b228ee02146ee8c29b43cc0127044"
     },
     {
       "ruta": "src/features/home/servicios/Servicios.module.css",
       "tipo": "archivo",
-      "bytes": 5400,
-      "sha256": "8bfe22baa85bf5d0ddba6dba20402964c95ee2762ad31f3b968ee17e2bd3454d"
+      "bytes": 5605,
+      "sha256": "0099d429c2b7f9d11bf2b4405dabae23c1d994f6d59b749c79850620d6795961"
     },
     {
       "ruta": "src/features/products/provisional/Provisional.astro",
