@@ -8,11 +8,6 @@ interface Props {
 
 const { isHomePage = false, currentPage = "home" } = Astro.props;
 
-/* URL confirmada del sistema externo de reservas (PRODUCT.md).
-   Enlace simple: no se asumen API, embeds ni parámetros de Yeasy. */
-const bookingUrl =
-  "https://yeasy.io/commerce/7b8627f1-9c5e-46a6-ab95-ef6e0e1b87da";
-
 const anchor = (id: string) => (isHomePage ? `#${id}` : `/#${id}`);
 ---
 
@@ -43,10 +38,6 @@ const anchor = (id: string) => (isHomePage ? `#${id}` : `/#${id}`);
     <li>
       <a href={anchor("info")}>Información</a>
     </li>
-    <li>
-      <!-- Texto funcional provisional; se ajustará con el responsable. -->
-      <a href={bookingUrl}>Pedir cita</a>
-    </li>
   </ul>
 </nav>
 
@@ -71,10 +62,10 @@ const anchor = (id: string) => (isHomePage ? `#${id}` : `/#${id}`);
         const fondo = getComputedStyle(actual).backgroundColor;
         const coincidencia = /rgba?\(([^)]+)\)/.exec(fondo);
         if (coincidencia) {
-          const [r, g, b, a = "1"] = coincidencia[1]
+          const [r, g, b, a = 1] = coincidencia[1]
             .split(",")
             .map((valor) => parseFloat(valor));
-          if (parseFloat(a) > 0.5) {
+          if (a > 0.5) {
             return 0.2126 * r + 0.7152 * g + 0.0722 * b > UMBRAL_LUMINANCIA;
           }
         }
@@ -93,17 +84,24 @@ const anchor = (id: string) => (isHomePage ? `#${id}` : `/#${id}`);
       return null;
     };
 
-    const actualizarTema = () => {
-      nav.dataset.theme = fondoEsClaro(seccionBajoNav()) ? "light" : "dark";
+    const actualizarEstado = () => {
+      const seccion = seccionBajoNav();
+      const esClaro = fondoEsClaro(seccion);
+      nav.dataset.theme = esClaro ? "light" : "dark";
+      /* Desenfoque ligero solo sobre la cabecera (sección con vídeo). */
+      const esCabecera =
+        seccion?.getAttribute("aria-labelledby")?.startsWith("cabecera-") ??
+        false;
+      nav.dataset.blur = esCabecera && !esClaro ? "on" : "off";
     };
 
-    actualizarTema();
-    window.addEventListener("resize", actualizarTema);
+    actualizarEstado();
+    window.addEventListener("resize", actualizarEstado);
     ScrollTrigger.create({
       start: 0,
       end: "max",
-      onUpdate: actualizarTema,
-      onRefresh: actualizarTema,
+      onUpdate: actualizarEstado,
+      onRefresh: actualizarEstado,
     });
 
     const media = gsap.matchMedia();

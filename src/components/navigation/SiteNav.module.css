@@ -25,12 +25,21 @@
 .list a {
   display: flex;
   align-items: center;
-  padding: 1.4rem 0.6rem;
+  padding: 0.8rem 1.6rem;
+  border-radius: 0.5rem;
   color: #fff;
   text-decoration: none;
   transition:
     background-color 0.2s ease,
-    color 0.2s ease;
+    color 0.2s ease,
+    backdrop-filter 0.2s ease;
+}
+
+/* Desenfoque ligero tras las opciones, solo sobre la cabecera (data-blur).
+   Al interactuar se retira y entra la inversión sólida. */
+.nav[data-blur="on"] .list a {
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
 }
 
 /* Tema oscuro (por defecto y pre-JS): letras blancas; al hover, inversión
@@ -39,6 +48,8 @@
 .list a:focus-visible {
   background-color: #fff;
   color: #000;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
 }
 
 /* Tema claro (secciones blancas): letras negras; al hover, fondo negro. */

@@ -311,8 +311,8 @@
     {
       "ruta": "memoria/estado.json",
       "tipo": "archivo",
-      "bytes": 6315,
-      "sha256": "d3663bab0de83383b8d9c93c4fe43b323ef48c245ee1f3a3c6e3fa3b24b8a836"
+      "bytes": 6649,
+      "sha256": "e03cbc9aff7e5b3d8c5ce57c668b04fc3e12ceb5a7c49ad8081416f0843a65f1"
     },
     {
       "ruta": "memoria/herramientas.md",
@@ -329,8 +329,8 @@
     {
       "ruta": "memoria/mapa.md",
       "tipo": "archivo",
-      "bytes": 5784,
-      "sha256": "30bd8bef9507efd2ff3c9b43b03c91026eb40162a95fcb5e8cbe92f57429259c"
+      "bytes": 5785,
+      "sha256": "4d9400fb695028f8dde6b6048fabd7a473728d56e6372db35743acc39be98a5c"
     },
     {
       "ruta": "memoria/primer-commit.md",
@@ -401,8 +401,8 @@
     {
       "ruta": "memoria/sesiones/SES-007-nav-scroll.md",
       "tipo": "archivo",
-      "bytes": 5322,
-      "sha256": "c403e288a56a733846089ab7826135f55bbe7a6d2c6568d3e6662cc3d0a38a67"
+      "bytes": 6458,
+      "sha256": "0aec6488e342d38b8f98488346e29a829769a0ef82adf36d0424e79733e58170"
     },
     {
       "ruta": "memoria/sesiones/SES-008-servicios.md",
@@ -413,8 +413,8 @@
     {
       "ruta": "memoria/sesiones/SES-009-intro-entrada.md",
       "tipo": "archivo",
-      "bytes": 6521,
-      "sha256": "fc17edf1be4cdcb042938c78cb4bd81e1514936a2c373e9907abb5f78d8cc29a"
+      "bytes": 8365,
+      "sha256": "c004afce114d0955f274d387ab46d95feb174016feff45cace60e1012d7b17f4"
     },
     {
       "ruta": "openspec/changes/archive/.gitkeep",
@@ -543,6 +543,18 @@
       "sha256": "2d7a310283d6f9cc753210d83224cd6db6348cb82a5536348884e5831d46203f"
     },
     {
+      "ruta": "public/fonts/archivo-600.woff2",
+      "tipo": "archivo",
+      "bytes": 13820,
+      "sha256": "d9e8c29fdd348edde2a4f9aae438e569dd165bbbdebda78495824a2d9aaa67e8"
+    },
+    {
+      "ruta": "public/fonts/inter-800.woff2",
+      "tipo": "archivo",
+      "bytes": 24400,
+      "sha256": "a7d0a50f15d389cad679238466bdb5fc9787aa0715719064ce25abaff042820d"
+    },
+    {
       "ruta": "public/videos/Video_Head.mp4",
       "tipo": "archivo",
       "bytes": 7661458,
@@ -575,14 +587,14 @@
     {
       "ruta": "src/components/navigation/SiteNav.astro",
       "tipo": "archivo",
-      "bytes": 4029,
-      "sha256": "bebb6506de3c3253cdc9ea017d6fa6dc34ffd15d5dc1d7fc43e6846a397d9cc4"
+      "bytes": 3983,
+      "sha256": "9db820dc515c69f6b2caf5eaa713f0dde8182b77c28fa4fb2bdcf64265f322d6"
     },
     {
       "ruta": "src/components/navigation/SiteNav.module.css",
       "tipo": "archivo",
-      "bytes": 980,
-      "sha256": "557eee821cb5ba5114790373b9cf8d1cddfe1515c8cc7283e4fc57e819b86c86"
+      "bytes": 1334,
+      "sha256": "bdcaaee7da6fc95dbb811b179de229084d1998b35765c03026d233d6a45be913"
     },
     {
       "ruta": "src/components/ui/ProvisionalNote.astro",
@@ -617,8 +629,8 @@
     {
       "ruta": "src/features/home/cabecera/Cabecera.module.css",
       "tipo": "archivo",
-      "bytes": 1887,
-      "sha256": "8cf19881d0361070c418d20e1485e6532e40bd65e5a505f25beb0dd7d09fdba0"
+      "bytes": 1976,
+      "sha256": "4f6cb97e487712e374fd22392b356e760fae3b0873c4b50dccf9eb12853387ef"
     },
     {
       "ruta": "src/features/home/galeria/Galeria.astro",
@@ -659,8 +671,8 @@
     {
       "ruta": "src/features/home/intro/intro.ts",
       "tipo": "archivo",
-      "bytes": 10683,
-      "sha256": "ffc2979ddd63a6a35ecd80c275bcf0f39d24671ff8c2a13dc09bd019d29ea28f"
+      "bytes": 10985,
+      "sha256": "16715318cedb200652e056a058f0fbfa54ba69199f837f61cab8b088cf063fdb"
     },
     {
       "ruta": "src/features/home/opiniones/Opiniones.astro",
@@ -725,8 +737,8 @@
     {
       "ruta": "src/styles/global.css",
       "tipo": "archivo",
-      "bytes": 1274,
-      "sha256": "66193d8db533bf349609bf173d8eaea12e2869715d371847e3436576c1bede4e"
+      "bytes": 2066,
+      "sha256": "c8b8fac3305c724d3943217158ab96760eafda1e374347a4a0f9c770e510999f"
     },
     {
       "ruta": "tsconfig.json",

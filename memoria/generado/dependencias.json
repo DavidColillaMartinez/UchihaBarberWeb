@@ -34,6 +34,8 @@
         "astro.config.mjs",
         "public/favicon.ico",
         "public/favicon.svg",
+        "public/fonts/archivo-600.woff2",
+        "public/fonts/inter-800.woff2",
         "public/videos/Video_Head.mp4",
         "src/components/navigation/SiteNav.astro",
         "src/components/navigation/SiteNav.module.css",
