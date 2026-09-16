@@ -25,6 +25,12 @@ Instrucción: «tengo el contenido demo, lo sacaremos desde el repositorio en ca
 - `Cabecera.astro`: constante `videoUrl = "/videos/Video_Head.mp4"` en frontmatter y `src={videoUrl}` en el `<video>`; comentario actualizado (demo desde repo; el cambio a VPS se hace en esa constante). El script de movimiento reducido ya pausaba el vídeo.
 - `.gitignore`: añadida la exclusión `ContenidoDemo/` (24 MB de material demo).
 
+## Turno 3: ajuste de composición del h1 (prototipo de intro aprobado)
+
+Instrucción: «movamos el h1 más al centro y un 15% más pequeño». Cambios en `Cabecera.module.css`: `align-items: flex-end → center` (grupo título+CTA centrado verticalmente, alineación izquierda conservada) y `font-size: min(28vw, 34vh) → min(23.8vw, 28.9vh)` (−15%). `npm run build` correcto y Prettier limpio.
+
+Contexto de exploración en paralelo (sin tocar el repo): prototipo desechable de la intro de entrada en `/tmp/opencode/intro-proto/` (overlay SVG con máscara de texto sobre el vídeo demo, iris por el contador de la B de BARBER, cobertura total sin fade al final, 24 fps con blur, una vez por sesión, fuentes Inter/Archivo self-hosted). Decisiones de la intro pendientes de capturar en cambio OpenSpec antes de implementar en `src/features/home/intro/`.
+
 ## No tocado
 
 Resto de secciones, navegación, layout, estilos globales, página de productos, specs y demás fuentes: sin cambios salvo memoria y el brief local. ProvisionalNote sigue usándose en las otras secciones.
