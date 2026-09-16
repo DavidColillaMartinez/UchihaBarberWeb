@@ -2,10 +2,11 @@
   "schema": 1,
   "proyecto": "UchihaBarberWeb",
   "faseActiva": "UB-004",
-  "ultimoRelevo": "memoria/sesiones/SES-007-nav-scroll.md",
-  "alcanceActual": "UB-004 en curso, dos bloques paralelos: cabecera implementada con vídeo demo (SES-007-cabecera, sin commit) y nav fusionado + recorrido con ajuste por secciones (SES-007-nav-scroll, cambio nav-scroll-inicio). Ambos pendientes de aceptación visual; el resto de secciones espera su turno.",
+  "ultimoRelevo": "memoria/sesiones/SES-009-intro-entrada.md",
+  "alcanceActual": "UB-004 en curso, cuatro bloques paralelos: cabecera con vídeo demo, h1 centrado verticalmente un 15% más pequeño y tipografías autoalojadas (Inter 800 titular, Archivo 600 acceso) sobre tokens compartidos (SES-007-cabecera), cruce de entrada implementado en src/features/home/intro/ repetido en cada carga y con arranque acortado (SES-009-intro-entrada), nav fusionado + recorrido con ajuste por secciones (SES-007-nav-scroll, cambio nav-scroll-inicio) y sección Servicios con datos reales de Yeasy, vídeo en las letras y transformación al scroll (SES-008). Los cuatro pendientes de aceptación visual; el resto de secciones espera su turno. Sin commits solicitados en este turno.",
   "pendientesDeDecision": [
     "Sessions: confirmar inclusión y ubicación.",
+    "Familia tipográfica definitiva: Inter (titulares) y Archivo (interfaz) adoptadas de forma provisional por indicación del responsable, a falta del visto bueno del cliente (supreme/off-white/apple); el reparto por elemento se concreta en cada sección.",
     "Diseños y comportamientos definitivos se concretan por sección; ver PRODUCT.md."
   ],
   "fases": [
@@ -67,8 +68,8 @@
       "titulo": "Desarrollo individual de las secciones de inicio",
       "estado": "en_curso",
       "dependeDe": ["UB-003"],
-      "autorizacion": "Instrucción directa del usuario (SES-007): diseñar la cabecera, no tocar otras secciones, con hueco de vídeo preparado; turno 2 autorizado para integrar el vídeo demo desde ContenidoDemo. Bloque paralelo autorizado (SES-007-nav-scroll): nav fusionado y comportamiento de scroll de la index, sin tocar la cabecera.",
-      "openspec": "openspec/changes/nav-scroll-inicio/proposal.md",
+      "autorizacion": "Instrucción directa del usuario (SES-007): diseñar la cabecera, no tocar otras secciones, con hueco de vídeo preparado; turno 2 autorizado para integrar el vídeo demo desde ContenidoDemo; turno 3 autorizado para centrar el h1 y reducirlo un 15%. Bloque paralelo autorizado (SES-007-nav-scroll): nav fusionado y comportamiento de scroll de la index, sin tocar la cabecera. Turno autorizado (SES-008): primer diseño de la sección Servicios con Impeccable, escritura solo dentro de servicios; datos reales de servicios tomados de la página pública de Yeasy por indicación del usuario. Turno autorizado (SES-009): implementar el cruce de entrada en la web según el prototipo aprobado, revisando las integraciones en curso para no romperlas; y turno 2 autorizado para que el cruce se repita en cada carga en lugar de una vez por sesión.",
+      "openspec": "openspec/changes/archive/2026-09-16-nav-scroll-inicio/proposal.md",
       "criterios": [
         "El usuario define el turno y alcance de cada sección.",
         "Aislamiento CSS, componentes compartidos y comportamiento acordado.",
@@ -76,7 +77,9 @@
       ],
       "evidencias": [
         "memoria/sesiones/SES-007-cabecera.md",
-        "memoria/sesiones/SES-007-nav-scroll.md"
+        "memoria/sesiones/SES-007-nav-scroll.md",
+        "memoria/sesiones/SES-008-servicios.md",
+        "memoria/sesiones/SES-009-intro-entrada.md"
       ]
     },
     {

@@ -13,5 +13,5 @@
 ## 3. Verificación y cierre
 
 - [x] 3.1 Verificación técnica: `npm run build` sin errores, formato correcto en archivos tocados, teclado y foco intactos (comprobación: build + revisión registrada)
-- [ ] 3.2 Actualizar memoria (estado, mapa si procede, relevo) tras revisar el diff (comprobación: `npm run memoria:check` vigente)
-- [ ] 3.3 Presentar al responsable la revisión visual del desvanecimiento y del snap; registrar su aceptación o el paso al plan B (comprobación: decisión anotada en relevo)
+- [x] 3.2 Actualizar memoria (estado, mapa si procede, relevo) tras revisar el diff (comprobación: `npm run memoria:check` vigente)
+- [x] 3.3 Presentar al responsable la revisión visual del desvanecimiento y del snap; registrar su aceptación o el paso al plan B (comprobación: decisión anotada en relevo)

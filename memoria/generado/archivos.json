@@ -311,8 +311,8 @@
     {
       "ruta": "memoria/estado.json",
       "tipo": "archivo",
-      "bytes": 6649,
-      "sha256": "e03cbc9aff7e5b3d8c5ce57c668b04fc3e12ceb5a7c49ad8081416f0843a65f1"
+      "bytes": 6668,
+      "sha256": "59fff49415cc6f0b25b723684aa398264868065a838353a22dc74c1f30af2f17"
     },
     {
       "ruta": "memoria/herramientas.md",
@@ -401,8 +401,8 @@
     {
       "ruta": "memoria/sesiones/SES-007-nav-scroll.md",
       "tipo": "archivo",
-      "bytes": 6458,
-      "sha256": "0aec6488e342d38b8f98488346e29a829769a0ef82adf36d0424e79733e58170"
+      "bytes": 7090,
+      "sha256": "feaf916fc540a5d7ac16cccc0abbd150b2ed0d903886e0c87f534554cd210fe8"
     },
     {
       "ruta": "memoria/sesiones/SES-008-servicios.md",
@@ -459,40 +459,40 @@
       "sha256": "ead7f22f8252b112ea6526182e894de49dafc40532f50d539aaf2129f65e82c7"
     },
     {
-      "ruta": "openspec/changes/nav-scroll-inicio/.openspec.yaml",
+      "ruta": "openspec/changes/archive/2026-09-16-nav-scroll-inicio/.openspec.yaml",
       "tipo": "archivo",
       "bytes": 40,
       "sha256": "50c36dfa766b2fc52e8a7d270b1d67cc487bcd95d1b4c8a5f929d62738e3c77e"
     },
     {
-      "ruta": "openspec/changes/nav-scroll-inicio/design.md",
+      "ruta": "openspec/changes/archive/2026-09-16-nav-scroll-inicio/design.md",
       "tipo": "archivo",
       "bytes": 4720,
       "sha256": "eefbcc0904fa34d84ecd578174a7c1b39eacedaf5a324000941bf0c73bc3b634"
     },
     {
-      "ruta": "openspec/changes/nav-scroll-inicio/proposal.md",
+      "ruta": "openspec/changes/archive/2026-09-16-nav-scroll-inicio/proposal.md",
       "tipo": "archivo",
       "bytes": 2547,
       "sha256": "bce527bb276f3294c82540a5f6bac2f829390b16e10ed9a3039fac354782bf7c"
     },
     {
-      "ruta": "openspec/changes/nav-scroll-inicio/specs/home-skeleton/spec.md",
+      "ruta": "openspec/changes/archive/2026-09-16-nav-scroll-inicio/specs/home-skeleton/spec.md",
       "tipo": "archivo",
       "bytes": 2560,
       "sha256": "1350c70d8b5407d796dc0bddb3c3d01277a3017463b075455ea8656e9d497524"
     },
     {
-      "ruta": "openspec/changes/nav-scroll-inicio/specs/site-navigation/spec.md",
+      "ruta": "openspec/changes/archive/2026-09-16-nav-scroll-inicio/specs/site-navigation/spec.md",
       "tipo": "archivo",
       "bytes": 2804,
       "sha256": "7c6fd657f68ce2a070bb01cb735cee2b96be7b2217caef83dd196eda075b5d0c"
     },
     {
-      "ruta": "openspec/changes/nav-scroll-inicio/tasks.md",
+      "ruta": "openspec/changes/archive/2026-09-16-nav-scroll-inicio/tasks.md",
       "tipo": "archivo",
       "bytes": 1753,
-      "sha256": "9444b27e744a5212b4bfe84d5bb46a1ffa4c11978598a7ba49165ccc0656c381"
+      "sha256": "68254adf40dfaa16e6759c1d6fed26b6935e329402f53b8f563d8f1cd8a21cb5"
     },
     {
       "ruta": "openspec/config.yaml",
@@ -509,14 +509,20 @@
     {
       "ruta": "openspec/specs/home-skeleton/spec.md",
       "tipo": "archivo",
-      "bytes": 4050,
-      "sha256": "afb3ad0660027164d17c05d88721aed29c2064110f6471c1d57c048ee1171254"
+      "bytes": 5516,
+      "sha256": "a725ef96840a1483c4452840cd7a335ceafa0990bdb85efc9094a5036446af67"
     },
     {
       "ruta": "openspec/specs/products-page/spec.md",
       "tipo": "archivo",
       "bytes": 2063,
       "sha256": "634128382a908d8dfebb2e5e2463ad8ad7cfdaef72134aa9410ed4f5683688ea"
+    },
+    {
+      "ruta": "openspec/specs/site-navigation/spec.md",
+      "tipo": "archivo",
+      "bytes": 2805,
+      "sha256": "0468d148206da2021aa36315ceb1cac40665851f90ec30d1f2f7b22d2e9dc690"
     },
     {
       "ruta": "package-lock.json",
@@ -593,8 +599,8 @@
     {
       "ruta": "src/components/navigation/SiteNav.module.css",
       "tipo": "archivo",
-      "bytes": 1334,
-      "sha256": "bdcaaee7da6fc95dbb811b179de229084d1998b35765c03026d233d6a45be913"
+      "bytes": 1336,
+      "sha256": "8b88fe63fc44aeaba60472b6fa430f216ef93663ea69a697aa780d420542cdae"
     },
     {
       "ruta": "src/components/ui/ProvisionalNote.astro",
@@ -689,14 +695,14 @@
     {
       "ruta": "src/features/home/servicios/Servicios.astro",
       "tipo": "archivo",
-      "bytes": 5156,
-      "sha256": "115ed4b2eb59909129b607772fd5516618bbd291abedd84fd427925b1d87aad1"
+      "bytes": 6363,
+      "sha256": "f6dfa6b735a1acbc56e1984e947f7a0f8f7e29a51d1fd96eaaf743d679491888"
     },
     {
       "ruta": "src/features/home/servicios/Servicios.module.css",
       "tipo": "archivo",
-      "bytes": 4111,
-      "sha256": "c09e9c9ce983dd72bffec03b61413038803768e8849f8affc1a2161f3a67d4c7"
+      "bytes": 3997,
+      "sha256": "9f0e022d7cce54e92e2b6e28a2262ec99365cca92ed83c33e69dba549ece9175"
     },
     {
       "ruta": "src/features/products/provisional/Provisional.astro",

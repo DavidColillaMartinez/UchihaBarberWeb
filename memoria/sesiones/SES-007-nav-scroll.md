@@ -39,6 +39,10 @@ Base Git: `052954b06cab7083aa0173d442a15f09ac97bb8d` (Cierra el esqueleto con su
 - Corrección de un fallo propio detectado en esta pasada: el script de tema tenía un error de tipos (`parseFloat(a)` con un valor por defecto de tipo string) que `astro check` marcaba y que **hacía fallar `npm run build`** (la cadena `check && astro build`), dejando `dist/` obsoleto mientras las comprobaciones anteriores solo miraban el final de la salida. Corregido (`a` numérico); comprobado ahora con la salida completa: `astro check` 0 errores y build real de 2 páginas.
 - Comprobado tras el ajuste: `npm run build` correcto, `astro check` sin errores y Prettier en orden.
 
+## Aceptación y archivo
+
+El responsable ajustó el desenfoque de cabecera a `blur(10px)` (se alinea el prefijo `-webkit-` al mismo valor) y dio por buena la revisión visual del nav y del recorrido (desvanecimiento suave, inversión por tema y snap por secciones), sin pasar al plan B. `astro check` 0 errores y build real de 2 páginas tras el ajuste. El cambio OpenSpec `nav-scroll-inicio` se archiva con sus deltas aplicados a las specs principales: `site-navigation` (nueva) y `home-skeleton` (requisitos modificados de composición y recorrido). Las excepciones futuras siguen documentadas: ajuste centrado tipo banner para Galería y convivencia con el _pin_ de Servicios.
+
 ## Pendiente
 
-Revisión visual y aceptación del responsable (tarea 3.3) antes de cerrar el cambio. Excepción futura: snap centrado tipo banner para Galería cuando se trabaje su contenido. Sin dependencias nuevas; lockfile intacto.
+El resto de bloques paralelos (cabecera, Servicios, intro) mantienen su estado y aceptación pendientes en sus propios relevos. Sin dependencias nuevas; lockfile intacto.

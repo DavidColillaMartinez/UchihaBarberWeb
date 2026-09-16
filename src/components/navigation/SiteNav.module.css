@@ -38,8 +38,8 @@
 /* Desenfoque ligero tras las opciones, solo sobre la cabecera (data-blur).
    Al interactuar se retira y entra la inversión sólida. */
 .nav[data-blur="on"] .list a {
-  -webkit-backdrop-filter: blur(4px);
-  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 
 /* Tema oscuro (por defecto y pre-JS): letras blancas; al hover, inversión
