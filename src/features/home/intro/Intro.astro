@@ -1,0 +1,31 @@
+---
+import styles from "./Intro.module.css";
+---
+
+<!-- Cruce de entrada: capa negra con el nombre como máscara negativa, por
+     donde se ve el vídeo de la cabecera. Solo se muestra si el script previo
+     al primer pintado dejó html[data-intro="pendiente"]; con JS desactivado,
+     movimiento reducido o visita repetida en la sesión, nunca aparece. -->
+<svg class={styles.intro} data-intro-capa aria-hidden="true" focusable="false">
+  <defs>
+    <mask id="intro-mascara" maskContentUnits="userSpaceOnUse">
+      <rect width="100%" height="100%" fill="#fff"></rect>
+      <g data-intro-texto>
+        <text data-intro-linea fill="#000" text-anchor="middle"></text>
+        <text data-intro-linea fill="#000" text-anchor="middle"></text>
+      </g>
+    </mask>
+  </defs>
+  <rect
+    width="100%"
+    height="100%"
+    fill="#000"
+    mask="url(#intro-mascara)"
+  ></rect>
+</svg>
+
+<script>
+  import { iniciarIntro } from "@/features/home/intro/intro";
+
+  iniciarIntro();
+</script>

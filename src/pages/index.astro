@@ -8,9 +8,10 @@ import Galeria from "@/features/home/galeria/Galeria.astro";
 import AccesoProductos from "@/features/home/acceso-productos/AccesoProductos.astro";
 import Opiniones from "@/features/home/opiniones/Opiniones.astro";
 import Informacion from "@/features/home/informacion/Informacion.astro";
+import Intro from "@/features/home/intro/Intro.astro";
 ---
 
-<BaseLayout title="Uchiha Barber">
+<BaseLayout title="Uchiha Barber" introDeEntrada>
   <SiteNav isHomePage currentPage="home" />
   <main id="contenido" class={styles.contenido}>
     <Cabecera />
@@ -20,4 +21,5 @@ import Informacion from "@/features/home/informacion/Informacion.astro";
     <Opiniones />
     <Informacion />
   </main>
+  <Intro />
 </BaseLayout>

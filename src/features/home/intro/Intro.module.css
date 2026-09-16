@@ -1,0 +1,28 @@
+/* Cruce de entrada: capa fija negra con el nombre como máscara (misma técnica
+   de máscara que la sección de servicios, en SVG inline para poder animar la
+   letra). La tipografía y las métricas las ajusta el script con las del h1
+   real, de modo que se cruza exactamente la letra que luego aterriza. */
+.intro {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: none;
+  width: 100%;
+  height: 100%;
+  font-family: var(--font-base);
+  font-weight: 800;
+}
+
+/* Solo existe durante el cruce; al terminar, html pasa a "listo" y la capa
+   desaparece (el script además la retira del DOM). */
+:global(html[data-intro="pendiente"]) .intro {
+  display: block;
+}
+
+/* Bloqueo de scroll mientras se cruza; se libera al terminar y con la salida
+   de seguridad del script previo al pintado. La reserva del canal evita el
+   salto de composición al reaparecer la barra. */
+:global(html[data-intro="pendiente"]) {
+  overflow: hidden;
+  scrollbar-gutter: stable;
+}

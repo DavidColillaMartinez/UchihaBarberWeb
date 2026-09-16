@@ -4,13 +4,15 @@ import "@/styles/global.css";
 interface Props {
   title: string;
   description?: string;
+  /* Cruce de entrada de la web (solo en la portada). */
+  introDeEntrada?: boolean;
 }
 
-const { title, description } = Astro.props;
+const { title, description, introDeEntrada = false } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang="es" data-intro-activa={introDeEntrada ? "" : undefined}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -20,6 +22,30 @@ const { title, description } = Astro.props;
     <!-- Pendiente: meta description con contenido real; sin texto comercial inventado. -->
     {description && <meta name="description" content={description} />}
     <title>{title}</title>
+    <!-- Marca previa al primer pintado: la capa de la intro se muestra desde el
+         primer fotograma (sin destello) y con el scroll bloqueado. Si algo
+         falla, la salida de seguridad libera la página a los 5 s. -->
+    <script is:inline>
+      (() => {
+        const raiz = document.documentElement;
+        if (!raiz.hasAttribute("data-intro-activa")) {
+          return;
+        }
+        try {
+          if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+            return;
+          }
+          raiz.dataset.intro = "pendiente";
+          window.setTimeout(() => {
+            if (raiz.dataset.intro === "pendiente") {
+              raiz.dataset.intro = "listo";
+            }
+          }, 5000);
+        } catch {
+          /* Si el navegador no responde a la consulta: se omite la intro. */
+        }
+      })();
+    </script>
   </head>
   <body>
     <a class="skip-link" href="#contenido">
