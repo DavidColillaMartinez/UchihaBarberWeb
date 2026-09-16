@@ -1,14 +1,47 @@
 ---
 import styles from "./Cabecera.module.css";
-import ProvisionalNote from "@/components/ui/ProvisionalNote.astro";
+
+/* URL confirmada del sistema externo de reservas (PRODUCT.md). */
+const bookingUrl =
+  "https://yeasy.io/commerce/7b8627f1-9c5e-46a6-ab95-ef6e0e1b87da";
+
+/* Vídeo de fondo: material demo servido desde el repo. Se sustituirá por la
+   URL del VPS propio con el contenido real (PRODUCT.md); basta cambiar aquí. */
+const videoUrl = "/videos/Video_Head.mp4";
 ---
 
 <section class={styles.cabecera} aria-labelledby="cabecera-titulo">
-  <h1 id="cabecera-titulo" class={styles.titulo}>
-    Uchiha Barber
-  </h1>
-  <!-- Pendiente: vídeo de cabecera (blanco y negro, desenfoque) y textos adicionales. -->
-  <ProvisionalNote>
-    Cabecera provisional · pendiente de vídeo y composición
-  </ProvisionalNote>
+  <!-- Vídeo de fondo en blanco y negro con desenfoque (PRODUCT.md). -->
+  <video
+    class={styles.video}
+    data-video-fondo
+    src={videoUrl}
+    autoplay
+    muted
+    loop
+    playsinline
+    aria-hidden="true"
+    tabindex="-1"
+  ></video>
+
+  <div class={styles.contenido}>
+    <h1 id="cabecera-titulo" class={styles.titulo}>
+      <span class={styles.linea}>Uchiha</span>
+      <span class={styles.linea}>Barber</span>
+    </h1>
+    <a class={styles.cita} href={bookingUrl}>
+      Pedir cita
+    </a>
+  </div>
 </section>
+
+<script>
+  const video = document.querySelector<HTMLVideoElement>(
+    "video[data-video-fondo]",
+  );
+
+  if (video && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    video.removeAttribute("autoplay");
+    video.pause();
+  }
+</script>
