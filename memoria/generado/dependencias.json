@@ -188,19 +188,21 @@
         "openspec/changes/archive/2026-09-16-cabecera-entrada-portada/specs/home-cabecera/spec.md",
         "openspec/changes/archive/2026-09-16-cabecera-entrada-portada/specs/home-intro/spec.md",
         "openspec/changes/archive/2026-09-16-cabecera-entrada-portada/tasks.md",
+        "openspec/changes/archive/2026-09-16-home-galeria/.openspec.yaml",
+        "openspec/changes/archive/2026-09-16-home-galeria/design.md",
+        "openspec/changes/archive/2026-09-16-home-galeria/proposal.md",
+        "openspec/changes/archive/2026-09-16-home-galeria/specs/home-galeria/spec.md",
+        "openspec/changes/archive/2026-09-16-home-galeria/specs/home-skeleton/spec.md",
+        "openspec/changes/archive/2026-09-16-home-galeria/tasks.md",
         "openspec/changes/archive/2026-09-16-nav-scroll-inicio/.openspec.yaml",
         "openspec/changes/archive/2026-09-16-nav-scroll-inicio/design.md",
         "openspec/changes/archive/2026-09-16-nav-scroll-inicio/proposal.md",
         "openspec/changes/archive/2026-09-16-nav-scroll-inicio/specs/home-skeleton/spec.md",
         "openspec/changes/archive/2026-09-16-nav-scroll-inicio/specs/site-navigation/spec.md",
         "openspec/changes/archive/2026-09-16-nav-scroll-inicio/tasks.md",
-        "openspec/changes/home-galeria/.openspec.yaml",
-        "openspec/changes/home-galeria/design.md",
-        "openspec/changes/home-galeria/proposal.md",
-        "openspec/changes/home-galeria/specs/home-galeria/spec.md",
-        "openspec/changes/home-galeria/tasks.md",
         "openspec/specs/.gitkeep",
         "openspec/specs/home-cabecera/spec.md",
+        "openspec/specs/home-galeria/spec.md",
         "openspec/specs/home-intro/spec.md",
         "openspec/specs/home-skeleton/spec.md",
         "openspec/specs/products-page/spec.md",
@@ -250,7 +252,8 @@
         "memoria/sesiones/SES-015-galeria-correcciones.md",
         "memoria/sesiones/SES-016-galeria-snap.md",
         "memoria/sesiones/SES-017-galeria-carrusel.md",
-        "memoria/sesiones/SES-018-cierre-galeria.md"
+        "memoria/sesiones/SES-018-cierre-galeria.md",
+        "memoria/sesiones/SES-019-archivo-galeria.md"
       ]
     }
   ]

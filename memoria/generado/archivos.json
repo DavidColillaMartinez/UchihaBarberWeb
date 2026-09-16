@@ -299,8 +299,8 @@
     {
       "ruta": "memoria/estado.json",
       "tipo": "archivo",
-      "bytes": 11062,
-      "sha256": "371b76d4bd4252cbd60497a77d15122fc728111131a247d46987017e833f066a"
+      "bytes": 11635,
+      "sha256": "dd0871df6b4ce8aa224fa725cf1a53c9d505f785cfa1403c5e47db8774e3be41"
     },
     {
       "ruta": "memoria/herramientas.md",
@@ -317,8 +317,8 @@
     {
       "ruta": "memoria/mapa.md",
       "tipo": "archivo",
-      "bytes": 8087,
-      "sha256": "46712dfdb51cd3da124d08d19f09dfc7c3cc205e9689dafe8f03081d7e0066c3"
+      "bytes": 8088,
+      "sha256": "0a2f7c424ac7c3f8dbc4f0aa98116c1cf7ce3a6c882f1e7bf695bdc897dc9608"
     },
     {
       "ruta": "memoria/primer-commit.md",
@@ -471,6 +471,12 @@
       "sha256": "4a06a15dc0f4ee507a92408e7aacdab216b4919179118047a8b007570fdc26bc"
     },
     {
+      "ruta": "memoria/sesiones/SES-019-archivo-galeria.md",
+      "tipo": "archivo",
+      "bytes": 2970,
+      "sha256": "81656e2ec19a442966ef499d8bea7cce18eeb0c4a4f7075380be7558cc544c6a"
+    },
+    {
       "ruta": "openspec/changes/archive/.gitkeep",
       "tipo": "archivo",
       "bytes": 0,
@@ -549,6 +555,42 @@
       "sha256": "dfc4024dbc306e3710205ad320dd18dce2c15bfe83e562a547806d5fd994fd9d"
     },
     {
+      "ruta": "openspec/changes/archive/2026-09-16-home-galeria/.openspec.yaml",
+      "tipo": "archivo",
+      "bytes": 40,
+      "sha256": "50c36dfa766b2fc52e8a7d270b1d67cc487bcd95d1b4c8a5f929d62738e3c77e"
+    },
+    {
+      "ruta": "openspec/changes/archive/2026-09-16-home-galeria/design.md",
+      "tipo": "archivo",
+      "bytes": 7100,
+      "sha256": "875e63de752bb1beb9b364e5910fbc9c9534bea8418f87ec4b2c3f62991703bf"
+    },
+    {
+      "ruta": "openspec/changes/archive/2026-09-16-home-galeria/proposal.md",
+      "tipo": "archivo",
+      "bytes": 3104,
+      "sha256": "d7128c68d946ed09523fdfb16ad701ded4177e951d3d86eee69700b4d785a1c6"
+    },
+    {
+      "ruta": "openspec/changes/archive/2026-09-16-home-galeria/specs/home-galeria/spec.md",
+      "tipo": "archivo",
+      "bytes": 7606,
+      "sha256": "348a978a91ae6fdab414c5a221684db831df8ef4f6611bd0d05bd5727957a636"
+    },
+    {
+      "ruta": "openspec/changes/archive/2026-09-16-home-galeria/specs/home-skeleton/spec.md",
+      "tipo": "archivo",
+      "bytes": 1385,
+      "sha256": "ee289f4d1c1b889fb77c8ac6678f86cc33f587aa31e8cb9f2cf3b3306c74a00a"
+    },
+    {
+      "ruta": "openspec/changes/archive/2026-09-16-home-galeria/tasks.md",
+      "tipo": "archivo",
+      "bytes": 4092,
+      "sha256": "8fc9b196b1d90fc326731e98de05e86dac910546a3e077dc3ab134ab306147e9"
+    },
+    {
       "ruta": "openspec/changes/archive/2026-09-16-nav-scroll-inicio/.openspec.yaml",
       "tipo": "archivo",
       "bytes": 40,
@@ -585,36 +627,6 @@
       "sha256": "68254adf40dfaa16e6759c1d6fed26b6935e329402f53b8f563d8f1cd8a21cb5"
     },
     {
-      "ruta": "openspec/changes/home-galeria/.openspec.yaml",
-      "tipo": "archivo",
-      "bytes": 40,
-      "sha256": "50c36dfa766b2fc52e8a7d270b1d67cc487bcd95d1b4c8a5f929d62738e3c77e"
-    },
-    {
-      "ruta": "openspec/changes/home-galeria/design.md",
-      "tipo": "archivo",
-      "bytes": 7100,
-      "sha256": "875e63de752bb1beb9b364e5910fbc9c9534bea8418f87ec4b2c3f62991703bf"
-    },
-    {
-      "ruta": "openspec/changes/home-galeria/proposal.md",
-      "tipo": "archivo",
-      "bytes": 3104,
-      "sha256": "d7128c68d946ed09523fdfb16ad701ded4177e951d3d86eee69700b4d785a1c6"
-    },
-    {
-      "ruta": "openspec/changes/home-galeria/specs/home-galeria/spec.md",
-      "tipo": "archivo",
-      "bytes": 7271,
-      "sha256": "8ac920d36cfd489daa2b5960e6107b879f482e62c6d0d2483821aa991546afd9"
-    },
-    {
-      "ruta": "openspec/changes/home-galeria/tasks.md",
-      "tipo": "archivo",
-      "bytes": 3877,
-      "sha256": "9f57ea1fdbffe6608399ea2f4c706bd6411a4b8d10f5a7093f9842974f2b7628"
-    },
-    {
       "ruta": "openspec/config.yaml",
       "tipo": "archivo",
       "bytes": 2911,
@@ -633,6 +645,12 @@
       "sha256": "290a148c9f365e330bfe8802ba7bebe373a3a23b8cb5fa1952f4e121a113eadb"
     },
     {
+      "ruta": "openspec/specs/home-galeria/spec.md",
+      "tipo": "archivo",
+      "bytes": 7630,
+      "sha256": "29cf4ef17f1c1608d5070c8ce2a8461c702534de9306d829348729efbd9a0a4a"
+    },
+    {
       "ruta": "openspec/specs/home-intro/spec.md",
       "tipo": "archivo",
       "bytes": 2572,
@@ -641,8 +659,8 @@
     {
       "ruta": "openspec/specs/home-skeleton/spec.md",
       "tipo": "archivo",
-      "bytes": 5516,
-      "sha256": "a725ef96840a1483c4452840cd7a335ceafa0990bdb85efc9094a5036446af67"
+      "bytes": 5779,
+      "sha256": "ec37849675c4bea9a1704efce1ed8e635683b071c14383817db27c7474dae9b5"
     },
     {
       "ruta": "openspec/specs/products-page/spec.md",

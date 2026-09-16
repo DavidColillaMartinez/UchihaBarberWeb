@@ -6,3 +6,7 @@ package-lock.json
 memoria/generado/
 .impeccable/config.local.json
 .codex/hooks.json
+
+# Skills y comandos generados por sus herramientas (no se formatean)
+.agents/
+.opencode/

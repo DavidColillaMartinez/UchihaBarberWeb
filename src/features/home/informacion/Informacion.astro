@@ -1,13 +1,10 @@
 ---
 import styles from "./Informacion.module.css";
 import ProvisionalNote from "@/components/ui/ProvisionalNote.astro";
+import BookingLink from "@/components/ui/BookingLink.astro";
 
 /* Ubicación confirmada en PRODUCT.md; dirección detallada, horarios y contacto pendientes. */
 const ubicacion = "Torrejón de Ardoz, Madrid";
-
-/* URL confirmada del sistema externo de reservas (PRODUCT.md). */
-const bookingUrl =
-  "https://yeasy.io/commerce/7b8627f1-9c5e-46a6-ab95-ef6e0e1b87da";
 ---
 
 <section id="info" class={styles.informacion} aria-labelledby="info-titulo">
@@ -16,7 +13,7 @@ const bookingUrl =
   </h2>
   <p class={styles.ubicacion}>{ubicacion}</p>
   <p class={styles.reserva}>
-    <a href={bookingUrl}>Pedir cita</a>
+    <BookingLink>Pedir cita</BookingLink>
   </p>
   <!-- Pendiente: dirección detallada, horarios, teléfono y perfiles oficiales
        (Instagram/Google) validados antes de publicarlos. -->
