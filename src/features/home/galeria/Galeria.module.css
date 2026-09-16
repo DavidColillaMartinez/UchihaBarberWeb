@@ -1,17 +1,110 @@
 .galeria {
   display: grid;
-  gap: 1rem;
-  padding: 4rem 1.5rem;
-  border-top: 1px solid var(--color-fg);
+  /* La sección mide el ancho de la página: sin plantilla la columna
+     implícita se dimensiona al max-content de la tira y extiende la
+     página horizontalmente. */
+  grid-template-columns: minmax(0, 1fr);
+  align-content: center;
 }
 
-.titulo {
-  margin: 0;
-  font-size: clamp(2rem, 6vw, 4rem);
-  line-height: 1;
+/* La Galería controla su fondo: el fundido blanco→negro lo anima GSAP.
+   Por defecto (sin JS, con movimiento reducido o fuera del fundido)
+   el fondo es blanco: el negro solo existe durante la animación. */
+.galeria {
+  background: var(--color-bg);
 }
 
-.visor {
-  min-height: 30vh;
-  border: 1px solid var(--color-fg);
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* Recorrido del carrusel: el desplazamiento lateral lo hace transform
+   (scroll vertical y flechas sobre la misma posición); la escena recorta
+   la tira dentro del ancho de la página, en cualquier tamaño. */
+.escena {
+  overflow: clip;
+}
+
+.tira {
+  display: flex;
+  width: max-content;
+}
+
+.panel {
+  display: block;
+  height: 38svh;
+  width: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  filter: grayscale(1);
+}
+
+/* Navegación sobre los extremos de la tira: vidrio y chevron tenue en
+   reposo; hover/foco con blanco semitransparente para que la galería siga
+   leyéndose. Aparecen fundidas al encajar la sección en el recorrido. */
+.bloque {
+  position: relative;
+  display: grid;
+  /* Misma contención que la sección: el bloque nunca crece más allá del
+     ancho de la página, las flechas quedan en los extremos del viewport. */
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.control {
+  position: absolute;
+  top: 0;
+  width: clamp(2.75rem, 8vw, 8rem);
+  height: 100%;
+  padding: 0;
+  border: 0;
+  display: grid;
+  place-items: center;
+  color: var(--color-bg);
+  background: rgb(255 255 255 / 0.06);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.4s ease-out,
+    visibility 0.4s ease-out,
+    color 0.35s ease-out,
+    background-color 0.35s ease-out;
+}
+
+.control[data-visible] {
+  opacity: 1;
+  visibility: visible;
+}
+
+.control svg {
+  width: clamp(1.25rem, 1.6vw, 1.75rem);
+  height: auto;
+  opacity: 0.5;
+  transition: opacity 0.35s ease-out;
+}
+
+.control:is(:hover, :focus-visible) {
+  color: var(--color-fg);
+  background: rgb(255 255 255 / 0.55);
+}
+
+.control:is(:hover, :focus-visible) svg {
+  opacity: 1;
+}
+
+.control[data-atras] {
+  left: 0;
+}
+
+.control[data-adelante] {
+  right: 0;
 }

@@ -1,16 +1,327 @@
 ---
 import styles from "./Galeria.module.css";
-import ProvisionalNote from "@/components/ui/ProvisionalNote.astro";
+
+/* Material demo copiado de ContenidoDemo/ (facilitado por el responsable);
+   se sustituirá por el material profesional del VPS cambiando esta lista.
+   Video_Head queda fuera de la Galería por decisión del responsable. */
+const videosDemo = [
+  "Corte+barba.mp4",
+  "CorteDePelo1.mp4",
+  "CorteDePelo2.mp4",
+  "CorteDePelo3.mp4",
+  "CorteDePelo4.mp4",
+  "CorteDePelo5.mp4",
+  "CorteDePelo6.mp4",
+  "CorteDePelo7.mp4",
+  "CorteDePelo8.mp4",
+  "CorteDePelo9.mp4",
+  "CorteDePelo10.mp4",
+  "CorteDePelo11.mp4",
+];
 ---
 
-<section id="galeria" class={styles.galeria} aria-labelledby="galeria-titulo">
-  <h2 id="galeria-titulo" class={styles.titulo}>
+<section
+  id="galeria"
+  class={styles.galeria}
+  data-galeria
+  aria-labelledby="galeria-titulo"
+>
+  <h2 id="galeria-titulo" class={styles.srOnly}>
     Galería
   </h2>
-  <!-- Pendiente: material audiovisual/fotográfico real desde el VPS; no usar stock
-       como identidad definitiva. Contenedor preparado para la tira de Servicios a Productos. -->
-  <div class={styles.visor} aria-hidden="true"></div>
-  <ProvisionalNote>
-    Galería provisional · pendiente de material real
-  </ProvisionalNote>
+
+  <!-- Tira de trabajo real a sangre; el recorrido de la página y las flechas
+       la desplazan lateralmente. Se duplica el material para el bucle
+       circular (noria): tras el último clip vuelven a verse los primeros.
+       Sin JS o con movimiento reducido queda estática en su posición inicial. -->
+  <div class={styles.bloque} data-bloque-galeria>
+    <div class={styles.escena} data-escena-galeria aria-hidden="true">
+      <div class={styles.tira} data-tira-galeria>
+        {[...videosDemo, ...videosDemo].map((archivo) => (
+          <video
+            class={styles.panel}
+            src={`/videos/${archivo}`}
+            muted
+            loop
+            playsinline
+            preload="none"
+            tabindex="-1"
+          ></video>
+        ))}
+      </div>
+    </div>
+
+    <button
+      class={styles.control}
+      type="button"
+      data-atras
+      aria-label="Anterior"
+    >
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path
+          d="M15 4.5 7.5 12 15 19.5"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="square"
+          stroke-linejoin="miter"
+        ></path>
+      </svg>
+    </button>
+    <button
+      class={styles.control}
+      type="button"
+      data-adelante
+      aria-label="Siguiente"
+    >
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path
+          d="M9 4.5 16.5 12 9 19.5"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="square"
+          stroke-linejoin="miter"
+        ></path>
+      </svg>
+    </button>
+  </div>
 </section>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  const seccion = document.querySelector<HTMLElement>("[data-galeria]");
+  const tira = document.querySelector<HTMLElement>("[data-tira-galeria]");
+  const atras = document.querySelector<HTMLButtonElement>("[data-atras]");
+  const adelante = document.querySelector<HTMLButtonElement>("[data-adelante]");
+
+  const movimientoReducido = window.matchMedia(
+    "(prefers-reduced-motion: reduce)",
+  );
+
+  const videosTira = tira
+    ? Array.from(tira.querySelectorAll<HTMLVideoElement>("video"))
+    : [];
+
+  /* Posición compartida del carrusel (px acumulados, sin límite). El scroll
+     vertical y las flechas alimentan la misma posición; el visual la persigue
+     con suavizado y se normaliza módulo una vuelta (tira duplicada = noria):
+     tras el último clip vuelven los primeros, en ambos sentidos, sin saltos. */
+  let posicion = 0;
+  let posicionVisual = 0;
+  let enPantalla = false;
+
+  const anchoVuelta = () => (tira ? tira.scrollWidth / 2 : 0);
+
+  const pasoPanel = () => {
+    const panel = tira?.querySelector<HTMLElement>("video");
+    return panel ? panel.offsetWidth : 0;
+  };
+
+  /* Reproducción contenida: solo los paneles cercanos al hueco visible se
+     reproducen (con margen de precarga); el resto queda pausado. */
+  const actualizarReproduccion = (dentro: number, vuelta: number) => {
+    const total = videosTira.length;
+    if (!total || !vuelta) {
+      return;
+    }
+    const panel = vuelta / (total / 2);
+    const margen = 2;
+    const desde = Math.max(0, Math.floor(dentro / panel) - margen);
+    const hasta = Math.min(
+      total - 1,
+      Math.ceil((dentro + window.innerWidth) / panel) + margen,
+    );
+    for (let indice = 0; indice < total; indice++) {
+      const video = videosTira[indice];
+      if (!video) {
+        continue;
+      }
+      const visible =
+        enPantalla &&
+        !movimientoReducido.matches &&
+        indice >= desde &&
+        indice <= hasta;
+      if (visible && video.paused) {
+        void video.play().catch(() => {});
+      } else if (!visible && !video.paused) {
+        video.pause();
+      }
+    }
+  };
+
+  let dentroPrevio = -1;
+
+  const render = () => {
+    if (!tira) {
+      return;
+    }
+    const vuelta = anchoVuelta();
+    if (!vuelta) {
+      return;
+    }
+    const dentro = ((posicionVisual % vuelta) + vuelta) % vuelta;
+    if (Math.abs(dentro - dentroPrevio) < 0.25) {
+      return;
+    }
+    dentroPrevio = dentro;
+    gsap.set(tira, { x: -dentro });
+    actualizarReproduccion(dentro, vuelta);
+  };
+
+  /* El visual persigue la posición objetivo (equivalente al scrub anterior);
+     con movimiento reducido va directa, sin persecución. */
+  const FACTOR_SUAVIZADO = 0.16;
+
+  gsap.ticker.add(() => {
+    if (!tira) {
+      return;
+    }
+    let objetivo = posicionVisual;
+    if (movimientoReducido.matches) {
+      objetivo = posicion;
+    } else if (Math.abs(posicion - posicionVisual) >= 0.5) {
+      objetivo =
+        posicionVisual + (posicion - posicionVisual) * FACTOR_SUAVIZADO;
+    }
+    if (objetivo !== posicionVisual) {
+      posicionVisual = objetivo;
+      render();
+    }
+  });
+
+  /* El scroll vertical alimenta el carrusel mientras la sección cruza la
+     pantalla: recorrerla de punta a punta equivale a una vuelta completa.
+     La página conserva su snap: el carrusel no mueve el scroll. */
+  let progresoPrevio: number | null = null;
+
+  gsap.matchMedia().add("(prefers-reduced-motion: no-preference)", () => {
+    if (seccion && tira) {
+      ScrollTrigger.create({
+        trigger: seccion,
+        start: "top bottom",
+        end: "bottom top",
+        onRefresh: (self) => {
+          progresoPrevio = self.progress;
+        },
+        onUpdate: (self) => {
+          if (progresoPrevio === null) {
+            progresoPrevio = self.progress;
+            return;
+          }
+          posicion += (self.progress - progresoPrevio) * anchoVuelta();
+          progresoPrevio = self.progress;
+        },
+      });
+    }
+
+    /* Umbral de cobertura que dispara el fundido y su duración (~1 s):
+       valores de partida del responsable, a afinar al revisar. */
+    const UMBRAL_COBERTURA = 50;
+    const DURACION_FUNDIDO = 1;
+
+    if (seccion) {
+      const fondo = gsap.timeline({
+        scrollTrigger: {
+          trigger: seccion,
+          start: `top ${UMBRAL_COBERTURA}%`,
+          end: `bottom ${UMBRAL_COBERTURA}%`,
+          toggleActions: "play reverse play reverse",
+        },
+      });
+
+      fondo.fromTo(
+        seccion,
+        { backgroundColor: "#fff" },
+        {
+          backgroundColor: "#000",
+          duration: DURACION_FUNDIDO,
+          ease: "power2.inOut",
+        },
+        0,
+      );
+    }
+
+    return () => {
+      progresoPrevio = null;
+    };
+  });
+
+  /* Las flechas mueven solo el carrusel: un panel por pulsación en ambas
+     direcciones; el bucle circular hace de noria por los dos extremos y la
+     página permanece quieta. Sin JS quedan ocultas (sin función posible). */
+  const avanzar = (direccion: 1 | -1) => {
+    const paso = pasoPanel();
+    if (!paso) {
+      return;
+    }
+    posicion += direccion * paso;
+  };
+
+  atras?.addEventListener("click", () => avanzar(-1));
+  adelante?.addEventListener("click", () => avanzar(1));
+
+  /* Cobertura aproximada a la que asoman las flechas: cerca del encaje
+     (snap) de la sección en el recorrido. */
+  const UMBRAL_CONTROLES = 0.25;
+
+  if (seccion) {
+    new IntersectionObserver(
+      (entradas) => {
+        const entrada = entradas[0];
+        if (!entrada) {
+          return;
+        }
+        const visible =
+          entrada.isIntersecting &&
+          entrada.intersectionRatio >= UMBRAL_CONTROLES;
+        for (const boton of [atras, adelante]) {
+          if (!boton) {
+            continue;
+          }
+          if (visible) {
+            boton.setAttribute("data-visible", "");
+          } else {
+            boton.removeAttribute("data-visible");
+          }
+        }
+      },
+      { threshold: UMBRAL_CONTROLES },
+    ).observe(seccion);
+  }
+
+  /* Reproducción y composición en pantalla: la entrada activa el render de
+     los paneles visibles y, con movimiento reducido, carga el primer
+     fotograma de los clips para que la tira estática no quede en negro;
+     la salida pausa todo. */
+  if (seccion && videosTira.length) {
+    new IntersectionObserver(
+      (entradas) => {
+        const entrada = entradas[0];
+        if (!entrada) {
+          return;
+        }
+        enPantalla = entrada.isIntersecting;
+        if (enPantalla && movimientoReducido.matches) {
+          for (const video of videosTira) {
+            if (video.preload !== "auto") {
+              video.preload = "auto";
+              video.load();
+            }
+          }
+        }
+        if (!enPantalla) {
+          for (const video of videosTira) {
+            video.pause();
+          }
+        } else {
+          dentroPrevio = -1;
+          render();
+        }
+      },
+      { threshold: 0 },
+    ).observe(seccion);
+  }
+</script>
