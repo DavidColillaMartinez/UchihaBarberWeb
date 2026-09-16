@@ -2,8 +2,8 @@
   "schema": 1,
   "proyecto": "UchihaBarberWeb",
   "faseActiva": "UB-004",
-  "ultimoRelevo": "memoria/sesiones/SES-009-intro-entrada.md",
-  "alcanceActual": "UB-004 en curso, cuatro bloques paralelos: cabecera con vídeo demo, h1 centrado verticalmente un 15% más pequeño y tipografías autoalojadas (Inter 800 titular, Archivo 600 acceso) sobre tokens compartidos (SES-007-cabecera), cruce de entrada implementado en src/features/home/intro/ repetido en cada carga y con arranque acortado (SES-009-intro-entrada), nav fusionado + recorrido con ajuste por secciones (SES-007-nav-scroll, cambio nav-scroll-inicio) y sección Servicios con datos reales de Yeasy, vídeo en las letras y transformación al scroll (SES-008). Los cuatro pendientes de aceptación visual; el resto de secciones espera su turno. Sin commits solicitados en este turno.",
+  "ultimoRelevo": "memoria/sesiones/SES-010-servicios-ajustes-hover.md",
+  "alcanceActual": "UB-004 en curso, cuatro bloques paralelos: cabecera con vídeo demo, h1 centrado verticalmente un 15% más pequeño y tipografías autoalojadas (Inter 800 titular, Archivo 600 acceso) sobre tokens compartidos (SES-007-cabecera), cruce de entrada repetido en cada carga y con arranque acortado, ya aceptado visualmente y gobernado por las specs home-cabecera y home-intro con el cambio archivado (SES-009-intro-entrada, SES-010-cierre-cabecera), nav fusionado + recorrido con ajuste por secciones (SES-007-nav-scroll, ya archivado por su sesión) y sección Servicios con datos reales de Yeasy, vídeo en las letras y transformación al scroll (SES-008), con segunda ronda de ajustes aplicada: banner completo quieto antes de la transformación (tramo top 30 % → top −20 %), nombres a la izquierda, fila que crece con la descripción y barra de inversión de abajo arriba (SES-009-servicios-ajustes), y tercera ronda: título centrado fijo medido en reposo, snap y anclaje anulados solo en Servicios para que el despliegue del hover no salte, espaciado equivalente de la descripción y «Reserva ya» centrado con mini borde (SES-010-servicios-ajustes-hover). Pendientes de aceptación visual el nav y Servicios; el resto de secciones espera su turno. Sin commits solicitados en este turno.",
   "pendientesDeDecision": [
     "Sessions: confirmar inclusión y ubicación.",
     "Familia tipográfica definitiva: Inter (titulares) y Archivo (interfaz) adoptadas de forma provisional por indicación del responsable, a falta del visto bueno del cliente (supreme/off-white/apple); el reparto por elemento se concreta en cada sección.",
@@ -79,7 +79,11 @@
         "memoria/sesiones/SES-007-cabecera.md",
         "memoria/sesiones/SES-007-nav-scroll.md",
         "memoria/sesiones/SES-008-servicios.md",
-        "memoria/sesiones/SES-009-intro-entrada.md"
+        "memoria/sesiones/SES-009-intro-entrada.md",
+        "memoria/sesiones/SES-010-cierre-cabecera.md",
+        "openspec/changes/archive/2026-09-16-cabecera-entrada-portada/proposal.md",
+        "memoria/sesiones/SES-009-servicios-ajustes.md",
+        "memoria/sesiones/SES-010-servicios-ajustes-hover.md"
       ]
     },
     {

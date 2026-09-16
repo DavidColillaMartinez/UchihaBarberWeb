@@ -168,6 +168,12 @@
         "openspec/changes/archive/2026-09-15-esqueleto-inicio-productos/specs/home-skeleton/spec.md",
         "openspec/changes/archive/2026-09-15-esqueleto-inicio-productos/specs/products-page/spec.md",
         "openspec/changes/archive/2026-09-15-esqueleto-inicio-productos/tasks.md",
+        "openspec/changes/archive/2026-09-16-cabecera-entrada-portada/.openspec.yaml",
+        "openspec/changes/archive/2026-09-16-cabecera-entrada-portada/design.md",
+        "openspec/changes/archive/2026-09-16-cabecera-entrada-portada/proposal.md",
+        "openspec/changes/archive/2026-09-16-cabecera-entrada-portada/specs/home-cabecera/spec.md",
+        "openspec/changes/archive/2026-09-16-cabecera-entrada-portada/specs/home-intro/spec.md",
+        "openspec/changes/archive/2026-09-16-cabecera-entrada-portada/tasks.md",
         "openspec/changes/archive/2026-09-16-nav-scroll-inicio/.openspec.yaml",
         "openspec/changes/archive/2026-09-16-nav-scroll-inicio/design.md",
         "openspec/changes/archive/2026-09-16-nav-scroll-inicio/proposal.md",
@@ -175,6 +181,8 @@
         "openspec/changes/archive/2026-09-16-nav-scroll-inicio/specs/site-navigation/spec.md",
         "openspec/changes/archive/2026-09-16-nav-scroll-inicio/tasks.md",
         "openspec/specs/.gitkeep",
+        "openspec/specs/home-cabecera/spec.md",
+        "openspec/specs/home-intro/spec.md",
         "openspec/specs/home-skeleton/spec.md",
         "openspec/specs/products-page/spec.md",
         "openspec/specs/site-navigation/spec.md"
@@ -212,7 +220,10 @@
         "memoria/sesiones/SES-007-cabecera.md",
         "memoria/sesiones/SES-007-nav-scroll.md",
         "memoria/sesiones/SES-008-servicios.md",
-        "memoria/sesiones/SES-009-intro-entrada.md"
+        "memoria/sesiones/SES-009-intro-entrada.md",
+        "memoria/sesiones/SES-009-servicios-ajustes.md",
+        "memoria/sesiones/SES-010-cierre-cabecera.md",
+        "memoria/sesiones/SES-010-servicios-ajustes-hover.md"
       ]
     }
   ]
