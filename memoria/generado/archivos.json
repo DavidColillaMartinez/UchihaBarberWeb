@@ -299,8 +299,8 @@
     {
       "ruta": "memoria/estado.json",
       "tipo": "archivo",
-      "bytes": 8471,
-      "sha256": "c6cedd4de0cc14809feb4a3ec4fa366c99f0ca5c9f698d469499f094a15e2db2"
+      "bytes": 11062,
+      "sha256": "371b76d4bd4252cbd60497a77d15122fc728111131a247d46987017e833f066a"
     },
     {
       "ruta": "memoria/herramientas.md",
@@ -317,8 +317,8 @@
     {
       "ruta": "memoria/mapa.md",
       "tipo": "archivo",
-      "bytes": 6813,
-      "sha256": "5965c81e7ea1381b37134bbf6e6849849fc514bb89bd6167943454a07e64ecd9"
+      "bytes": 8087,
+      "sha256": "46712dfdb51cd3da124d08d19f09dfc7c3cc205e9689dafe8f03081d7e0066c3"
     },
     {
       "ruta": "memoria/primer-commit.md",
@@ -433,6 +433,42 @@
       "tipo": "archivo",
       "bytes": 4255,
       "sha256": "4b7507e0c18eedc05356ba488bced80162a5096b27cff70cb9b5404e8944f628"
+    },
+    {
+      "ruta": "memoria/sesiones/SES-013-cierre-servicios.md",
+      "tipo": "archivo",
+      "bytes": 4376,
+      "sha256": "39b344d76958ee73d5642e0674d3679e00cf308a08f8dfdc4de02754b4010d2d"
+    },
+    {
+      "ruta": "memoria/sesiones/SES-014-galeria-navegacion.md",
+      "tipo": "archivo",
+      "bytes": 3648,
+      "sha256": "9a6aa23e2ab9a9667d66f90c7367df52fb1029ae8652a6af1034763e2d68ccb1"
+    },
+    {
+      "ruta": "memoria/sesiones/SES-015-galeria-correcciones.md",
+      "tipo": "archivo",
+      "bytes": 3678,
+      "sha256": "804f2cffc8be04162b1884d71eebf35935d9e90d2c8ff15365b946be69653103"
+    },
+    {
+      "ruta": "memoria/sesiones/SES-016-galeria-snap.md",
+      "tipo": "archivo",
+      "bytes": 2940,
+      "sha256": "f408fbd6334122e22907112ab4a028fc7eb15d6a81582f537946a24817c57ff1"
+    },
+    {
+      "ruta": "memoria/sesiones/SES-017-galeria-carrusel.md",
+      "tipo": "archivo",
+      "bytes": 4232,
+      "sha256": "9f2be37359977f3feaba4ade2f3bdd32ac988e55428665f2f1843fe4b0342b90"
+    },
+    {
+      "ruta": "memoria/sesiones/SES-018-cierre-galeria.md",
+      "tipo": "archivo",
+      "bytes": 2944,
+      "sha256": "4a06a15dc0f4ee507a92408e7aacdab216b4919179118047a8b007570fdc26bc"
     },
     {
       "ruta": "openspec/changes/archive/.gitkeep",
@@ -557,8 +593,8 @@
     {
       "ruta": "openspec/changes/home-galeria/design.md",
       "tipo": "archivo",
-      "bytes": 3400,
-      "sha256": "58a2992e5c33e82ab066238a84d727b543bd343d5d7d13fd8a6629058f8fa20f"
+      "bytes": 7100,
+      "sha256": "875e63de752bb1beb9b364e5910fbc9c9534bea8418f87ec4b2c3f62991703bf"
     },
     {
       "ruta": "openspec/changes/home-galeria/proposal.md",
@@ -569,14 +605,14 @@
     {
       "ruta": "openspec/changes/home-galeria/specs/home-galeria/spec.md",
       "tipo": "archivo",
-      "bytes": 3086,
-      "sha256": "3ddf32994b8ed69c32f6c908221c5d72733968d66e2dad54ad101c1116f230cb"
+      "bytes": 7271,
+      "sha256": "8ac920d36cfd489daa2b5960e6107b879f482e62c6d0d2483821aa991546afd9"
     },
     {
       "ruta": "openspec/changes/home-galeria/tasks.md",
       "tipo": "archivo",
-      "bytes": 1956,
-      "sha256": "1b4f064d1c1771d5c333f4255e3e0858f2552231aa72787f1ebe7698585c3764"
+      "bytes": 3877,
+      "sha256": "9f57ea1fdbffe6608399ea2f4c706bd6411a4b8d10f5a7093f9842974f2b7628"
     },
     {
       "ruta": "openspec/config.yaml",
@@ -821,14 +857,14 @@
     {
       "ruta": "src/features/home/galeria/Galeria.astro",
       "tipo": "archivo",
-      "bytes": 4287,
-      "sha256": "99e9247e38baffa6438315b62e5616a8b2ca4c1fcb61f076ccfeb01c10fd5ca6"
+      "bytes": 9460,
+      "sha256": "a6b11de2329693f1273d31a8ba852299f7e65c90b03a3dcbc695dc09120171c6"
     },
     {
       "ruta": "src/features/home/galeria/Galeria.module.css",
       "tipo": "archivo",
-      "bytes": 969,
-      "sha256": "3f41633ac72cdfa86b7e55a1ff901587bb899e13d22c09bce8772b68aa03bb77"
+      "bytes": 2515,
+      "sha256": "5cc864ecf93ed178819b23c84b9674db38c81ce81ec384870e71919db6db3e15"
     },
     {
       "ruta": "src/features/home/informacion/Informacion.astro",
