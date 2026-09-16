@@ -28,6 +28,12 @@ Base Git: `052954b06cab7083aa0173d442a15f09ac97bb8d` (Cierra el esqueleto con su
 - Prettier correcto en archivos tocados; `openspec validate` correcto.
 - Pendiente de revisión visual del usuario: legibilidad del blend sobre grises medios y suavidad del desvanecimiento (plan B documentado en el diseño).
 
+## Ajuste tras revisión del responsable
+
+- Hover del nav: en lugar del subrayado, cada opción invierte a pill blanco con texto negro en hover y en foco por teclado (sin esquinas redondeadas; el `difference` del nav invierte el pill solo: oscuro con texto claro sobre fondos claros, claro con texto oscuro sobre oscuros/vídeo). Transición de color ~0,2 s; el subrayado del enlace de reservas se unifica con el resto.
+- Desvanecimiento más ágil: ocultado 0,4 s → 0,25 s; retardo de reaparición al subir 0,3 s → 0,1 s.
+- Comprobado tras el ajuste: `npm run build` correcto, `astro check` sin errores y Prettier en orden.
+
 ## Pendiente
 
 Revisión visual y aceptación del responsable (tarea 3.3) antes de cerrar el cambio. Excepción futura: snap centrado tipo banner para Galería cuando se trabaje su contenido. Sin dependencias nuevas; lockfile intacto.

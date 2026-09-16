@@ -45,9 +45,7 @@ const anchor = (id: string) => (isHomePage ? `#${id}` : `/#${id}`);
     </li>
     <li>
       <!-- Texto funcional provisional; se ajustará con el responsable. -->
-      <a class={styles.booking} href={bookingUrl}>
-        Pedir cita
-      </a>
+      <a href={bookingUrl}>Pedir cita</a>
     </li>
   </ul>
 </nav>
@@ -82,12 +80,12 @@ const anchor = (id: string) => (isHomePage ? `#${id}` : `/#${id}`);
             return;
           }
           if (self.direction === 1) {
-            gsap.to(nav, { autoAlpha: 0, duration: 0.4, overwrite: true });
+            gsap.to(nav, { autoAlpha: 0, duration: 0.25, overwrite: true });
           } else if (self.direction === -1) {
             gsap.to(nav, {
               autoAlpha: 1,
-              duration: 0.4,
-              delay: 0.3,
+              duration: 0.25,
+              delay: 0.1,
               overwrite: true,
             });
           }

@@ -22,12 +22,16 @@
 .list a {
   color: #fff;
   text-decoration: none;
+  padding: 0.25rem 0.5rem;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
 }
 
-.list a:hover {
-  text-decoration: underline;
-}
-
-.booking {
-  text-decoration: underline;
+/* El pill blanco + texto negro se invierten solos con el difference del nav:
+   sobre fondo claro queda pill oscuro con texto claro; sobre oscuro, al revés. */
+.list a:hover,
+.list a:focus-visible {
+  background-color: #fff;
+  color: #000;
 }

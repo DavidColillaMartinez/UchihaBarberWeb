@@ -165,6 +165,12 @@
       "sha256": "ff384d44b12e11ba4f665f1978cb5e4e184ce02d84c0e08401b290b8baf52706"
     },
     {
+      "ruta": ".impeccable/surfaces/src-features-home-servicios-servicios-astro.md",
+      "tipo": "archivo",
+      "bytes": 3345,
+      "sha256": "91dc82dc295e265e5cbab3c4534bfee7ad4c614705241688c3bf325d2a97ce2e"
+    },
+    {
       "ruta": ".nvmrc",
       "tipo": "archivo",
       "bytes": 8,
@@ -395,8 +401,8 @@
     {
       "ruta": "memoria/sesiones/SES-007-nav-scroll.md",
       "tipo": "archivo",
-      "bytes": 3159,
-      "sha256": "fcb3f52d27cc50d71908ef273b950691d96f9b294d7c126995163cf67fcec4da"
+      "bytes": 3789,
+      "sha256": "6966e13b22101f70d5bc25a6e630d832f82e9400e6930aa06b9fb36aafb8e7af"
     },
     {
       "ruta": "openspec/changes/archive/.gitkeep",
@@ -557,14 +563,14 @@
     {
       "ruta": "src/components/navigation/SiteNav.astro",
       "tipo": "archivo",
-      "bytes": 2584,
-      "sha256": "4f274d246205aa5cde9cfa8df0d09a35eca5e7ca86e3411a8226dadb44027e25"
+      "bytes": 2547,
+      "sha256": "82af736ac0798defa8df63d2218fc2358feec10709eb621c29c45acd335cf7ed"
     },
     {
       "ruta": "src/components/navigation/SiteNav.module.css",
       "tipo": "archivo",
-      "bytes": 450,
-      "sha256": "2b193cf5bc0e0608269865c6c523dbc2ae74768c0ef1e11d20835de471e7aa44"
+      "bytes": 696,
+      "sha256": "8a9d9ccfe253e1beca286077f8044789d114343160575d38827b11ccb21dde0e"
     },
     {
       "ruta": "src/components/ui/ProvisionalNote.astro",
@@ -641,14 +647,14 @@
     {
       "ruta": "src/features/home/servicios/Servicios.astro",
       "tipo": "archivo",
-      "bytes": 570,
-      "sha256": "9e1566016116cae4ca8c3a7f2749b8bbfea0c89a0d5b24afbf3b240aff6365cd"
+      "bytes": 5156,
+      "sha256": "115ed4b2eb59909129b607772fd5516618bbd291abedd84fd427925b1d87aad1"
     },
     {
       "ruta": "src/features/home/servicios/Servicios.module.css",
       "tipo": "archivo",
-      "bytes": 191,
-      "sha256": "2868e66930b277e896d6cc9773bda11ef04626c6828dc69b756280a6e28e4f5a"
+      "bytes": 4111,
+      "sha256": "c09e9c9ce983dd72bffec03b61413038803768e8849f8affc1a2161f3a67d4c7"
     },
     {
       "ruta": "src/features/products/provisional/Provisional.astro",
