@@ -299,8 +299,8 @@
     {
       "ruta": "memoria/estado.json",
       "tipo": "archivo",
-      "bytes": 11635,
-      "sha256": "dd0871df6b4ce8aa224fa725cf1a53c9d505f785cfa1403c5e47db8774e3be41"
+      "bytes": 8143,
+      "sha256": "d49da3c1a356abbb17b3772c32e12f4ea78bf4dec35a86af39ac945e92e4bf3f"
     },
     {
       "ruta": "memoria/herramientas.md",
@@ -475,6 +475,12 @@
       "tipo": "archivo",
       "bytes": 2970,
       "sha256": "81656e2ec19a442966ef499d8bea7cce18eeb0c4a4f7075380be7558cc544c6a"
+    },
+    {
+      "ruta": "memoria/sesiones/SES-020-validacion-visual.md",
+      "tipo": "archivo",
+      "bytes": 2142,
+      "sha256": "c1432b364668037b2c7bab21fccba0262e8bb59be531dad73aa8862551efe4d5"
     },
     {
       "ruta": "openspec/changes/archive/.gitkeep",
