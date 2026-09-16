@@ -1,19 +1,218 @@
 ---
 import styles from "./Servicios.module.css";
-import ProvisionalNote from "@/components/ui/ProvisionalNote.astro";
+import BookingLink from "@/components/ui/BookingLink.astro";
+
+/* Vídeo demo servido desde el repo; se sustituirá por la URL del VPS propio
+   con el contenido real (PRODUCT.md). Basta cambiar esta constante. */
+const videoUrl = "/videos/Video_Head.mp4";
+
+/* Listado real publicado en Yeasy (nombre, duración y precio; consultado
+   2026-09-16). La descripción del hover queda vacía a propósito: la
+   redacta el responsable del proyecto. */
+const servicios = [
+  {
+    nombre: "Corte de pelo",
+    precio: "14 €",
+    descripcion:
+      "Corte clásico o moderno adaptado a tu estilo y tipo de cabello, con la precisión y el cuidado necesarios para que salgas luciendo impecable.",
+  },
+  {
+    nombre: "Corte de pelo + Barba",
+    precio: "19 €",
+    descripcion:
+      "Define tu imagen con un corte de pelo impecable y una barba cuidada, todo en una misma sesión para un acabado armónico y profesional.",
+  },
+  {
+    nombre: "Corte de pelo + Arreglo de barba tradicional",
+    precio: "25 €",
+    descripcion:
+      "La experiencia clásica: corte de pelo y arreglo de barba al estilo tradicional, con toalla caliente y técnicas artesanales para un acabado elegante y preciso.",
+  },
+  {
+    nombre: "Arreglo de barba",
+    precio: "8 €",
+    descripcion:
+      "Rápido y eficaz: retoca y da forma a tu barba para mantenerla limpia y bien definida en pocos minutos.",
+  },
+  {
+    nombre: "Corte con lavado de cabeza",
+    precio: "16 €",
+    descripcion:
+      "Renueva tu look con un corte de pelo adaptado a tu estilo, acompañado de un lavado relajante que deja tu cabello limpio, suave y listo para lucir perfecto.",
+  },
+  {
+    nombre: "Corte de pelo para jubilados",
+    precio: "10 €",
+    descripcion:
+      "Un corte clásico o moderno adaptado a tu gusto, con la atención y el cuidado que mereces, a un precio especial para jubilados.",
+  },
+  {
+    nombre: "Corte de pelo para niños",
+    precio: "12 €",
+    descripcion:
+      "Cortes divertidos y cuidados para los más pequeños, con paciencia y atención para que se sientan cómodos y salgan sonriendo.",
+  },
+  {
+    nombre: "Servicio VIP",
+    precio: "35 €",
+    descripcion:
+      "El cuidado definitivo para el hombre actual. Incluye asesoría personalizada, corte de precisión, ritual tradicional de barba (toalla caliente, navaja, aceites y aftershave), exfoliación de pelo, champú específico y peinado con productos de alta gama.",
+  },
+];
 ---
 
 <section
   id="servicios"
   class={styles.servicios}
+  data-servicios
   aria-labelledby="servicios-titulo"
 >
-  <h2 id="servicios-titulo" class={styles.titulo}>
+  <h2 id="servicios-titulo" class={styles.srOnly}>
     Servicios
   </h2>
-  <!-- Pendiente: lista real de servicios y precios validados; no inventar datos.
-       Aquí se trabajarán la palabra a gran escala con vídeo y las interacciones. -->
-  <ProvisionalNote>
-    Servicios provisional · pendiente de listado validado
-  </ProvisionalNote>
+
+  <div class={styles.escena} data-escena-servicios>
+    <div class={styles.tituloBloque} data-titulo-servicios>
+      <span class={styles.tituloVisual} aria-hidden="true">
+        <!-- Relleno de vídeo: solo se ve dentro de las letras (máscara SVG). -->
+        <video
+          class={styles.videoLetras}
+          data-video-servicios
+          src={videoUrl}
+          autoplay
+          muted
+          loop
+          playsinline
+          tabindex="-1"
+        ></video>
+      </span>
+    </div>
+
+    <ul class={styles.lista} data-lista-servicios>
+      {servicios.map((servicio) => (
+        <li class={styles.item}>
+          <BookingLink class={styles.fila}>
+            <span class={styles.textos}>
+              <span class={styles.nombre}>{servicio.nombre}</span>
+            </span>
+            <span class={styles.descripcionContenedor}>
+              <span class={styles.descripcion}>{servicio.descripcion}</span>
+            </span>
+            <span class={styles.precio}>{servicio.precio}</span>
+            <span class={styles.llamada}>Reserva ya</span>
+          </BookingLink>
+        </li>
+      ))}
+    </ul>
+  </div>
 </section>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  const seccion = document.querySelector<HTMLElement>("[data-servicios]");
+  const escena = seccion?.querySelector<HTMLElement>("[data-escena-servicios]");
+  const titulo = seccion?.querySelector<HTMLElement>("[data-titulo-servicios]");
+  const lista = seccion?.querySelector<HTMLElement>("[data-lista-servicios]");
+
+  const video = document.querySelector<HTMLVideoElement>(
+    "video[data-video-servicios]",
+  );
+
+  const movimientoReducido = window.matchMedia(
+    "(prefers-reduced-motion: reduce)",
+  );
+
+  /* Título centrado y fijo: se mide con la lista en reposo (sin descripciones
+     desplegadas) y no se recalcula al crecer una fila, de modo que el hover no
+     lo desplaza. Solo se recalcula al cambiar el tamaño de la ventana o al
+     cargar las fuentes. En móvil vuelve al flujo normal. */
+  const fijarTitulo = () => {
+    if (!escena || !titulo) {
+      return;
+    }
+    if (!window.matchMedia("(min-width: 48rem)").matches) {
+      titulo.style.removeProperty("top");
+      return;
+    }
+    /* El CSS deja el bloque centrado con translateY(-50%); el `top` en
+       píxeles se calcula para que el centro visual caiga en el centro de la
+       altura de reposo. */
+    const centroReposo = escena.offsetHeight / 2;
+    titulo.style.top = `${centroReposo + titulo.offsetHeight / 2}px`;
+  };
+
+  fijarTitulo();
+  window.addEventListener("resize", fijarTitulo);
+  if (document.fonts) {
+    void document.fonts.ready.then(fijarTitulo);
+  }
+
+  if (video && movimientoReducido.matches) {
+    video.removeAttribute("autoplay");
+    video.pause();
+  }
+
+  /* Pausa el vídeo de las letras cuando la sección no está en pantalla. */
+  if (seccion && video) {
+    new IntersectionObserver(
+      (entradas) => {
+        const entrada = entradas[0];
+        if (!entrada) {
+          return;
+        }
+        if (entrada.isIntersecting && !movimientoReducido.matches) {
+          void video.play().catch(() => {});
+        } else {
+          video.pause();
+        }
+      },
+      { threshold: 0 },
+    ).observe(seccion);
+  }
+
+  /* Transformación al scroll: el banner se mantiene completo y quieto hasta
+     que su borde superior llega al 30 % del viewport; ahí la palabra se
+     reduce a la mitad izquierda (solo escala respecto a su centro) y la lista
+     entra desde abajo en la mitad derecha. Sin JS ni con movimiento reducido
+     se queda el estado final compuesto. */
+  if (seccion && escena && titulo && lista) {
+    gsap
+      .matchMedia()
+      .add(
+        "(min-width: 48rem) and (prefers-reduced-motion: no-preference)",
+        () => {
+          const linea = gsap.timeline({
+            scrollTrigger: {
+              trigger: seccion,
+              start: "top 30%",
+              end: "top -20%",
+              scrub: 0.8,
+              invalidateOnRefresh: true,
+            },
+          });
+
+          linea
+            .fromTo(
+              titulo,
+              {
+                transformOrigin: "left center",
+                scale: () =>
+                  escena.offsetWidth / Math.max(titulo.offsetWidth, 1),
+              },
+              { scale: 1, ease: "expo.inOut" },
+              0,
+            )
+            .fromTo(
+              lista,
+              { opacity: 0, yPercent: 40 },
+              { opacity: 1, yPercent: 0, ease: "expo.out" },
+              0.25,
+            );
+        },
+      );
+  }
+</script>
