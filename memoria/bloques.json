@@ -12,11 +12,13 @@
         "openspec/specs/home-skeleton/spec.md"
       ],
       "cambios": [
-        "openspec/changes/archive/2026-09-16-nav-scroll-inicio/proposal.md"
+        "openspec/changes/archive/2026-09-16-nav-scroll-inicio/proposal.md",
+        "openspec/changes/archive/2026-09-18-nav-tira-inicio/proposal.md"
       ],
       "aceptacion": [
         "memoria/sesiones/SES-007-nav-scroll.md",
-        "memoria/sesiones/SES-020-validacion-visual.md"
+        "memoria/sesiones/SES-020-validacion-visual.md",
+        "memoria/sesiones/SES-023.md"
       ],
       "pendientes": [
         "Material/familia definitiva según PRODUCT; aprobación actual limitada a la versión demo."
@@ -30,11 +32,13 @@
       "rutas": ["src/features/home/cabecera/"],
       "specs": ["openspec/specs/home-cabecera/spec.md"],
       "cambios": [
-        "openspec/changes/archive/2026-09-16-cabecera-entrada-portada/proposal.md"
+        "openspec/changes/archive/2026-09-16-cabecera-entrada-portada/proposal.md",
+        "openspec/changes/archive/2026-09-18-nav-tira-inicio/proposal.md"
       ],
       "aceptacion": [
         "memoria/sesiones/SES-010-cierre-cabecera.md",
-        "memoria/sesiones/SES-020-validacion-visual.md"
+        "memoria/sesiones/SES-020-validacion-visual.md",
+        "memoria/sesiones/SES-023.md"
       ],
       "pendientes": [
         "Material/familia definitiva según PRODUCT; aprobación actual limitada a la versión demo."
@@ -48,7 +52,8 @@
       "rutas": ["src/features/home/intro/"],
       "specs": ["openspec/specs/home-intro/spec.md"],
       "cambios": [
-        "openspec/changes/archive/2026-09-16-cabecera-entrada-portada/proposal.md"
+        "openspec/changes/archive/2026-09-16-cabecera-entrada-portada/proposal.md",
+        "openspec/changes/archive/2026-09-18-nav-tira-inicio/proposal.md"
       ],
       "aceptacion": [
         "memoria/sesiones/SES-010-cierre-cabecera.md",

@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "relevo": "memoria/sesiones/SES-022.md",
-  "resumen": "Contrastados código,PRODUCT,mapa,specs y bloques: parche aplicado,spec home-servicios consolidada y excepción de Servicios reflejada en las fuentes.",
+  "relevo": "memoria/sesiones/SES-023.md",
+  "resumen": "Contrastados codigo, specs sincronizadas, PRODUCT, mapa y bloques: nav en tira y barra de inicio aceptados por el responsable; cambio archivado",
   "alcance": "codigo-y-documentacion-no-aprobacion-visual",
   "archivos": [
     {
@@ -194,7 +194,7 @@
     },
     {
       "ruta": "memoria/bloques.json",
-      "sha256": "e9c6a89cf3375f05ac49c1200c1c0b41f90be2af2a1e9eb029f8ae4fee0d3209"
+      "sha256": "650f7c80577dadce267abc713834332b4e6e9dd0f77d1d27f61ffc6fdd4e081f"
     },
     {
       "ruta": "memoria/cierre.md",
@@ -210,7 +210,7 @@
     },
     {
       "ruta": "memoria/estado.json",
-      "sha256": "4988d25e732faca46011bb5daf8ec28d95dae3b872505ecd537bae340c3e87fb"
+      "sha256": "d82790df1b290a676ae9549994d858ef1874328f49034e601cac99cea8796a0a"
     },
     {
       "ruta": "memoria/herramientas.md",
@@ -222,7 +222,7 @@
     },
     {
       "ruta": "memoria/mapa.md",
-      "sha256": "938589123564cf4b9b7481bdf3037beb18f7820dee5cb3ad7c71faae37bb90e3"
+      "sha256": "9c4a5f55623d158fd216036a8915082d599d1993a68b2fd9062464f8bfa0f6ce"
     },
     {
       "ruta": "memoria/primer-commit.md",
@@ -345,6 +345,10 @@
       "sha256": "430578de7fe7bacf3f149c63c31ffd8c6c84700bc864ad62a3ca23823e48c70a"
     },
     {
+      "ruta": "memoria/sesiones/SES-023.md",
+      "sha256": "35be0e8741d196ee58e1966d4d675ae7b44f2630f2e302df592920d90b4f4017"
+    },
+    {
       "ruta": "openspec/changes/archive/.gitkeep",
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
@@ -445,6 +449,58 @@
       "sha256": "68254adf40dfaa16e6759c1d6fed26b6935e329402f53b8f563d8f1cd8a21cb5"
     },
     {
+      "ruta": "openspec/changes/archive/2026-09-18-nav-tira-inicio/.openspec.yaml",
+      "sha256": "dc276ca1f5af9fc6062b02d4253186f254288dcf61711e1a8ec3573e8587440a"
+    },
+    {
+      "ruta": "openspec/changes/archive/2026-09-18-nav-tira-inicio/design.md",
+      "sha256": "31e654b7a2e6402616c6c6717f669a6f9a7c9b75c1001d6f059f42fdb63d79c1"
+    },
+    {
+      "ruta": "openspec/changes/archive/2026-09-18-nav-tira-inicio/proposal.md",
+      "sha256": "4442d9a047f04411dd66a9435b204559bcdcc0c88d640fc649f952877b883087"
+    },
+    {
+      "ruta": "openspec/changes/archive/2026-09-18-nav-tira-inicio/specs/home-cabecera/spec.md",
+      "sha256": "d78b9c73203c79032d95a8859bbcd0cc1e35b593f304bc9f6a6f7096d328a9d9"
+    },
+    {
+      "ruta": "openspec/changes/archive/2026-09-18-nav-tira-inicio/specs/home-intro/spec.md",
+      "sha256": "ca3077d64cea3e9ea927546c79b99ea801f4f1649617016e637a85786cfe7d5b"
+    },
+    {
+      "ruta": "openspec/changes/archive/2026-09-18-nav-tira-inicio/specs/site-navigation/spec.md",
+      "sha256": "cfe3b88d74eb73bed6ca4e7f3a642da4d271faf2a6cd7f2eccd226b7b2751a46"
+    },
+    {
+      "ruta": "openspec/changes/archive/2026-09-18-nav-tira-inicio/tasks.md",
+      "sha256": "170025634963b8b3883803c3ccbb952092968bc4d463dca3ecb696c0f2d074ca"
+    },
+    {
+      "ruta": "openspec/changes/intro-con-logo/.openspec.yaml",
+      "sha256": "dc276ca1f5af9fc6062b02d4253186f254288dcf61711e1a8ec3573e8587440a"
+    },
+    {
+      "ruta": "openspec/changes/intro-con-logo/design.md",
+      "sha256": "f95425fae3e5f813a27c651363ce3505b935ae82d5806a928d0fae81c871d4c9"
+    },
+    {
+      "ruta": "openspec/changes/intro-con-logo/proposal.md",
+      "sha256": "2508e414458bd8a50bbb83ec5c774319e9946a0db382d8aefb5912ea4f0ee410"
+    },
+    {
+      "ruta": "openspec/changes/intro-con-logo/specs/home-cabecera/spec.md",
+      "sha256": "bfc3f5a4cb5bd102d9eb9ed2997721b19c05094f4f3ac44a285199e6aeaa02fa"
+    },
+    {
+      "ruta": "openspec/changes/intro-con-logo/specs/home-intro/spec.md",
+      "sha256": "f25ea9b4d3389a8d2d84437ac130346460e68d33aa8aab5c029cd3c0cd211e3b"
+    },
+    {
+      "ruta": "openspec/changes/intro-con-logo/tasks.md",
+      "sha256": "b0148de1675a47a0b2e0f958bce134af69cbf4270d653d55d141613ee008b6ea"
+    },
+    {
       "ruta": "openspec/config.yaml",
       "sha256": "8e84058ddc5089ba0015c92aaa925adce988046cd27d60b74fc3b079498aba5d"
     },
@@ -454,7 +510,7 @@
     },
     {
       "ruta": "openspec/specs/home-cabecera/spec.md",
-      "sha256": "290a148c9f365e330bfe8802ba7bebe373a3a23b8cb5fa1952f4e121a113eadb"
+      "sha256": "c57deb77eb18fc526c5d25899b873854dbe3c80d95cf4e5d9d9c9246f104d92a"
     },
     {
       "ruta": "openspec/specs/home-galeria/spec.md",
@@ -462,7 +518,7 @@
     },
     {
       "ruta": "openspec/specs/home-intro/spec.md",
-      "sha256": "abb09f3c4dfbaea3327bdbe598534e2611e105d00a01bf5e6257fe0904e0537f"
+      "sha256": "c70d8830439691d14884c864c72b10bf53ee2fb79dce3e2d48564f4f4ba652fe"
     },
     {
       "ruta": "openspec/specs/home-servicios/spec.md",
@@ -478,7 +534,7 @@
     },
     {
       "ruta": "openspec/specs/site-navigation/spec.md",
-      "sha256": "0468d148206da2021aa36315ceb1cac40665851f90ec30d1f2f7b22d2e9dc690"
+      "sha256": "c6959c0f4a1affdd967e4f356de6813dca3079031a20119018c5fe88c59284fd"
     },
     {
       "ruta": "package-lock.json",
@@ -517,12 +573,20 @@
       "sha256": "4abba123cf28092d81d81d978c07f522cda4d1b0c5fc4d8e7afb246d7ec4b883"
     },
     {
+      "ruta": "src/components/navigation/BarraInicio.astro",
+      "sha256": "dbd7ce69b98b17a7bec4a6bac34cf08b0c8e30e0d9dc5b3517b26483e0db2aad"
+    },
+    {
+      "ruta": "src/components/navigation/BarraInicio.module.css",
+      "sha256": "ae5ff533893f102b42c9ac4b2e8610310b941f4675c9bb7c8a42bba6afa7126c"
+    },
+    {
       "ruta": "src/components/navigation/SiteNav.astro",
-      "sha256": "9db820dc515c69f6b2caf5eaa713f0dde8182b77c28fa4fb2bdcf64265f322d6"
+      "sha256": "5cfa43e91b312a9d34bf9861ab5833847ffc5c9ccec5ed8d72807d4c66caddd8"
     },
     {
       "ruta": "src/components/navigation/SiteNav.module.css",
-      "sha256": "8b88fe63fc44aeaba60472b6fa430f216ef93663ea69a697aa780d420542cdae"
+      "sha256": "2a7a84f1f455fce3bbd17f4ebed890b3c806aa77c24dcf6ba6501b817b1375e9"
     },
     {
       "ruta": "src/components/ui/BookingLink.astro",
@@ -550,11 +614,11 @@
     },
     {
       "ruta": "src/features/home/cabecera/Cabecera.astro",
-      "sha256": "393f860660d95647821896b722c64f2640c361bda4d925289667feb318a23590"
+      "sha256": "2ab34b5ed715e934f2659d42441f6a80d9a87f002fc2ca9ddda5182545983c94"
     },
     {
       "ruta": "src/features/home/cabecera/Cabecera.module.css",
-      "sha256": "4f6cb97e487712e374fd22392b356e760fae3b0873c4b50dccf9eb12853387ef"
+      "sha256": "f999fe3026680d25ca62983ee31d75763d7ae60db10527a5baace7ab5c256a79"
     },
     {
       "ruta": "src/features/home/galeria/Galeria.astro",
@@ -562,7 +626,7 @@
     },
     {
       "ruta": "src/features/home/galeria/Galeria.module.css",
-      "sha256": "5cc864ecf93ed178819b23c84b9674db38c81ce81ec384870e71919db6db3e15"
+      "sha256": "5d626d5203ecab27fff06daf4be5f900185942401cf36c6a3be5f68d19adaefa"
     },
     {
       "ruta": "src/features/home/informacion/Informacion.astro",
@@ -574,15 +638,15 @@
     },
     {
       "ruta": "src/features/home/intro/Intro.astro",
-      "sha256": "d9be29e0dab073c000071093677f5897ca81cbedab0a247c3b0cbbe84a7040e3"
+      "sha256": "1d016459bd2d4a5a2519f0d1b74f9527ddd5bbd5c39c2e3e0b07cfa7e752e958"
     },
     {
       "ruta": "src/features/home/intro/Intro.module.css",
-      "sha256": "13fbb7590b7b39e9e8b7f377a04c566592527213f55fb369ca74915df332915d"
+      "sha256": "6f29eb140dbe00c1f9da8d041e0903fae83a0933eee72b6b31565fb7a4a090ec"
     },
     {
       "ruta": "src/features/home/intro/intro.ts",
-      "sha256": "16715318cedb200652e056a058f0fbfa54ba69199f837f61cab8b088cf063fdb"
+      "sha256": "c416dc671e2e8c23ded355a99feca5bca7997b88f9927212f014642a1a2d9f07"
     },
     {
       "ruta": "src/features/home/opiniones/Opiniones.astro",
@@ -598,7 +662,7 @@
     },
     {
       "ruta": "src/features/home/servicios/Servicios.module.css",
-      "sha256": "0099d429c2b7f9d11bf2b4405dabae23c1d994f6d59b749c79850620d6795961"
+      "sha256": "99918d1c90d858386e61d075991fb22cda81de5dcb6b569f187bb24e4777dfab"
     },
     {
       "ruta": "src/features/products/provisional/Provisional.astro",
@@ -633,5 +697,5 @@
       "sha256": "98e1484cb0954ac7306a850cdbf03c8140e2fd32e65fa6c213b19343dfdc6d43"
     }
   ],
-  "huella": "ba1a1e2a6014bbffbc97c4a2d1f4c783b6df88364d87d15b3180ffaa2c4d67eb"
+  "huella": "fc145060cccb978fb9eb230b3ef0fb34658e3052e79238312589f32b10b10589"
 }

@@ -5,7 +5,10 @@
   right: 0;
   z-index: 100;
   display: flex;
+  align-items: center;
   justify-content: center;
+  /* Tira negra de extremo a extremo con la que reaparece al subir. */
+  background: var(--color-fg);
 }
 
 .list {
@@ -22,43 +25,54 @@
   display: flex;
 }
 
+/* Las opciones solo amplían su texto al hover o al foco, sin fondo ni
+   inversión de color. */
 .list a {
   display: flex;
   align-items: center;
   padding: 0.8rem 1.6rem;
-  border-radius: 0.5rem;
-  color: #fff;
+  color: var(--color-bg);
   text-decoration: none;
-  transition:
-    background-color 0.2s ease,
-    color 0.2s ease,
-    backdrop-filter 0.2s ease;
+  transition: transform 0.2s ease-out;
 }
 
-/* Desenfoque ligero tras las opciones, solo sobre la cabecera (data-blur).
-   Al interactuar se retira y entra la inversión sólida. */
-.nav[data-blur="on"] .list a {
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-}
-
-/* Tema oscuro (por defecto y pre-JS): letras blancas; al hover, inversión
-   sólida a fondo blanco con letras negras, como el CTA de la cabecera. */
 .list a:hover,
 .list a:focus-visible {
-  background-color: #fff;
-  color: #000;
-  -webkit-backdrop-filter: none;
-  backdrop-filter: none;
+  transform: scale(1.12);
 }
 
-/* Tema claro (secciones blancas): letras negras; al hover, fondo negro. */
-.nav[data-theme="light"] .list a {
-  color: #000;
+/* «Pedir cita» conserva el tratamiento que tenía el acceso de la cabecera:
+   recuadro con borde y sin relleno que se invierte al interactuar. */
+.cita {
+  position: absolute;
+  top: 50%;
+  right: 1.5rem;
+  transform: translateY(-50%);
+  padding: 0.3rem 0.6rem;
+  border: 1px solid var(--color-bg);
+  color: var(--color-bg);
+  font-family: var(--font-text);
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    background-color 0.25s ease-out,
+    color 0.25s ease-out;
 }
 
-.nav[data-theme="light"] .list a:hover,
-.nav[data-theme="light"] .list a:focus-visible {
-  background-color: #000;
-  color: #fff;
+.cita:hover,
+.cita:focus-visible {
+  background: var(--color-bg);
+  color: var(--color-fg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .list a,
+  .cita {
+    transition: none;
+  }
+
+  .list a:hover,
+  .list a:focus-visible {
+    transform: none;
+  }
 }

@@ -2,8 +2,8 @@
   "schema": 1,
   "proyecto": "UchihaBarberWeb",
   "faseActiva": "UB-004",
-  "ultimoRelevo": "memoria/sesiones/SES-022.md",
-  "alcanceActual": "Parche de coherencia documental y controles de cierre aplicado con los recursos locales; cinco bloques demo (cabecera, entrada, navegación, Servicios, Galería) aprobados. Acceso a Productos, Opiniones e Información pendientes de turno; catálogo y Sessions sin confirmar. Estado por bloque en memoria/bloques.json; el cierre debe seguir memoria/cierre.md.",
+  "ultimoRelevo": "memoria/sesiones/SES-023.md",
+  "alcanceActual": "Navegación en tira negra, barra de inicio con desplegable y cabecera sin nombre ni CTA: bloques demo aceptados por el responsable (SES-023) y cambio nav-tira-inicio archivado con sus specs sincronizadas (site-navigation, home-cabecera, home-intro). Pendientes de turno: acceso a Productos, Opiniones e Información; fuente final ya elegida por el responsable, pendiente de su bloque; catálogo (UB-005) y móvil (UB-006) en sus fases. Estado por bloque en memoria/bloques.json.",
   "pendientesDeDecision": [
     "Sessions: confirmar inclusión y ubicación.",
     "Familia tipográfica definitiva: Inter (titulares) y Archivo (interfaz) adoptadas de forma provisional por indicación del responsable, a falta del visto bueno del cliente (supreme/off-white/apple); el reparto por elemento se concreta en cada sección.",
@@ -94,7 +94,8 @@
         "memoria/sesiones/SES-018-cierre-galeria.md",
         "memoria/sesiones/SES-020-validacion-visual.md",
         "memoria/sesiones/SES-021.md",
-        "memoria/sesiones/SES-022.md"
+        "memoria/sesiones/SES-022.md",
+        "memoria/sesiones/SES-023.md"
       ],
       "notaOpenSpec": "Esta fase agrupa varios bloques: consultar sus referencias individuales en memoria/bloques.json."
     },

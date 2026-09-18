@@ -1,10 +1,4 @@
-# home-cabecera Specification
-
-## Purpose
-
-Composición y contenido de la cabecera de inicio de Uchiha Barber —vídeo de fondo a pantalla completa en blanco y negro, con el nombre solo para lectores de pantalla y las reservas fuera de la cabecera— y adopción de las tipografías propias que la web sirve desde su propio origen.
-
-## Requirements
+## MODIFIED Requirements
 
 ### Requirement: Cabecera a viewport completo
 
@@ -34,22 +28,3 @@ La cabecera de inicio SHALL ocupar al menos la altura del viewport y SHALL mostr
 
 - **WHEN** el visitante prefiere movimiento reducido
 - **THEN** el vídeo de fondo no se reproduce automáticamente y permanece pausado
-
-### Requirement: Tipografías propias autoalojadas
-
-La web SHALL servir sus tipografías desde su propio origen, sin depender de servicios de terceros, mediante subconjuntos optimizados y tokens compartidos para titulares y para textos de interfaz. La familia provisional SHALL conservarse como respaldo mientras la definitiva no esté aprobada.
-
-#### Scenario: Sin dependencia externa
-
-- **WHEN** se carga la portada
-- **THEN** las tipografías se solicitan al propio sitio y no a un servicio externo
-
-#### Scenario: Reparto por elemento
-
-- **WHEN** una sección aplica un token tipográfico
-- **THEN** puede usar la familia de titulares o la de interfaz con independencia del resto de secciones
-
-#### Scenario: Familia provisional
-
-- **WHEN** la familia definitiva todavía no está aprobada por el cliente
-- **THEN** la composición se mantiene con la provisional como respaldo sin depender de decisiones pendientes

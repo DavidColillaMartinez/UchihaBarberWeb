@@ -1,10 +1,9 @@
-# site-navigation Specification
+## RENAMED Requirements
 
-## Purpose
+- FROM: `### Requirement: Navegación fija y fusionada con el contenido`
+- TO: `### Requirement: Navegación fija como tira negra`
 
-Comportamiento de la navegación compartida de Uchiha Barber en todo el sitio: fija en la parte superior, visible como tira negra de extremo a extremo al reaparecer con el scroll, con ampliación de texto en las opciones, acceso a reservas con tratamiento propio y una barra específica en lo alto de la portada.
-
-## Requirements
+## MODIFIED Requirements
 
 ### Requirement: Navegación fija como tira negra
 
@@ -61,6 +60,8 @@ La navegación fija y su tira negra SHALL aplicar a todas las páginas existente
 
 - **WHEN** se visita la página de productos
 - **THEN** la misma navegación fija está presente con su comportamiento de tira negra y sus enlaces
+
+## ADDED Requirements
 
 ### Requirement: Opciones con ampliación de texto
 

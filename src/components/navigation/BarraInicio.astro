@@ -1,0 +1,115 @@
+---
+import styles from "./BarraInicio.module.css";
+import BookingLink from "@/components/ui/BookingLink.astro";
+
+/* Opciones de la portada: mismas anclas que la navegación compartida. */
+const opciones = [
+  { href: "#servicios", texto: "Servicios" },
+  { href: "/productos", texto: "Productos" },
+  { href: "#opiniones", texto: "Opiniones" },
+  { href: "#info", texto: "Información" },
+];
+---
+
+<div class={styles.barra} data-barra>
+  <button
+    class={styles.menu}
+    type="button"
+    aria-expanded="false"
+    aria-controls="barra-inicio-desplegable"
+    aria-label="Abrir menú de navegación"
+    data-menu
+  >
+    <span class={styles.raya}></span>
+    <span class={styles.raya}></span>
+    <span class={styles.raya}></span>
+  </button>
+
+  <BookingLink class={styles.cita}>Pedir cita</BookingLink>
+
+  <div
+    class={styles.desplegable}
+    id="barra-inicio-desplegable"
+    data-desplegable
+    data-abierto="false"
+  >
+    <ul class={styles.lista}>
+      {opciones.map((opcion) => (
+        <li>
+          <a href={opcion.href}>{opcion.texto}</a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</div>
+
+<script>
+  const boton = document.querySelector<HTMLButtonElement>("[data-menu]");
+  const panel = document.querySelector<HTMLElement>("[data-desplegable]");
+
+  if (boton && panel) {
+    const estaAbierto = () => panel.dataset.abierto === "true";
+
+    const actualizarBoton = (abierto: boolean) => {
+      boton.setAttribute("aria-expanded", String(abierto));
+      boton.setAttribute(
+        "aria-label",
+        abierto ? "Cerrar menú de navegación" : "Abrir menú de navegación",
+      );
+    };
+
+    const abrir = () => {
+      panel.dataset.abierto = "true";
+      actualizarBoton(true);
+    };
+
+    const cerrar = (devolverFoco: boolean) => {
+      panel.dataset.abierto = "false";
+      actualizarBoton(false);
+      if (devolverFoco) {
+        boton.focus();
+      }
+    };
+
+    boton.addEventListener("click", () => {
+      if (estaAbierto()) {
+        cerrar(false);
+      } else {
+        abrir();
+      }
+    });
+
+    /* Al elegir una opción, el desplegable se cierra y la navegación sigue. */
+    panel.addEventListener("click", (evento) => {
+      const destino = evento.target instanceof Element ? evento.target : null;
+      if (destino?.closest("a")) {
+        cerrar(false);
+      }
+    });
+
+    /* Clic fuera del botón y del panel: cierra sin devolver el foco. */
+    document.addEventListener("click", (evento) => {
+      if (!estaAbierto()) {
+        return;
+      }
+      const destino = evento.target instanceof Element ? evento.target : null;
+      if (!destino) {
+        return;
+      }
+      if (
+        destino.closest("[data-desplegable]") ||
+        destino.closest("[data-menu]")
+      ) {
+        return;
+      }
+      cerrar(false);
+    });
+
+    /* Escape cierra y devuelve el foco al botón. */
+    document.addEventListener("keydown", (evento) => {
+      if (evento.key === "Escape" && estaAbierto()) {
+        cerrar(true);
+      }
+    });
+  }
+</script>

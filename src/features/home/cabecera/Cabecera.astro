@@ -1,14 +1,14 @@
 ---
 import styles from "./Cabecera.module.css";
-import BookingLink from "@/components/ui/BookingLink.astro";
+import BarraInicio from "@/components/navigation/BarraInicio.astro";
 
-/* Vídeo de fondo: material demo servido desde el repo. Se sustituirá por la
-   URL del VPS propio con el contenido real (PRODUCT.md); basta cambiar aquí. */
+/* Vídeo de fondo: material demo servido desde el repo. Se sustituirá por
+   la URL del VPS propio con el contenido real (PRODUCT.md); basta cambiar aquí. */
 const videoUrl = "/videos/Video_Head.mp4";
 ---
 
 <section class={styles.cabecera} aria-labelledby="cabecera-titulo">
-  <!-- Vídeo de fondo en blanco y negro con desenfoque (PRODUCT.md). -->
+  <!-- Vídeo de fondo en blanco y negro a pantalla completa (PRODUCT.md). -->
   <video
     class={styles.video}
     data-video-fondo
@@ -21,13 +21,13 @@ const videoUrl = "/videos/Video_Head.mp4";
     tabindex="-1"
   ></video>
 
-  <div class={styles.contenido}>
-    <h1 id="cabecera-titulo" class={styles.titulo}>
-      <span class={styles.linea}>Uchiha</span>
-      <span class={styles.linea}>Barber</span>
-    </h1>
-    <BookingLink class={styles.cita}>Pedir cita</BookingLink>
-  </div>
+  <BarraInicio />
+
+  <!-- El nombre queda solo para lectores de pantalla: la presencia visual
+       la lleva el vídeo con la barra de navegación encima. -->
+  <h1 id="cabecera-titulo" class={styles.srOnly}>
+    Uchiha Barber
+  </h1>
 </section>
 
 <script>
