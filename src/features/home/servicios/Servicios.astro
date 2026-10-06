@@ -67,14 +67,14 @@ const servicios = [
   data-servicios
   aria-labelledby="servicios-titulo"
 >
-  <h2 id="servicios-titulo" class={styles.srOnly}>
-    Servicios
-  </h2>
-
   <div class={styles.escena} data-escena-servicios>
-    <div class={styles.tituloBloque} data-titulo-servicios>
-      <span class={styles.tituloVisual} aria-hidden="true">
-        <!-- Relleno de vídeo: solo se ve dentro de las letras (máscara SVG). -->
+    <div class={styles.tituloMarco}>
+      <div class={styles.tituloGrupo} data-titulo-servicios>
+        <h2 id="servicios-titulo" class={styles.titulo} data-palabra-servicios>
+          Servicios
+        </h2>
+        <!-- El vídeo se funde sobre el texto: solo se ve dentro de las letras
+             (modo de fusión screen sobre el blanco y el negro de la palabra). -->
         <video
           class={styles.videoLetras}
           data-video-servicios
@@ -83,9 +83,10 @@ const servicios = [
           muted
           loop
           playsinline
+          aria-hidden="true"
           tabindex="-1"
         ></video>
-      </span>
+      </div>
     </div>
 
     <ul class={styles.lista} data-lista-servicios>
@@ -115,7 +116,10 @@ const servicios = [
 
   const seccion = document.querySelector<HTMLElement>("[data-servicios]");
   const escena = seccion?.querySelector<HTMLElement>("[data-escena-servicios]");
-  const titulo = seccion?.querySelector<HTMLElement>("[data-titulo-servicios]");
+  const grupo = seccion?.querySelector<HTMLElement>("[data-titulo-servicios]");
+  const palabra = seccion?.querySelector<HTMLElement>(
+    "[data-palabra-servicios]",
+  );
   const lista = seccion?.querySelector<HTMLElement>("[data-lista-servicios]");
 
   const video = document.querySelector<HTMLVideoElement>(
@@ -126,23 +130,98 @@ const servicios = [
     "(prefers-reduced-motion: reduce)",
   );
 
-  /* Título centrado y fijo: se mide con la lista en reposo (sin descripciones
-     desplegadas) y no se recalcula al crecer una fila, de modo que el hover no
-     lo desplaza. Solo se recalcula al cambiar el tamaño de la ventana o al
-     cargar las fuentes. En móvil vuelve al flujo normal. */
+  /* Mide la tinta real de la palabra con un canvas, en las mismas
+     condiciones que el h2 (misma familia, tamaño y peso): devuelve el alto
+     de la tinta y su distancia al borde superior de la caja, para poder
+     llevarla exactamente de borde a borde del listado. */
+  const medirTinta = () => {
+    if (!palabra || !grupo) {
+      return null;
+    }
+    const cs = getComputedStyle(palabra);
+    const lienzo = document.createElement("canvas");
+    const ctx = lienzo.getContext("2d");
+    if (!ctx) {
+      return null;
+    }
+    ctx.font = `${cs.fontWeight} ${cs.fontSize} ${cs.fontFamily}`;
+    const medida = ctx.measureText(palabra.textContent?.trim() || "Servicios");
+    const asc = medida.actualBoundingBoxAscent;
+    const desc = medida.actualBoundingBoxDescent;
+    if (!Number.isFinite(asc) || !Number.isFinite(desc)) {
+      return null;
+    }
+    const fuenteAsc = medida.fontBoundingBoxAscent;
+    const fuenteDesc = medida.fontBoundingBoxDescent;
+    const lineH = parseFloat(cs.lineHeight) || parseFloat(cs.fontSize);
+    const lineaBase = (lineH - (fuenteAsc + fuenteDesc)) / 2 + fuenteAsc;
+    return {
+      anchoCaja: Math.max(grupo.offsetWidth, 1),
+      altoTinta: Math.max(asc + desc, 1),
+      tintaArriba: lineaBase - asc,
+    };
+  };
+
+  /* Calcula las escalas y el desplazamiento de los dos estados:
+     reposo (banner a sangre, escala uniforme centrada) y pausa (ancho de la
+     columna y tinta de borde a borde del listado). `--factor-tinta` (CSS)
+     permite subir o bajar el alto de la pausa sin tocar el resto. */
+  const calcular = () => {
+    if (!escena || !grupo || !lista) {
+      return null;
+    }
+    const medidas = medirTinta();
+    if (!medidas) {
+      return null;
+    }
+    const altoLista = lista.offsetHeight;
+    const anchoColumna =
+      grupo.parentElement?.clientWidth ?? escena.offsetWidth / 2;
+    const anchoEscena = escena.offsetWidth;
+    const factor =
+      Number.parseFloat(
+        getComputedStyle(grupo).getPropertyValue("--factor-tinta"),
+      ) || 1;
+
+    const escalaXPausa = anchoColumna / medidas.anchoCaja;
+    const escalaYPausa = (altoLista / medidas.altoTinta) * factor;
+    const desplazaYPausa =
+      (altoLista - medidas.altoTinta * escalaYPausa) / 2 -
+      medidas.tintaArriba * escalaYPausa;
+
+    const escalaReposo = anchoEscena / medidas.anchoCaja;
+    const desplazaYReposo =
+      (altoLista - medidas.altoTinta * escalaReposo) / 2 -
+      medidas.tintaArriba * escalaReposo;
+
+    return {
+      escalaXPausa,
+      escalaYPausa,
+      desplazaYPausa,
+      escalaReposo,
+      desplazaYReposo,
+    };
+  };
+
+  /* Estado pausado en CSS (fallback sin gsap o con movimiento reducido).
+     En móvil la palabra vuelve al flujo normal. */
   const fijarTitulo = () => {
-    if (!escena || !titulo) {
+    if (!grupo) {
       return;
     }
     if (!window.matchMedia("(min-width: 48rem)").matches) {
-      titulo.style.removeProperty("top");
+      grupo.style.removeProperty("--escala-x");
+      grupo.style.removeProperty("--escala-y");
+      grupo.style.removeProperty("--desplaza-y");
       return;
     }
-    /* El CSS deja el bloque centrado con translateY(-50%); el `top` en
-       píxeles se calcula para que el centro visual caiga en el centro de la
-       altura de reposo. */
-    const centroReposo = escena.offsetHeight / 2;
-    titulo.style.top = `${centroReposo + titulo.offsetHeight / 2}px`;
+    const valores = calcular();
+    if (!valores) {
+      return;
+    }
+    grupo.style.setProperty("--escala-x", `${valores.escalaXPausa}`);
+    grupo.style.setProperty("--escala-y", `${valores.escalaYPausa}`);
+    grupo.style.setProperty("--desplaza-y", `${valores.desplazaYPausa}px`);
   };
 
   fijarTitulo();
@@ -175,11 +254,12 @@ const servicios = [
   }
 
   /* Transformación al scroll: el banner se mantiene completo y quieto hasta
-     que su borde superior llega al 30 % del viewport; ahí la palabra se
-     reduce a la mitad izquierda (solo escala respecto a su centro) y la lista
-     entra desde abajo en la mitad derecha. Sin JS ni con movimiento reducido
-     se queda el estado final compuesto. */
-  if (seccion && escena && titulo && lista) {
+     que su borde superior llega al 50 % del viewport; ahí la palabra se
+     reduce a la columna izquierda y su tinta estira en vertical hasta el
+     alto exacto del listado (más vídeo en las letras, efecto texto estirado),
+     mientras la lista entra desde abajo en la mitad derecha. Sin JS ni con
+     movimiento reducido se queda el estado final compuesto. */
+  if (seccion && escena && grupo && lista) {
     gsap
       .matchMedia()
       .add(
@@ -188,8 +268,8 @@ const servicios = [
           const linea = gsap.timeline({
             scrollTrigger: {
               trigger: seccion,
-              start: "top 30%",
-              end: "top -20%",
+              start: "top 50%",
+              end: "top 0%",
               scrub: 0.8,
               invalidateOnRefresh: true,
             },
@@ -197,13 +277,19 @@ const servicios = [
 
           linea
             .fromTo(
-              titulo,
+              grupo,
               {
-                transformOrigin: "left center",
-                scale: () =>
-                  escena.offsetWidth / Math.max(titulo.offsetWidth, 1),
+                transformOrigin: "left top",
+                y: () => calcular()?.desplazaYReposo ?? 0,
+                scaleX: () => calcular()?.escalaReposo ?? 1,
+                scaleY: () => calcular()?.escalaReposo ?? 1,
               },
-              { scale: 1, ease: "expo.inOut" },
+              {
+                y: () => calcular()?.desplazaYPausa ?? 0,
+                scaleX: () => calcular()?.escalaXPausa ?? 1,
+                scaleY: () => calcular()?.escalaYPausa ?? 1,
+                ease: "expo.inOut",
+              },
               0,
             )
             .fromTo(

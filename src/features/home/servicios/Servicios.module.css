@@ -1,6 +1,6 @@
 .servicios {
   position: relative;
-  padding: 20svh 0;
+  padding: 5svh 0;
   /* El despliegue de descripciones crece en vertical sin recortes. */
   overflow-x: clip;
   /* Fuera de los puntos de ajuste: el crecimiento de una fila no puede
@@ -8,17 +8,18 @@
   scroll-snap-align: none;
   overflow-anchor: none;
   background: var(--color-bg);
+  /* El fundido del vídeo sobre la palabra se confina a la sección e
+     incluye su fondo blanco. */
+  isolation: isolate;
+  /* Franja de media pantalla: solo en escritorio; en móvil la sección
+     fluye con su contenido. */
 }
 
-.srOnly {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  clip-path: inset(50%);
-  white-space: nowrap;
+@media (min-width: 48rem) {
+  .servicios {
+    min-height: 50svh;
+    max-height: 50svh;
+  }
 }
 
 .escena {
@@ -27,29 +28,53 @@
   grid-template-columns: repeat(2, minmax(0, 1fr));
   column-gap: 3rem;
   align-items: start;
+  /* El fondo blanco del grupo del título (necesario para el fundido del
+     vídeo) se recorta exactamente a la banda de la composición: sin esto
+     sobresale de la franja y tapa cabecera y Galería. El hover no se ve
+     afectado porque las filas crecen en flujo y la escena crece con ellas. */
+  overflow: clip;
 }
 
-/* Centrado fijo: el JS fija el `top` en píxeles con la lista en reposo
-   para que los despliegues de descripciones no muevan el título. */
-.tituloBloque {
+/* Marco de la palabra: columna izquierda, sin capturar el puntero. */
+.tituloMarco {
   position: absolute;
-  top: 50%;
+  top: 0;
   left: 0;
-  z-index: 0;
   width: calc(50% - 1.5rem);
-  transform: translateY(-50%);
+  height: 100%;
   pointer-events: none;
 }
 
-.tituloVisual {
-  position: relative;
-  display: block;
-  aspect-ratio: 1000 / 182;
+/* El grupo transformado aísla el fundido: el blanco vive dentro para que el
+   vídeo desaparezca fuera de las letras. El JS deja aquí el estado pausado
+   (--escala-x, --escala-y, --desplaza-y) como fallback sin gsap; el timeline
+   sobrescribe el transform cuando anima. `--factor-tinta` ajusta el alto de
+   la pausa: 1 = tinta de borde a borde del listado. */
+.tituloGrupo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: var(--color-bg);
+  transform-origin: left top;
+  transform: translateY(var(--desplaza-y, 0))
+    scale(var(--escala-x, 1), var(--escala-y, 1));
+  --factor-tinta: 1;
 }
 
-/* El vídeo solo se ve dentro de las letras: máscara SVG con la palabra.
-   La tipografía de la máscara sigue la provisional global; se ajustará
-   con la familia definitiva. */
+.titulo {
+  display: block;
+  margin: 0;
+  font-family: var(--font-base);
+  font-size: 10rem;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+  color: var(--color-fg);
+}
+
+/* El vídeo cubre la caja del texto y se funde con el fondo: sobre el blanco
+   desaparece y sobre las letras negras se ve (el color del texto es el
+   vídeo). Si el vídeo no carga, quedan las letras negras. */
 .videoLetras {
   position: absolute;
   inset: 0;
@@ -57,12 +82,7 @@
   height: 100%;
   object-fit: cover;
   filter: grayscale(1);
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 182' preserveAspectRatio='none'%3E%3Ctext x='500' y='181' text-anchor='middle' textLength='1000' lengthAdjust='spacingAndGlyphs' font-family='system-ui, sans-serif' font-weight='800' font-size='250' fill='%23fff'%3EServicios%3C/text%3E%3C/svg%3E");
-  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 182' preserveAspectRatio='none'%3E%3Ctext x='500' y='181' text-anchor='middle' textLength='1000' lengthAdjust='spacingAndGlyphs' font-family='system-ui, sans-serif' font-weight='800' font-size='250' fill='%23fff'%3EServicios%3C/text%3E%3C/svg%3E");
-  -webkit-mask-size: 100% 100%;
-  mask-size: 100% 100%;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
+  mix-blend-mode: screen;
 }
 
 /* Colocada explícitamente en la segunda columna: el título es absoluto y
@@ -81,7 +101,8 @@
 /* El nombre va alineado a la izquierda; la descripción lo sustituye al
    hacer hover y la fila crece hacia abajo para leerla: la fila del nombre
    colapsa mientras crece la de la descripción, para un espacio equivalente
-   arriba y abajo. */
+   arriba y abajo. Altura ligada a la franja: 8 filas de 5 svh = 40 svh,
+   el alto disponible dentro de la franja de 50 svh. */
 .fila {
   position: relative;
   display: grid;
@@ -89,7 +110,8 @@
   grid-template-rows: 1fr 0fr;
   column-gap: 2rem;
   align-items: center;
-  padding: 1.35rem 1rem 1.35rem 1rem;
+  min-height: 5svh;
+  padding: 0.4rem 1rem 0.4rem 1rem;
   color: var(--color-fg);
   text-decoration: none;
   transition:
@@ -129,12 +151,23 @@
 
 .nombre,
 .descripcion {
-  font-size: clamp(1.05rem, 1.5vw, 1.4rem);
-  font-weight: 600;
+  font-size: clamp(1rem, 1.3vw, 1.2rem);
   line-height: 1.3;
   transition:
     transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
     opacity 0.3s ease-out;
+}
+
+/* Nombres de servicio: Regular (prueba manual: Medium o Semibold). */
+.nombre {
+  font-weight: var(--font-weight-medium);
+}
+
+/* Las descripciones siguen en Regular: aparecen en un estado interactivo y
+   deben conservar contraste y lectura inmediata; Light queda reservado para
+   copias informativas de mayor tamaño. Prueba manual: Medium. */
+.descripcion {
+  font-weight: var(--font-weight-regular);
 }
 
 .descripcionContenedor {
@@ -169,8 +202,8 @@
   transform: translateY(0);
 }
 
-/* El precio cede su sitio a la llamada de reserva (mismo peso tipográfico).
-   Abarcan las dos filas para quedar centrados con el li desplegado. */
+/* El precio cede su sitio a la llamada de reserva. Abarcan las dos filas
+   para quedar centrados con el li desplegado. */
 .precio,
 .llamada {
   position: relative;
@@ -179,17 +212,20 @@
   grid-column: 2;
   justify-self: end;
   align-self: center;
-  font-weight: 600;
   transition:
     opacity 0.35s ease-out,
     transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+/* Precios: Semibold (prueba manual: Medium o Bold). */
 .precio {
+  font-weight: var(--font-weight-semibold);
   font-variant-numeric: tabular-nums;
 }
 
+/* Llamada de reserva: Medium (prueba manual: Regular o Semibold). */
 .llamada {
+  font-weight: var(--font-weight-medium);
   padding: 0.4rem 1.1rem;
   border: 1px solid currentColor;
   opacity: 0;
@@ -215,14 +251,21 @@
     column-gap: 0;
   }
 
-  .tituloBloque {
+  .tituloMarco {
     position: static;
     width: auto;
+    height: auto;
+    margin-bottom: 1.5rem;
+  }
+
+  .tituloGrupo {
+    position: relative;
+    display: inline-block;
     transform: none;
   }
 
-  .tituloVisual {
-    margin-bottom: 1.5rem;
+  .titulo {
+    font-size: clamp(3rem, 16vw, 6rem);
   }
 
   .fila {
