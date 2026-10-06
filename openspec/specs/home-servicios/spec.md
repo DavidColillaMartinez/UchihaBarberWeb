@@ -12,13 +12,27 @@ La sección SHALL identificar sus servicios mediante un encabezado accesible y S
 
 #### Scenario: Recorrido de escritorio
 
-- **WHEN** la sección atraviesa el tramo de transformación acordado (actualmente `top 30%` a `top -20%`)
+- **WHEN** la sección atraviesa el tramo de transformación acordado (actualmente `top 50%` a `top 0%`, adelantado dos pasos de rueda respecto a la versión anterior)
 - **THEN** el título se reduce y la lista aparece en la mitad derecha sin fijar el scroll de la página
+
+#### Scenario: Estado pausado con la lista mostrada
+
+- **WHEN** la transformación termina y la sección queda compuesta
+- **THEN** las letras de la palabra conservan un alto ampliado (escala vertical sobre su base) para que el vídeo de las letras se aprecie mejor, sin que la lista se desplace
 
 #### Scenario: Movimiento reducido o disposición estrecha
 
 - **WHEN** se solicita movimiento reducido o no se aplica la composición de escritorio
 - **THEN** no se ejecuta la transformación de escritorio y el listado permanece disponible
+
+### Requirement: Franja de media pantalla en escritorio
+
+En escritorio la sección SHALL comportarse como franja de aproximadamente media pantalla (alto capado en torno a 50 svh) y el listado SHALL caber en ella con filas de altura ligada a la pantalla. El crecimiento en flujo de una fila al interactuar puede rebasar transitoriamente la franja, decisión aceptada por el responsable; en móvil la sección fluye con su contenido.
+
+#### Scenario: Listado dentro de la franja
+
+- **WHEN** la sección se muestra en escritorio en estado de reposo o pausado
+- **THEN** la franja mantiene en torno a media pantalla de alto y el listado cabe en ella sin desplazar a las secciones vecinas
 
 ### Requirement: Filas de servicios y reservas
 
