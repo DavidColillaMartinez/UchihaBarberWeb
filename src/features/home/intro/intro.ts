@@ -1,19 +1,24 @@
-/* Cruce de entrada: capa negra con el nombre como máscara negativa sobre el
-   vídeo de la cabecera. Se activa solo si html[data-intro="pendiente"] (marca
-   que deja el script previo al primer pintado en BaseLayout). Termina cuando
-   el hueco de la letra cubre el viewport: sin fundido, el último fotograma ya
-   es el vídeo a pantalla completa. Se repite en cada carga de la portada.
+/* Cruce de entrada: capa negra con el logo de la marca como máscara negativa
+   sobre el vídeo de la cabecera. Se activa solo si html[data-intro="pendiente"]
+   (marca que deja el script previo al primer pintado en BaseLayout). Termina
+   cuando una zona sólida de la tinta del logo cubre el viewport: sin fundido,
+   el último fotograma ya es el vídeo a pantalla completa. Se repite en cada
+   carga de la portada.
 
-   El foco y la geometría del hueco se calculan con el texto real de la máscara
-   dibujado en un canvas, de modo que la letra por la que se cruza es siempre la
-   que deja de cubrir la pantalla, sea cual sea la tipografía. */
+   El logo suministrado se sirve como archivo propio y se dibuja en un canvas
+   de medición: sobre su tinta se busca el punto de fuga (la zona sólida más
+   generosa próxima al centro) y la escala exacta de cobertura total. El
+   activo no se redibuja, recolorea ni recomprime: solo se escala. */
 
 const DURACION = 1050; // ms del cruce
-const ESCALA_INICIAL = 0.12; // el texto arranca diminuto pero visible
+const ANCHO_INICIAL = 0.12; // el logo arranca al 12 % del ancho del viewport
+const ESCALA_INICIAL = 1; // multiplicador de arranque (ya es diminuto)
 const MARGEN_COBERTURA = 1.25; // holgura sobre la escala de cobertura total
-const ESCALA_MAXIMA = 150;
+const ESCALA_MAXIMA = 500; // tope del multiplicador (trazos finos del logo)
 const FPS = 24; // cadencia de cine
 const ESPERA_MINIMA = 40; // ms antes de arrancar (deja pintar la capa)
+const LOGO = "/logo/uchiha-barber-logo-negro.svg";
+const RELACION_LOGO = 347.444 / 234.129; // proporción original del activo
 
 const html = document.documentElement;
 
@@ -23,43 +28,29 @@ function liberar(): void {
 
 function iniciar(): void {
   const capa = document.querySelector<SVGSVGElement>("[data-intro-capa]");
-  const titulo = document.querySelector<HTMLElement>("#cabecera-titulo");
-  const grupo = capa?.querySelector<SVGGElement>("[data-intro-texto]");
-  const lineas = capa?.querySelectorAll<SVGTextElement>("[data-intro-linea]");
+  const grupo = capa?.querySelector<SVGGElement>("[data-intro-grupo]");
+  const imagen = capa?.querySelector<SVGImageElement>("[data-intro-logo]");
 
   if (
     !capa ||
-    !titulo ||
     !grupo ||
-    !lineas ||
-    lineas.length === 0 ||
+    !imagen ||
     window.matchMedia("(prefers-reduced-motion: reduce)").matches
   ) {
     liberar();
     return;
   }
 
-  const textos = [...titulo.querySelectorAll("span")].map((span) =>
-    (span.textContent ?? "").trim().toUpperCase(),
-  );
-
-  if (textos.length === 0) {
-    liberar();
-    return;
-  }
-
   let ancho = 0;
   let alto = 0;
-  let fs = 0;
-  let espaciado = 0;
-  let interlineado = 0;
-  let familia = "";
-  let peso = "";
-  let base1 = 0;
-  let base2 = 0;
+  let baseAncho = 0;
+  let baseAlto = 0;
+  let xInicial = 0;
+  let yInicial = 0;
   let lienzo: HTMLCanvasElement | null = null;
   let contexto: CanvasRenderingContext2D | null = null;
   let pixeles: Uint8ClampedArray | null = null;
+  let logo: HTMLImageElement | null = null;
 
   let escala = ESCALA_INICIAL;
   let origen = { x: 0, y: 0 };
@@ -67,19 +58,20 @@ function iniciar(): void {
   let cobertura = false;
   let fotogramaPedido = 0;
 
-  /* Métricas: se toman del propio h1 (tamaño, interlineado, tipografía) para
-     que la máscara sea exactamente la misma letra que luego aterriza. */
+  /* Coloca el logo (máscara y lienzo de medición con las mismas medidas) al
+     tamaño inicial, centrado y sin deformar. */
   function medir(): void {
-    const cs = getComputedStyle(titulo!);
-    fs = Number.parseFloat(cs.fontSize);
-    const esp = Number.parseFloat(cs.letterSpacing);
-    espaciado = Number.isFinite(esp) ? esp : 0;
-    const inter = Number.parseFloat(cs.lineHeight);
-    interlineado = Number.isFinite(inter) ? inter : fs * 0.84;
-    familia = cs.fontFamily;
-    peso = cs.fontWeight;
     ancho = window.innerWidth;
     alto = window.innerHeight;
+    baseAncho = ancho * ANCHO_INICIAL;
+    baseAlto = baseAncho / RELACION_LOGO;
+    xInicial = (ancho - baseAncho) / 2;
+    yInicial = (alto - baseAlto) / 2;
+
+    imagen!.setAttribute("x", String(xInicial));
+    imagen!.setAttribute("y", String(yInicial));
+    imagen!.setAttribute("width", String(baseAncho));
+    imagen!.setAttribute("height", String(baseAlto));
 
     if (!lienzo) {
       lienzo = document.createElement("canvas");
@@ -87,61 +79,37 @@ function iniciar(): void {
     lienzo.width = ancho;
     lienzo.height = alto;
     contexto = lienzo.getContext("2d", { willReadFrequently: true });
-    if (!contexto) {
-      return;
-    }
-
-    contexto.font = `${peso} ${fs}px ${familia}`;
-    const metrica = contexto.measureText("H");
-    const alturaMayuscula = metrica.actualBoundingBoxAscent || fs * 0.72;
-    const alturaBloque = alturaMayuscula + interlineado;
-    const arriba = alto / 2 - alturaBloque / 2;
-    base1 = arriba + alturaMayuscula;
-    base2 = base1 + interlineado;
-
-    lineas!.forEach((linea, i) => {
-      const texto = textos[i] ?? "";
-      linea.textContent = texto;
-      linea.setAttribute("font-size", String(fs));
-      linea.setAttribute("x", String(ancho / 2));
-      linea.setAttribute("y", String(i === 0 ? base1 : base2));
-      linea.style.letterSpacing = `${espaciado}px`;
-      linea.style.fontFamily = familia;
-      linea.style.fontWeight = peso;
-    });
-
     dibujarMascara();
   }
 
-  /* El mismo texto de la máscara, dibujado en el canvas: blanco = zona opaca
-     (negro de la capa), negro = letra (por donde se ve el vídeo). */
+  function cargarLogo(): Promise<HTMLImageElement | null> {
+    return new Promise((resolver) => {
+      const img = new Image();
+      img.onload = () => {
+        const listo = () => resolver(img);
+        if (typeof img.decode === "function") {
+          void img.decode().then(listo, listo);
+          return;
+        }
+        listo();
+      };
+      img.onerror = () => resolver(null);
+      img.src = LOGO;
+    });
+  }
+
+  /* La misma composición de la máscara, dibujada en el canvas: blanco = zona
+     opaca (negro de la capa), tinta del logo = ventana al vídeo. */
   function dibujarMascara(): void {
     if (!contexto) {
       return;
     }
     contexto.fillStyle = "#fff";
     contexto.fillRect(0, 0, ancho, alto);
-    contexto.fillStyle = "#000";
-    contexto.font = `${peso} ${fs}px ${familia}`;
-    textos.forEach((texto, i) => {
-      dibujarLinea(texto, i === 0 ? base1 : base2);
-    });
-    pixeles = contexto.getImageData(0, 0, ancho, alto).data;
-  }
-
-  function dibujarLinea(texto: string, y: number): void {
-    if (!contexto) {
-      return;
+    if (logo) {
+      contexto.drawImage(logo, xInicial, yInicial, baseAncho, baseAlto);
     }
-    const anchos = [...texto].map((c) => contexto!.measureText(c).width);
-    const total =
-      anchos.reduce((a, b) => a + b, 0) +
-      espaciado * Math.max(texto.length - 1, 0);
-    let x = ancho / 2 - total / 2;
-    [...texto].forEach((c, i) => {
-      contexto!.fillText(c, x, y);
-      x += (anchos[i] ?? 0) + espaciado;
-    });
+    pixeles = contexto.getImageData(0, 0, ancho, alto).data;
   }
 
   function valorEn(x: number, y: number): number | null {
@@ -156,16 +124,19 @@ function iniciar(): void {
     return pixeles[(yi * ancho + xi) * 4] ?? null;
   }
 
-  /* Radio inscrito de la letra alrededor del punto: distancia al borde más
-     cercano de la zona opaca. 0 si el punto no cae dentro de una letra. */
-  function radioHueco(ox: number, oy: number): number {
+  /* Radio inscrito de la tinta alrededor del punto: distancia al borde más
+     cercano de la zona opaca. 0 si el punto no cae dentro del logo. */
+  function radioHueco(
+    ox: number,
+    oy: number,
+    limite = Math.max(ancho, alto),
+  ): number {
     const inicial = valorEn(ox, oy);
     if (inicial === null || inicial > 128) {
       return 0;
     }
     let minimo = Number.POSITIVE_INFINITY;
     const direcciones = 48;
-    const limite = Math.max(ancho, alto);
     for (let i = 0; i < direcciones; i++) {
       const angulo = (i / direcciones) * Math.PI * 2;
       const dx = Math.cos(angulo);
@@ -184,59 +155,39 @@ function iniciar(): void {
     return Number.isFinite(minimo) ? minimo : 0;
   }
 
-  /* Punto de fuga: la letra más central del nombre que tenga un hueco sólido
-     suficiente (los contadores cerrados y los trazos gruesos valen). Se
-     empieza por la última línea y, si no hubiera hueco válido, por la primera. */
+  /* Punto de fuga: barrido de candidatos sobre la caja del logo, puntuando la
+     zona sólida (radio inscrito) con preferencia por las próximas al centro.
+     El barrido acota su radio; la escala final se mide después sin tope. */
   function buscarOrigen(): { x: number; y: number } | null {
-    const totalLineas = Math.min(textos.length, lineas!.length);
-    const desfases: [number, number][] = [
-      [0.55, 0.32],
-      [0.55, 0.28],
-      [0.55, 0.36],
-      [0.5, 0.3],
-      [0.6, 0.3],
-      [0.45, 0.3],
-      [0.65, 0.35],
-      [0.5, 0.5],
-    ];
+    const paso = Math.max(4, baseAncho / 60);
+    const centroX = ancho / 2;
+    const centroY = alto / 2;
+    let mejor: { x: number; y: number; nota: number } | null = null;
 
-    let mejor: { x: number; y: number; r: number } | null = null;
-    for (let i = totalLineas - 1; i >= 0; i--) {
-      const linea = lineas![i];
-      const texto = textos[i] ?? "";
-      if (!linea || texto.length === 0) {
-        continue;
-      }
-      const centro = (texto.length - 1) / 2;
-      const indices = [...texto]
-        .map((_, indice) => indice)
-        .sort((a, b) => Math.abs(a - centro) - Math.abs(b - centro));
-
-      for (const indice of indices) {
-        let caja: DOMRect;
-        try {
-          caja = linea.getExtentOfChar(indice);
-        } catch {
+    for (let y = yInicial + paso; y <= yInicial + baseAlto - paso; y += paso) {
+      for (
+        let x = xInicial + paso;
+        x <= xInicial + baseAncho - paso;
+        x += paso
+      ) {
+        const r = radioHueco(x, y, 260);
+        if (r < 4) {
           continue;
         }
-        for (const [fx, fy] of desfases) {
-          const x = caja.x + caja.width * fx;
-          const y = caja.y + caja.height * fy;
-          const r = radioHueco(x, y);
-          if (r >= 8) {
-            return { x, y };
-          }
-          if (r >= 3 && (!mejor || r > mejor.r)) {
-            mejor = { x, y, r };
-          }
+        const distancia = Math.hypot(x - centroX, y - centroY);
+        const nota = r - distancia * 0.12;
+        if (!mejor || nota > mejor.nota) {
+          mejor = { x, y, nota };
         }
       }
     }
     return mejor ? { x: mejor.x, y: mejor.y } : null;
   }
 
-  /* Escala a la que la esquina más lejana del viewport queda dentro del
-     hueco: el último fotograma es vídeo completo, sin restos de negro. */
+  /* Escala a la que la esquina más lejana del viewport queda dentro del hueco:
+     el último fotograma es vídeo completo, sin restos de negro. Si la escala
+     necesaria superara el tope, no se declara cobertura (mejor el rescate que
+     un final con restos). */
   function escalaDeCobertura(ox: number, oy: number): number {
     const r = radioHueco(ox, oy);
     if (r < 3) {
@@ -248,7 +199,8 @@ function iniciar(): void {
       Math.hypot(ox, alto - oy),
       Math.hypot(ancho - ox, alto - oy),
     );
-    return Math.min(ESCALA_MAXIMA, (esquina / r) * MARGEN_COBERTURA);
+    const necesaria = (esquina / r) * MARGEN_COBERTURA;
+    return necesaria <= ESCALA_MAXIMA ? necesaria : 0;
   }
 
   function pintar(s: number, ox: number, oy: number, desenfoque: number): void {
@@ -267,7 +219,7 @@ function iniciar(): void {
     escalaFinal = escalaDeCobertura(origen.x, origen.y);
     cobertura = escalaFinal > 0;
     if (!cobertura) {
-      escalaFinal = 22;
+      escalaFinal = 6;
     }
   }
 
@@ -311,7 +263,7 @@ function iniciar(): void {
       ultimo = ahora;
       const t = Math.min(1, (ahora - inicio) / DURACION);
       /* Aceleración cúbica: acelera hacia el final como la exponencial, pero
-         el texto ya crece de forma perceptible en los primeros fotogramas
+         el logo ya crece de forma perceptible en los primeros fotogramas
          (menos negro absoluto al entrar). */
       escala = ESCALA_INICIAL + (escalaFinal - ESCALA_INICIAL) * t ** 3;
       const desenfoque = Math.min(
@@ -342,8 +294,14 @@ function iniciar(): void {
     cancelAnimationFrame(fotogramaPedido);
   });
 
-  window.scrollTo(0, 0);
-  void document.fonts.ready.then(() => {
+  void cargarLogo().then((img) => {
+    if (!img) {
+      /* Sin logo no hay cruce: la portada queda usable directamente. */
+      liberar();
+      return;
+    }
+    logo = img;
+    window.scrollTo(0, 0);
     window.setTimeout(reproducir, ESPERA_MINIMA);
   });
 }

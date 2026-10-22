@@ -1,7 +1,8 @@
-/* Cruce de entrada: capa fija negra con el nombre como máscara (misma técnica
-   de máscara que la sección de servicios, en SVG inline para poder animar la
-   letra). La tipografía y las métricas las ajusta el script con las del h1
-   real, de modo que se cruza exactamente la letra que luego aterriza. */
+/* Cruce de entrada: capa fija negra con el logo de la marca como máscara (misma
+   técnica de máscara que la sección de servicios, en SVG inline para poder
+   animar el logotipo). El tamaño, la posición y el punto de fuga los ajusta el
+   script midiendo la tinta real del logo, de modo que el cruce termine siempre
+   en cobertura total. */
 .intro {
   position: fixed;
   inset: 0;
@@ -9,8 +10,6 @@
   display: none;
   width: 100%;
   height: 100%;
-  font-family: var(--font-base);
-  font-weight: 800;
 }
 
 /* Solo existe durante el cruce; al terminar, html pasa a "listo" y la capa

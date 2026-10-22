@@ -2,18 +2,23 @@
 
 ## Purpose
 
-Cruce de entrada de la portada: la capa con el nombre como máscara negativa sobre el vídeo de la cabecera y sus condiciones de reproducción, accesibilidad y degradación segura.
+Cruce de entrada de la portada: la capa con el logo de la marca como máscara negativa sobre el vídeo de la cabecera y sus condiciones de reproducción, accesibilidad y degradación segura.
 
 ## Requirements
 
 ### Requirement: Cruce de entrada en la portada
 
-Al entrar en la portada, la página SHALL mostrar una capa negra con el nombre del negocio como máscara negativa, de modo que el vídeo de la cabecera se vea a través de sus letras. El texto SHALL crecer desde un tamaño diminuto hasta que el hueco de una de sus letras cubra la pantalla completa, momento en el que la portada SHALL aparecer con el vídeo a pantalla completa y sus accesos disponibles: el encabezado accesible del negocio y «Pedir cita» en la barra y la navegación. El cruce SHALL repetirse en cada carga de la portada y MUST NOT existir en otras páginas.
+Al entrar en la portada, la página SHALL mostrar una capa negra con el logo de la marca como máscara negativa, de modo que el vídeo de la cabecera se vea a través de la tinta del logotipo. El logo SHALL crecer desde un tamaño diminuto hasta que una zona sólida de su propia tinta cubra la pantalla completa, momento en el que la capa se retira y la portada queda visible con el vídeo a pantalla completa y sus accesos disponibles: el encabezado accesible del negocio y «Pedir cita» en la barra y la navegación. El cruce SHALL repetirse en cada carga de la portada y MUST NOT existir en otras páginas.
 
 #### Scenario: Entrada nueva en la portada
 
 - **WHEN** se carga la portada
-- **THEN** el cruce se reproduce desde el texto diminuto hasta que el hueco de una letra cubre la pantalla completa
+- **THEN** el cruce se reproduce desde el logo diminuto hasta que una zona sólida de su tinta cubre la pantalla completa
+
+#### Scenario: Arranque limpio
+
+- **WHEN** el cruce arranca
+- **THEN** solo es visible la capa negra con el logotipo centrado, sin ninguna forma del logo fuera de la máscara ni en otra posición
 
 #### Scenario: Final sin restos de negro
 
@@ -58,3 +63,17 @@ El cruce MUST omitirse por completo cuando el visitante prefiere movimiento redu
 
 - **WHEN** un lector de pantalla recorre la portada
 - **THEN** la capa del cruce no se anuncia y el título y el acceso reales permanecen disponibles
+
+### Requirement: Fidelidad al logo suministrado
+
+El cruce SHALL usar el logo suministrado por el responsable, mediante su variante de tinta oscura y conservando sus proporciones originales; el logotipo MUST NOT redibujarse, recolorearse ni recomponerse. El activo SHALL servirse desde el propio origen, sin servicios de terceros.
+
+#### Scenario: Proporciones del logotipo
+
+- **WHEN** se revisa el cruce en cualquier tamaño de ventana
+- **THEN** el logo conserva su relación de aspecto original sin deformarse
+
+#### Scenario: Activo propio
+
+- **WHEN** se carga la portada
+- **THEN** el logo se solicita al propio sitio, no a un servicio externo

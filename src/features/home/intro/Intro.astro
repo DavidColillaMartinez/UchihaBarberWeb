@@ -2,17 +2,30 @@
 import styles from "./Intro.module.css";
 ---
 
-<!-- Cruce de entrada: capa negra con el nombre como máscara negativa, por
-     donde se ve el vídeo de la cabecera. Solo se muestra si el script previo
-     al primer pintado dejó html[data-intro="pendiente"]; con JS desactivado,
-     movimiento reducido o visita repetida en la sesión, nunca aparece. -->
+<!-- Cruce de entrada: capa negra con el logo de la marca como máscara negativa,
+     por donde se ve el vídeo de la cabecera. Solo se muestra si el script
+     previo al primer pintado dejó html[data-intro="pendiente"]; con JS
+     desactivado, movimiento reducido o fallo, la portada nunca queda bloqueada.
+     Logo suministrado por el responsable (variante de tinta oscura; el material
+     original vive en ContenidoDemo/Logo/ y la copia servida desde public/logo/
+     conserva geometría y proporciones). -->
 <svg class={styles.intro} data-intro-capa aria-hidden="true" focusable="false">
   <defs>
     <mask id="intro-mascara" maskContentUnits="userSpaceOnUse">
       <rect width="100%" height="100%" fill="#fff"></rect>
-      <g data-intro-texto>
-        <text data-intro-linea fill="#000" text-anchor="middle"></text>
-        <text data-intro-linea fill="#000" text-anchor="middle"></text>
+      <g data-intro-grupo>
+        <!-- Geometría inicial a cero a propósito: sin width/height, SVG2 usa el
+             tamaño intrínseco del archivo y el logo asomaría en la esquina
+             antes de que el script lo mida y lo centre. -->
+        <image
+          data-intro-logo
+          href="/logo/uchiha-barber-logo-negro.svg"
+          x="0"
+          y="0"
+          width="0"
+          height="0"
+          preserveAspectRatio="xMidYMid meet"
+        />
       </g>
     </mask>
   </defs>
