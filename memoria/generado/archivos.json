@@ -263,8 +263,8 @@
     {
       "ruta": "PRODUCT.md",
       "tipo": "archivo",
-      "bytes": 12224,
-      "sha256": "d7da0b070c115ff47bc73f4ae0e3c5b815dfb118a30431ac11fc2113ed229e15"
+      "bytes": 12727,
+      "sha256": "c3214c237fe6bb9b5e30ca328d1f94c60095aaa225a01f6eff9fbc7a739dcd93"
     },
     {
       "ruta": "README.md",
@@ -293,8 +293,8 @@
     {
       "ruta": "memoria/bloques.json",
       "tipo": "archivo",
-      "bytes": 5501,
-      "sha256": "a9615842986dfc6654b2f083e9997717cc33612871f90e1a28b64c54852d33ce"
+      "bytes": 6412,
+      "sha256": "9680100d0cf6ed78c152ac5c1e25f3d9eed19500d334ad077add202ba288e4f9"
     },
     {
       "ruta": "memoria/cierre.md",
@@ -323,8 +323,8 @@
     {
       "ruta": "memoria/estado.json",
       "tipo": "archivo",
-      "bytes": 9411,
-      "sha256": "740d5c3702359d4ad8f35f1ae878b941d5457f14284d4650ec5e71f671a5c110"
+      "bytes": 11491,
+      "sha256": "ad706ce5fcca3f6c7bd2a253c36af109c0bb05825f11e49f92621784c0062ce9"
     },
     {
       "ruta": "memoria/herramientas.md",
@@ -341,8 +341,8 @@
     {
       "ruta": "memoria/mapa.md",
       "tipo": "archivo",
-      "bytes": 9349,
-      "sha256": "169b7778e422d810ac8b1aefb9f23e349e107dd41f528c2f9f886479550f2b9f"
+      "bytes": 14571,
+      "sha256": "6f1ac27f32efac1280265363aee279b4475a04138220e50d06ac3579c2a27c45"
     },
     {
       "ruta": "memoria/primer-commit.md",
@@ -371,8 +371,8 @@
     {
       "ruta": "memoria/revision.json",
       "tipo": "archivo",
-      "bytes": 32687,
-      "sha256": "b6c600fd3edfc19721f9317bb83f9ad2c004f6effd0d77e429aeffba2b98fe46"
+      "bytes": 35161,
+      "sha256": "cdad63ce1837dff7ba2028c9dd73d499afec1537878d8b62c6c0e24ab6e1894c"
     },
     {
       "ruta": "memoria/roadmap.md",
@@ -587,8 +587,20 @@
     {
       "ruta": "memoria/sesiones/SES-033.md",
       "tipo": "archivo",
-      "bytes": 4745,
-      "sha256": "c8e41d67475cec1875fa25d68e2d4517493563e1dee728734dc4c5d2e2d8c6db"
+      "bytes": 5671,
+      "sha256": "57456a7b5868af7746c61611f021372ce74a7de8b94ec82731d71d56e1506d8b"
+    },
+    {
+      "ruta": "memoria/sesiones/SES-034.md",
+      "tipo": "archivo",
+      "bytes": 5562,
+      "sha256": "ec7c142c05438dde82184b2337b50a9d017b225b9588fec049bbd641c5c4e3df"
+    },
+    {
+      "ruta": "memoria/sesiones/SES-035.md",
+      "tipo": "archivo",
+      "bytes": 7933,
+      "sha256": "c8e0a20b9b806e024c77ff0c3860bd4d2f64c13c87f4ea4621fd080a5e090ae4"
     },
     {
       "ruta": "openspec/changes/archive/.gitkeep",
@@ -849,6 +861,36 @@
       "sha256": "32e5babac1643bcf4ca53c347a6107ee6a46e7cf6e4662fbf067030b2c1dc835"
     },
     {
+      "ruta": "openspec/changes/home-acceso-productos/.openspec.yaml",
+      "tipo": "archivo",
+      "bytes": 40,
+      "sha256": "0ad492a63d87e00a8bc135b0a1a2b19270dbb9ffd997a69b89fd4ab72015a944"
+    },
+    {
+      "ruta": "openspec/changes/home-acceso-productos/design.md",
+      "tipo": "archivo",
+      "bytes": 9095,
+      "sha256": "500410f3f57bf6e0999a46770525c826d2a117b9f364c0038adfc629a2f200fc"
+    },
+    {
+      "ruta": "openspec/changes/home-acceso-productos/proposal.md",
+      "tipo": "archivo",
+      "bytes": 2370,
+      "sha256": "05d3aed1eff9dc570f4120f22f551f1ef70c7cd7d0eca4de63c9b1b99301f3c7"
+    },
+    {
+      "ruta": "openspec/changes/home-acceso-productos/specs/home-acceso-productos/spec.md",
+      "tipo": "archivo",
+      "bytes": 6021,
+      "sha256": "13747e67e4b86765161f6a4c0308978044a58d7f138dc9f8a1a7866b8fa15982"
+    },
+    {
+      "ruta": "openspec/changes/home-acceso-productos/tasks.md",
+      "tipo": "archivo",
+      "bytes": 4215,
+      "sha256": "6b1795e14820ccbe55a12d93187ef998daaebb5a298dd20af78611e77d670b5e"
+    },
+    {
       "ruta": "openspec/changes/home-galeria-autoavance/.openspec.yaml",
       "tipo": "archivo",
       "bytes": 40,
@@ -893,8 +935,8 @@
     {
       "ruta": "openspec/changes/home-intro-arranque-cabecera/design.md",
       "tipo": "archivo",
-      "bytes": 2172,
-      "sha256": "3135159f02c8b9c0936faff286e7ac02d666884c5c7ebc9c2c8c586b4e5b8e77"
+      "bytes": 2743,
+      "sha256": "41f534dcb4193df1d8a05ce1e6a1da170f09516b31370ecfa17596f3e18ebfde"
     },
     {
       "ruta": "openspec/changes/home-intro-arranque-cabecera/proposal.md",
@@ -912,7 +954,37 @@
       "ruta": "openspec/changes/home-intro-arranque-cabecera/tasks.md",
       "tipo": "archivo",
       "bytes": 1372,
-      "sha256": "c589ba4b58b1303294aaba936d2af255250322e996ffdfa78cd1ccb452e94be7"
+      "sha256": "56a9b82e74e1a86c8263eb1a260a7d12586d7be4439d997eaf6b6d6cd3733e8e"
+    },
+    {
+      "ruta": "openspec/changes/home-nav-arranque-portada/.openspec.yaml",
+      "tipo": "archivo",
+      "bytes": 40,
+      "sha256": "0ad492a63d87e00a8bc135b0a1a2b19270dbb9ffd997a69b89fd4ab72015a944"
+    },
+    {
+      "ruta": "openspec/changes/home-nav-arranque-portada/design.md",
+      "tipo": "archivo",
+      "bytes": 6007,
+      "sha256": "bfd518231f6a136cb8100a1ff00059ad4d03ec9a6a4e0fd1ebb50c28e6db56cc"
+    },
+    {
+      "ruta": "openspec/changes/home-nav-arranque-portada/proposal.md",
+      "tipo": "archivo",
+      "bytes": 2693,
+      "sha256": "479e69cacb2ffd3acd5401f68f824afb2d8ec90096e732f1effcc8ef58b7bb89"
+    },
+    {
+      "ruta": "openspec/changes/home-nav-arranque-portada/specs/site-navigation/spec.md",
+      "tipo": "archivo",
+      "bytes": 2362,
+      "sha256": "46c7e3a0fc47eaa95dc080579fa57a731da72a6f89d7f6b4c2a92e465db3d51b"
+    },
+    {
+      "ruta": "openspec/changes/home-nav-arranque-portada/tasks.md",
+      "tipo": "archivo",
+      "bytes": 1956,
+      "sha256": "34fcd932e9542b28b08882cca2afc64f0b06a6bcae68e91f6b9a7d251bd9784c"
     },
     {
       "ruta": "openspec/changes/home-servicios-mascara-estirado/.openspec.yaml",
@@ -1077,6 +1149,12 @@
       "sha256": "5911e796b715381d716d918192b0fcf43183ca7c1479107216825ced23325165"
     },
     {
+      "ruta": "public/videos/CorteDePelo1-poster.jpg",
+      "tipo": "archivo",
+      "bytes": 73768,
+      "sha256": "0a68c5a5e06a874530cc1e36858e41cce3a244c24b0c72fbfa0fc74755c22a1e"
+    },
+    {
       "ruta": "public/videos/CorteDePelo1.mp4",
       "tipo": "archivo",
       "bytes": 1372340,
@@ -1205,14 +1283,14 @@
     {
       "ruta": "src/components/navigation/SiteNav.astro",
       "tipo": "archivo",
-      "bytes": 2896,
-      "sha256": "5cfa43e91b312a9d34bf9861ab5833847ffc5c9ccec5ed8d72807d4c66caddd8"
+      "bytes": 3148,
+      "sha256": "775cf2e5c5e868dd806aaa7018511cdefe3a284fd8c631839a4674f90221ef28"
     },
     {
       "ruta": "src/components/navigation/SiteNav.module.css",
       "tipo": "archivo",
-      "bytes": 1761,
-      "sha256": "916761cc57db26b59d5ef3eb4929944dbcc668277a88dcd97d7b99d21cd9e399"
+      "bytes": 2146,
+      "sha256": "10ee23ae15cc34ec3c206396f80009862e7cad1cf3006151b47a8f1bf0ea40af"
     },
     {
       "ruta": "src/components/ui/BookingLink.astro",
@@ -1241,14 +1319,20 @@
     {
       "ruta": "src/features/home/acceso-productos/AccesoProductos.astro",
       "tipo": "archivo",
-      "bytes": 675,
-      "sha256": "d7ec938b2be7577f47809ef3aa949852e63825ec1fcc556d07128dc931aaf6ab"
+      "bytes": 2980,
+      "sha256": "6f7b191b180dc83c468ba32d64f953887ee875d6d62b9785a55c5f7bd81ceb5b"
     },
     {
       "ruta": "src/features/home/acceso-productos/AccesoProductos.module.css",
       "tipo": "archivo",
-      "bytes": 346,
-      "sha256": "542b441e8047065634dbea088595244f31fe1f6498520147a573ddb193fa9d4c"
+      "bytes": 5677,
+      "sha256": "80a79cc323ddf7f1d3f3ea87cedd5de5052706cf30cce05c1c92e3a8493e7dd5"
+    },
+    {
+      "ruta": "src/features/home/acceso-productos/acceso-productos.ts",
+      "tipo": "archivo",
+      "bytes": 2864,
+      "sha256": "c2f8c7fb5808cfcf86c98be2dacc19bea7e2174232de3c57b5f2cd1c396b2182"
     },
     {
       "ruta": "src/features/home/cabecera/Cabecera.astro",
@@ -1301,8 +1385,8 @@
     {
       "ruta": "src/features/home/intro/intro.ts",
       "tipo": "archivo",
-      "bytes": 10651,
-      "sha256": "289b96d20d929fb49e1f29fee03c915c060a8748c8617d03f7ad10141911c8f5"
+      "bytes": 10339,
+      "sha256": "01d690344e5f63a901d8000fae403aeb0efd603dfc93b8d19edaab063adcc7fb"
     },
     {
       "ruta": "src/features/home/opiniones/Opiniones.astro",
@@ -1343,8 +1427,8 @@
     {
       "ruta": "src/layouts/BaseLayout.astro",
       "tipo": "archivo",
-      "bytes": 2580,
-      "sha256": "28bdaa371d9432fc7e6ac82d94c00c7b597b1c205cb5573f07054df3dd4b9d20"
+      "bytes": 3225,
+      "sha256": "6e655f99d178646025bf0daa10b5d6bc5bfb3a03fb0c00e5983ad39574b6349a"
     },
     {
       "ruta": "src/pages/index.astro",

@@ -13,7 +13,8 @@
       ],
       "cambios": [
         "openspec/changes/archive/2026-09-16-nav-scroll-inicio/proposal.md",
-        "openspec/changes/archive/2026-09-18-nav-tira-inicio/proposal.md"
+        "openspec/changes/archive/2026-09-18-nav-tira-inicio/proposal.md",
+        "openspec/changes/home-nav-arranque-portada/proposal.md"
       ],
       "aceptacion": [
         "memoria/sesiones/SES-007-nav-scroll.md",
@@ -21,7 +22,8 @@
         "memoria/sesiones/SES-023.md"
       ],
       "pendientes": [
-        "Material profesional según PRODUCT; aprobación actual limitada a la versión demo."
+        "Material profesional según PRODUCT; aprobación actual limitada a la versión demo.",
+        "Cambio home-nav-arranque-portada (la navegacion fija no debe verse en ningun fotograma del arranque de la portada) pendiente de validacion visual y archivo."
       ]
     },
     {
@@ -54,7 +56,8 @@
       "cambios": [
         "openspec/changes/archive/2026-09-16-cabecera-entrada-portada/proposal.md",
         "openspec/changes/archive/2026-09-18-nav-tira-inicio/proposal.md",
-        "openspec/changes/archive/2026-09-18-intro-con-logo/proposal.md"
+        "openspec/changes/archive/2026-09-18-intro-con-logo/proposal.md",
+        "openspec/changes/home-intro-arranque-cabecera/proposal.md"
       ],
       "aceptacion": [
         "memoria/sesiones/SES-010-cierre-cabecera.md",
@@ -62,7 +65,8 @@
         "memoria/sesiones/SES-024.md"
       ],
       "pendientes": [
-        "Material profesional según PRODUCT; aprobación actual limitada a la versión demo."
+        "Material profesional según PRODUCT; aprobación actual limitada a la versión demo.",
+        "Cambio home-intro-arranque-cabecera (la portada recarga siempre en la cabecera para que la máscara del logo se vea sobre el vídeo) pendiente de validación visual y archivo; requiere despliegue para comprobarlo en la vista previa."
       ]
     },
     {
@@ -116,10 +120,16 @@
       "estado": "provisional",
       "rutas": ["src/features/home/acceso-productos/"],
       "specs": ["openspec/specs/home-skeleton/spec.md"],
-      "cambios": [],
+      "cambios": [
+        "openspec/changes/home-acceso-productos/proposal.md",
+        "openspec/changes/home-acceso-productos/specs/home-acceso-productos/spec.md"
+      ],
       "aceptacion": [],
       "pendientes": [
-        "Desarrollo y aceptación pendientes del turno del usuario."
+        "Aceptación visual del responsable pendiente.",
+        "Vídeo demo (CorteDePelo1) pendiente del material oficial de productos.",
+        "Texto de la descripción demo pendiente de la redacción definitiva.",
+        "Adaptación móvil definitiva en la fase UB-006."
       ]
     },
     {

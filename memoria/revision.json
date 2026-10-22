@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "relevo": "memoria/sesiones/SES-032.md",
-  "resumen": "Revision en navegador de Servicios con Firefox local: el video se dimensiona sobre la caja del texto (elemento reemplazado) y deja de desbordarse; comprobado en reposo, transicion y pausa a 1440x900, 1920x1080, 1280x720 y 390x844, con el video solo dentro de las letras y fondo blanco limpio en los bordes",
+  "relevo": "memoria/sesiones/SES-035.md",
+  "resumen": "Coherencia documental tras el arranque en cabecera del cruce de entrada (SES-033): contrastados el codigo (BaseLayout e intro.ts), el delta de home-intro, PRODUCT, el mapa y el registro del bloque entrada; verificado en navegador headless que la recarga desde Servicios y con ancla deja la portada arriba con la mascara sobre el video de la cabecera, y que el logo ausente y el movimiento reducido liberan la pagina. Corregida la referencia de Acceso a Productos, que apuntaba a SES-033 en lugar de SES-035. El trabajo de acceso a productos (SES-035) y el de navegacion (SES-034) siguen en curso y no han sido revisados en detalle.",
   "alcance": "codigo-y-documentacion-no-aprobacion-visual",
   "archivos": [
     {
@@ -174,7 +174,7 @@
     },
     {
       "ruta": "PRODUCT.md",
-      "sha256": "d7da0b070c115ff47bc73f4ae0e3c5b815dfb118a30431ac11fc2113ed229e15"
+      "sha256": "c3214c237fe6bb9b5e30ca328d1f94c60095aaa225a01f6eff9fbc7a739dcd93"
     },
     {
       "ruta": "README.md",
@@ -194,7 +194,7 @@
     },
     {
       "ruta": "memoria/bloques.json",
-      "sha256": "a9615842986dfc6654b2f083e9997717cc33612871f90e1a28b64c54852d33ce"
+      "sha256": "9680100d0cf6ed78c152ac5c1e25f3d9eed19500d334ad077add202ba288e4f9"
     },
     {
       "ruta": "memoria/cierre.md",
@@ -214,7 +214,7 @@
     },
     {
       "ruta": "memoria/estado.json",
-      "sha256": "740d5c3702359d4ad8f35f1ae878b941d5457f14284d4650ec5e71f671a5c110"
+      "sha256": "ad706ce5fcca3f6c7bd2a253c36af109c0bb05825f11e49f92621784c0062ce9"
     },
     {
       "ruta": "memoria/herramientas.md",
@@ -226,7 +226,7 @@
     },
     {
       "ruta": "memoria/mapa.md",
-      "sha256": "169b7778e422d810ac8b1aefb9f23e349e107dd41f528c2f9f886479550f2b9f"
+      "sha256": "6f1ac27f32efac1280265363aee279b4475a04138220e50d06ac3579c2a27c45"
     },
     {
       "ruta": "memoria/primer-commit.md",
@@ -386,7 +386,15 @@
     },
     {
       "ruta": "memoria/sesiones/SES-033.md",
-      "sha256": "c8e41d67475cec1875fa25d68e2d4517493563e1dee728734dc4c5d2e2d8c6db"
+      "sha256": "57456a7b5868af7746c61611f021372ce74a7de8b94ec82731d71d56e1506d8b"
+    },
+    {
+      "ruta": "memoria/sesiones/SES-034.md",
+      "sha256": "ec7c142c05438dde82184b2337b50a9d017b225b9588fec049bbd641c5c4e3df"
+    },
+    {
+      "ruta": "memoria/sesiones/SES-035.md",
+      "sha256": "c8e0a20b9b806e024c77ff0c3860bd4d2f64c13c87f4ea4621fd080a5e090ae4"
     },
     {
       "ruta": "openspec/changes/archive/.gitkeep",
@@ -561,6 +569,26 @@
       "sha256": "32e5babac1643bcf4ca53c347a6107ee6a46e7cf6e4662fbf067030b2c1dc835"
     },
     {
+      "ruta": "openspec/changes/home-acceso-productos/.openspec.yaml",
+      "sha256": "0ad492a63d87e00a8bc135b0a1a2b19270dbb9ffd997a69b89fd4ab72015a944"
+    },
+    {
+      "ruta": "openspec/changes/home-acceso-productos/design.md",
+      "sha256": "500410f3f57bf6e0999a46770525c826d2a117b9f364c0038adfc629a2f200fc"
+    },
+    {
+      "ruta": "openspec/changes/home-acceso-productos/proposal.md",
+      "sha256": "05d3aed1eff9dc570f4120f22f551f1ef70c7cd7d0eca4de63c9b1b99301f3c7"
+    },
+    {
+      "ruta": "openspec/changes/home-acceso-productos/specs/home-acceso-productos/spec.md",
+      "sha256": "13747e67e4b86765161f6a4c0308978044a58d7f138dc9f8a1a7866b8fa15982"
+    },
+    {
+      "ruta": "openspec/changes/home-acceso-productos/tasks.md",
+      "sha256": "6b1795e14820ccbe55a12d93187ef998daaebb5a298dd20af78611e77d670b5e"
+    },
+    {
       "ruta": "openspec/changes/home-galeria-autoavance/.openspec.yaml",
       "sha256": "dc276ca1f5af9fc6062b02d4253186f254288dcf61711e1a8ec3573e8587440a"
     },
@@ -590,7 +618,7 @@
     },
     {
       "ruta": "openspec/changes/home-intro-arranque-cabecera/design.md",
-      "sha256": "3135159f02c8b9c0936faff286e7ac02d666884c5c7ebc9c2c8c586b4e5b8e77"
+      "sha256": "41f534dcb4193df1d8a05ce1e6a1da170f09516b31370ecfa17596f3e18ebfde"
     },
     {
       "ruta": "openspec/changes/home-intro-arranque-cabecera/proposal.md",
@@ -602,7 +630,27 @@
     },
     {
       "ruta": "openspec/changes/home-intro-arranque-cabecera/tasks.md",
-      "sha256": "c589ba4b58b1303294aaba936d2af255250322e996ffdfa78cd1ccb452e94be7"
+      "sha256": "56a9b82e74e1a86c8263eb1a260a7d12586d7be4439d997eaf6b6d6cd3733e8e"
+    },
+    {
+      "ruta": "openspec/changes/home-nav-arranque-portada/.openspec.yaml",
+      "sha256": "0ad492a63d87e00a8bc135b0a1a2b19270dbb9ffd997a69b89fd4ab72015a944"
+    },
+    {
+      "ruta": "openspec/changes/home-nav-arranque-portada/design.md",
+      "sha256": "bfd518231f6a136cb8100a1ff00059ad4d03ec9a6a4e0fd1ebb50c28e6db56cc"
+    },
+    {
+      "ruta": "openspec/changes/home-nav-arranque-portada/proposal.md",
+      "sha256": "479e69cacb2ffd3acd5401f68f824afb2d8ec90096e732f1effcc8ef58b7bb89"
+    },
+    {
+      "ruta": "openspec/changes/home-nav-arranque-portada/specs/site-navigation/spec.md",
+      "sha256": "46c7e3a0fc47eaa95dc080579fa57a731da72a6f89d7f6b4c2a92e465db3d51b"
+    },
+    {
+      "ruta": "openspec/changes/home-nav-arranque-portada/tasks.md",
+      "sha256": "34fcd932e9542b28b08882cca2afc64f0b06a6bcae68e91f6b9a7d251bd9784c"
     },
     {
       "ruta": "openspec/changes/home-servicios-mascara-estirado/.openspec.yaml",
@@ -706,11 +754,11 @@
     },
     {
       "ruta": "src/components/navigation/SiteNav.astro",
-      "sha256": "5cfa43e91b312a9d34bf9861ab5833847ffc5c9ccec5ed8d72807d4c66caddd8"
+      "sha256": "775cf2e5c5e868dd806aaa7018511cdefe3a284fd8c631839a4674f90221ef28"
     },
     {
       "ruta": "src/components/navigation/SiteNav.module.css",
-      "sha256": "916761cc57db26b59d5ef3eb4929944dbcc668277a88dcd97d7b99d21cd9e399"
+      "sha256": "10ee23ae15cc34ec3c206396f80009862e7cad1cf3006151b47a8f1bf0ea40af"
     },
     {
       "ruta": "src/components/ui/BookingLink.astro",
@@ -730,11 +778,15 @@
     },
     {
       "ruta": "src/features/home/acceso-productos/AccesoProductos.astro",
-      "sha256": "d7ec938b2be7577f47809ef3aa949852e63825ec1fcc556d07128dc931aaf6ab"
+      "sha256": "6f7b191b180dc83c468ba32d64f953887ee875d6d62b9785a55c5f7bd81ceb5b"
     },
     {
       "ruta": "src/features/home/acceso-productos/AccesoProductos.module.css",
-      "sha256": "542b441e8047065634dbea088595244f31fe1f6498520147a573ddb193fa9d4c"
+      "sha256": "80a79cc323ddf7f1d3f3ea87cedd5de5052706cf30cce05c1c92e3a8493e7dd5"
+    },
+    {
+      "ruta": "src/features/home/acceso-productos/acceso-productos.ts",
+      "sha256": "c2f8c7fb5808cfcf86c98be2dacc19bea7e2174232de3c57b5f2cd1c396b2182"
     },
     {
       "ruta": "src/features/home/cabecera/Cabecera.astro",
@@ -770,7 +822,7 @@
     },
     {
       "ruta": "src/features/home/intro/intro.ts",
-      "sha256": "289b96d20d929fb49e1f29fee03c915c060a8748c8617d03f7ad10141911c8f5"
+      "sha256": "01d690344e5f63a901d8000fae403aeb0efd603dfc93b8d19edaab063adcc7fb"
     },
     {
       "ruta": "src/features/home/opiniones/Opiniones.astro",
@@ -798,7 +850,7 @@
     },
     {
       "ruta": "src/layouts/BaseLayout.astro",
-      "sha256": "28bdaa371d9432fc7e6ac82d94c00c7b597b1c205cb5573f07054df3dd4b9d20"
+      "sha256": "6e655f99d178646025bf0daa10b5d6bc5bfb3a03fb0c00e5983ad39574b6349a"
     },
     {
       "ruta": "src/pages/index.astro",
@@ -821,5 +873,5 @@
       "sha256": "98e1484cb0954ac7306a850cdbf03c8140e2fd32e65fa6c213b19343dfdc6d43"
     }
   ],
-  "huella": "6ab40ce780aba806b3db78479b5baa0a95f4f7d90fd316b3e0ecfc1e21f7bbc9"
+  "huella": "b7366339220e1e2169663f90dd5a7674353a4547bb5170d41e9f8eb3be5504b5"
 }
