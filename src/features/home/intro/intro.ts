@@ -26,6 +26,15 @@ function liberar(): void {
   html.dataset.intro = "listo";
 }
 
+/* La capa descubre el vídeo de la cabecera, así que la portada debe estar
+   arriba durante todo el cruce aunque el navegador intente restaurar otra
+   posición o saltar a un ancla de la URL. */
+function anclarPortada(): void {
+  if (html.dataset.intro === "pendiente") {
+    window.scrollTo(0, 0);
+  }
+}
+
 function iniciar(): void {
   const capa = document.querySelector<SVGSVGElement>("[data-intro-capa]");
   const grupo = capa?.querySelector<SVGGElement>("[data-intro-grupo]");
@@ -224,6 +233,7 @@ function iniciar(): void {
   }
 
   function terminar(): void {
+    anclarPortada();
     pintar(escala, origen.x, origen.y, 0);
     if (cobertura) {
       capa!.remove();
@@ -246,6 +256,7 @@ function iniciar(): void {
   }
 
   function reproducir(): void {
+    anclarPortada();
     preparar();
     escala = ESCALA_INICIAL;
     pintar(escala, origen.x, origen.y, 0);
@@ -286,22 +297,28 @@ function iniciar(): void {
     if (html.dataset.intro !== "pendiente") {
       return;
     }
+    anclarPortada();
     preparar();
     pintar(escala, origen.x, origen.y, 0);
   });
+
+  window.addEventListener("pageshow", anclarPortada);
 
   window.addEventListener("pagehide", () => {
     cancelAnimationFrame(fotogramaPedido);
   });
 
   void cargarLogo().then((img) => {
+    if (html.dataset.intro !== "pendiente") {
+      return;
+    }
     if (!img) {
       /* Sin logo no hay cruce: la portada queda usable directamente. */
       liberar();
       return;
     }
     logo = img;
-    window.scrollTo(0, 0);
+    anclarPortada();
     window.setTimeout(reproducir, ESPERA_MINIMA);
   });
 }

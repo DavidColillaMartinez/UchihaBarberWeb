@@ -23,19 +23,45 @@ const { title, description, introDeEntrada = false } = Astro.props;
     {description && <meta name="description" content={description} />}
     <title>{title}</title>
     <!-- Marca previa al primer pintado: la capa de la intro se muestra desde el
-         primer fotograma (sin destello) y con el scroll bloqueado. Si algo
-         falla, la salida de seguridad libera la página a los 5 s. -->
+         primer fotograma (sin destello) y con el scroll bloqueado. La portada
+         arranca siempre en la cabecera para que el cruce descubra su vídeo,
+         aunque el navegador quisiera restaurar otra sección o un ancla. Antes
+         de ese primer pintado, la navegación fija de la portada también se
+         marca como oculta: en lo alto manda la barra de inicio y la navegación
+         no debe aparecer ni sobre la cabecera ni sobre la capa del cruce. Su
+         script retira la marca en cuanto asume el control; si no llegara a
+         ejecutarse, el plazo de seguridad la deja visible. Si algo falla, la
+         salida de seguridad libera la página a los 5 s. -->
     <script is:inline>
       (() => {
         const raiz = document.documentElement;
         if (!raiz.hasAttribute("data-intro-activa")) {
           return;
         }
+        raiz.dataset.navPortada = "oculto";
+        window.setTimeout(() => {
+          raiz.removeAttribute("data-nav-portada");
+        }, 5000);
         try {
           if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
             return;
           }
           raiz.dataset.intro = "pendiente";
+          /* La restauración automática se anula antes del primer pintado: el
+             navegador no puede devolver la portada a otra sección mientras
+             dura el cruce. ScrollTrigger la gestiona después por su cuenta. */
+          if ("scrollRestoration" in history) {
+            history.scrollRestoration = "manual";
+          }
+          const fijarCabecera = () => {
+            if (raiz.dataset.intro === "pendiente") {
+              window.scrollTo(0, 0);
+            }
+          };
+          fijarCabecera();
+          window.addEventListener("scroll", fijarCabecera, { passive: true });
+          window.addEventListener("pageshow", fijarCabecera);
+          window.addEventListener("load", fijarCabecera);
           window.setTimeout(() => {
             if (raiz.dataset.intro === "pendiente") {
               raiz.dataset.intro = "listo";
