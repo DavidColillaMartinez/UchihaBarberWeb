@@ -3,7 +3,9 @@
 - [x] 1.1 Sustituir la máscara SVG por un `h2` real («Servicios», General Sans Bold) con el `<video>` superpuesto en el mismo grupo; verificar en el HTML compilado que el `h2` contiene la palabra y que el vídeo queda `aria-hidden`
 - [x] 1.2 Aplicar `mix-blend-mode: screen` al vídeo con `isolation: isolate` en la sección y fondo blanco dentro del grupo transformado; verificar en el CSS compilado `mix-blend-mode:screen` y la ausencia de `mask-image`
 - [x] 1.3 Recortar el fondo del grupo a la banda con `overflow: clip` en `.escena` (sin afectar al crecimiento en flujo del hover); verificar en el CSS compilado que la escena recorta y que cabecera/Galería ya no reciben el recuadro blanco
-- [ ] 1.4 Comprobar visualmente con el navegador del responsable que el vídeo solo se ve dentro de las letras y que la palabra queda en General Sans Bold (prototipo validado en `/tmp/opencode/proto-servicios`)
+- [x] 1.4 Separar el borde del vídeo del borde del fondo blanco con un margen interior (`--margen-video`) y descontarlo en la medición; verificar en el CSS compilado el margen y en el bundle el ajuste de `offsetTop`
+- [x] 1.5 Dimensionar el vídeo de forma explícita sobre la caja del contenedor (un vídeo es un elemento reemplazado y con `inset` conservaba su tamaño intrínseco, desbordando la caja); verificar en el CSS compilado `width/height: calc(100% - 2 * var(--margen-video))` y con measurement de cajas en navegador que el vídeo queda dentro de la caja del texto en los tres estados del tramo
+- [ ] 1.6 Comprobar visualmente con el navegador del responsable que el vídeo solo se ve dentro de las letras y que la palabra queda en General Sans Bold (prototipo validado en `/tmp/opencode/proto-servicios`; revisión propia en Firefox con capturas de los tres estados a 1440x900, 1920x1080, 1280x720 y 390x844)
 
 ## 2. Composición con proporciones naturales
 

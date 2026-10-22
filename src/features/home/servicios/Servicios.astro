@@ -158,7 +158,9 @@ const servicios = [
     return {
       anchoCaja: Math.max(grupo.offsetWidth, 1),
       altoTinta: Math.max(asc + desc, 1),
-      tintaArriba: lineaBase - asc,
+      /* Distancia de la tinta al borde del grupo (origen del transform),
+         contando el margen interior que separa el vídeo del fondo. */
+      tintaArriba: palabra.offsetTop + lineaBase - asc,
     };
   };
 
