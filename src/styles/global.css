@@ -1,35 +1,72 @@
 /* Fundamentos globales: base, reset y variables compartidas.
    Los estilos de cada sección viven en su CSS Module. */
 
-/* Tipografías propias, servidas desde la web (subsets latinos autoalojados;
-   sin CDN externo). Inter para titulares y Archivo para textos de interfaz:
-   la mezcla por elemento la decide cada sección. Provisional hasta el visto
-   bueno del cliente sobre la familia definitiva (ver PRODUCT.md). */
+/* General Sans, autoalojada desde Fontshare. Se declaran únicamente los
+   cortes que forman parte de la pauta tipográfica vigente de Uchiha Barber;
+   la licencia y la procedencia están documentadas en PRODUCT.md. */
 @font-face {
-  font-family: "Inter";
+  font-family: "General Sans";
   font-style: normal;
-  font-weight: 800;
-  font-display: block;
-  src: url("/fonts/inter-800.woff2") format("woff2");
+  font-weight: 300;
+  font-display: swap;
+  src: url("/fonts/general-sans/general-sans-light.woff2") format("woff2");
 }
 
 @font-face {
-  font-family: "Archivo";
+  font-family: "General Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/general-sans/general-sans-regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "General Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/fonts/general-sans/general-sans-medium.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "General Sans";
   font-style: normal;
   font-weight: 600;
-  font-display: block;
-  src: url("/fonts/archivo-600.woff2") format("woff2");
+  font-display: swap;
+  src: url("/fonts/general-sans/general-sans-semibold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "General Sans";
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/fonts/general-sans/general-sans-semibold-italic.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-family: "General Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/general-sans/general-sans-bold.woff2") format("woff2");
 }
 
 :root {
   --color-fg: #000;
   --color-bg: #fff;
-  /* Provisional: familia tipográfica definitiva sin elegir (ver PRODUCT.md). */
   --font-base:
-    system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  /* Familias autoalojadas; el reparto por elemento lo fija cada sección. */
-  --font-display: "Inter", var(--font-base);
-  --font-text: "Archivo", var(--font-base);
+    "General Sans", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+  /* La familia es única; la jerarquía se expresa con peso, escala y espacio. */
+  --font-display: var(--font-base);
+  --font-text: var(--font-base);
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
 }
 
 *,
@@ -55,6 +92,7 @@ body {
   color: var(--color-fg);
   font-family: var(--font-base);
   line-height: 1.5;
+  font-synthesis: none;
 }
 
 :focus-visible {

@@ -20,6 +20,8 @@ Concretar criterios al llegar el turno de cada sección. El esqueleto completó 
 
 El usuario dirige el diseño. Una auditoría no autoriza rediseños; mostrar ubicación, motivo e impacto de sus observaciones y separar correcciones autorizadas de mejoras pendientes. No elegir fuentes, material, patrones o textos por defecto.
 
+La decisión tipográfica vigente está consolidada en `PRODUCT.md`: General Sans autoalojada, con la escala de pesos y la restricción de legibilidad allí descritas. Impeccable debe tratar esa familia y esa jerarquía como contexto vinculante; no proponer sustituciones ni aplicar Light a texto pequeño por defecto.
+
 El original contiene consentimiento local y hooks de Codex con rutas de máquina. Eso no prueba que Impeccable esté operativo en todos los entornos. Se conservan localmente y se excluyen de Git. Cada equipo usa la inicialización oficial cuando su propietario lo solicite; no trasladar consentimientos ni inventar rutas.
 
 ## Prueba local

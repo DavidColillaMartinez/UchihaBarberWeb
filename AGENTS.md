@@ -30,6 +30,9 @@ npm run format:check
 - Rutas en `src/pages/`. Cada sección vive en `src/features/<pagina>/<seccion>/` con su componente Astro, su CSS Module y su TypeScript co-localizados en la misma carpeta.
 - Componentes reutilizables en `src/components/ui/` y `src/components/navigation/`. Alias `@/* → src/*` (tsconfig, strict de Astro).
 - Estilos globales solo base, reset y variables compartidas en `src/styles/`. El aislamiento por sección se logra con CSS Modules, no con separar archivos CSS globales.
+- Tipografía vigente: General Sans de Fontshare, autoalojada en `public/fonts/general-sans/`. Mantener los archivos originales y su licencia/procedencia (`https://www.fontshare.com/fonts/general-sans` y `https://www.fontshare.com/licenses/itf-ffl`); no sustituirla por una fuente del sistema ni cargarla desde un CDN por iniciativa propia.
+- Pauta de pesos: Bold `700` para titulares; Medium `500` para botones, navegación y llamadas a la acción; Regular `400` para nombres, etiquetas y texto de lectura; Semibold `600` para énfasis y cifras/precios; Semibold Italic `600` + cursiva para textos especiales; Light `300` solo para descripciones informativas, avisos legales y textos secundarios suficientemente grandes. No usar Light en texto pequeño, controles o información crítica si compromete la legibilidad.
+- En código, usar los tokens `--font-*` y `--font-weight-*` de `src/styles/global.css`, declarar el peso real del archivo utilizado y no provocar negritas/cursivas sintéticas. La elección de peso puede ajustarse por sección si preserva esta jerarquía y la legibilidad.
 - Catálogo de productos: se construirá después desde JSON local en `src/data/` con generación estática; su esquema no está definido, no lo inventes.
 - Salida estática, sin adaptador de servidor. GSAP (con ScrollTrigger incluido en el mismo paquete) para animaciones; no añadir otros motores de scroll.
 

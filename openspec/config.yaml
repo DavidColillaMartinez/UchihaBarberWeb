@@ -11,6 +11,8 @@ context: |
   El usuario dirige el diseño; conocer la visión no autoriza a construirla.
   No anticipar secciones ni inventar datos, assets, fuentes o integraciones.
   Impeccable y otras skills asesoran dentro del alcance autorizado, no lo amplían.
+  General Sans es la familia tipográfica vigente y autoalojada; respetar en cada cambio
+  la jerarquía de pesos y las restricciones de legibilidad descritas en PRODUCT.md.
   Secciones en src/features/<pagina>/<seccion>/; compartidos en src/components/.
   Consultar memoria:check y memoria:changes antes de regenerar el inventario.
   Memoria registra roadmap y relevos; OpenSpec gobierna specs y tareas del cambio.

@@ -26,12 +26,15 @@
 }
 
 /* Las opciones solo amplían su texto al hover o al foco, sin fondo ni
-   inversión de color. */
+   inversión de color. Peso de pauta: Medium (prueba manual:
+   --font-weight-regular, --font-weight-semibold). */
 .list a {
   display: flex;
   align-items: center;
   padding: 0.8rem 1.6rem;
   color: var(--color-bg);
+  font-family: var(--font-text);
+  font-weight: var(--font-weight-medium);
   text-decoration: none;
   transition: transform 0.2s ease-out;
 }
@@ -52,7 +55,8 @@
   border: 1px solid var(--color-bg);
   color: var(--color-bg);
   font-family: var(--font-text);
-  font-weight: 600;
+  /* Llamada a la acción: Medium (prueba manual: Regular o Semibold). */
+  font-weight: var(--font-weight-medium);
   text-decoration: none;
   transition:
     background-color 0.25s ease-out,
