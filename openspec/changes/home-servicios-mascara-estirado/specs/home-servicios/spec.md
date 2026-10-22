@@ -2,7 +2,7 @@
 
 ### Requirement: Composición y transformación de Servicios
 
-La sección SHALL identificar sus servicios mediante un encabezado accesible y SHALL mostrar la palabra visual como texto real en la tipografía de identidad del sitio, con el vídeo fundido sobre las letras (visible solo dentro de ellas). En escritorio con movimiento permitido, el título SHALL comenzar a gran escala y transformarse hacia la mitad izquierda mientras la lista aparece en la derecha, de forma progresiva con el scroll. En el estado compuesto la palabra SHALL conservar el ancho de su columna y la tinta de sus letras SHALL ocupar exactamente el alto del listado, calculado en tiempo de ejecución con las métricas reales de la fuente; el factor `--factor-tinta` permite ajustar ese alto. El estado compuesto SHALL mantenerse utilizable sin esa animación.
+La sección SHALL identificar sus servicios mediante un encabezado accesible y SHALL mostrar la palabra visual como texto real en la tipografía de identidad del sitio, con el vídeo fundido sobre las letras (visible solo dentro de ellas). En escritorio con movimiento permitido, el título SHALL comenzar a gran escala y transformarse hacia la mitad izquierda mientras la lista aparece en la derecha, de forma progresiva con el scroll. En el estado compuesto la palabra SHALL ocupar el ancho de su columna conservando sus proporciones naturales (escala uniforme, sin estirar) y SHALL quedar centrada respecto al listado. El estado compuesto SHALL mantenerse utilizable sin esa animación.
 
 #### Scenario: Recorrido de escritorio
 
@@ -12,17 +12,17 @@ La sección SHALL identificar sus servicios mediante un encabezado accesible y S
 #### Scenario: Estado pausado con la lista mostrada
 
 - **WHEN** la transformación termina y la sección queda compuesta
-- **THEN** la palabra mantiene el ancho de su columna y la tinta de sus letras va de borde superior a inferior del listado, con el vídeo rellenándolas, sin que la lista se desplace
+- **THEN** la palabra mantiene el ancho de su columna, conserva sus proporciones sin deformarse y queda centrada respecto al listado, con el vídeo rellenando las letras
 
 #### Scenario: Distinta resolución
 
 - **WHEN** cambia el tamaño de la ventana o terminan de cargar las fuentes
-- **THEN** las métricas de la tinta se recalculan y el encaje exacto con el listado se mantiene
+- **THEN** las métricas de la palabra se recalculan y la composición se mantiene centrada respecto al listado
 
 #### Scenario: Movimiento reducido o disposición estrecha
 
 - **WHEN** se solicita movimiento reducido o no se aplica la composición de escritorio
-- **THEN** no se ejecuta la transformación de escritorio y el estado compuesto conserva el encaje mediante los valores medidos, con el listado disponible
+- **THEN** no se ejecuta la transformación de escritorio y el estado compuesto conserva la composición mediante los valores medidos, con el listado disponible
 
 ## ADDED Requirements
 

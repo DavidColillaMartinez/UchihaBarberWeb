@@ -5,12 +5,14 @@
 - [x] 1.3 Recortar el fondo del grupo a la banda con `overflow: clip` en `.escena` (sin afectar al crecimiento en flujo del hover); verificar en el CSS compilado que la escena recorta y que cabecera/Galería ya no reciben el recuadro blanco
 - [ ] 1.4 Comprobar visualmente con el navegador del responsable que el vídeo solo se ve dentro de las letras y que la palabra queda en General Sans Bold (prototipo validado en `/tmp/opencode/proto-servicios`)
 
-## 2. Estirado exacto y responsive
+## 2. Composición con proporciones naturales
 
-- [x] 2.1 Medir la tinta real de la palabra con canvas (misma familia, tamaño y peso) y calcular las escalas y el desplazamiento de reposo y pausa; verificar `actualBoundingBoxAscent` en el bundle
-- [x] 2.2 Timeline de GSAP con origen `left top`, funciones e `invalidateOnRefresh`, destino de pausa con la tinta de borde a borde del listado; verificar el tramo y las funciones en el bundle
-- [x] 2.3 Fallback CSS con las variables medidas (`--escala-x`, `--escala-y`, `--desplaza-y`) y ajuste fino `--factor-tinta` (por defecto 1); verificar que el estado pausado se mantiene sin gsap
-- [x] 2.4 Recalcular en `resize` y `document.fonts.ready`; verificar que el encaje se mantiene al cambiar de resolución
+- [x] 2.1 Medir la palabra real con canvas (misma familia, tamaño y peso) y calcular la escala uniforme y el desplazamiento de reposo y pausa; verificar `actualBoundingBoxAscent` en el bundle
+- [x] 2.2 Timeline de GSAP con origen `left top`, escala uniforme en los dos estados (reposo a sangre, pausa en la columna) y `invalidateOnRefresh`; verificar el tramo y las funciones en el bundle
+- [x] 2.3 Fallback CSS con las variables medidas (`--escala`, `--desplaza-y`) para el estado pausado sin gsap; verificar que sin gsap la composición se mantiene
+- [x] 2.4 Recalcular en `resize` y `document.fonts.ready`; verificar que la composición se mantiene al cambiar de resolución
+- [x] 2.5 Sustituir el estirado vertical por escala uniforme y eliminar el factor de ajuste manual; verificar que no quedan `--factor-tinta`, `--escala-x` ni `--escala-y` en el bundle
+- [ ] 2.6 Incorporar la tipografía de titular de letras alargadas cuando el responsable la facilite y recalcular sus medidas; verificar el encaje con la nueva familia
 
 ## 3. Verificación del cambio
 

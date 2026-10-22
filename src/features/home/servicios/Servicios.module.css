@@ -47,23 +47,23 @@
 
 /* El grupo transformado aísla el fundido: el blanco vive dentro para que el
    vídeo desaparezca fuera de las letras. El JS deja aquí el estado pausado
-   (--escala-x, --escala-y, --desplaza-y) como fallback sin gsap; el timeline
-   sobrescribe el transform cuando anima. `--factor-tinta` ajusta el alto de
-   la pausa: 1 = tinta de borde a borde del listado. */
+   (--escala y --desplaza-y) como fallback sin gsap; el timeline sobrescribe
+   el transform cuando anima. Escala uniforme: la palabra conserva sus
+   proporciones, sin estirar. */
 .tituloGrupo {
   position: absolute;
   top: 0;
   left: 0;
   background: var(--color-bg);
   transform-origin: left top;
-  transform: translateY(var(--desplaza-y, 0))
-    scale(var(--escala-x, 1), var(--escala-y, 1));
-  --factor-tinta: 1;
+  transform: translateY(var(--desplaza-y, 0)) scale(var(--escala, 1));
 }
 
 .titulo {
   display: block;
   margin: 0;
+  /* Familia del titular de la sección: aquí se sustituye por la fuente
+     alargada cuando esté disponible. */
   font-family: var(--font-base);
   font-size: 10rem;
   font-weight: 700;

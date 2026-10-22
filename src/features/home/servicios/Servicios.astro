@@ -162,10 +162,11 @@ const servicios = [
     };
   };
 
-  /* Calcula las escalas y el desplazamiento de los dos estados:
-     reposo (banner a sangre, escala uniforme centrada) y pausa (ancho de la
-     columna y tinta de borde a borde del listado). `--factor-tinta` (CSS)
-     permite subir o bajar el alto de la pausa sin tocar el resto. */
+  /* Calcula la escala y el desplazamiento de los dos estados, con las
+     proporciones naturales de la palabra (escala uniforme, sin estirar):
+     reposo (banner a sangre, centrado) y pausa (columna izquierda,
+     centrado respecto al listado). La fuente de titular se puede cambiar
+     en el CSS; las medidas se recalculan con las métricas reales. */
   const calcular = () => {
     if (!escena || !grupo || !lista) {
       return null;
@@ -178,16 +179,11 @@ const servicios = [
     const anchoColumna =
       grupo.parentElement?.clientWidth ?? escena.offsetWidth / 2;
     const anchoEscena = escena.offsetWidth;
-    const factor =
-      Number.parseFloat(
-        getComputedStyle(grupo).getPropertyValue("--factor-tinta"),
-      ) || 1;
 
-    const escalaXPausa = anchoColumna / medidas.anchoCaja;
-    const escalaYPausa = (altoLista / medidas.altoTinta) * factor;
+    const escalaPausa = anchoColumna / medidas.anchoCaja;
     const desplazaYPausa =
-      (altoLista - medidas.altoTinta * escalaYPausa) / 2 -
-      medidas.tintaArriba * escalaYPausa;
+      (altoLista - medidas.altoTinta * escalaPausa) / 2 -
+      medidas.tintaArriba * escalaPausa;
 
     const escalaReposo = anchoEscena / medidas.anchoCaja;
     const desplazaYReposo =
@@ -195,8 +191,7 @@ const servicios = [
       medidas.tintaArriba * escalaReposo;
 
     return {
-      escalaXPausa,
-      escalaYPausa,
+      escalaPausa,
       desplazaYPausa,
       escalaReposo,
       desplazaYReposo,
@@ -210,8 +205,7 @@ const servicios = [
       return;
     }
     if (!window.matchMedia("(min-width: 48rem)").matches) {
-      grupo.style.removeProperty("--escala-x");
-      grupo.style.removeProperty("--escala-y");
+      grupo.style.removeProperty("--escala");
       grupo.style.removeProperty("--desplaza-y");
       return;
     }
@@ -219,8 +213,7 @@ const servicios = [
     if (!valores) {
       return;
     }
-    grupo.style.setProperty("--escala-x", `${valores.escalaXPausa}`);
-    grupo.style.setProperty("--escala-y", `${valores.escalaYPausa}`);
+    grupo.style.setProperty("--escala", `${valores.escalaPausa}`);
     grupo.style.setProperty("--desplaza-y", `${valores.desplazaYPausa}px`);
   };
 
@@ -254,11 +247,10 @@ const servicios = [
   }
 
   /* Transformación al scroll: el banner se mantiene completo y quieto hasta
-     que su borde superior llega al 50 % del viewport; ahí la palabra se
-     reduce a la columna izquierda y su tinta estira en vertical hasta el
-     alto exacto del listado (más vídeo en las letras, efecto texto estirado),
-     mientras la lista entra desde abajo en la mitad derecha. Sin JS ni con
-     movimiento reducido se queda el estado final compuesto. */
+     que su borde superior llega al 50 % del viewport; ahí la palabra pasa a
+     la columna izquierda conservando sus proporciones, mientras la lista
+     entra desde abajo en la mitad derecha. Sin JS ni con movimiento reducido
+     se queda el estado final compuesto. */
   if (seccion && escena && grupo && lista) {
     gsap
       .matchMedia()
@@ -281,13 +273,11 @@ const servicios = [
               {
                 transformOrigin: "left top",
                 y: () => calcular()?.desplazaYReposo ?? 0,
-                scaleX: () => calcular()?.escalaReposo ?? 1,
-                scaleY: () => calcular()?.escalaReposo ?? 1,
+                scale: () => calcular()?.escalaReposo ?? 1,
               },
               {
                 y: () => calcular()?.desplazaYPausa ?? 0,
-                scaleX: () => calcular()?.escalaXPausa ?? 1,
-                scaleY: () => calcular()?.escalaYPausa ?? 1,
+                scale: () => calcular()?.escalaPausa ?? 1,
                 ease: "expo.inOut",
               },
               0,
