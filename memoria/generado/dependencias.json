@@ -238,6 +238,12 @@
         "openspec/changes/home-galeria-autoavance/proposal.md",
         "openspec/changes/home-galeria-autoavance/specs/home-galeria/spec.md",
         "openspec/changes/home-galeria-autoavance/tasks.md",
+        "openspec/changes/home-intro-arranque-cabecera/.openspec.yaml",
+        "openspec/changes/home-intro-arranque-cabecera/README.md",
+        "openspec/changes/home-intro-arranque-cabecera/design.md",
+        "openspec/changes/home-intro-arranque-cabecera/proposal.md",
+        "openspec/changes/home-intro-arranque-cabecera/specs/home-intro/spec.md",
+        "openspec/changes/home-intro-arranque-cabecera/tasks.md",
         "openspec/changes/home-servicios-mascara-estirado/.openspec.yaml",
         "openspec/changes/home-servicios-mascara-estirado/design.md",
         "openspec/changes/home-servicios-mascara-estirado/proposal.md",
@@ -316,7 +322,8 @@
         "memoria/sesiones/SES-029.md",
         "memoria/sesiones/SES-030.md",
         "memoria/sesiones/SES-031.md",
-        "memoria/sesiones/SES-032.md"
+        "memoria/sesiones/SES-032.md",
+        "memoria/sesiones/SES-033.md"
       ]
     }
   ]

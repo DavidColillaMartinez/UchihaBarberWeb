@@ -371,8 +371,8 @@
     {
       "ruta": "memoria/revision.json",
       "tipo": "archivo",
-      "bytes": 29924,
-      "sha256": "f495a06138c8a5a1e359b22d58fa8b188cdea787d18f161b5a5cd70414da1ede"
+      "bytes": 32687,
+      "sha256": "b6c600fd3edfc19721f9317bb83f9ad2c004f6effd0d77e429aeffba2b98fe46"
     },
     {
       "ruta": "memoria/roadmap.md",
@@ -581,8 +581,14 @@
     {
       "ruta": "memoria/sesiones/SES-032.md",
       "tipo": "archivo",
-      "bytes": 2738,
-      "sha256": "c57a27b5588ddc5ef65e074bf6bfa024fff2e3afcc7e6d85a60c5551df6dc07f"
+      "bytes": 4778,
+      "sha256": "5d963676c7c2d6754423f8416060e8136c6f1ca9de09e91ba6f80c025ed1ff29"
+    },
+    {
+      "ruta": "memoria/sesiones/SES-033.md",
+      "tipo": "archivo",
+      "bytes": 4745,
+      "sha256": "c8e41d67475cec1875fa25d68e2d4517493563e1dee728734dc4c5d2e2d8c6db"
     },
     {
       "ruta": "openspec/changes/archive/.gitkeep",
@@ -873,6 +879,42 @@
       "sha256": "43939d33115ebf0730c8c2fa2b0fad1ca6ae728f9fd50d0bf2dcbbe75e27153f"
     },
     {
+      "ruta": "openspec/changes/home-intro-arranque-cabecera/.openspec.yaml",
+      "tipo": "archivo",
+      "bytes": 40,
+      "sha256": "0ad492a63d87e00a8bc135b0a1a2b19270dbb9ffd997a69b89fd4ab72015a944"
+    },
+    {
+      "ruta": "openspec/changes/home-intro-arranque-cabecera/README.md",
+      "tipo": "archivo",
+      "bytes": 146,
+      "sha256": "2d5dc96457140c5f9861e311637df511bfee365f6484edcd0c8cad39444b7d96"
+    },
+    {
+      "ruta": "openspec/changes/home-intro-arranque-cabecera/design.md",
+      "tipo": "archivo",
+      "bytes": 2172,
+      "sha256": "3135159f02c8b9c0936faff286e7ac02d666884c5c7ebc9c2c8c586b4e5b8e77"
+    },
+    {
+      "ruta": "openspec/changes/home-intro-arranque-cabecera/proposal.md",
+      "tipo": "archivo",
+      "bytes": 1596,
+      "sha256": "1d76448bd29972d5f33ed515b33d3bdd479fdb496e71caad60be77bd34df8255"
+    },
+    {
+      "ruta": "openspec/changes/home-intro-arranque-cabecera/specs/home-intro/spec.md",
+      "tipo": "archivo",
+      "bytes": 2077,
+      "sha256": "3c38dcd0f7cbd7cdcdc18e168db8d5dc5e7cd1a9a38f8ac949f971e0091ca031"
+    },
+    {
+      "ruta": "openspec/changes/home-intro-arranque-cabecera/tasks.md",
+      "tipo": "archivo",
+      "bytes": 1372,
+      "sha256": "c589ba4b58b1303294aaba936d2af255250322e996ffdfa78cd1ccb452e94be7"
+    },
+    {
       "ruta": "openspec/changes/home-servicios-mascara-estirado/.openspec.yaml",
       "tipo": "archivo",
       "bytes": 40,
@@ -881,8 +923,8 @@
     {
       "ruta": "openspec/changes/home-servicios-mascara-estirado/design.md",
       "tipo": "archivo",
-      "bytes": 4187,
-      "sha256": "a5e3041e5e5b08c2c84e1031bacf3226f1105db510fa98165dd8fb928b207133"
+      "bytes": 5476,
+      "sha256": "199b65bae3a91e19c4c113739feb5d241464213a80c28599b69e410c76ac250a"
     },
     {
       "ruta": "openspec/changes/home-servicios-mascara-estirado/proposal.md",
@@ -899,8 +941,8 @@
     {
       "ruta": "openspec/changes/home-servicios-mascara-estirado/tasks.md",
       "tipo": "archivo",
-      "bytes": 2946,
-      "sha256": "c4146cc36c59186d19830bab285e909ff2af0b8c94c339f05308cc517bb19e45"
+      "bytes": 3659,
+      "sha256": "e899215dc9150b991895e10976ba8dc99309b465fe1b1aefc106f9f3befdb1cb"
     },
     {
       "ruta": "openspec/config.yaml",
@@ -1259,8 +1301,8 @@
     {
       "ruta": "src/features/home/intro/intro.ts",
       "tipo": "archivo",
-      "bytes": 9851,
-      "sha256": "c416dc671e2e8c23ded355a99feca5bca7997b88f9927212f014642a1a2d9f07"
+      "bytes": 10651,
+      "sha256": "289b96d20d929fb49e1f29fee03c915c060a8748c8617d03f7ad10141911c8f5"
     },
     {
       "ruta": "src/features/home/opiniones/Opiniones.astro",
@@ -1277,14 +1319,14 @@
     {
       "ruta": "src/features/home/servicios/Servicios.astro",
       "tipo": "archivo",
-      "bytes": 9971,
-      "sha256": "20cdfc148e8f88733eb5d020c6a816e84200ea6abb084bb76c89393e4f3fb0e9"
+      "bytes": 10137,
+      "sha256": "2836745712fe852a8546f82f559ee0b47136378c335a10f0190dc4ea17e5cfe5"
     },
     {
       "ruta": "src/features/home/servicios/Servicios.module.css",
       "tipo": "archivo",
-      "bytes": 6767,
-      "sha256": "14e7c447ef41dec45648154609422e5f8290bfcbcd5883cd57963a41aaa48d08"
+      "bytes": 7538,
+      "sha256": "5b0babb667af09a1f8297da8dac238d9238f227831d28cd41991e2d93c869abe"
     },
     {
       "ruta": "src/features/products/provisional/Provisional.astro",
@@ -1301,8 +1343,8 @@
     {
       "ruta": "src/layouts/BaseLayout.astro",
       "tipo": "archivo",
-      "bytes": 1803,
-      "sha256": "29aacb32f7587acebaa19002ac85f1747b10e10dbacf3d37ab300b2f2a45c73f"
+      "bytes": 2580,
+      "sha256": "28bdaa371d9432fc7e6ac82d94c00c7b597b1c205cb5573f07054df3dd4b9d20"
     },
     {
       "ruta": "src/pages/index.astro",

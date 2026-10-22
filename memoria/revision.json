@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "relevo": "memoria/sesiones/SES-027.md",
-  "resumen": "Contrastados paquete, checkout actual, CSS emitido y documentacion: General Sans integrada con pesos reales y sin referencias a Inter/Archivo; trabajo ajeno conservado",
+  "relevo": "memoria/sesiones/SES-032.md",
+  "resumen": "Revision en navegador de Servicios con Firefox local: el video se dimensiona sobre la caja del texto (elemento reemplazado) y deja de desbordarse; comprobado en reposo, transicion y pausa a 1440x900, 1920x1080, 1280x720 y 390x844, con el video solo dentro de las letras y fondo blanco limpio en los bordes",
   "alcance": "codigo-y-documentacion-no-aprobacion-visual",
   "archivos": [
     {
@@ -194,7 +194,7 @@
     },
     {
       "ruta": "memoria/bloques.json",
-      "sha256": "389a6ad9f0192120ae63072c7a5ba70f9a146b34cf9314d13b3772d448cb64b2"
+      "sha256": "a9615842986dfc6654b2f083e9997717cc33612871f90e1a28b64c54852d33ce"
     },
     {
       "ruta": "memoria/cierre.md",
@@ -214,7 +214,7 @@
     },
     {
       "ruta": "memoria/estado.json",
-      "sha256": "0949b33f33b84ef26413bca5428784de5a5579d3f6dc52267da417cf791a22f2"
+      "sha256": "740d5c3702359d4ad8f35f1ae878b941d5457f14284d4650ec5e71f671a5c110"
     },
     {
       "ruta": "memoria/herramientas.md",
@@ -226,7 +226,7 @@
     },
     {
       "ruta": "memoria/mapa.md",
-      "sha256": "f26057eef571a6a0ccc2d90ef47feb4f22864d008679057652dfbba36681f4e3"
+      "sha256": "169b7778e422d810ac8b1aefb9f23e349e107dd41f528c2f9f886479550f2b9f"
     },
     {
       "ruta": "memoria/primer-commit.md",
@@ -357,16 +357,36 @@
       "sha256": "d62224dfbf03cbe11798027141b7dca73138cce26b123ec55bbadeb26e4b0476"
     },
     {
-      "ruta": "memoria/sesiones/SES-025.md",
-      "sha256": "c4af114dfde321f502071bc1c02c93d4a16a2648a4554b63527f47f335b17595"
-    },
-    {
       "ruta": "memoria/sesiones/SES-026.md",
       "sha256": "3d226afaf501213c63ce841806ee5287e2cf2027b54faba6e984d6d9119bc869"
     },
     {
       "ruta": "memoria/sesiones/SES-027.md",
       "sha256": "9f149f808982d96332b90d639084547cb64f25211ed2ab5f89bc0ab0af262c97"
+    },
+    {
+      "ruta": "memoria/sesiones/SES-028.md",
+      "sha256": "b4cb8677ba55f6fb654f8b8e8bb7b15cc750e45b32951d806630bbcba11afa40"
+    },
+    {
+      "ruta": "memoria/sesiones/SES-029.md",
+      "sha256": "8ab97e53576750fa84c2d6a5be59dc51af9194650dfa6b3699555a880fc56854"
+    },
+    {
+      "ruta": "memoria/sesiones/SES-030.md",
+      "sha256": "0221e54c21c5efdccaa96927875816b3f48a910a2dd51252e18292f8bd228a51"
+    },
+    {
+      "ruta": "memoria/sesiones/SES-031.md",
+      "sha256": "da2e58aee1cf07fa071f93f98a364258053c9d2480a34b209c1746becd34bbd4"
+    },
+    {
+      "ruta": "memoria/sesiones/SES-032.md",
+      "sha256": "5d963676c7c2d6754423f8416060e8136c6f1ca9de09e91ba6f80c025ed1ff29"
+    },
+    {
+      "ruta": "memoria/sesiones/SES-033.md",
+      "sha256": "c8e41d67475cec1875fa25d68e2d4517493563e1dee728734dc4c5d2e2d8c6db"
     },
     {
       "ruta": "openspec/changes/archive/.gitkeep",
@@ -546,19 +566,63 @@
     },
     {
       "ruta": "openspec/changes/home-galeria-autoavance/design.md",
-      "sha256": "ccc82387655308f6dd7dd8a60272099be5460f11c020d1ab2117a82924071e53"
+      "sha256": "2a8d6a6bd0db13e9f78531d26b386347bee6d44e532471c62433590544f97f63"
     },
     {
       "ruta": "openspec/changes/home-galeria-autoavance/proposal.md",
-      "sha256": "8712b5a95e283eb2c57e6d96b8386213d5fa260f97b0648d60fa7d00323ab304"
+      "sha256": "a221ba1632af4c23f4cf91c8c9feb62ff4cdab7f0798d1ae6a305e9bb39978aa"
     },
     {
       "ruta": "openspec/changes/home-galeria-autoavance/specs/home-galeria/spec.md",
-      "sha256": "d95007d4cf8bfb607b7a4a220c2f945abf0501727db243909d2b2f4f251067de"
+      "sha256": "d843091075199f7c0ec8217df988f3f59532168c3a25bb5d73d0cec0a2325dd0"
     },
     {
       "ruta": "openspec/changes/home-galeria-autoavance/tasks.md",
-      "sha256": "3a67756bfe0360c7435c3e03ed4e017f0e8e89f9fc517b7566416ded976b963b"
+      "sha256": "43939d33115ebf0730c8c2fa2b0fad1ca6ae728f9fd50d0bf2dcbbe75e27153f"
+    },
+    {
+      "ruta": "openspec/changes/home-intro-arranque-cabecera/.openspec.yaml",
+      "sha256": "0ad492a63d87e00a8bc135b0a1a2b19270dbb9ffd997a69b89fd4ab72015a944"
+    },
+    {
+      "ruta": "openspec/changes/home-intro-arranque-cabecera/README.md",
+      "sha256": "2d5dc96457140c5f9861e311637df511bfee365f6484edcd0c8cad39444b7d96"
+    },
+    {
+      "ruta": "openspec/changes/home-intro-arranque-cabecera/design.md",
+      "sha256": "3135159f02c8b9c0936faff286e7ac02d666884c5c7ebc9c2c8c586b4e5b8e77"
+    },
+    {
+      "ruta": "openspec/changes/home-intro-arranque-cabecera/proposal.md",
+      "sha256": "1d76448bd29972d5f33ed515b33d3bdd479fdb496e71caad60be77bd34df8255"
+    },
+    {
+      "ruta": "openspec/changes/home-intro-arranque-cabecera/specs/home-intro/spec.md",
+      "sha256": "3c38dcd0f7cbd7cdcdc18e168db8d5dc5e7cd1a9a38f8ac949f971e0091ca031"
+    },
+    {
+      "ruta": "openspec/changes/home-intro-arranque-cabecera/tasks.md",
+      "sha256": "c589ba4b58b1303294aaba936d2af255250322e996ffdfa78cd1ccb452e94be7"
+    },
+    {
+      "ruta": "openspec/changes/home-servicios-mascara-estirado/.openspec.yaml",
+      "sha256": "dc276ca1f5af9fc6062b02d4253186f254288dcf61711e1a8ec3573e8587440a"
+    },
+    {
+      "ruta": "openspec/changes/home-servicios-mascara-estirado/design.md",
+      "sha256": "199b65bae3a91e19c4c113739feb5d241464213a80c28599b69e410c76ac250a"
+    },
+    {
+      "ruta": "openspec/changes/home-servicios-mascara-estirado/proposal.md",
+      "sha256": "9e9c3ddc1cd587535d487e715c691194c88e9f910779afee6ae57814dfc9de4a"
+    },
+    {
+      "ruta": "openspec/changes/home-servicios-mascara-estirado/specs/home-servicios/spec.md",
+      "sha256": "ef26be0127603433a94a762207189b7df5de172ca5e093e97c14d2f1a70a5da0"
+    },
+    {
+      "ruta": "openspec/changes/home-servicios-mascara-estirado/tasks.md",
+      "sha256": "e899215dc9150b991895e10976ba8dc99309b465fe1b1aefc106f9f3befdb1cb"
     },
     {
       "ruta": "openspec/config.yaml",
@@ -682,11 +746,11 @@
     },
     {
       "ruta": "src/features/home/galeria/Galeria.astro",
-      "sha256": "776e559853a9a974ff1149524910523cceb86f0c976b25fb4cd0bfb318b5cb61"
+      "sha256": "d542695d3ca06ed3d59dbde1cb584fb024dc193fa0c82a24571a57e1e9f85706"
     },
     {
       "ruta": "src/features/home/galeria/Galeria.module.css",
-      "sha256": "5d626d5203ecab27fff06daf4be5f900185942401cf36c6a3be5f68d19adaefa"
+      "sha256": "5cc864ecf93ed178819b23c84b9674db38c81ce81ec384870e71919db6db3e15"
     },
     {
       "ruta": "src/features/home/informacion/Informacion.astro",
@@ -706,7 +770,7 @@
     },
     {
       "ruta": "src/features/home/intro/intro.ts",
-      "sha256": "c416dc671e2e8c23ded355a99feca5bca7997b88f9927212f014642a1a2d9f07"
+      "sha256": "289b96d20d929fb49e1f29fee03c915c060a8748c8617d03f7ad10141911c8f5"
     },
     {
       "ruta": "src/features/home/opiniones/Opiniones.astro",
@@ -718,11 +782,11 @@
     },
     {
       "ruta": "src/features/home/servicios/Servicios.astro",
-      "sha256": "1ddc756a8a4566094f2110055b38ebee34d56904448e97f9c6f1d26714d0dfc3"
+      "sha256": "2836745712fe852a8546f82f559ee0b47136378c335a10f0190dc4ea17e5cfe5"
     },
     {
       "ruta": "src/features/home/servicios/Servicios.module.css",
-      "sha256": "7a555a085ca7e55407322bf394c089823e9a44d76bbccd22aa42061d7e35cd2b"
+      "sha256": "5b0babb667af09a1f8297da8dac238d9238f227831d28cd41991e2d93c869abe"
     },
     {
       "ruta": "src/features/products/provisional/Provisional.astro",
@@ -734,7 +798,7 @@
     },
     {
       "ruta": "src/layouts/BaseLayout.astro",
-      "sha256": "29aacb32f7587acebaa19002ac85f1747b10e10dbacf3d37ab300b2f2a45c73f"
+      "sha256": "28bdaa371d9432fc7e6ac82d94c00c7b597b1c205cb5573f07054df3dd4b9d20"
     },
     {
       "ruta": "src/pages/index.astro",
@@ -757,5 +821,5 @@
       "sha256": "98e1484cb0954ac7306a850cdbf03c8140e2fd32e65fa6c213b19343dfdc6d43"
     }
   ],
-  "huella": "25f6c551a145863d9695ca93a0b2c9de2b99bfc1ba523c81046e4ede10c7884f"
+  "huella": "6ab40ce780aba806b3db78479b5baa0a95f4f7d90fd316b3e0ecfc1e21f7bbc9"
 }
