@@ -21,7 +21,7 @@
         "memoria/sesiones/SES-023.md"
       ],
       "pendientes": [
-        "Material/familia definitiva según PRODUCT; aprobación actual limitada a la versión demo."
+        "Material profesional según PRODUCT; aprobación actual limitada a la versión demo."
       ]
     },
     {
@@ -41,7 +41,7 @@
         "memoria/sesiones/SES-023.md"
       ],
       "pendientes": [
-        "Material/familia definitiva según PRODUCT; aprobación actual limitada a la versión demo."
+        "Material profesional según PRODUCT; aprobación actual limitada a la versión demo."
       ]
     },
     {
@@ -53,14 +53,16 @@
       "specs": ["openspec/specs/home-intro/spec.md"],
       "cambios": [
         "openspec/changes/archive/2026-09-16-cabecera-entrada-portada/proposal.md",
-        "openspec/changes/archive/2026-09-18-nav-tira-inicio/proposal.md"
+        "openspec/changes/archive/2026-09-18-nav-tira-inicio/proposal.md",
+        "openspec/changes/archive/2026-09-18-intro-con-logo/proposal.md"
       ],
       "aceptacion": [
         "memoria/sesiones/SES-010-cierre-cabecera.md",
-        "memoria/sesiones/SES-020-validacion-visual.md"
+        "memoria/sesiones/SES-020-validacion-visual.md",
+        "memoria/sesiones/SES-024.md"
       ],
       "pendientes": [
-        "Material/familia definitiva según PRODUCT; aprobación actual limitada a la versión demo."
+        "Material profesional según PRODUCT; aprobación actual limitada a la versión demo."
       ]
     },
     {
@@ -79,7 +81,7 @@
         "memoria/sesiones/SES-020-validacion-visual.md"
       ],
       "pendientes": [
-        "Material/familia definitiva según PRODUCT; aprobación actual limitada a la versión demo.",
+        "Material profesional según PRODUCT; aprobación actual limitada a la versión demo.",
         "Validación de la consolidación documental home-servicios con la CLI local al aplicar esta entrega.",
         "Elección definitiva de reproducción del vídeo; el bucle actual no responde al servicio."
       ]
@@ -95,14 +97,16 @@
         "openspec/specs/home-skeleton/spec.md"
       ],
       "cambios": [
-        "openspec/changes/archive/2026-09-16-home-galeria/proposal.md"
+        "openspec/changes/archive/2026-09-16-home-galeria/proposal.md",
+        "openspec/changes/home-galeria-autoavance/proposal.md"
       ],
       "aceptacion": [
         "memoria/sesiones/SES-018-cierre-galeria.md",
         "memoria/sesiones/SES-020-validacion-visual.md"
       ],
       "pendientes": [
-        "Material/familia definitiva según PRODUCT; aprobación actual limitada a la versión demo."
+        "Material profesional según PRODUCT; aprobación actual limitada a la versión demo.",
+        "Cambio home-galeria-autoavance (autoavance de 2 s con reinicio por flechas; la altura de la tira se mantiene en 38 svh) pendiente de validación visual."
       ]
     },
     {
