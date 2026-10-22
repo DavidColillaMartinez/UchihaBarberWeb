@@ -112,12 +112,49 @@ const videosDemo = [
   let posicion = 0;
   let posicionVisual = 0;
   let enPantalla = false;
+  let controlesVisibles = false;
 
   const anchoVuelta = () => (tira ? tira.scrollWidth / 2 : 0);
 
   const pasoPanel = () => {
     const panel = tira?.querySelector<HTMLElement>("video");
     return panel ? panel.offsetWidth : 0;
+  };
+
+  /* Avance automático: un panel cada ~2 s en bucle, solo con la sección
+     encuadrada (mismo umbral que las flechas) y con movimiento normal. Cada
+     pulsación de flecha reprograma el contador; con la pestaña oculta el tic
+     no avanza y se espera otra cadencia. Con movimiento reducido o sin JS
+     nunca se activa. Solo mueve el carrusel, jamás la página. */
+  const CADENCIA_AUTO = 2;
+  let temporizadorAuto: number | null = null;
+
+  const autoActivo = () => !movimientoReducido.matches && controlesVisibles;
+
+  const cancelarAuto = () => {
+    if (temporizadorAuto !== null) {
+      clearTimeout(temporizadorAuto);
+      temporizadorAuto = null;
+    }
+  };
+
+  const programarAuto = () => {
+    cancelarAuto();
+    if (!autoActivo()) {
+      return;
+    }
+    temporizadorAuto = window.setTimeout(() => {
+      temporizadorAuto = null;
+      if (document.hidden) {
+        programarAuto();
+        return;
+      }
+      const paso = pasoPanel();
+      if (paso) {
+        posicion += paso;
+      }
+      programarAuto();
+    }, CADENCIA_AUTO * 1000);
   };
 
   /* Reproducción contenida: solo los paneles cercanos al hueco visible se
@@ -258,10 +295,15 @@ const videosDemo = [
       return;
     }
     posicion += direccion * paso;
+    programarAuto();
   };
 
   atras?.addEventListener("click", () => avanzar(-1));
   adelante?.addEventListener("click", () => avanzar(1));
+
+  /* Si la preferencia de movimiento cambia en caliente, el autoavance se
+     cancela o se reprograma según corresponda. */
+  movimientoReducido.addEventListener("change", programarAuto);
 
   /* Cobertura aproximada a la que asoman las flechas: cerca del encaje
      (snap) de la sección en el recorrido. */
@@ -277,6 +319,8 @@ const videosDemo = [
         const visible =
           entrada.isIntersecting &&
           entrada.intersectionRatio >= UMBRAL_CONTROLES;
+        controlesVisibles = visible;
+        programarAuto();
         for (const boton of [atras, adelante]) {
           if (!boton) {
             continue;
