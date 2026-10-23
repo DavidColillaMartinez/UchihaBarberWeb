@@ -293,8 +293,8 @@
     {
       "ruta": "memoria/bloques.json",
       "tipo": "archivo",
-      "bytes": 8722,
-      "sha256": "29e3d4cee9c0d6b93ec1044e2fbe5507df2f391d1b66b3e57096636e3bae546c"
+      "bytes": 8903,
+      "sha256": "b445445f22288bfa9bf1fad318428619d2e2e354e6f5ebf98f2d2a018678e913"
     },
     {
       "ruta": "memoria/cierre.md",
@@ -323,8 +323,8 @@
     {
       "ruta": "memoria/estado.json",
       "tipo": "archivo",
-      "bytes": 13634,
-      "sha256": "5eee3ced183addffa474fc5cd2ae783507e82a2c7d6cd252f1563ebd5cdd214c"
+      "bytes": 14206,
+      "sha256": "19c3a93c693ab37e5e58378af59cfa0959bdc3c1c0819f5dc071037f20b3821a"
     },
     {
       "ruta": "memoria/herramientas.md",
@@ -371,8 +371,8 @@
     {
       "ruta": "memoria/revision.json",
       "tipo": "archivo",
-      "bytes": 39925,
-      "sha256": "d9186b1fb596fbc8f0fa1e106185d96bfa7cd162853e7b81bd8f49760a48fd9b"
+      "bytes": 40331,
+      "sha256": "5f27570828b961a946d0d53373c9fe1326b9aecc7fc577f1566563b0e8897750"
     },
     {
       "ruta": "memoria/roadmap.md",
@@ -667,6 +667,12 @@
       "tipo": "archivo",
       "bytes": 2285,
       "sha256": "99ce13619aa82b6e7f6a63ab013da9d985d7bd8157261b07f2822993eec79849"
+    },
+    {
+      "ruta": "memoria/sesiones/SES-047.md",
+      "tipo": "archivo",
+      "bytes": 3639,
+      "sha256": "b9e671e66949949fa75c87301428d03840f753f8b41890c8ca6bf0d3f2109a81"
     },
     {
       "ruta": "openspec/changes/archive/.gitkeep",
@@ -1505,8 +1511,8 @@
     {
       "ruta": "src/features/home/cabecera/Cabecera.astro",
       "tipo": "archivo",
-      "bytes": 1154,
-      "sha256": "2ab34b5ed715e934f2659d42441f6a80d9a87f002fc2ca9ddda5182545983c94"
+      "bytes": 2641,
+      "sha256": "be90cb9b85485e216b058e6e96a55cc37228aeca608f7d09dd82b28d8d50a9a9"
     },
     {
       "ruta": "src/features/home/cabecera/Cabecera.module.css",
@@ -1571,14 +1577,14 @@
     {
       "ruta": "src/features/home/servicios/Servicios.astro",
       "tipo": "archivo",
-      "bytes": 10137,
-      "sha256": "2836745712fe852a8546f82f559ee0b47136378c335a10f0190dc4ea17e5cfe5"
+      "bytes": 12676,
+      "sha256": "8bf9dae04b16250c2628aecb35178616ea2a92c6deaa8f9334c745e41cc27a19"
     },
     {
       "ruta": "src/features/home/servicios/Servicios.module.css",
       "tipo": "archivo",
-      "bytes": 7538,
-      "sha256": "5b0babb667af09a1f8297da8dac238d9238f227831d28cd41991e2d93c869abe"
+      "bytes": 10755,
+      "sha256": "2e643590e0f9bacd5405fd5f7d8da1ac591708ae435442cbd4c0d2c0ecca132c"
     },
     {
       "ruta": "src/features/products/provisional/Provisional.astro",

@@ -31,12 +31,48 @@ const videoUrl = "/videos/Video_Head.mp4";
 </section>
 
 <script>
+  /* El vídeo de fondo arranca solo, silenciado, en bucle y en línea, y no
+     ofrece control de reproducción ni pausa al visitante (pauta transversal
+     de video-reproduccion y PRODUCT). El silencio se reafirma por script
+     porque en móvil el bloqueo del autoplay nativo es silencioso: sin él, el
+     navegador puede dejar el vídeo a la espera con su cartel de reproducción. */
   const video = document.querySelector<HTMLVideoElement>(
     "video[data-video-fondo]",
   );
 
-  if (video && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    video.removeAttribute("autoplay");
-    video.pause();
+  if (video) {
+    video.muted = true;
+    video.defaultMuted = true;
+
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      video.removeAttribute("autoplay");
+      video.pause();
+    } else {
+      const reproducir = (): void => {
+        void video.play().catch(() => {
+          /* En móvil la petición puede abortar por ir pegada a la carga del
+             recurso (p. ej. en iOS): se reintenta en cuanto hay fotograma
+             disponible, sin quedar el vídeo a la espera de un control que no
+             existe. */
+          if (video.readyState < HTMLMediaElement.HAVE_FUTURE_DATA) {
+            video.addEventListener("loadeddata", reproducir, { once: true });
+          }
+        });
+      };
+
+      if (video.readyState >= HTMLMediaElement.HAVE_FUTURE_DATA) {
+        reproducir();
+      } else {
+        video.addEventListener("loadeddata", reproducir, { once: true });
+      }
+
+      /* Al volver a la web (pestaña visible) reanuda si el navegador lo
+         dejó pausado de fondo; el bucle y el arranque siguen intactos. */
+      document.addEventListener("visibilitychange", () => {
+        if (!document.hidden && video.paused) {
+          reproducir();
+        }
+      });
+    }
   }
 </script>
