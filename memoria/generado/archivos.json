@@ -263,8 +263,8 @@
     {
       "ruta": "PRODUCT.md",
       "tipo": "archivo",
-      "bytes": 15351,
-      "sha256": "8e5e6cd73aa9f369b0b33fc89bbc4fdb1b34b45dce5383a0945ee44ab7493cb0"
+      "bytes": 15879,
+      "sha256": "80b37a711e97b6d35f8c3eacc4206b89dcdcfd60d4e7f623e801221c2fe7c420"
     },
     {
       "ruta": "README.md",
@@ -293,8 +293,8 @@
     {
       "ruta": "memoria/bloques.json",
       "tipo": "archivo",
-      "bytes": 8576,
-      "sha256": "a91e86421796516b96033558659fd95f453ac51407e8fd1c9feef0352b909a00"
+      "bytes": 8722,
+      "sha256": "29e3d4cee9c0d6b93ec1044e2fbe5507df2f391d1b66b3e57096636e3bae546c"
     },
     {
       "ruta": "memoria/cierre.md",
@@ -323,8 +323,8 @@
     {
       "ruta": "memoria/estado.json",
       "tipo": "archivo",
-      "bytes": 12958,
-      "sha256": "a901ac497e1d23ce87f10ba3cd50a2b52a5027058cffecdccbd0efe9ae22a8b9"
+      "bytes": 13293,
+      "sha256": "2ab350ffa6ac8a2c27a1ae667d68b0135d5de0e5e2879281b73bb83c4540113e"
     },
     {
       "ruta": "memoria/herramientas.md",
@@ -341,8 +341,8 @@
     {
       "ruta": "memoria/mapa.md",
       "tipo": "archivo",
-      "bytes": 17465,
-      "sha256": "c93e4fba3b1e606ad474d70053562e96425c1a095a128d21effa0abce2cf5e81"
+      "bytes": 17775,
+      "sha256": "49a695a8653ac9a607aeeb5ae744824f64c10ac65bf1cf887af258d3c1ee4d27"
     },
     {
       "ruta": "memoria/primer-commit.md",
@@ -371,8 +371,8 @@
     {
       "ruta": "memoria/revision.json",
       "tipo": "archivo",
-      "bytes": 40004,
-      "sha256": "f4e9a9011ae31c6416df49296092d5520385a02131835b002037b48b1e62d6a2"
+      "bytes": 40208,
+      "sha256": "4f65c40a02e53e27c1321d5f5acbfae27d4f860820de62f436943beece0b49ac"
     },
     {
       "ruta": "memoria/roadmap.md",
@@ -655,6 +655,12 @@
       "tipo": "archivo",
       "bytes": 2138,
       "sha256": "b695a55a2a555ee6c5135a95552a6d742052edca58321bdc9625ffa80fa83450"
+    },
+    {
+      "ruta": "memoria/sesiones/SES-045.md",
+      "tipo": "archivo",
+      "bytes": 2293,
+      "sha256": "796204202101af1d2d66817dde277eb0dd44323a027f76d583d89dae2ae8772b"
     },
     {
       "ruta": "openspec/changes/archive/.gitkeep",
@@ -995,8 +1001,8 @@
     {
       "ruta": "openspec/changes/home-acceso-productos/design.md",
       "tipo": "archivo",
-      "bytes": 11171,
-      "sha256": "ea6db07f8d556a4942090a966ae33806118ebbf6824235aa78f76e138410500f"
+      "bytes": 11820,
+      "sha256": "5079ef6afb5f9cc1236d18f0acdfbaa74458c38a1746d15166b4920e45358716"
     },
     {
       "ruta": "openspec/changes/home-acceso-productos/proposal.md",
@@ -1007,8 +1013,8 @@
     {
       "ruta": "openspec/changes/home-acceso-productos/specs/home-acceso-productos/spec.md",
       "tipo": "archivo",
-      "bytes": 7419,
-      "sha256": "3c25762bab23ecd35fae8415230fd0f1add4fe2e1758f53d6712226e2c77f843"
+      "bytes": 7945,
+      "sha256": "02ce24d0f9a13efc39b0da4ec43abbfedfabe20158386cc3da8688c9c6cdf50c"
     },
     {
       "ruta": "openspec/changes/home-acceso-productos/tasks.md",
@@ -1169,8 +1175,8 @@
     {
       "ruta": "openspec/specs/home-galeria/spec.md",
       "tipo": "archivo",
-      "bytes": 8681,
-      "sha256": "26021d7e166500790e420ac377a093a60cce4f6d570ca31025bdf92207df7baa"
+      "bytes": 8839,
+      "sha256": "a725e0627b5dc3730ade52d0439cc0c18092e6ae3adba4955a04b1998e18ab22"
     },
     {
       "ruta": "openspec/specs/home-intro/spec.md",
@@ -1463,8 +1469,8 @@
     {
       "ruta": "src/features/home/acceso-productos/AccesoProductos.module.css",
       "tipo": "archivo",
-      "bytes": 5863,
-      "sha256": "92b59d688db699c16239435088c00e040eaa63def9eb743123b0e231a5925362"
+      "bytes": 6474,
+      "sha256": "1ea19d893ce068ebceb43bc2ccffecd9de437ad16b43045a962dd4e01480ad1b"
     },
     {
       "ruta": "src/features/home/acceso-productos/acceso-productos.ts",
@@ -1511,8 +1517,8 @@
     {
       "ruta": "src/features/home/galeria/Galeria.module.css",
       "tipo": "archivo",
-      "bytes": 3060,
-      "sha256": "67f931d507b655e50b127e52efccfa153d33ef7ed06952298889ea259a15b87c"
+      "bytes": 3713,
+      "sha256": "d726c4b0dab4fce6bdcdb9051d52607ed61afb4d9ebfa61d679258adbc28bd93"
     },
     {
       "ruta": "src/features/home/informacion/Informacion.astro",

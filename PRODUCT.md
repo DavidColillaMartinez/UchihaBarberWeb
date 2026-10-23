@@ -47,6 +47,8 @@ Reservas y datos reales:
 
 Estado de la dirección visual:
 
+Adaptación móvil de Productos autorizada en SES-045: hasta 68rem, vídeo primero con proporción 16:10 y márgenes simétricos como Sessions; debajo titular vertical compacto a la izquierda, descripción sin margen superior y alineada a la izquierda, y Conócelos bajo la descripción. Sustituye solo en este rango las reglas de composición de escritorio. Galería extiende el fundido inferior 1px sobre la junta para evitar líneas de rasterización. Escritorio y Sessions no se modifican; pendiente de aceptación visual.
+
 - Las decisiones vigentes de Cabecera, Entrada, Navegación, Servicios y Galería están consolidadas en `openspec/specs/`; sus rutas, aprobación y relevos figuran en `memoria/bloques.json`. Ante una evolución autorizada, actualizar esa fuente y este resumen; conservar el proceso en los relevos históricos.
 - Cabecera, cruce de entrada, navegación, Servicios y Galería fueron aceptados para la versión demo (SES-020). General Sans queda elegida como familia tipográfica vigente; el material profesional, catálogo y móvil siguen pendientes.
 - Acceso a Productos está implementado en su versión demo (SES-035) y pendiente de aceptación visual: no se considera aprobado ni consolidado.

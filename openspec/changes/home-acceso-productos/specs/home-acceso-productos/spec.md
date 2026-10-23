@@ -28,6 +28,12 @@ La sección SHALL ocupar el lugar acordado en la portada, entre la Galería y la
 - **WHEN** el contenido de la columna izquierda no cabe en la altura disponible
 - **THEN** el bloque crece para mostrarlo entero, sin recortarlo ni desbordarlo
 
+#### Scenario: Adaptación móvil y tablet
+
+- **WHEN** el ancho disponible es de hasta 68rem
+- **THEN** la composición de escritorio se sustituye por vídeo primero en proporción 16:10 con márgenes simétricos; debajo aparece el titular vertical compacto a la izquierda, la descripción alineada a la izquierda sin margen superior y Conócelos bajo ella
+- **AND** el título se dimensiona por anchura, no por altura de pantalla; la sección crece según el contenido sin recortes y la pausa conserva su posición interior
+
 ### Requirement: Titular vertical de abajo hacia arriba
 
 La sección SHALL presentar la palabra «Productos» con gran protagonismo, escrita de abajo hacia arriba y colocada junto al borde izquierdo de la columna de contenido, apoyada en su parte inferior. La palabra SHALL ser texto real del documento, legible por lectores de pantalla y seleccionable, y SHALL mostrarse en mayúsculas por estilo sin alterar lo que se lee ni lo que se anuncia.

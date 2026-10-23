@@ -35,6 +35,29 @@
   white-space: nowrap;
 }
 
+/* La franja termina fuera de la junta un píxel CSS: evita que el redondeo
+   de alturas fraccionarias deje asomar el fondo blanco en móviles con DPR
+   distinto de 1. La capa solo cubre fondo y no intercepta interacciones. */
+@media (max-width: 68rem) {
+  .galeria {
+    position: relative;
+    background-image: linear-gradient(
+      to bottom,
+      var(--color-bg),
+      rgb(255 255 255 / 0)
+    );
+  }
+
+  .galeria::after {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+    inset: auto 0 -1px;
+    height: calc(clamp(2rem, 6svh, 4rem) + 1px);
+    background: linear-gradient(to top, var(--color-fg), rgb(0 0 0 / 0));
+  }
+}
+
 /* Recorrido del carrusel: el desplazamiento lateral lo hace transform
    (scroll vertical y flechas sobre la misma posición); la escena recorta
    la tira dentro del ancho de la página, en cualquier tamaño. */

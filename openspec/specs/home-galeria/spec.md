@@ -90,6 +90,7 @@ El fondo de la Galería SHALL fundirse del blanco al negro en aproximadamente un
 - **THEN** una franja de degradado inferior mezcla su color actual con el negro superior de Productos, sin desenfocar contenido ni alterar alturas, snap o carrusel
 - **AND** sobre negro la franja resulta indistinguible del fondo; sobre blanco se muestra la transición al negro, también sin JavaScript y con movimiento reducido
 - **AND** la franja superior de unión con Servicios conserva su comportamiento independiente
+- **AND** en anchos de hasta 68rem la franja inferior prolonga su extremo negro 1px sobre la junta para impedir líneas claras de rasterización entre fondos
 
 ### Requirement: Reproducción contenida de los vídeos
 

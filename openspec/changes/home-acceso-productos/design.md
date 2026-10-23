@@ -110,9 +110,11 @@ El bloque no introduce datos estructurados: no hay catálogo ni productos reales
 
 ## Risks / Trade-offs
 
+Actualización SES-045: adaptación autorizada hasta 68rem inspirada en el ritmo de Sessions, sin modificar Sessions ni escritorio. Vídeo primero, 16:10 y márgenes iguales; marco al 100 % y margen cero dentro de la escena móvil. Debajo se conserva el título vertical a 2.5–3.5rem según ancho; descripción izquierda y sin los 6rem de margen de escritorio; botón bajo ella. La altura puede crecer. Sustituye la adaptación provisional anterior. El CSS móvil de Galería traslada el fundido inferior a una capa de fondo que se prolonga 1px más allá de la junta, sin filtros ni eventos y conservando su franja superior.
+
 - **El vídeo demo no representa los productos** → se declara como material provisional en la documentación y en `PRODUCT.md`, no dentro del bloque; la sustitución es un cambio de dos rutas.
 - **El recorte del vídeo es aggressive**: el clip es de 16:9 y el bloque es casi vertical, así que `object-fit: cover` muestra solo la banda central (en un bloque de 864×900 px se ve el 54 % del ancho). → Se eligió el clip cuyo encuadre aguanta el recorte (`CorteDePelo1`, con la estantería de productos detrás del cliente) y se documenta para que el material oficial se encuadre pensando en el bloque.
 - **La medida del texto es estrecha** (unos 35 caracteres) por la composición de 40 % con el titular dentro. → Es la consecuencia de la dirección pedida y coincide con la referencia; el peso y el interlineado lo hacen legible.
 - **El aire superior resta altura al titular**: el bloque no puede pegar la palabra al borde superior mientras la navegación tape el contenido. → Se prioriza que la navegación no tape nada.
 - **El bloque depende del coeficiente 6,4667 medido sobre la familia vigente**. → Si cambia la familia o el texto, hay que remedir; queda documentado en el CSS y en este documento.
-- **La adaptación móvil es provisional**: en pantalla estrecha la sección se apila y el bloque crece por encima de una pantalla. → Es lo esperable: el diseño móvil tiene su propia fase (UB-006) y aquí solo se garantiza que nada se bloquea ni se recorta.
+- **La adaptación específica móvil necesita aceptación**: SES-045 incorpora la composición autorizada con vídeo primero y titular vertical compacto. Puede crecer más de una pantalla; aceptación visual, dispositivo real y revisión móvil global de UB-006 siguen pendientes.
