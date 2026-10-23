@@ -59,6 +59,10 @@ const anchor = (id: string) => (isHomePage ? `#${id}` : `/#${id}`);
        muestra hasta que el recorrido avanza. Sin JS queda visible por CSS. */
     if (esPortada) {
       gsap.set(nav, { autoAlpha: 0 });
+      /* GSAP ya gestiona la visibilidad de la navegación: la marca previa al
+         primer pintado, que la mantenía oculta desde el primer fotograma,
+         puede retirarse. */
+      document.documentElement.removeAttribute("data-nav-portada");
     }
 
     const media = gsap.matchMedia();

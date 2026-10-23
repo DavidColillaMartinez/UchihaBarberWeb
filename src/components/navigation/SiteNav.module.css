@@ -11,6 +11,15 @@
   background: var(--color-fg);
 }
 
+/* En la portada, la navegación fija no debe verse en el arranque: en lo alto
+   manda la barra de inicio. La marca previa al primer pintado (ver
+   BaseLayout) la mantiene oculta hasta que su propio script asume el
+   control; sin JavaScript la marca no existe y la navegación sigue visible. */
+:global(html[data-nav-portada="oculto"]) .nav {
+  visibility: hidden;
+  opacity: 0;
+}
+
 .list {
   display: flex;
   flex-wrap: wrap;
