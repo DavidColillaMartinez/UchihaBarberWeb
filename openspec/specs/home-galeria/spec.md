@@ -78,6 +78,12 @@ El fondo de la Galería SHALL fundirse del blanco al negro en aproximadamente un
 - **WHEN** el visitante continúa o deshace el scroll hasta que la Galería deja de cubrir el umbral
 - **THEN** el fondo vuelve al blanco en ambos sentidos, sin estados atascados
 
+#### Scenario: Unión suave con Servicios durante el cambio de fondo
+
+- **WHEN** el fondo de Galería se oscurece o vuelve al blanco
+- **THEN** una franja de degradado en su borde superior mezcla el blanco de Servicios con el color actual del fondo, sin un corte abrupto y sin desenfocar contenido ni alterar alturas, snap o carrusel
+- **AND** mientras el fondo sea blanco la unión es completamente blanca, sin sombra ni franja gris visible, también sin JavaScript y con movimiento reducido
+
 ### Requirement: Reproducción contenida de los vídeos
 
 Los vídeos de la tira SHALL reproducirse solo mientras la sección está en pantalla, silenciados, en bucle y sin capturar el foco, limitándose a los paneles cercanos al hueco visible (con margen de precarga); el resto SHALL permanecer pausado. Con movimiento reducido SHALL permanecer pausados, mostrándose el primer fotograma de los clips para que la tira estática no quede vacía.

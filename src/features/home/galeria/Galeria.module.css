@@ -12,6 +12,16 @@
    el fondo es blanco: el negro solo existe durante la animación. */
 .galeria {
   background: var(--color-bg);
+  /* Mezcla solo el fondo de la junta con Servicios. Sobre blanco no hay
+     diferencia visible; al animarse backgroundColor aparece el fundido,
+     y al revertir desaparece sin otro temporizador ni capa sobre los clips. */
+  background-image: linear-gradient(
+    to bottom,
+    var(--color-bg),
+    rgb(255 255 255 / 0)
+  );
+  background-size: 100% clamp(2rem, 6svh, 4rem);
+  background-repeat: no-repeat;
 }
 
 .srOnly {
