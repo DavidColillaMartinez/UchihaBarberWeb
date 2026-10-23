@@ -12,6 +12,6 @@
 
 ## 3. Cierre documental
 
-- [ ] 3.1 Revisión visual del responsable en local y en la vista previa desplegada, con recarga desde varias secciones.
+- [x] 3.1 Revisión visual del responsable en local y en la vista previa desplegada, con recarga desde varias secciones.
 - [x] 3.2 Actualizar relevo, estado, registro del bloque `entrada`, mapa y referencias; ejecutar `memoria:scan` y `memoria:check`.
-- [ ] 3.3 Tras la aceptación, archivar el cambio y consolidar `home-intro` con el flujo de OpenSpec.
+- [x] 3.3 Tras la aceptación, archivar el cambio y consolidar `home-intro` con el flujo de OpenSpec.

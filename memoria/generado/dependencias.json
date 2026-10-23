@@ -229,6 +229,12 @@
         "openspec/changes/archive/2026-09-18-nav-tira-inicio/specs/home-intro/spec.md",
         "openspec/changes/archive/2026-09-18-nav-tira-inicio/specs/site-navigation/spec.md",
         "openspec/changes/archive/2026-09-18-nav-tira-inicio/tasks.md",
+        "openspec/changes/archive/2026-10-23-home-intro-arranque-cabecera/.openspec.yaml",
+        "openspec/changes/archive/2026-10-23-home-intro-arranque-cabecera/README.md",
+        "openspec/changes/archive/2026-10-23-home-intro-arranque-cabecera/design.md",
+        "openspec/changes/archive/2026-10-23-home-intro-arranque-cabecera/proposal.md",
+        "openspec/changes/archive/2026-10-23-home-intro-arranque-cabecera/specs/home-intro/spec.md",
+        "openspec/changes/archive/2026-10-23-home-intro-arranque-cabecera/tasks.md",
         "openspec/changes/general-sans/.openspec.yaml",
         "openspec/changes/general-sans/design.md",
         "openspec/changes/general-sans/proposal.md",
@@ -245,12 +251,6 @@
         "openspec/changes/home-galeria-autoavance/proposal.md",
         "openspec/changes/home-galeria-autoavance/specs/home-galeria/spec.md",
         "openspec/changes/home-galeria-autoavance/tasks.md",
-        "openspec/changes/home-intro-arranque-cabecera/.openspec.yaml",
-        "openspec/changes/home-intro-arranque-cabecera/README.md",
-        "openspec/changes/home-intro-arranque-cabecera/design.md",
-        "openspec/changes/home-intro-arranque-cabecera/proposal.md",
-        "openspec/changes/home-intro-arranque-cabecera/specs/home-intro/spec.md",
-        "openspec/changes/home-intro-arranque-cabecera/tasks.md",
         "openspec/changes/home-nav-arranque-portada/.openspec.yaml",
         "openspec/changes/home-nav-arranque-portada/design.md",
         "openspec/changes/home-nav-arranque-portada/proposal.md",
@@ -337,7 +337,8 @@
         "memoria/sesiones/SES-032.md",
         "memoria/sesiones/SES-033.md",
         "memoria/sesiones/SES-034.md",
-        "memoria/sesiones/SES-035.md"
+        "memoria/sesiones/SES-035.md",
+        "memoria/sesiones/SES-036.md"
       ]
     }
   ]

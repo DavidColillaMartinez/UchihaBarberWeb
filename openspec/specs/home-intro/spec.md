@@ -8,7 +8,7 @@ Cruce de entrada de la portada: la capa con el logo de la marca como máscara ne
 
 ### Requirement: Cruce de entrada en la portada
 
-Al entrar en la portada, la página SHALL mostrar una capa negra con el logo de la marca como máscara negativa, de modo que el vídeo de la cabecera se vea a través de la tinta del logotipo. El logo SHALL crecer desde un tamaño diminuto hasta que una zona sólida de su propia tinta cubra la pantalla completa, momento en el que la capa se retira y la portada queda visible con el vídeo a pantalla completa y sus accesos disponibles: el encabezado accesible del negocio y «Pedir cita» en la barra y la navegación. El cruce SHALL repetirse en cada carga de la portada y MUST NOT existir en otras páginas.
+Al entrar en la portada, la página SHALL mostrar una capa negra con el logo de la marca como máscara negativa, de modo que el vídeo de la cabecera se vea a través de la tinta del logotipo. El logo SHALL crecer desde un tamaño diminuto hasta que una zona sólida de su propia tinta cubra la pantalla completa, momento en el que la capa se retira y la portada queda visible con el vídeo a pantalla completa y sus accesos disponibles: el encabezado accesible del negocio y «Pedir cita» en la barra y la navegación. El cruce SHALL repetirse en cada carga de la portada y MUST NOT existir en otras páginas. Al recargarse la portada, la página SHALL arrancar en la cabecera, con independencia de la sección visible antes de la recarga o del ancla de la URL, de modo que el cruce se reproduzca siempre sobre el vídeo de la cabecera.
 
 #### Scenario: Entrada nueva en la portada
 
@@ -27,8 +27,13 @@ Al entrar en la portada, la página SHALL mostrar una capa negra con el logo de 
 
 #### Scenario: Recarga de la portada
 
-- **WHEN** se recarga la portada o se vuelve a ella
-- **THEN** el cruce vuelve a reproducirse
+- **WHEN** se recarga la portada, incluso desde otra sección
+- **THEN** el cruce vuelve a reproducirse con la página situada en la cabecera
+
+#### Scenario: Recarga con ancla
+
+- **WHEN** se recarga una URL de la portada que incluye un ancla de sección
+- **THEN** la página arranca en la cabecera y el ancla no desplaza la vista durante el cruce
 
 #### Scenario: Otras páginas
 

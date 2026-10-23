@@ -57,16 +57,17 @@
         "openspec/changes/archive/2026-09-16-cabecera-entrada-portada/proposal.md",
         "openspec/changes/archive/2026-09-18-nav-tira-inicio/proposal.md",
         "openspec/changes/archive/2026-09-18-intro-con-logo/proposal.md",
-        "openspec/changes/home-intro-arranque-cabecera/proposal.md"
+        "openspec/changes/archive/2026-10-23-home-intro-arranque-cabecera/proposal.md"
       ],
       "aceptacion": [
         "memoria/sesiones/SES-010-cierre-cabecera.md",
         "memoria/sesiones/SES-020-validacion-visual.md",
-        "memoria/sesiones/SES-024.md"
+        "memoria/sesiones/SES-024.md",
+        "memoria/sesiones/SES-033.md",
+        "memoria/sesiones/SES-036.md"
       ],
       "pendientes": [
-        "Material profesional según PRODUCT; aprobación actual limitada a la versión demo.",
-        "Cambio home-intro-arranque-cabecera (la portada recarga siempre en la cabecera para que la máscara del logo se vea sobre el vídeo) pendiente de validación visual y archivo; requiere despliegue para comprobarlo en la vista previa."
+        "Material profesional según PRODUCT; aprobación actual limitada a la versión demo."
       ]
     },
     {

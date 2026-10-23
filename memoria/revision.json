@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "relevo": "memoria/sesiones/SES-035.md",
-  "resumen": "Revisión final del bloque de acceso a Productos con los retoques de composición del responsable: descripción y llamada centradas en su columna, vídeo presentado dentro de su mitad con margen sobre el negro (90 % de ancho y alto y 5 % de margen superior) en lugar de a sangre, y retirada de la nota de provisionalidad del bloque, cuyo carácter demo queda registrado en la documentación del proyecto. Verificado en navegador real que el bloque mide exactamente el viewport (900 px en 1440x900), que el titular se lee de abajo hacia arriba como texto real y que con movimiento reducido el vídeo queda en su cartel y sin JavaScript no hay control inactivo. Documentación conciliada: delta home-acceso-productos, diseño técnico, PRODUCT.md, bloque de memoria y relevo SES-035. Build y formato correctos, cambio OpenSpec válido, detector de Impeccable sin hallazgos. Pendiente de aceptación visual del responsable, del material oficial de vídeo y de la redacción definitiva del texto.",
+  "relevo": "memoria/sesiones/SES-036.md",
+  "resumen": "Cierre del bloque de entrada: el cambio home-intro-arranque-cabecera se archivó como archive/2026-10-23 (tareas 9/9) y la delta quedó consolidada en openspec/specs/home-intro/spec.md por el flujo de OpenSpec (requisito del cruce con arranque en cabecera y 6 escenarios). Aceptacion real del responsable el 23-10-2026 («vale listo esta bien, archiva») sobre la vista previa publicada y verificada en navegador el 22. Contrastado el bloque entrada en bloques.json, alcance y autorizacion en estado.json, mapa y SES-033/SES-036; el bloque solo conserva el pendiente de material profesional.",
   "alcance": "codigo-y-documentacion-no-aprobacion-visual",
   "archivos": [
     {
@@ -194,7 +194,7 @@
     },
     {
       "ruta": "memoria/bloques.json",
-      "sha256": "9680100d0cf6ed78c152ac5c1e25f3d9eed19500d334ad077add202ba288e4f9"
+      "sha256": "db1345281589066a4b9676e0e450c56000e538d6eea816be5f5defb3fc7a8243"
     },
     {
       "ruta": "memoria/cierre.md",
@@ -214,7 +214,7 @@
     },
     {
       "ruta": "memoria/estado.json",
-      "sha256": "ad706ce5fcca3f6c7bd2a253c36af109c0bb05825f11e49f92621784c0062ce9"
+      "sha256": "b26ec02ca61b38cb90c5d9d3f747de2197adb2b60c81a43cb2a3066a069efaed"
     },
     {
       "ruta": "memoria/herramientas.md",
@@ -226,7 +226,7 @@
     },
     {
       "ruta": "memoria/mapa.md",
-      "sha256": "6f1ac27f32efac1280265363aee279b4475a04138220e50d06ac3579c2a27c45"
+      "sha256": "97c054ccc7830e863f526170a01880757fdd29b8aa707329d55262ed6322dd66"
     },
     {
       "ruta": "memoria/primer-commit.md",
@@ -386,7 +386,7 @@
     },
     {
       "ruta": "memoria/sesiones/SES-033.md",
-      "sha256": "57456a7b5868af7746c61611f021372ce74a7de8b94ec82731d71d56e1506d8b"
+      "sha256": "947a3f3d34303b44e773dcb5a91cbc9c18fdbd87938811f95d89b296d2b7cea2"
     },
     {
       "ruta": "memoria/sesiones/SES-034.md",
@@ -395,6 +395,10 @@
     {
       "ruta": "memoria/sesiones/SES-035.md",
       "sha256": "e52dfbf724b5a30503e8f179722d223e670573465b47e343664f86a5697a3add"
+    },
+    {
+      "ruta": "memoria/sesiones/SES-036.md",
+      "sha256": "3ebb920943affb873e9bf4c32897f0d5f1384d0a459e41f7bb98caac0d370abe"
     },
     {
       "ruta": "openspec/changes/archive/.gitkeep",
@@ -545,6 +549,30 @@
       "sha256": "170025634963b8b3883803c3ccbb952092968bc4d463dca3ecb696c0f2d074ca"
     },
     {
+      "ruta": "openspec/changes/archive/2026-10-23-home-intro-arranque-cabecera/.openspec.yaml",
+      "sha256": "0ad492a63d87e00a8bc135b0a1a2b19270dbb9ffd997a69b89fd4ab72015a944"
+    },
+    {
+      "ruta": "openspec/changes/archive/2026-10-23-home-intro-arranque-cabecera/README.md",
+      "sha256": "2d5dc96457140c5f9861e311637df511bfee365f6484edcd0c8cad39444b7d96"
+    },
+    {
+      "ruta": "openspec/changes/archive/2026-10-23-home-intro-arranque-cabecera/design.md",
+      "sha256": "41f534dcb4193df1d8a05ce1e6a1da170f09516b31370ecfa17596f3e18ebfde"
+    },
+    {
+      "ruta": "openspec/changes/archive/2026-10-23-home-intro-arranque-cabecera/proposal.md",
+      "sha256": "1d76448bd29972d5f33ed515b33d3bdd479fdb496e71caad60be77bd34df8255"
+    },
+    {
+      "ruta": "openspec/changes/archive/2026-10-23-home-intro-arranque-cabecera/specs/home-intro/spec.md",
+      "sha256": "3c38dcd0f7cbd7cdcdc18e168db8d5dc5e7cd1a9a38f8ac949f971e0091ca031"
+    },
+    {
+      "ruta": "openspec/changes/archive/2026-10-23-home-intro-arranque-cabecera/tasks.md",
+      "sha256": "9f84ce4088b47db9628c92e78c7214f3a991cf7b1b0720425fbd3e02c066a0ec"
+    },
+    {
       "ruta": "openspec/changes/general-sans/.openspec.yaml",
       "sha256": "dc276ca1f5af9fc6062b02d4253186f254288dcf61711e1a8ec3573e8587440a"
     },
@@ -609,30 +637,6 @@
       "sha256": "43939d33115ebf0730c8c2fa2b0fad1ca6ae728f9fd50d0bf2dcbbe75e27153f"
     },
     {
-      "ruta": "openspec/changes/home-intro-arranque-cabecera/.openspec.yaml",
-      "sha256": "0ad492a63d87e00a8bc135b0a1a2b19270dbb9ffd997a69b89fd4ab72015a944"
-    },
-    {
-      "ruta": "openspec/changes/home-intro-arranque-cabecera/README.md",
-      "sha256": "2d5dc96457140c5f9861e311637df511bfee365f6484edcd0c8cad39444b7d96"
-    },
-    {
-      "ruta": "openspec/changes/home-intro-arranque-cabecera/design.md",
-      "sha256": "41f534dcb4193df1d8a05ce1e6a1da170f09516b31370ecfa17596f3e18ebfde"
-    },
-    {
-      "ruta": "openspec/changes/home-intro-arranque-cabecera/proposal.md",
-      "sha256": "1d76448bd29972d5f33ed515b33d3bdd479fdb496e71caad60be77bd34df8255"
-    },
-    {
-      "ruta": "openspec/changes/home-intro-arranque-cabecera/specs/home-intro/spec.md",
-      "sha256": "3c38dcd0f7cbd7cdcdc18e168db8d5dc5e7cd1a9a38f8ac949f971e0091ca031"
-    },
-    {
-      "ruta": "openspec/changes/home-intro-arranque-cabecera/tasks.md",
-      "sha256": "56a9b82e74e1a86c8263eb1a260a7d12586d7be4439d997eaf6b6d6cd3733e8e"
-    },
-    {
       "ruta": "openspec/changes/home-nav-arranque-portada/.openspec.yaml",
       "sha256": "0ad492a63d87e00a8bc135b0a1a2b19270dbb9ffd997a69b89fd4ab72015a944"
     },
@@ -690,7 +694,7 @@
     },
     {
       "ruta": "openspec/specs/home-intro/spec.md",
-      "sha256": "c69ec573c02c4eb4831e16591484c1d37e512c8c63c604c9a50d0be502261970"
+      "sha256": "1453ee57f25c1bcd593f755888b4aa6e38331a59db830b9774a6df42ed96797e"
     },
     {
       "ruta": "openspec/specs/home-servicios/spec.md",
@@ -873,5 +877,5 @@
       "sha256": "98e1484cb0954ac7306a850cdbf03c8140e2fd32e65fa6c213b19343dfdc6d43"
     }
   ],
-  "huella": "58f83d6b9fe164bb556c3cf75b8e3baef899b717f1431e12d8aea1690510b00d"
+  "huella": "c72d35f594699708c8f434d24c858cc167f14790b585ad4ff530ee78cb03dc36"
 }
