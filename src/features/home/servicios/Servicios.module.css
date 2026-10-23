@@ -110,11 +110,12 @@
   list-style: none;
 }
 
-/* El nombre va alineado a la izquierda; la descripción lo sustituye al
-   hacer hover y la fila crece hacia abajo para leerla: la fila del nombre
-   colapsa mientras crece la de la descripción, para un espacio equivalente
-   arriba y abajo. Altura ligada a la franja: 8 filas de 5 svh = 40 svh,
-   el alto disponible dentro de la franja de 50 svh. */
+/* La fila despliega su descripcion al interactuar: en escritorio lo
+   gobiernan hover y foco (CSS) y en movil el control de la fila (el JS
+   marca data-abierta). Al desplegar, el nombre cede su espacio y la
+   descripcion lo ocupa, con un espaciado equivalente arriba y abajo.
+   Altura ligada a la franja: 8 filas de 5 svh = 40 svh, el alto disponible
+   dentro de la franja de 50 svh. */
 .fila {
   position: relative;
   display: grid;
@@ -125,7 +126,6 @@
   min-height: 5svh;
   padding: 0.4rem 1rem 0.4rem 1rem;
   color: var(--color-fg);
-  text-decoration: none;
   transition:
     color 0.35s ease-out,
     grid-template-rows 0.45s cubic-bezier(0.16, 1, 0.3, 1);
@@ -143,15 +143,47 @@
   pointer-events: none;
 }
 
-.fila:is(:hover, :focus-visible) {
-  color: var(--color-bg);
-  grid-template-rows: 0fr 1fr;
+/* Escritorio: enlace que cubre la fila entera (activar cualquier punto
+   abre reservas, comportamiento aceptado). Su nombre accesible va en su
+   interior; el contenido visible de la fila no es interactivo. */
+.enlaceFila {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  color: inherit;
+  text-decoration: none;
 }
 
-.fila:is(:hover, :focus-visible)::before {
-  transform: scaleY(1);
+/* Movil: control desplegable que cubre la fila; la reserva queda en el
+   enlace «Reserva ya». En cada breakpoint solo uno de los dos controles
+   existe para interaccion y tabulado. */
+.control {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
 }
 
+/* Nombre accesible del enlace de escritorio, fuera de lo visual. */
+.ocultoVisual {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+/* El contenido visible es comun a los dos controles y no interactivo por
+   si mismo: los controles lo cubren para capturar el toque o el clic. */
 .textos {
   position: relative;
   z-index: 1;
@@ -183,6 +215,8 @@
 }
 
 .descripcionContenedor {
+  position: relative;
+  z-index: 1;
   grid-row: 2;
   grid-column: 1;
   display: grid;
@@ -200,22 +234,10 @@
   transform: translateY(0.75rem);
 }
 
-.fila:is(:hover, :focus-visible) .nombre {
-  opacity: 0;
-  transform: translateY(-115%);
-}
-
-.fila:is(:hover, :focus-visible) .descripcionContenedor {
-  grid-template-rows: 1fr;
-  opacity: 1;
-}
-
-.fila:is(:hover, :focus-visible) .descripcion {
-  transform: translateY(0);
-}
-
 /* El precio cede su sitio a la llamada de reserva. Abarcan las dos filas
-   para quedar centrados con el li desplegado. */
+   para quedar centrados con el li desplegado. La llamada va por encima de
+   los controles (es el unico enlace activo en movil) y oculta su
+   visibilidad al plegarse para no robar toques ni tabulaciones. */
 .precio,
 .llamada {
   position: relative;
@@ -235,22 +257,73 @@
   font-variant-numeric: tabular-nums;
 }
 
-/* Llamada de reserva: Medium (prueba manual: Regular o Semibold). */
+/* Llamada de reserva: Medium (prueba manual: Regular o Semibold).
+   Hereda el color de la fila: al ser ahora un enlace real, el navegador
+   le pondria su azul de link. */
 .llamada {
+  z-index: 3;
+  color: inherit;
   font-weight: var(--font-weight-medium);
   padding: 0.4rem 1.1rem;
   border: 1px solid currentColor;
+  text-decoration: none;
   opacity: 0;
+  visibility: hidden;
   transform: translateX(0.75rem);
+  transition:
+    opacity 0.35s ease-out,
+    transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    visibility 0s 0.35s;
 }
 
-.fila:is(:hover, :focus-visible) .precio {
-  opacity: 0;
-}
+/* Despliegue compartido por los dos mecanismos: las reglas se escriben en
+   los bloques de escritorio (hover/foco) y de movil (data-abierta), que
+   deben espejarse. */
 
-.fila:is(:hover, :focus-visible) .llamada {
-  opacity: 1;
-  transform: translateX(0);
+/* Escritorio: hover y foco visible despliegan; el control movil queda
+   fuera. El hover no se aplica en movil para que el toque no deje un
+   estado de hover pegajoso que reabra la fila al contraerla. */
+@media (min-width: 48rem) {
+  .control {
+    display: none;
+  }
+
+  .fila:is(:hover, :has(:focus-visible)) {
+    color: var(--color-bg);
+    grid-template-rows: 0fr 1fr;
+  }
+
+  .fila:is(:hover, :has(:focus-visible))::before {
+    transform: scaleY(1);
+  }
+
+  .fila:is(:hover, :has(:focus-visible)) .nombre {
+    opacity: 0;
+    transform: translateY(-115%);
+  }
+
+  .fila:is(:hover, :has(:focus-visible)) .descripcionContenedor {
+    grid-template-rows: 1fr;
+    opacity: 1;
+  }
+
+  .fila:is(:hover, :has(:focus-visible)) .descripcion {
+    transform: translateY(0);
+  }
+
+  .fila:is(:hover, :has(:focus-visible)) .precio {
+    opacity: 0;
+  }
+
+  .fila:is(:hover, :has(:focus-visible)) .llamada {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+    transition:
+      opacity 0.35s ease-out,
+      transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+      visibility 0s;
+  }
 }
 
 @media (max-width: 48rem) {
@@ -287,5 +360,48 @@
   .nombre,
   .descripcion {
     font-size: 1rem;
+  }
+
+  .enlaceFila {
+    display: none;
+  }
+
+  /* Movil: el estado abierto lo marca el JS (data-abierta); el foco
+     visible tambien despliega para teclado. Espeja el bloque de escritorio. */
+  .fila:is([data-abierta], :has(:focus-visible)) {
+    color: var(--color-bg);
+    grid-template-rows: 0fr 1fr;
+  }
+
+  .fila:is([data-abierta], :has(:focus-visible))::before {
+    transform: scaleY(1);
+  }
+
+  .fila:is([data-abierta], :has(:focus-visible)) .nombre {
+    opacity: 0;
+    transform: translateY(-115%);
+  }
+
+  .fila:is([data-abierta], :has(:focus-visible)) .descripcionContenedor {
+    grid-template-rows: 1fr;
+    opacity: 1;
+  }
+
+  .fila:is([data-abierta], :has(:focus-visible)) .descripcion {
+    transform: translateY(0);
+  }
+
+  .fila:is([data-abierta], :has(:focus-visible)) .precio {
+    opacity: 0;
+  }
+
+  .fila:is([data-abierta], :has(:focus-visible)) .llamada {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+    transition:
+      opacity 0.35s ease-out,
+      transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+      visibility 0s;
   }
 }

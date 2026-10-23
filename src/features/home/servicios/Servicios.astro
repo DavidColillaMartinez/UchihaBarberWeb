@@ -90,18 +90,40 @@ const servicios = [
     </div>
 
     <ul class={styles.lista} data-lista-servicios>
-      {servicios.map((servicio) => (
+      {servicios.map((servicio, indice) => (
         <li class={styles.item}>
-          <BookingLink class={styles.fila}>
+          <div class={styles.fila} data-fila-servicio>
+            {/* Escritorio: la fila completa enlaza a reservas (comportamiento
+                 aceptado); su nombre accesible es el nombre del servicio. */}
+            <BookingLink class={styles.enlaceFila}>
+              <span class={styles.ocultoVisual}>
+                Reservar {servicio.nombre}
+              </span>
+            </BookingLink>
+            {/* Movil: control desplegable de la fila; la reserva queda en
+                 el enlace «Reserva ya». El estado abierto lo marca el JS. */}
+            <button
+              class={styles.control}
+              type="button"
+              aria-expanded="false"
+              aria-controls={`servicio-descripcion-${indice}`}
+              aria-labelledby={`servicio-nombre-${indice}`}
+              data-control-servicio
+            />
             <span class={styles.textos}>
-              <span class={styles.nombre}>{servicio.nombre}</span>
+              <span class={styles.nombre} id={`servicio-nombre-${indice}`}>
+                {servicio.nombre}
+              </span>
             </span>
-            <span class={styles.descripcionContenedor}>
+            <span
+              class={styles.descripcionContenedor}
+              id={`servicio-descripcion-${indice}`}
+            >
               <span class={styles.descripcion}>{servicio.descripcion}</span>
             </span>
             <span class={styles.precio}>{servicio.precio}</span>
-            <span class={styles.llamada}>Reserva ya</span>
-          </BookingLink>
+            <BookingLink class={styles.llamada}>Reserva ya</BookingLink>
+          </div>
         </li>
       ))}
     </ul>
@@ -229,6 +251,54 @@ const servicios = [
     video.removeAttribute("autoplay");
     video.pause();
   }
+
+  /* Desplegable en movil: el primer toque despliega la descripcion y
+     muestra «Reserva ya» (que enlaza a reservas); un segundo toque la
+     contrae, y abrir otro servicio cierra el anterior. En escritorio el
+     despliegue lo gobierna hover/foco con CSS y la fila entera enlaza. */
+  const filas = Array.from(
+    seccion?.querySelectorAll<HTMLElement>("[data-fila-servicio]") ?? [],
+  );
+  const controles = filas.map((fila) =>
+    fila.querySelector<HTMLButtonElement>("[data-control-servicio]"),
+  );
+
+  const contraerFila = (indice: number) => {
+    const fila = filas[indice];
+    const control = controles[indice];
+    if (!fila || !control) {
+      return;
+    }
+    delete fila.dataset.abierta;
+    control.setAttribute("aria-expanded", "false");
+  };
+
+  controles.forEach((control, indice) => {
+    control?.addEventListener("click", () => {
+      const fila = filas[indice];
+      if (!fila || !control) {
+        return;
+      }
+      const abierta = fila.hasAttribute("data-abierta");
+      filas.forEach((_, otra) => {
+        if (otra !== indice) {
+          contraerFila(otra);
+        }
+      });
+      if (abierta) {
+        contraerFila(indice);
+      } else {
+        fila.setAttribute("data-abierta", "");
+        control.setAttribute("aria-expanded", "true");
+      }
+    });
+  });
+
+  /* Al pasar a escritorio, el despliegue vuelve a pilotarlo hover/foco. */
+  const consultaMovil = window.matchMedia("(max-width: 48rem)");
+  consultaMovil.addEventListener("change", () => {
+    filas.forEach((_, indice) => contraerFila(indice));
+  });
 
   /* Pausa el vídeo de las letras cuando la sección no está en pantalla. */
   if (seccion && video) {
