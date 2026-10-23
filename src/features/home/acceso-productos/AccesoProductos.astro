@@ -1,24 +1,101 @@
 ---
 import styles from "./AccesoProductos.module.css";
 import ProvisionalNote from "@/components/ui/ProvisionalNote.astro";
+
+/* Vídeo del bloque: material demo ya presente en el repo. Cuando llegue el
+   material oficial de productos se sustituyen estas dos rutas (vídeo y
+   cartel) y el resto de la sección no cambia. */
+const videoDemo = "/videos/CorteDePelo1.mp4";
+const cartelDemo = "/videos/CorteDePelo1-poster.jpg";
 ---
 
 <section
   id="productos"
   class={styles.acceso}
+  data-acceso-productos
   aria-labelledby="productos-titulo"
 >
-  <div class={styles.contenido}>
+  <div class={styles.lateral}>
+    <!-- Titular vertical de abajo hacia arriba. El texto sigue siendo HTML
+         real (legible por lectores de pantalla y seleccionable): la
+         escritura vertical la resuelve CSS con `writing-mode` y un giro. -->
     <h2 id="productos-titulo" class={styles.titulo}>
-      Productos
+      <span class={styles.palabra}>Productos</span>
     </h2>
-    <!-- Pendiente: descripción breve real y vídeo del bloque; no inventar textos. -->
-    <p class={styles.aviso}>
-      <a href="/productos">Conócelos</a>
+
+    <!-- Texto demo: pendiente de la redacción definitiva del responsable. -->
+    <p class={styles.eslogan}>
+      El corte termina cuando te levantas de la silla, pero tu estilo te
+      acompaña el resto del día. Estos son los productos con los que cuidamos,
+      peinamos y damos forma al pelo en la barbería: los mismos que usamos
+      nosotros, para que lleves tu estilo a todas partes.
     </p>
+
+    <p class={styles.accion}>
+      <a class={styles.boton} href="/productos">
+        Conócelos
+      </a>
+    </p>
+
+  
   </div>
-  <div class={styles.visor} aria-hidden="true"></div>
-  <ProvisionalNote>
-    Acceso provisional · pendiente de vídeo y descripción
-  </ProvisionalNote>
+
+  <div class={styles.escena}>
+    <video
+      class={styles.video}
+      data-video-productos
+      src={videoDemo}
+      poster={cartelDemo}
+      muted
+      loop
+      playsinline
+      preload="none"
+      tabindex="-1"
+      aria-hidden="true"
+    ></video>
+
+    <!-- Control de pausa: el vídeo se reproduce solo cuando la sección está
+         a la vista, y este botón permite detenerlo (WCAG 2.2.2). Sin JS no
+         hay reproducción posible y el botón permanece oculto. -->
+    <button
+      class={styles.control}
+      type="button"
+      data-control-video
+      data-estado="pausado"
+      aria-label="Reproducir el vídeo"
+    >
+      <svg
+        class={styles.iconoPausa}
+        viewBox="0 0 24 24"
+        fill="none"
+        aria-hidden="true"
+      >
+        <path
+          d="M9 5v14M15 5v14"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="square"
+        ></path>
+      </svg>
+      <svg
+        class={styles.iconoReproducir}
+        viewBox="0 0 24 24"
+        fill="none"
+        aria-hidden="true"
+      >
+        <path
+          d="M8 5.5v13l10-6.5z"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linejoin="miter"
+        ></path>
+      </svg>
+    </button>
+  </div>
 </section>
+
+<script>
+  import { iniciarAccesoProductos } from "@/features/home/acceso-productos/acceso-productos";
+
+  iniciarAccesoProductos();
+</script>

@@ -1,27 +1,216 @@
+/* Acceso a Productos: bloque de contraste de la portada.
+   Composición de escritorio: ~40 % de contenido a la izquierda y ~60 % de
+   vídeo a la derecha, con el titular escrito de abajo hacia arriba. El
+   bloque se apoya en el negro para marcar el contraste con la Galería y
+   sostener el ritmo de secciones claras y oscuras del recorrido. */
+
 .acceso {
+  /* Aire reservado arriba y abajo: arriba para que la navegación fija (que
+     reaparece como tira negra) no tape el titular ni el texto; abajo para el
+     respiro del bloque. */
+  --aire-superior: 3.75rem;
+  --aire-inferior: 1.25rem;
+  /* Avance vertical de la palabra en General Sans Bold: 6,47 veces el tamaño
+     de letra, medido sobre los archivos de la familia en uso. */
+  --avance-palabra: 6.4667;
   display: grid;
-  gap: 1rem;
-  padding: 4rem 1.5rem;
-  border-top: 1px solid var(--color-fg);
+  grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+  background: var(--color-fg);
+  color: var(--color-bg);
 }
 
-.contenido {
+.lateral {
   display: grid;
-  gap: 1rem;
-  max-width: 40%;
-}
-
-.titulo {
-  margin: 0;
-  font-size: clamp(2rem, 6vw, 4rem);
-  line-height: 1;
+  grid-template-columns: auto minmax(0, 1fr);
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "titulo eslogan"
+    "titulo accion"
+    "titulo aviso";
+  column-gap: clamp(0.75rem, 1.2vw, 1.5rem);
+  row-gap: 1.5rem;
+  align-items: start;
+  padding: var(--aire-inferior) clamp(1.25rem, 3vw, 3.5rem);
+  padding-top: var(--aire-superior);
 }
 
 .aviso {
-  margin: 0;
+  grid-area: aviso;
 }
 
-.visor {
-  min-height: 30vh;
-  border: 1px solid var(--color-fg);
+/* Titular: la palabra se apoya en el borde inferior de la columna y sube
+   desde ahí, como en la referencia del cliente. */
+.titulo {
+  grid-area: titulo;
+  display: flex;
+  align-items: flex-end;
+  margin: 0;
+  font-weight: var(--font-weight-bold);
+  line-height: 1;
+}
+
+.palabra {
+  display: inline-block;
+  /* Escritura vertical de derecha a izquierda y giro de 180°: la palabra se
+     lee de abajo hacia arriba, con las letras tumbadas a la derecha. El DOM
+     conserva «Productos»: el estilo no cambia lo que se lee ni lo que se
+     anuncia. */
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  text-transform: uppercase;
+  /* El tamaño se deriva de la altura disponible: la palabra ocupa el bloque
+     de arriba abajo sin que la sección crezca más allá de una pantalla. */
+  font-size: max(
+    2.75rem,
+    min(
+      calc(
+        (100svh - var(--aire-superior) - var(--aire-inferior)) /
+          var(--avance-palabra)
+      ),
+      22vw
+    )
+  );
+  letter-spacing: -0.01em;
+}
+
+.eslogan {
+  grid-area: eslogan;
+  margin: auto;
+  max-width: 34ch;
+  font-family: var(--font-text);
+  /* Texto especial: Semibold Italic 600 (corte real de la familia, sin
+     cursiva sintética). */
+  font-weight: var(--font-weight-semibold);
+  font-style: italic;
+  font-size: clamp(1.05rem, 1.3vw, 1.45rem);
+  line-height: 1.35;
+  color: rgb(255 255 255 / 0.88);
+  text-wrap: pretty;
+  text-align: center;
+}
+
+.accion {
+  grid-area: accion;
+  align-self: end;
+  margin: auto;
+}
+
+/* «Conócelos»: mismo tratamiento que el acceso de la navegación (recuadro
+   con borde y sin relleno que se invierte al interactuar). */
+.boton {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  padding: 0.55rem 1.5rem;
+  border: 1px solid var(--color-bg);
+  color: var(--color-bg);
+  font-family: var(--font-text);
+  /* Llamada a la acción: Medium. */
+  font-weight: var(--font-weight-medium);
+  font-size: 1rem;
+  text-decoration: none;
+  transition:
+    background-color 0.25s ease-out,
+    color 0.25s ease-out;
+}
+
+.boton:is(:hover, :focus-visible) {
+  background: var(--color-bg);
+  color: var(--color-fg);
+}
+
+/* Al invertir el botón, el foco por defecto (del color del texto, negro)
+   desaparecería sobre el fondo negro: se mantiene en blanco para que la
+   posición del teclado siga siendo visible. */
+.boton:focus-visible {
+  outline-color: var(--color-bg);
+}
+
+.escena {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.video {
+  position: absolute;
+  inset: 0;
+  width: 90%;
+  height: 90%;
+  object-fit: cover;
+  /* Blanco y negro: mismo tratamiento que el resto del material audiovisual. */
+  filter: grayscale(1);
+  background: var(--color-fg);
+  margin-top: 5%;
+}
+
+/* Control de pausa sobre el vídeo. Sin JS no hay reproducción posible, así
+   que el botón permanece oculto hasta que el script lo revela. */
+.control {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  width: 2.75rem;
+  height: 2.75rem;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 1px solid rgb(255 255 255 / 0.55);
+  background: rgb(0 0 0 / 0.35);
+  color: var(--color-bg);
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.4s ease-out,
+    visibility 0.4s ease-out,
+    background-color 0.25s ease-out,
+    border-color 0.25s ease-out,
+    color 0.25s ease-out;
+}
+
+.control[data-visible] {
+  opacity: 1;
+  visibility: visible;
+}
+
+.control:is(:hover, :focus-visible) {
+  background: rgb(255 255 255 / 0.92);
+  border-color: transparent;
+  color: var(--color-fg);
+}
+
+/* Igual que en el botón: sobre el vídeo, el foco se dibuja en blanco. */
+.control:focus-visible {
+  outline-color: var(--color-bg);
+}
+
+.control svg {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+/* Cada icono aparece según el estado del vídeo. */
+.control[data-estado="reproduciendo"] .iconoReproducir,
+.control[data-estado="pausado"] .iconoPausa {
+  display: none;
+}
+
+/* Adaptación provisional: la sección se apila y el vídeo pasa debajo del
+   contenido. El diseño móvil definitivo corresponde a su propia fase; aquí
+   solo se evita que la composición de escritorio bloquee el apilado. */
+@media (max-width: 48rem) {
+  .acceso {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto auto;
+    align-content: start;
+  }
+
+  .palabra {
+    font-size: max(2.25rem, min(13svh, 22vw));
+  }
+
+  .escena {
+    min-height: 40svh;
+  }
 }

@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "relevo": "memoria/sesiones/SES-035.md",
-  "resumen": "Coherencia documental tras el arranque en cabecera del cruce de entrada (SES-033): contrastados el codigo (BaseLayout e intro.ts), el delta de home-intro, PRODUCT, el mapa y el registro del bloque entrada; verificado en navegador headless que la recarga desde Servicios y con ancla deja la portada arriba con la mascara sobre el video de la cabecera, y que el logo ausente y el movimiento reducido liberan la pagina. Corregida la referencia de Acceso a Productos, que apuntaba a SES-033 en lugar de SES-035. El trabajo de acceso a productos (SES-035) y el de navegacion (SES-034) siguen en curso y no han sido revisados en detalle.",
+  "resumen": "Revisión final del bloque de acceso a Productos con los retoques de composición del responsable: descripción y llamada centradas en su columna, vídeo presentado dentro de su mitad con margen sobre el negro (90 % de ancho y alto y 5 % de margen superior) en lugar de a sangre, y retirada de la nota de provisionalidad del bloque, cuyo carácter demo queda registrado en la documentación del proyecto. Verificado en navegador real que el bloque mide exactamente el viewport (900 px en 1440x900), que el titular se lee de abajo hacia arriba como texto real y que con movimiento reducido el vídeo queda en su cartel y sin JavaScript no hay control inactivo. Documentación conciliada: delta home-acceso-productos, diseño técnico, PRODUCT.md, bloque de memoria y relevo SES-035. Build y formato correctos, cambio OpenSpec válido, detector de Impeccable sin hallazgos. Pendiente de aceptación visual del responsable, del material oficial de vídeo y de la redacción definitiva del texto.",
   "alcance": "codigo-y-documentacion-no-aprobacion-visual",
   "archivos": [
     {
@@ -174,7 +174,7 @@
     },
     {
       "ruta": "PRODUCT.md",
-      "sha256": "c3214c237fe6bb9b5e30ca328d1f94c60095aaa225a01f6eff9fbc7a739dcd93"
+      "sha256": "819559268728f0af56d43a6a037c322b2b27110a5ff5fc93b6cacdbdbf4cffda"
     },
     {
       "ruta": "README.md",
@@ -394,7 +394,7 @@
     },
     {
       "ruta": "memoria/sesiones/SES-035.md",
-      "sha256": "c8e0a20b9b806e024c77ff0c3860bd4d2f64c13c87f4ea4621fd080a5e090ae4"
+      "sha256": "e52dfbf724b5a30503e8f179722d223e670573465b47e343664f86a5697a3add"
     },
     {
       "ruta": "openspec/changes/archive/.gitkeep",
@@ -574,7 +574,7 @@
     },
     {
       "ruta": "openspec/changes/home-acceso-productos/design.md",
-      "sha256": "500410f3f57bf6e0999a46770525c826d2a117b9f364c0038adfc629a2f200fc"
+      "sha256": "92683697f03cabc66fe0aa3565409c9d4e41ee813ddb9e5337aa5b531b5313be"
     },
     {
       "ruta": "openspec/changes/home-acceso-productos/proposal.md",
@@ -582,11 +582,11 @@
     },
     {
       "ruta": "openspec/changes/home-acceso-productos/specs/home-acceso-productos/spec.md",
-      "sha256": "13747e67e4b86765161f6a4c0308978044a58d7f138dc9f8a1a7866b8fa15982"
+      "sha256": "e8983c10c887e59ce214a5229fc3ecd1f926610d04c6338711849bfafc3844d1"
     },
     {
       "ruta": "openspec/changes/home-acceso-productos/tasks.md",
-      "sha256": "6b1795e14820ccbe55a12d93187ef998daaebb5a298dd20af78611e77d670b5e"
+      "sha256": "aa0368d90c75e9583a5a7248d80655f6b1ce345193d25e41bd29a7fb09a4f435"
     },
     {
       "ruta": "openspec/changes/home-galeria-autoavance/.openspec.yaml",
@@ -778,11 +778,11 @@
     },
     {
       "ruta": "src/features/home/acceso-productos/AccesoProductos.astro",
-      "sha256": "6f7b191b180dc83c468ba32d64f953887ee875d6d62b9785a55c5f7bd81ceb5b"
+      "sha256": "66721b171ff4051e9e7e528c7ef9104d92188178212f88a57cc4c8f8fd79b488"
     },
     {
       "ruta": "src/features/home/acceso-productos/AccesoProductos.module.css",
-      "sha256": "80a79cc323ddf7f1d3f3ea87cedd5de5052706cf30cce05c1c92e3a8493e7dd5"
+      "sha256": "715547db1a239e95807154ca765f7c7244a2c18a83638dab9bba00217a798e01"
     },
     {
       "ruta": "src/features/home/acceso-productos/acceso-productos.ts",
@@ -873,5 +873,5 @@
       "sha256": "98e1484cb0954ac7306a850cdbf03c8140e2fd32e65fa6c213b19343dfdc6d43"
     }
   ],
-  "huella": "b7366339220e1e2169663f90dd5a7674353a4547bb5170d41e9f8eb3be5504b5"
+  "huella": "58f83d6b9fe164bb556c3cf75b8e3baef899b717f1431e12d8aea1690510b00d"
 }
