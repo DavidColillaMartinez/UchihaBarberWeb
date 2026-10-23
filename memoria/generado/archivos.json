@@ -263,8 +263,8 @@
     {
       "ruta": "PRODUCT.md",
       "tipo": "archivo",
-      "bytes": 15151,
-      "sha256": "b6820059b06101bdf35b3979cb7dee4108e9771a60312d2ec9bb85916b2b484b"
+      "bytes": 15351,
+      "sha256": "8e5e6cd73aa9f369b0b33fc89bbc4fdb1b34b45dce5383a0945ee44ab7493cb0"
     },
     {
       "ruta": "README.md",
@@ -293,8 +293,8 @@
     {
       "ruta": "memoria/bloques.json",
       "tipo": "archivo",
-      "bytes": 8406,
-      "sha256": "8561d85507b55116e245828068b2ca74382aa36f6d920a7ac1edd17870f8c297"
+      "bytes": 8576,
+      "sha256": "a91e86421796516b96033558659fd95f453ac51407e8fd1c9feef0352b909a00"
     },
     {
       "ruta": "memoria/cierre.md",
@@ -323,8 +323,8 @@
     {
       "ruta": "memoria/estado.json",
       "tipo": "archivo",
-      "bytes": 12673,
-      "sha256": "0b68eddf4ecc0017502dea84aa759689a404515e265e8d9cf701fc50d760cbb6"
+      "bytes": 12958,
+      "sha256": "a901ac497e1d23ce87f10ba3cd50a2b52a5027058cffecdccbd0efe9ae22a8b9"
     },
     {
       "ruta": "memoria/herramientas.md",
@@ -341,8 +341,8 @@
     {
       "ruta": "memoria/mapa.md",
       "tipo": "archivo",
-      "bytes": 17148,
-      "sha256": "3f7d2dfe93466eac7816c8aab84da85d799438d1b76d2b247ff18bd6527a315d"
+      "bytes": 17465,
+      "sha256": "c93e4fba3b1e606ad474d70053562e96425c1a095a128d21effa0abce2cf5e81"
     },
     {
       "ruta": "memoria/primer-commit.md",
@@ -371,8 +371,8 @@
     {
       "ruta": "memoria/revision.json",
       "tipo": "archivo",
-      "bytes": 39760,
-      "sha256": "189558acff742db9de7a619ff2fc1b06bb17153cc60dc477c5c195d09e68cd55"
+      "bytes": 40004,
+      "sha256": "f4e9a9011ae31c6416df49296092d5520385a02131835b002037b48b1e62d6a2"
     },
     {
       "ruta": "memoria/roadmap.md",
@@ -649,6 +649,12 @@
       "tipo": "archivo",
       "bytes": 2909,
       "sha256": "a19cdba69837f751bf20e3290663c7882094da697ef8c2cbd16910ecb192588d"
+    },
+    {
+      "ruta": "memoria/sesiones/SES-044.md",
+      "tipo": "archivo",
+      "bytes": 2138,
+      "sha256": "b695a55a2a555ee6c5135a95552a6d742052edca58321bdc9625ffa80fa83450"
     },
     {
       "ruta": "openspec/changes/archive/.gitkeep",
@@ -989,8 +995,8 @@
     {
       "ruta": "openspec/changes/home-acceso-productos/design.md",
       "tipo": "archivo",
-      "bytes": 10689,
-      "sha256": "5231210bf8237e77836efa0a5d1721579bbd14f869c01d16356c7267c444e28d"
+      "bytes": 11171,
+      "sha256": "ea6db07f8d556a4942090a966ae33806118ebbf6824235aa78f76e138410500f"
     },
     {
       "ruta": "openspec/changes/home-acceso-productos/proposal.md",
@@ -1001,14 +1007,14 @@
     {
       "ruta": "openspec/changes/home-acceso-productos/specs/home-acceso-productos/spec.md",
       "tipo": "archivo",
-      "bytes": 7010,
-      "sha256": "4313c7b4805fcea25f546cfdf6eef9c9bbe3880cc3ebb08dbcbc0ab16a54c815"
+      "bytes": 7419,
+      "sha256": "3c25762bab23ecd35fae8415230fd0f1add4fe2e1758f53d6712226e2c77f843"
     },
     {
       "ruta": "openspec/changes/home-acceso-productos/tasks.md",
       "tipo": "archivo",
-      "bytes": 4295,
-      "sha256": "aa0368d90c75e9583a5a7248d80655f6b1ce345193d25e41bd29a7fb09a4f435"
+      "bytes": 4274,
+      "sha256": "742c8fbafd930d27dc12e2afda8e8ce3db4494d71c116f42cd948b3eda7a3b59"
     },
     {
       "ruta": "openspec/changes/home-acceso-sessions/.openspec.yaml",
@@ -1451,14 +1457,14 @@
     {
       "ruta": "src/features/home/acceso-productos/AccesoProductos.astro",
       "tipo": "archivo",
-      "bytes": 2878,
-      "sha256": "7a811989ac637d39c06ff2ad0267ea26bd065b5a9566d34b145b671f1e302636"
+      "bytes": 3021,
+      "sha256": "0a79cd46b384bc0436e1dd56dce31d22b02520997a48371fde8b521995bbb031"
     },
     {
       "ruta": "src/features/home/acceso-productos/AccesoProductos.module.css",
       "tipo": "archivo",
-      "bytes": 5776,
-      "sha256": "2a98727ee84c070e72e96eceaf2e5c80efcc3269b840451e4a06fc0d6d8abede"
+      "bytes": 5863,
+      "sha256": "92b59d688db699c16239435088c00e040eaa63def9eb743123b0e231a5925362"
     },
     {
       "ruta": "src/features/home/acceso-productos/acceso-productos.ts",

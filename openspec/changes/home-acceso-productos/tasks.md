@@ -15,7 +15,7 @@
 
 - [x] 3.1 Incorporar el clip demo con el mismo tratamiento audiovisual del sitio (blanco y negro) y generar su cartel. Comprobado: el clip se reproduce en bucle y sin sonido cuando el bloque está a la vista, y se pausa al salir.
 - [x] 3.2 Implementar el control de pausa y reproducción accesible, con el nombre actualizado según el estado y el foco visible en blanco. Comprobado: el botón alterna entre «Pausar el vídeo» y «Reproducir el vídeo» y el anillo de foco se ve sobre el fondo negro.
-- [x] 3.3 Respetar la preferencia de movimiento reducido y la ausencia de JavaScript: el vídeo no se reproduce solo y el control inactivo no se muestra. Comprobado: con `prefers-reduced-motion: reduce` el vídeo queda pausado en su cartel; sin JavaScript se mantiene el cartel y no aparece el botón.
+- [x] 3.3 Respetar la preferencia de movimiento reducido y la ausencia de JavaScript según la corrección SES-037: con movimiento reducido el vídeo queda pausado en su cartel hasta petición explícita; sin JavaScript conserva el autoplay nativo y no aparece el botón inactivo.
 
 ## 4. Verificación
 

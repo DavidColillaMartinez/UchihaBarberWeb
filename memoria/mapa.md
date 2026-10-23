@@ -1,5 +1,7 @@
 # Mapa del proyecto
 
+SES-044: Acceso a Productos conserva los ajustes del responsable en descripción y botón; un contenedor local `marcoVideo` en su Astro/CSS Module mantiene las dimensiones del vídeo y ancla la pausa a 1rem de su esquina inferior derecha. Sin nuevas rutas ni comportamiento JS; no modifica las uniones de secciones.
+
 SES-043: segunda imagen de fondo en `Galeria.module.css`, negro/transparente en el borde inferior, de la misma altura que la superior. Mezcla Galería blanca con Productos negro y resulta indistinguible cuando Galería está negra; sin modificar Productos ni la unión superior con Servicios. Sin rutas nuevas; pendiente de aceptación visual.
 
 SES-042: ajuste local de `Galeria.module.css`, degradado superior blanco/transparente de `clamp(2rem, 6svh, 4rem)` que mezcla la junta con Servicios al oscurecerse el fondo existente. Blanco uniforme antes y después del fundido; sin nuevas rutas, capas sobre contenido ni cambios de scroll. Pendiente de aceptación visual.

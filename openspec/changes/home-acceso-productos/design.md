@@ -70,15 +70,15 @@ La navegación reaparece como tira negra de extremo a extremo al subir el scroll
 
 ### El vídeo se carga y reproduce solo cuando está cerca de la vista
 
-El `video` va con `preload="none"` y sin `autoplay`; un `IntersectionObserver` con margen de 200 px carga el archivo y llama a `play()` cuando el bloque se acerca, y pausa al salir.
+El `video` va con `preload="none"` y `autoplay` nativo (corrección vigente de SES-037); un `IntersectionObserver` con margen de 200 px carga el archivo y llama a `play()` cuando el bloque se acerca, y pausa al salir.
 
-- Alternativa descartada: `autoplay` en el marcado. Descargaría 1,3 MB de clip en cada carga de la portada y arrancaría el movimiento sin control.
+- La decisión inicial sin `autoplay` fue sustituida por el arranque nativo autorizado en SES-037; se conserva el control de pausa y la pausa por visibilidad.
 - Alternativa descartada: reproducir en bucle siempre. El coste de CPU y datos es permanente.
 - El vídeo es decorativo (`aria-hidden` y `tabindex="-1"`): no tiene audio con sentido ni información que leer.
 
 ### El cartel resuelve movimiento reducido y ausencia de JavaScript
 
-Se genera `public/videos/CorteDePelo1-poster.jpg` a partir del propio clip demo. Con movimiento reducido el vídeo no se descarga ni se reproduce y se queda el cartel; sin JavaScript, igual. El control de pausa permanece oculto hasta que el script lo revela, de modo que no aparece un botón inactivo.
+Se genera `public/videos/CorteDePelo1-poster.jpg` a partir del propio clip demo. Con movimiento reducido el script retira autoplay y pausa el vídeo en su cartel hasta una acción explícita. Sin JavaScript el vídeo conserva el autoplay nativo (SES-037). El control de pausa permanece oculto hasta que el script lo revela, de modo que no aparece un botón inactivo.
 
 - El botón de control cumple el requisito de control del movimiento automático (WCAG 2.2.2) de un vídeo en bucle de más de cinco segundos.
 - El foco visible se fuerza en blanco sobre los dos controles que invierten su color al interactuar: con el color de texto por defecto (negro) el anillo de foco sería invisible sobre el fondo negro.
@@ -91,14 +91,14 @@ El bloque no muestra ninguna marca de provisionalidad: el carácter demo del tex
 
 Tras la primera entrega, el responsable ajustó la composición y esa versión es la vigente:
 
-- La descripción y la llamada «Conócelos» quedan centradas en su columna (`margin: auto` en la celda y `text-align: center` en la descripción).
+- SES-044 sustituye el centrado inicial de la descripción por los ajustes del responsable: `margin-top: 6rem` y `text-align: right`; la llamada «Conócelos» conserva `margin: auto` y aumenta su texto a `1.4rem`. No cambia el contenido literal del párrafo.
 - El vídeo deja de llenar su mitad a sangre: se presenta dentro de ella, al 90 % de ancho y alto y con un margen superior del 5 %, de modo que el negro del bloque lo rodea sin marcos, bordes ni sombras.
 - Se retira la nota de provisionalidad del bloque.
 - El fondo del bloque deja de ser negro plano y pasa a un degradado `linear-gradient(30deg, #757575 0%, #000000 42%)`: la luz cae desde el ángulo inferior izquierdo y se apaga hacia el extremo superior derecho, de modo que el titular y el vídeo se apoyen en una superficie con volumen en lugar de sobre un plano.
 
 El degradado introduce el único color de la sección, un gris medio, y es una excepción dirigida a la recomendación de evitar degradados decorativos: aquí cumple una función de luz y profundidad sobre el bloque, no de adorno. El texto blanco mantiene contraste holgado en toda la superficie: en la zona más clara (esquina inferior izquierda, bajo la última letra del titular) ronda 5,3:1, y en la zona donde se apoya la descripción y la llamada el fondo ya es negro prácticamente puro.
 
-El código no se ha vuelto a tocar desde entonces; estos retoques conviven con el resto de decisiones técnicas de este documento.
+SES-044 añade un contenedor posicionado compartido por vídeo y pausa. El contenedor conserva el 90 % de ancho y alto y el margen superior del 5 % anteriores; el vídeo lo llena sin cambiar `cover`. La pausa se ancla a ese rectángulo con `right` y `bottom` de `1rem`, no a la columna exterior. Así se conserva el encuadre y el control queda dentro también en el apilado móvil.
 
 ### Tipografía y aislamiento
 
@@ -110,7 +110,7 @@ El bloque no introduce datos estructurados: no hay catálogo ni productos reales
 
 ## Risks / Trade-offs
 
-- **El vídeo demo no representa los productos** → se declara como material provisional en el propio bloque, en el relevo y en `PRODUCT.md`; la sustitución es un cambio de dos rutas.
+- **El vídeo demo no representa los productos** → se declara como material provisional en la documentación y en `PRODUCT.md`, no dentro del bloque; la sustitución es un cambio de dos rutas.
 - **El recorte del vídeo es aggressive**: el clip es de 16:9 y el bloque es casi vertical, así que `object-fit: cover` muestra solo la banda central (en un bloque de 864×900 px se ve el 54 % del ancho). → Se eligió el clip cuyo encuadre aguanta el recorte (`CorteDePelo1`, con la estantería de productos detrás del cliente) y se documenta para que el material oficial se encuadre pensando en el bloque.
 - **La medida del texto es estrecha** (unos 35 caracteres) por la composición de 40 % con el titular dentro. → Es la consecuencia de la dirección pedida y coincide con la referencia; el peso y el interlineado lo hacen legible.
 - **El aire superior resta altura al titular**: el bloque no puede pegar la palabra al borde superior mientras la navegación tape el contenido. → Se prioriza que la navegación no tape nada.

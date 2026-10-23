@@ -44,7 +44,7 @@ La sección SHALL presentar la palabra «Productos» con gran protagonismo, escr
 
 ### Requirement: Descripción y llamada al catálogo
 
-La sección SHALL incluir una descripción breve que explique qué son los productos y anime a visitarlos, y SHALL incluir un enlace con el texto «Conócelos» que lleve a la página del catálogo. La descripción y la llamada SHALL quedar centradas en su columna. El enlace SHALL ser alcanzable por teclado, con foco visible, y SHALL tener un objetivo de pulsación suficiente.
+La sección SHALL incluir una descripción breve que explique qué son los productos y anime a visitarlos, y SHALL incluir un enlace con el texto «Conócelos» que lleve a la página del catálogo. La descripción SHALL alinearse a la derecha con margen superior de 6rem, y la llamada SHALL permanecer centrada en su celda con texto de 1.4rem, según los ajustes del responsable. El enlace SHALL ser alcanzable por teclado, con foco visible, y SHALL tener un objetivo de pulsación suficiente.
 
 #### Scenario: Llamada al catálogo
 
@@ -93,6 +93,11 @@ El bloque SHALL ofrecer un control accesible de pausa y reproducción sobre el v
 
 - **WHEN** el visitante activa el control con el vídeo en reproducción
 - **THEN** el vídeo se pausa y el control anuncia la acción de reproducir
+
+#### Scenario: Control dentro del vídeo
+
+- **WHEN** se muestra el control de pausa en escritorio o en el apilado estrecho
+- **THEN** permanece en la esquina inferior derecha del rectángulo visible del vídeo, con separación interior de 1rem respecto a ambos bordes, sin alterar su encuadre
 
 #### Scenario: Movimiento reducido
 
