@@ -48,3 +48,7 @@
 - [x] 8.1 Mezclar los fondos a ambos lados de la junta, conservar una fuga negra menor y verificar el render sin editar Productos.
 - [x] 8.2 Igualar la descripción a Semibold Italic de Productos y centrarla verticalmente respecto al h2; conservar altura del botón y centrar su eje horizontal entre columnas. Verificar geometría y responsive.
 - [x] 8.3 Ejecutar build, validar deltas, revisar capturas y actualizar continuidad sin declarar aceptación visual.
+
+## 9. Control de vídeo SES-046
+
+- [x] 9.1 Igualar presentación e iconos del control a Productos, manteniendo controlador y resto de composición; comprobar estilos computados de reposo/hover/foco y reproducción/pausa en escritorio y móvil, build y documentación de continuidad.

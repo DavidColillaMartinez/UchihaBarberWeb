@@ -1,5 +1,7 @@
 # Mapa del proyecto
 
+SES-046: el control de vídeo de Sessions iguala el estilo y los iconos de Productos mediante sus archivos Astro/CSS locales; sin extracción de componentes, cambios de arquitectura ni modificaciones del controlador.
+
 SES-045: adaptación móvil/tablet local de Productos hasta 68rem, vídeo primero 16:10 y contenido debajo con título vertical compacto. Galería sustituye solo en ese rango su imagen inferior por pseudo-elemento de fondo prolongado 1px sobre la junta. Sin nuevas rutas, JS o cambios de Sessions/escritorio.
 
 SES-044: Acceso a Productos conserva los ajustes del responsable en descripción y botón; un contenedor local `marcoVideo` en su Astro/CSS Module mantiene las dimensiones del vídeo y ancla la pausa a 1rem de su esquina inferior derecha. Sin nuevas rutas ni comportamiento JS; no modifica las uniones de secciones.

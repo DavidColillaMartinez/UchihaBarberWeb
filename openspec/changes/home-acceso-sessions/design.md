@@ -1,5 +1,9 @@
 ## Context
 
+### Control de vídeo igualado a Productos (SES-046)
+
+Corrección dirigida: 44×44px, separación interior 1rem, borde blanco al55%, fondo negro al35%, iconos de1.1rem y los mismos trazos SVG que Productos. Hover/foco invierten a blanco al92%, borde transparente y tinta negra; foco con outline blanco global, sin el anillo doble anterior. Solo se iguala presentación: se mantienen `hidden`, controles nativos sin JS y controlador local de Sessions, sin copiar la lógica de visibilidad de Productos ni modificarlo.
+
 ### Corrección vigente SES-041
 
 Por petición y confirmación del responsable, se sustituyen las concreciones visuales iniciales siguientes: descripción Regular pasa a General Sans Semibold Italic 600 con escala e interlineado de Productos, centrada verticalmente respecto al titular. El botón mantiene su altura y centra su eje bajo el hueco entre columnas (no el centro del panel). El degradado conserva negro con una fuga menor: 210°, negro 0%, gris #757575 6%, #c9c9c9 18%, #e5e5e5 100%. Una capa estática de 2.5rem cruza 1.25rem por cada lado de la junta, con centro opaco gris compartido y extremos transparentes; mezcla los fondos sin desenfocar contenido y sin editar Productos. Estas decisiones sustituyen los valores iniciales de SES-040 descritos más abajo como histórico de la primera demo. Aceptación visual pendiente.

@@ -59,6 +59,11 @@ El vídeo SHALL usar material demo ya existente y seguir `video-reproduccion`: i
 - **WHEN** Sessions entra en pantalla con movimiento normal y reproducción permitida por el navegador
 - **THEN** el clip arranca sin sonido ni pantalla completa y el control refleja su estado real
 
+#### Scenario: Apariencia común del control de vídeo
+
+- **WHEN** se comparan los controles de Sessions y Productos en reposo, hover y foco
+- **THEN** comparten tamaño de44×44px, borde y fondo semitransparentes, iconos y tratamiento de interacción, manteniendo Sessions su comportamiento de reproducción y pausa
+
 #### Scenario: Pausa voluntaria
 
 - **WHEN** el visitante pausa el vídeo y después abandona y recupera la sección

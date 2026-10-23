@@ -129,30 +129,33 @@
   width: 2.75rem;
   height: 2.75rem;
   padding: 0;
-  border: 1px solid var(--color-bg);
-  background: var(--color-fg);
+  border: 1px solid rgb(255 255 255 / 0.55);
+  background: rgb(0 0 0 / 0.35);
   color: var(--color-bg);
   cursor: pointer;
+  transition:
+    background-color 0.25s ease-out,
+    border-color 0.25s ease-out,
+    color 0.25s ease-out;
 }
 .control[hidden] {
   display: none;
 }
 .control svg {
-  width: 1.25rem;
-  height: 1.25rem;
+  width: 1.1rem;
+  height: 1.1rem;
 }
 .control[data-estado="pausado"] .pausa,
 .control[data-estado="reproduciendo"] .reproducir {
   display: none;
 }
 .control:is(:hover, :focus-visible) {
-  background: var(--color-bg);
+  background: rgb(255 255 255 / 0.92);
+  border-color: transparent;
   color: var(--color-fg);
 }
 .control:focus-visible {
-  outline: 2px solid white;
-  outline-offset: 4px;
-  box-shadow: 0 0 0 4px black;
+  outline-color: var(--color-bg);
 }
 .control,
 .boton {

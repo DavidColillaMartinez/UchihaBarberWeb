@@ -263,8 +263,8 @@
     {
       "ruta": "PRODUCT.md",
       "tipo": "archivo",
-      "bytes": 15879,
-      "sha256": "80b37a711e97b6d35f8c3eacc4206b89dcdcfd60d4e7f623e801221c2fe7c420"
+      "bytes": 16127,
+      "sha256": "7379c53b7ccec81da4a3090caae23db1578651742fdce7592f4e09d4ec05cd1d"
     },
     {
       "ruta": "README.md",
@@ -323,8 +323,8 @@
     {
       "ruta": "memoria/estado.json",
       "tipo": "archivo",
-      "bytes": 13293,
-      "sha256": "2ab350ffa6ac8a2c27a1ae667d68b0135d5de0e5e2879281b73bb83c4540113e"
+      "bytes": 13634,
+      "sha256": "5eee3ced183addffa474fc5cd2ae783507e82a2c7d6cd252f1563ebd5cdd214c"
     },
     {
       "ruta": "memoria/herramientas.md",
@@ -341,8 +341,8 @@
     {
       "ruta": "memoria/mapa.md",
       "tipo": "archivo",
-      "bytes": 17775,
-      "sha256": "49a695a8653ac9a607aeeb5ae744824f64c10ac65bf1cf887af258d3c1ee4d27"
+      "bytes": 17993,
+      "sha256": "94f2cfaba63d966c2af9d96c474ca3f2fe382e702217a46a145b69dc39de00d4"
     },
     {
       "ruta": "memoria/primer-commit.md",
@@ -371,8 +371,8 @@
     {
       "ruta": "memoria/revision.json",
       "tipo": "archivo",
-      "bytes": 40208,
-      "sha256": "4f65c40a02e53e27c1321d5f5acbfae27d4f860820de62f436943beece0b49ac"
+      "bytes": 39925,
+      "sha256": "d9186b1fb596fbc8f0fa1e106185d96bfa7cd162853e7b81bd8f49760a48fd9b"
     },
     {
       "ruta": "memoria/roadmap.md",
@@ -661,6 +661,12 @@
       "tipo": "archivo",
       "bytes": 2293,
       "sha256": "796204202101af1d2d66817dde277eb0dd44323a027f76d583d89dae2ae8772b"
+    },
+    {
+      "ruta": "memoria/sesiones/SES-046.md",
+      "tipo": "archivo",
+      "bytes": 2285,
+      "sha256": "99ce13619aa82b6e7f6a63ab013da9d985d7bd8157261b07f2822993eec79849"
     },
     {
       "ruta": "openspec/changes/archive/.gitkeep",
@@ -1031,8 +1037,8 @@
     {
       "ruta": "openspec/changes/home-acceso-sessions/design.md",
       "tipo": "archivo",
-      "bytes": 14495,
-      "sha256": "02dce84efcb8263e10f350fd3bb4d5c3c6c36b57f269619d7d977e61485c69cb"
+      "bytes": 15013,
+      "sha256": "037ce154b175fe2c8838654c6188e79a739c6184d10f4f0dcb38723e4b02d48f"
     },
     {
       "ruta": "openspec/changes/home-acceso-sessions/proposal.md",
@@ -1043,8 +1049,8 @@
     {
       "ruta": "openspec/changes/home-acceso-sessions/specs/home-acceso-sessions/spec.md",
       "tipo": "archivo",
-      "bytes": 7118,
-      "sha256": "f8e0a206cd9e9fde3011de8d170883da4efca0af798708c4d9f05d600d40e18e"
+      "bytes": 7436,
+      "sha256": "4d232986e6b0ab4098ad3eeaa5a7e714c7537e257776aa7553a650db15651710"
     },
     {
       "ruta": "openspec/changes/home-acceso-sessions/specs/home-skeleton/spec.md",
@@ -1061,8 +1067,8 @@
     {
       "ruta": "openspec/changes/home-acceso-sessions/tasks.md",
       "tipo": "archivo",
-      "bytes": 6460,
-      "sha256": "cfba88311ccd2da0829bfd2f63b468164616f6cba6a50dc9c8a0d666adc1f352"
+      "bytes": 6744,
+      "sha256": "3c1b2c0fa34d882c5b89f4cd90c1f62c15d5131930784f61b34f854c7cfbf410"
     },
     {
       "ruta": "openspec/changes/home-galeria-autoavance/.openspec.yaml",
@@ -1481,14 +1487,14 @@
     {
       "ruta": "src/features/home/acceso-sessions/AccesoSessions.astro",
       "tipo": "archivo",
-      "bytes": 2471,
-      "sha256": "c4930808dc58091a56bf504ad748d91cb8ec3bc7acdfbf35e40f41f4d6277a7a"
+      "bytes": 2621,
+      "sha256": "ac4fe67683d6f9c7a9784cefb97e1b6f8db02c323d3b1fbea923579530552f2f"
     },
     {
       "ruta": "src/features/home/acceso-sessions/AccesoSessions.module.css",
       "tipo": "archivo",
-      "bytes": 4511,
-      "sha256": "4ccc277107b1b83acc6a20a79834dc0dbda10a5af6c5851a13cca1e36a676cad"
+      "bytes": 4618,
+      "sha256": "99c1e9d66b0fb6d07210c685e458b8cc7af6a76b386957a5e052f5704c35691a"
     },
     {
       "ruta": "src/features/home/acceso-sessions/acceso-sessions.ts",

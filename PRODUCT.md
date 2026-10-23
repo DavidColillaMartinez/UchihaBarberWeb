@@ -57,6 +57,8 @@ Adaptación móvil de Productos autorizada en SES-045: hasta 68rem, vídeo prime
 
 Dirección por sección (decisiones vigentes donde ya hubo desarrollo; intenciones pendientes para las demás):
 
+Control de vídeo de Sessions (SES-046): mismo aspecto que Productos —44×44, borde blanco translúcido, fondo negro semitransparente, iconos y estados hover/foco iguales— sin cambiar la lógica local de reproducción ni el resto del diseño.
+
 Corrección vigente de Sessions (SES-041): descripción en General Sans Semibold Italic 600 como Productos, centrada verticalmente respecto al h2 en composición lateral. «Descúbrelas» conserva su altura y centra su eje horizontal bajo el hueco descripción/titular. El fondo conserva una fuga negra pequeña (no se sustituye negro por blanco) y una franja estática cruza la junta con Productos para mezclar los colores, sin filtros sobre contenido ni editar Productos. Sustituye las concreciones visuales iniciales de SES-040; pendiente de aceptación visual.
 
 - Navegación: bloque demo aceptado, con integración sobre la cabecera, adaptación de contraste y comportamiento de aparición/desaparición al recorrer la página. Los requisitos vigentes están en `site-navigation` y el recorrido compartido en `home-skeleton`, incluida la excepción de Servicios. Los destinos futuros solo se añaden cuando existan y estén autorizados.
