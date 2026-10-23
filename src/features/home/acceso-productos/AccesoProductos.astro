@@ -36,8 +36,6 @@ const cartelDemo = "/videos/CorteDePelo1-poster.jpg";
         Conócelos
       </a>
     </p>
-
-  
   </div>
 
   <div class={styles.escena}>
@@ -46,6 +44,7 @@ const cartelDemo = "/videos/CorteDePelo1-poster.jpg";
       data-video-productos
       src={videoDemo}
       poster={cartelDemo}
+      autoplay
       muted
       loop
       playsinline
@@ -54,9 +53,9 @@ const cartelDemo = "/videos/CorteDePelo1-poster.jpg";
       aria-hidden="true"
     ></video>
 
-    <!-- Control de pausa: el vídeo se reproduce solo cuando la sección está
-         a la vista, y este botón permite detenerlo (WCAG 2.2.2). Sin JS no
-         hay reproducción posible y el botón permanece oculto. -->
+    <!-- Control de pausa: el vídeo arranca solo de forma nativa y este botón
+         permite detenerlo (WCAG 2.2.2). Sin JS la reproducción nativa sigue
+         funcionando y el botón permanece oculto. -->
     <button
       class={styles.control}
       type="button"

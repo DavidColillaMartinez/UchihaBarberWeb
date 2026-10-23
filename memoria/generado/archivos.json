@@ -293,8 +293,8 @@
     {
       "ruta": "memoria/bloques.json",
       "tipo": "archivo",
-      "bytes": 6265,
-      "sha256": "db1345281589066a4b9676e0e450c56000e538d6eea816be5f5defb3fc7a8243"
+      "bytes": 6406,
+      "sha256": "f4c1d736c73f0c601ef25cdccc2df9d09a2870451f2169be18c36aa23a116c34"
     },
     {
       "ruta": "memoria/cierre.md",
@@ -323,8 +323,8 @@
     {
       "ruta": "memoria/estado.json",
       "tipo": "archivo",
-      "bytes": 11624,
-      "sha256": "b26ec02ca61b38cb90c5d9d3f747de2197adb2b60c81a43cb2a3066a069efaed"
+      "bytes": 12364,
+      "sha256": "0d27e00062382a8f8ccff3187eed72e8f34323e15d8d81ed48ee25464fc8492f"
     },
     {
       "ruta": "memoria/herramientas.md",
@@ -341,8 +341,8 @@
     {
       "ruta": "memoria/mapa.md",
       "tipo": "archivo",
-      "bytes": 14571,
-      "sha256": "97c054ccc7830e863f526170a01880757fdd29b8aa707329d55262ed6322dd66"
+      "bytes": 14642,
+      "sha256": "0dcb814c7bc6e4a6539493b6e7d1444281a86aa10806bc4c2e9488a8999d22e0"
     },
     {
       "ruta": "memoria/primer-commit.md",
@@ -371,8 +371,8 @@
     {
       "ruta": "memoria/revision.json",
       "tipo": "archivo",
-      "bytes": 35376,
-      "sha256": "ffb41c4d1b52e86f16114b3600171f32d094b782266bd3a0967659584d575fa8"
+      "bytes": 36832,
+      "sha256": "b82b113f1378a5ac412cbb809eb3813378bfbd19270cbc72ef468d53c6b0e088"
     },
     {
       "ruta": "memoria/roadmap.md",
@@ -593,8 +593,8 @@
     {
       "ruta": "memoria/sesiones/SES-034.md",
       "tipo": "archivo",
-      "bytes": 5562,
-      "sha256": "ec7c142c05438dde82184b2337b50a9d017b225b9588fec049bbd641c5c4e3df"
+      "bytes": 5759,
+      "sha256": "74cfcd199ad3242e6fc81c6bda460c9f34a118194fd173d1b022fc6cce3c8fc6"
     },
     {
       "ruta": "memoria/sesiones/SES-035.md",
@@ -607,6 +607,12 @@
       "tipo": "archivo",
       "bytes": 3058,
       "sha256": "3ebb920943affb873e9bf4c32897f0d5f1384d0a459e41f7bb98caac0d370abe"
+    },
+    {
+      "ruta": "memoria/sesiones/SES-037.md",
+      "tipo": "archivo",
+      "bytes": 4510,
+      "sha256": "517135c94c696382383cf1ae6f6a0275467a6f68444a967116da747f06b02028"
     },
     {
       "ruta": "openspec/changes/archive/.gitkeep",
@@ -867,6 +873,42 @@
       "sha256": "9f84ce4088b47db9628c92e78c7214f3a991cf7b1b0720425fbd3e02c066a0ec"
     },
     {
+      "ruta": "openspec/changes/archive/2026-10-23-videos-autoplay/.openspec.yaml",
+      "tipo": "archivo",
+      "bytes": 40,
+      "sha256": "54c2a6955b514abf783374521da3b6364c1d6b221970ad9faa7124a7e1124528"
+    },
+    {
+      "ruta": "openspec/changes/archive/2026-10-23-videos-autoplay/design.md",
+      "tipo": "archivo",
+      "bytes": 4913,
+      "sha256": "5fbdd2bd9ca35a731b2ca03d009dc48ddb1d4fab11afe0c6c2c5f57b13f415e1"
+    },
+    {
+      "ruta": "openspec/changes/archive/2026-10-23-videos-autoplay/proposal.md",
+      "tipo": "archivo",
+      "bytes": 3100,
+      "sha256": "8e77962d7d98944669ff0bfdc3fd3ec388b9a71a853d7b2ca832d76fc925924c"
+    },
+    {
+      "ruta": "openspec/changes/archive/2026-10-23-videos-autoplay/specs/home-cabecera/spec.md",
+      "tipo": "archivo",
+      "bytes": 1939,
+      "sha256": "a1f6004ca7a224cd76e7d762a855b0b5572db553e1abbbe824be15f26cdc261e"
+    },
+    {
+      "ruta": "openspec/changes/archive/2026-10-23-videos-autoplay/specs/video-reproduccion/spec.md",
+      "tipo": "archivo",
+      "bytes": 3310,
+      "sha256": "09e6f1151bdb9e0391486680e79afe58f262c3635eaa6221431331c8fb115b1c"
+    },
+    {
+      "ruta": "openspec/changes/archive/2026-10-23-videos-autoplay/tasks.md",
+      "tipo": "archivo",
+      "bytes": 1890,
+      "sha256": "6462201c8f3b6294719c7b7b62668deee4761d0db1334e7dca664f40e87ea1e9"
+    },
+    {
       "ruta": "openspec/changes/general-sans/.openspec.yaml",
       "tipo": "archivo",
       "bytes": 40,
@@ -923,8 +965,8 @@
     {
       "ruta": "openspec/changes/home-acceso-productos/specs/home-acceso-productos/spec.md",
       "tipo": "archivo",
-      "bytes": 6155,
-      "sha256": "e8983c10c887e59ce214a5229fc3ecd1f926610d04c6338711849bfafc3844d1"
+      "bytes": 6659,
+      "sha256": "29f98f79b67b7a8b1cdc7eb86665260fc08394869fd278b53605cdbcaa461216"
     },
     {
       "ruta": "openspec/changes/home-acceso-productos/tasks.md",
@@ -1037,8 +1079,8 @@
     {
       "ruta": "openspec/specs/home-cabecera/spec.md",
       "tipo": "archivo",
-      "bytes": 2973,
-      "sha256": "c57deb77eb18fc526c5d25899b873854dbe3c80d95cf4e5d9d9c9246f104d92a"
+      "bytes": 3184,
+      "sha256": "6f258a85db117f3b8b6fb738300cd7134b4dbe0c4f5da0d79e322aef031a5576"
     },
     {
       "ruta": "openspec/specs/home-galeria/spec.md",
@@ -1075,6 +1117,12 @@
       "tipo": "archivo",
       "bytes": 7189,
       "sha256": "c6959c0f4a1affdd967e4f356de6813dca3079031a20119018c5fe88c59284fd"
+    },
+    {
+      "ruta": "openspec/specs/video-reproduccion/spec.md",
+      "tipo": "archivo",
+      "bytes": 3339,
+      "sha256": "3419ccac703660ca256cf58c60bb084decc7818f80ef87e604f7f2eba69921f0"
     },
     {
       "ruta": "package-lock.json",
@@ -1325,8 +1373,8 @@
     {
       "ruta": "src/features/home/acceso-productos/AccesoProductos.astro",
       "tipo": "archivo",
-      "bytes": 2880,
-      "sha256": "66721b171ff4051e9e7e528c7ef9104d92188178212f88a57cc4c8f8fd79b488"
+      "bytes": 2878,
+      "sha256": "7a811989ac637d39c06ff2ad0267ea26bd065b5a9566d34b145b671f1e302636"
     },
     {
       "ruta": "src/features/home/acceso-productos/AccesoProductos.module.css",
@@ -1337,8 +1385,8 @@
     {
       "ruta": "src/features/home/acceso-productos/acceso-productos.ts",
       "tipo": "archivo",
-      "bytes": 2864,
-      "sha256": "c2f8c7fb5808cfcf86c98be2dacc19bea7e2174232de3c57b5f2cd1c396b2182"
+      "bytes": 3631,
+      "sha256": "3a89370739f2f2317a875b37df67ab641cbb1db7d14022b06ebc158b99139dc4"
     },
     {
       "ruta": "src/features/home/cabecera/Cabecera.astro",

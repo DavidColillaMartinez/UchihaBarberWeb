@@ -120,7 +120,7 @@
       "fase": "UB-004",
       "estado": "provisional",
       "rutas": ["src/features/home/acceso-productos/"],
-      "specs": ["openspec/specs/home-skeleton/spec.md"],
+      "specs": ["openspec/specs/home-skeleton/spec.md", "openspec/specs/video-reproduccion/spec.md"],
       "cambios": [
         "openspec/changes/home-acceso-productos/proposal.md",
         "openspec/changes/home-acceso-productos/specs/home-acceso-productos/spec.md"
@@ -130,6 +130,7 @@
         "Aceptación visual del responsable pendiente.",
         "Vídeo demo (CorteDePelo1) pendiente del material oficial de productos.",
         "Texto de la descripción demo pendiente de la redacción definitiva.",
+        "Autoplay real comprobado en móvil pendiente de revisión del responsable (SES-037).",
         "Adaptación móvil definitiva en la fase UB-006."
       ]
     },

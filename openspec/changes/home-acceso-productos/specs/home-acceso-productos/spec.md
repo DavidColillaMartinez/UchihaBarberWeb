@@ -58,12 +58,17 @@ La sección SHALL incluir una descripción breve que explique qué son los produ
 
 ### Requirement: Vídeo del bloque
 
-La mitad derecha del bloque SHALL contener un vídeo en bucle, sin sonido y en línea, tratado en blanco y negro como el resto del material audiovisual de la web. El vídeo SHALL reproducirse de forma automática solo cuando el bloque esté a la vista o muy cerca de ella, y SHALL pausarse al salir de la vista. El material SHALL ser sustituible por el vídeo oficial de productos sin rehacer la sección.
+La mitad derecha del bloque SHALL contener un vídeo en bucle, sin sonido y en línea, tratado en blanco y negro como el resto del material audiovisual de la web. El vídeo SHALL arrancar de forma nativa por sí solo, sin que el visitante lo active, y la visibilidad del bloque SHALL conservar ese arranque autónomo: SHALL pausarse al salir de la vista y SHALL reanudarse cuando el bloque esté a la vista o muy cerca de ella; la pausa puede llegar de inmediato al cargar la página si el bloque aún no es visible. El material SHALL ser sustituible por el vídeo oficial de productos sin rehacer la sección.
 
 #### Scenario: Reproducción al llegar al bloque
 
 - **WHEN** el bloque entra en la vista
 - **THEN** el vídeo se reproduce en bucle y sin sonido, mostrando el material del bloque
+
+#### Scenario: Arranque sin pulsar reproducir
+
+- **WHEN** se carga la portada en móvil con movimiento normal
+- **THEN** el vídeo del bloque se reproduce por sí solo, sin que el visitante tenga que pulsar reproducir
 
 #### Scenario: Pausa al salir de la vista
 
@@ -77,7 +82,7 @@ La mitad derecha del bloque SHALL contener un vídeo en bucle, sin sonido y en l
 
 ### Requirement: Control del movimiento del vídeo
 
-El bloque SHALL ofrecer un control accesible de pausa y reproducción sobre el vídeo, con su nombre actualizado según el estado. Con la preferencia de movimiento reducido activada, el vídeo SHALL permanecer estático en su cartel y SHALL reproducirse solo si el visitante lo pide de forma explícita. Sin JavaScript, el bloque SHALL conservar su contenido y el vídeo SHALL quedarse en su cartel, sin mostrar controles que no pueden funcionar.
+El bloque SHALL ofrecer un control accesible de pausa y reproducción sobre el vídeo, con su nombre actualizado según el estado. Con la preferencia de movimiento reducido activada, el vídeo SHALL permanecer estático en su cartel y SHALL reproducirse solo si el visitante lo pide de forma explícita. Sin JavaScript, el bloque SHALL conservar su contenido y el vídeo SHALL arrancar por sí solo de forma nativa, sin control disponible: la pausa por visibilidad y el control dependen del guion del bloque.
 
 #### Scenario: Pausa desde el control
 
@@ -92,7 +97,7 @@ El bloque SHALL ofrecer un control accesible de pausa y reproducción sobre el v
 #### Scenario: Sin JavaScript
 
 - **WHEN** la página se carga sin JavaScript
-- **THEN** el titular, la descripción y el enlace se muestran con normalidad, el vídeo queda en su cartel y no aparece ningún control inactivo
+- **THEN** el titular, la descripción y el enlace se muestran con normalidad, el vídeo arranca por sí solo de forma nativa y no aparece ningún control inactivo
 
 ### Requirement: Tipografía y aislamiento de estilos
 

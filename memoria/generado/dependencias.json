@@ -235,6 +235,12 @@
         "openspec/changes/archive/2026-10-23-home-intro-arranque-cabecera/proposal.md",
         "openspec/changes/archive/2026-10-23-home-intro-arranque-cabecera/specs/home-intro/spec.md",
         "openspec/changes/archive/2026-10-23-home-intro-arranque-cabecera/tasks.md",
+        "openspec/changes/archive/2026-10-23-videos-autoplay/.openspec.yaml",
+        "openspec/changes/archive/2026-10-23-videos-autoplay/design.md",
+        "openspec/changes/archive/2026-10-23-videos-autoplay/proposal.md",
+        "openspec/changes/archive/2026-10-23-videos-autoplay/specs/home-cabecera/spec.md",
+        "openspec/changes/archive/2026-10-23-videos-autoplay/specs/video-reproduccion/spec.md",
+        "openspec/changes/archive/2026-10-23-videos-autoplay/tasks.md",
         "openspec/changes/general-sans/.openspec.yaml",
         "openspec/changes/general-sans/design.md",
         "openspec/changes/general-sans/proposal.md",
@@ -268,7 +274,8 @@
         "openspec/specs/home-servicios/spec.md",
         "openspec/specs/home-skeleton/spec.md",
         "openspec/specs/products-page/spec.md",
-        "openspec/specs/site-navigation/spec.md"
+        "openspec/specs/site-navigation/spec.md",
+        "openspec/specs/video-reproduccion/spec.md"
       ]
     },
     {
@@ -338,7 +345,8 @@
         "memoria/sesiones/SES-033.md",
         "memoria/sesiones/SES-034.md",
         "memoria/sesiones/SES-035.md",
-        "memoria/sesiones/SES-036.md"
+        "memoria/sesiones/SES-036.md",
+        "memoria/sesiones/SES-037.md"
       ]
     }
   ]

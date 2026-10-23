@@ -20,6 +20,11 @@ La cabecera de inicio SHALL ocupar al menos la altura del viewport y SHALL mostr
 - **WHEN** se revisa la cabecera
 - **THEN** el vídeo de fondo se muestra a pantalla completa en blanco y negro sin desenfoque y su condición de material demo queda declarada en el código
 
+#### Scenario: Reproducción autónoma
+
+- **WHEN** la portada carga con movimiento normal
+- **THEN** el vídeo de fondo arranca solo, silenciado, en bucle y en línea, sin que haya que activar la reproducción
+
 #### Scenario: Encabezado accesible
 
 - **WHEN** un lector de pantalla recorre la portada
