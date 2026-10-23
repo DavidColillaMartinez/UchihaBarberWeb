@@ -139,6 +139,45 @@
       ]
     },
     {
+      "id": "acceso-sessions",
+      "nombre": "Acceso a Sessions",
+      "fase": "UB-004",
+      "estado": "en_revision",
+      "rutas": ["src/features/home/acceso-sessions/"],
+      "specs": [
+        "openspec/specs/home-skeleton/spec.md",
+        "openspec/specs/video-reproduccion/spec.md"
+      ],
+      "cambios": [
+        "openspec/changes/home-acceso-sessions/proposal.md",
+        "openspec/changes/home-acceso-sessions/specs/home-acceso-sessions/spec.md"
+      ],
+      "aceptacion": [],
+      "pendientes": [
+        "Aceptación visual y editorial pendiente del responsable.",
+        "Vídeo y descripción demo pendientes del material definitivo.",
+        "Comprobación en dispositivo móvil real y lector de pantalla pendiente.",
+        "Consolidación y archivo posteriores a la aceptación; tareas en home-acceso-sessions."
+      ]
+    },
+    {
+      "id": "sessions-page",
+      "nombre": "Página provisional de Sessions",
+      "fase": "UB-004",
+      "estado": "provisional",
+      "rutas": ["src/features/sessions/"],
+      "specs": ["openspec/specs/site-navigation/spec.md"],
+      "cambios": [
+        "openspec/changes/home-acceso-sessions/proposal.md",
+        "openspec/changes/home-acceso-sessions/specs/sessions-page/spec.md"
+      ],
+      "aceptacion": [],
+      "pendientes": [
+        "Aceptación del destino provisional pendiente.",
+        "Contenido definitivo fuera del alcance actual."
+      ]
+    },
+    {
       "id": "opiniones",
       "nombre": "Opiniones",
       "fase": "UB-004",

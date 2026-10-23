@@ -2,10 +2,20 @@
   "schema": 1,
   "proyecto": "UchihaBarberWeb",
   "faseActiva": "UB-004",
-  "ultimoRelevo": "memoria/sesiones/SES-038.md",
-  "alcanceActual": "Acceso a Productos: fondo del bloque con degradado de gris medio a negro por decisión del responsable (SES-038); implementado en versión demo (SES-035): bloque oscuro de una pantalla con ~40 % de contenido a la izquierda (titular «Productos» vertical de abajo hacia arriba en General Sans Bold, descripción demo en Semibold Italic y «Conócelos» al catálogo) y ~60 % de vídeo demo a la derecha con control de pausa; el cambio OpenSpec `home-acceso-productos` queda en curso y pendiente de aceptación visual. General Sans integrada como familia tipográfica única autoalojada (pesos reales, swap, sin síntesis, pauta por elemento con alternativas comentadas para la prueba manual del responsable); cambio general-sans activo pendiente de revisión visual y archivo. Cruce de entrada con el logo aceptado (SES-024); navegación, cabecera y portada aprobadas (SES-023); Servicios con ajustes en curso de otras sesiones. El cruce de entrada arranca siempre en la cabecera al recargar (SES-033) y está aceptado y archivado (SES-036): la portada anula la restauración automática de scroll y reafirma la cabecera durante el cruce, de modo que la máscara del logo se ve sobre el vídeo de la cabecera y no sobre otra sección. La vista previa pública sirve el build con el arreglo y la recarga se verificó en ella. Los ajustes de Galería de las rondas 5 y 6 (autoavance, encaje y altura) se revirtieron a la ronda 4 validada por fallo de funcionamiento (SES-028). Galería ronda 7 (SES-029): recuperado el autoavance de 2 s con las mismas instrucciones (solo flechas reinician, sin encaje ni refresh); la altura de la tira se mantiene en 38 svh, la propuesta de 55 svh se descartó tras revisarla en local; cambio home-galeria-autoavance activo pendiente de validación visual. Pendientes de turno: Opiniones e Información; catálogo (UB-005) y móvil (UB-006) en sus fases. Estado por bloque en memoria/bloques.json. Arranque de la navegacion en la portada corregido (SES-034): la navegacion fija ya no aparece en ningun fotograma del arranque; cambio home-nav-arranque-portada activo pendiente de validacion visual y archivo; su código y su carpeta se commitean en este turno sin cerrar el cambio (SES-037). Los vídeos de la portada arrancan solos por pauta transversal (SES-037): capacidad vigente `video-reproduccion` (inicio autónomo sin pulsar reproducir, silenciado, en bucle y en línea; pausa por visibilidad admitida; movimiento reducido pausado salvo acción explícita); el vídeo del acceso a Productos lleva autoplay nativo con reintento pegado a la carga y su cambio abierto lleva una enmienda al delta acorde; la Galería mantiene su reproducción contenida exigida por su spec; comprobación real en móvil pendiente del responsable.",
+  "ultimoRelevo": "memoria/sesiones/SES-041.md",
+  "correccionSessions": "SES-041: unión de fondos mezclada, fuga negra reducida, descripción Semibold Italic centrada respecto al titular y botón a la altura previa con eje horizontal entre columnas. Implementado, pendiente de aceptación visual; no se modifica Productos.",
+  "planificacionActual": {
+    "nombre": "Acceso a Sessions y página provisional",
+    "fase": "UB-004",
+    "estado": "implementada_demo_en_revision",
+    "cambio": "openspec/changes/home-acceso-sessions/proposal.md",
+    "autorizacion": "Petición expresa posterior: vas a implementar home-acceso-sessions/. Se autoriza código de Sessions y destino provisional; sin commit, push ni despliegue.",
+    "registroBloques": "Acceso y página provisional registrados con rutas reales; pendientes de aceptación.",
+    "relevo": "memoria/sesiones/SES-041.md"
+  },
+  "alcanceActual": "Sessions implementada en demo por autorización expresa (SES-040), entre Productos y Opiniones: vídeo demo izquierdo, descripción y titular de cuatro líneas a la derecha, Descúbrelas a /sessions provisional. General Sans, degradado neutro inverso luminoso, apilado responsive y control local de vídeo. Cambio home-acceso-sessions activo pendiente de aceptación visual/editorial y consolidación. Productos conserva su código y diff ajeno; documentación de su ajuste simultáneo pendiente del turno correspondiente (SES-039). Cabecera, entrada, navegación, Servicios y Galería conservan sus aprobaciones demo y pendientes propios registrados en bloques. General Sans, home-nav-arranque-portada, home-galeria-autoavance y home-acceso-productos siguen abiertos según sus artefactos; no se cierran al aplicar Sessions. Opiniones e Información pendientes de turno; catálogo y móvil general en sus fases. Sin commit, push ni despliegue autorizado.",
   "pendientesDeDecision": [
-    "Sessions: confirmar inclusión y ubicación.",
+    "Sessions: aceptación visual/editorial de composición, descripción demo y apilado móvil pendiente; clip CorteDePelo1 y cartel existentes con encuadre centrado seleccionados para la demo. Material profesional, dispositivo móvil real y lector de pantalla pendientes.",
     "Diseños y comportamientos definitivos se concretan por sección; ver PRODUCT.md."
   ],
   "fases": [
@@ -109,7 +119,10 @@
         "memoria/sesiones/SES-036.md",
         "openspec/changes/archive/2026-10-23-videos-autoplay/proposal.md",
         "memoria/sesiones/SES-037.md",
-        "memoria/sesiones/SES-038.md"
+        "memoria/sesiones/SES-038.md",
+        "memoria/sesiones/SES-039.md",
+        "memoria/sesiones/SES-040.md",
+        "openspec/changes/home-acceso-sessions/proposal.md"
       ],
       "notaOpenSpec": "Esta fase agrupa varios bloques: consultar sus referencias individuales en memoria/bloques.json."
     },

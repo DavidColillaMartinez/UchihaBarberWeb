@@ -1,0 +1,35 @@
+.sessions {
+  display: grid;
+  gap: 1rem;
+  padding: 6rem 1.5rem 4rem;
+  font-family: var(--font-text);
+  font-weight: var(--font-weight-regular);
+}
+.titulo {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: var(--font-weight-bold);
+  font-size: clamp(2.5rem, 8vw, 6rem);
+  line-height: 1;
+  overflow-wrap: anywhere;
+}
+.volver {
+  margin: 0;
+}
+.volver a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  color: var(--color-fg);
+  font-weight: var(--font-weight-medium);
+  text-underline-offset: 0.2em;
+  scroll-margin-block: 5rem;
+}
+
+/* La navegación compartida ocupa varias filas al estrecharse. El espacio
+   se reserva solo en este destino, sin alterar la barra del resto del sitio. */
+@media (max-width: 48rem) {
+  .sessions {
+    padding-top: 14rem;
+  }
+}

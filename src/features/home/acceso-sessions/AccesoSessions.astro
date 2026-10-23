@@ -1,0 +1,91 @@
+---
+import styles from "./AccesoSessions.module.css";
+
+// Demo existente; sustituir vídeo y cartel juntos al recibir el material final.
+const videoDemo = "/videos/CorteDePelo1.mp4";
+const cartelDemo = "/videos/CorteDePelo1-poster.jpg";
+---
+
+<section
+  id="sessions"
+  class={styles.acceso}
+  aria-labelledby="sessions-titulo"
+  data-acceso-sessions
+>
+  <div class={styles.escena}>
+    <video
+      id="sessions-video"
+      class={styles.video}
+      src={videoDemo}
+      poster={cartelDemo}
+      autoplay
+      muted
+      loop
+      playsinline
+      controls
+      preload="none"
+      aria-label="Vídeo demo de Uchiha Barber"
+    ></video>
+    <!-- Antes del módulo: no arrancar fuera de vista ni con movimiento reducido.
+         Sin JS se conservan los controles nativos. -->
+    <script is:inline>
+      (() => {
+        const video = document.getElementById("sessions-video");
+        if (!(video instanceof HTMLVideoElement)) return;
+        video.autoplay = false;
+        video.pause();
+      })();
+    </script>
+    <button
+      class={styles.control}
+      type="button"
+      data-sessions-control
+      hidden
+      aria-controls="sessions-video"
+      aria-label="Reproducir el vídeo de Sessions"
+      data-estado="pausado"
+    >
+      <svg
+        class={styles.pausa}
+        viewBox="0 0 24 24"
+        fill="none"
+        aria-hidden="true"
+      >
+        <path d="M9 5v14M15 5v14" stroke="currentColor" stroke-width="2"></path>
+      </svg>
+      <svg
+        class={styles.reproducir}
+        viewBox="0 0 24 24"
+        fill="none"
+        aria-hidden="true"
+      >
+        <path d="M8 5v14l11-7z" stroke="currentColor" stroke-width="2"></path>
+      </svg>
+    </button>
+  </div>
+  <div class={styles.contenido}>
+    <h2 id="sessions-titulo" class={styles.titulo} lang="en">
+      <span>UCHIHA</span> <span>BARBER</span> <span>SESSION</span>{" "}
+      <span>PLACES</span>
+    </h2>
+    <!-- Descripción demo autorizada; pendiente de redacción definitiva. -->
+    <p class={styles.descripcion}>
+      El corte es solo una parte. Entra en nuestras Sessions y conoce Uchiha
+      Barber desde otro punto de vista.
+    </p>
+    <p class={styles.accion}>
+      <a
+        class={styles.boton}
+        href="/sessions"
+        aria-label="Descúbrelas: Sessions"
+      >
+        Descúbrelas
+      </a>
+    </p>
+  </div>
+</section>
+
+<script>
+  import { iniciarAccesoSessions } from "./acceso-sessions";
+  iniciarAccesoSessions();
+</script>

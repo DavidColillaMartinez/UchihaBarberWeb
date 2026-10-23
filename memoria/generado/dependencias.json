@@ -68,6 +68,9 @@
         "src/features/home/acceso-productos/AccesoProductos.astro",
         "src/features/home/acceso-productos/AccesoProductos.module.css",
         "src/features/home/acceso-productos/acceso-productos.ts",
+        "src/features/home/acceso-sessions/AccesoSessions.astro",
+        "src/features/home/acceso-sessions/AccesoSessions.module.css",
+        "src/features/home/acceso-sessions/acceso-sessions.ts",
         "src/features/home/cabecera/Cabecera.astro",
         "src/features/home/cabecera/Cabecera.module.css",
         "src/features/home/galeria/Galeria.astro",
@@ -83,10 +86,13 @@
         "src/features/home/servicios/Servicios.module.css",
         "src/features/products/provisional/Provisional.astro",
         "src/features/products/provisional/Provisional.module.css",
+        "src/features/sessions/provisional/Provisional.astro",
+        "src/features/sessions/provisional/Provisional.module.css",
         "src/layouts/BaseLayout.astro",
         "src/pages/index.astro",
         "src/pages/index.module.css",
         "src/pages/productos/index.astro",
+        "src/pages/sessions/index.astro",
         "src/styles/global.css",
         "tsconfig.json"
       ]
@@ -252,6 +258,13 @@
         "openspec/changes/home-acceso-productos/proposal.md",
         "openspec/changes/home-acceso-productos/specs/home-acceso-productos/spec.md",
         "openspec/changes/home-acceso-productos/tasks.md",
+        "openspec/changes/home-acceso-sessions/.openspec.yaml",
+        "openspec/changes/home-acceso-sessions/design.md",
+        "openspec/changes/home-acceso-sessions/proposal.md",
+        "openspec/changes/home-acceso-sessions/specs/home-acceso-sessions/spec.md",
+        "openspec/changes/home-acceso-sessions/specs/home-skeleton/spec.md",
+        "openspec/changes/home-acceso-sessions/specs/sessions-page/spec.md",
+        "openspec/changes/home-acceso-sessions/tasks.md",
         "openspec/changes/home-galeria-autoavance/.openspec.yaml",
         "openspec/changes/home-galeria-autoavance/design.md",
         "openspec/changes/home-galeria-autoavance/proposal.md",
@@ -347,7 +360,10 @@
         "memoria/sesiones/SES-035.md",
         "memoria/sesiones/SES-036.md",
         "memoria/sesiones/SES-037.md",
-        "memoria/sesiones/SES-038.md"
+        "memoria/sesiones/SES-038.md",
+        "memoria/sesiones/SES-039.md",
+        "memoria/sesiones/SES-040.md",
+        "memoria/sesiones/SES-041.md"
       ]
     }
   ]
