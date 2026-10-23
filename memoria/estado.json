@@ -2,7 +2,8 @@
   "schema": 1,
   "proyecto": "UchihaBarberWeb",
   "faseActiva": "UB-004",
-  "ultimoRelevo": "memoria/sesiones/SES-047.md",
+  "ultimoRelevo": "memoria/sesiones/SES-048.md",
+  "desplegableServiciosMovil": "SES-048: en movil el primer toque despliega el servicio (control con aria-expanded) sin navegar, Reserva ya queda como unico enlace tactil a Yeasy, el segundo toque contrae y abrir otro cierra el anterior; en escritorio se conserva la fila completa enlazada con hover/foco. Cambio home-servicios-desplegable-movil activo, pendiente de aceptacion visual en movil real; sin commit solicitado.",
   "controlVideoSessions": "SES-046: aspecto del botón de pausa/reproducción igualado a Productos, incluidos iconos, fondo, borde, tamaño y hover/foco; controlador sin cambios. Verificado técnicamente, pendiente de revisión visual. Commit/push autorizado posteriormente solo para este cambio y su documentación, excluyendo Servicios.",
   "movilProductos": "SES-045: adaptación específica autorizada de Productos hasta 68rem, vídeo primero 16:10 y título vertical compacto junto a descripción/botón; junta inferior de Galería prolongada 1px para evitar línea clara. Sin cambios de escritorio ni Sessions. Commit/push autorizado; pendiente de aceptación visual.",
   "ajustesProductos": "SES-044: incluidos ajustes del responsable (descripción derecha con margen superior de 6rem y Conócelos a 1.4rem), pausa anclada dentro del vídeo sin cambiar encuadre. Implementado; commit/push expresamente autorizado, aceptación visual general pendiente.",
@@ -128,7 +129,9 @@
         "memoria/sesiones/SES-039.md",
         "memoria/sesiones/SES-040.md",
         "openspec/changes/home-acceso-sessions/proposal.md",
-        "memoria/sesiones/SES-047.md"
+        "memoria/sesiones/SES-047.md",
+        "openspec/changes/home-servicios-desplegable-movil/proposal.md",
+        "memoria/sesiones/SES-048.md"
       ],
       "notaOpenSpec": "Esta fase agrupa varios bloques: consultar sus referencias individuales en memoria/bloques.json."
     },

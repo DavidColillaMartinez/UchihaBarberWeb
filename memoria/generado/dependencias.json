@@ -275,6 +275,11 @@
         "openspec/changes/home-nav-arranque-portada/proposal.md",
         "openspec/changes/home-nav-arranque-portada/specs/site-navigation/spec.md",
         "openspec/changes/home-nav-arranque-portada/tasks.md",
+        "openspec/changes/home-servicios-desplegable-movil/.openspec.yaml",
+        "openspec/changes/home-servicios-desplegable-movil/design.md",
+        "openspec/changes/home-servicios-desplegable-movil/proposal.md",
+        "openspec/changes/home-servicios-desplegable-movil/specs/home-servicios/spec.md",
+        "openspec/changes/home-servicios-desplegable-movil/tasks.md",
         "openspec/changes/home-servicios-mascara-estirado/.openspec.yaml",
         "openspec/changes/home-servicios-mascara-estirado/design.md",
         "openspec/changes/home-servicios-mascara-estirado/proposal.md",
@@ -369,7 +374,8 @@
         "memoria/sesiones/SES-044.md",
         "memoria/sesiones/SES-045.md",
         "memoria/sesiones/SES-046.md",
-        "memoria/sesiones/SES-047.md"
+        "memoria/sesiones/SES-047.md",
+        "memoria/sesiones/SES-048.md"
       ]
     }
   ]

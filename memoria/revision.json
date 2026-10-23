@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "relevo": "memoria/sesiones/SES-047.md",
-  "resumen": "Correccion del autoplay de la cabecera: contrastado el aviso del responsable con la pauta vigente de video-reproduccion (arranque solo, sin accion del visitante) y con Cabecera.astro, donde solo se confiaba en el autoplay nativo; implementado el refuerzo de silencio y el reintento (loadeddata y visibilitychange) sin tocar Servicios, Productos, Sessions ni la spec (la pauta ya lo exige). Verificado en navegador headless (430x932) sobre la compilacion local: el video reproduce, muted, en bucle, sin controls y sin cartel, y no se detiene al recorrer la pagina.",
+  "relevo": "memoria/sesiones/SES-048.md",
+  "resumen": "Contrastado el desplegable movil de Servicios con el requisito de filas de home-servicios y PRODUCT: primer toque despliega sin navegar, Reserva ya abre Yeasy en pestana nueva, acordeon de una fila y escritorio intacto, verificado en Firefox headless a 390x844 y 1440x900",
   "alcance": "codigo-y-documentacion-no-aprobacion-visual",
   "archivos": [
     {
@@ -214,7 +214,7 @@
     },
     {
       "ruta": "memoria/estado.json",
-      "sha256": "19c3a93c693ab37e5e58378af59cfa0959bdc3c1c0819f5dc071037f20b3821a"
+      "sha256": "1b050d06742dd6018d658f07d98945cdebe94d2cded465545b02f384161c5404"
     },
     {
       "ruta": "memoria/herramientas.md",
@@ -443,6 +443,10 @@
     {
       "ruta": "memoria/sesiones/SES-047.md",
       "sha256": "b9e671e66949949fa75c87301428d03840f753f8b41890c8ca6bf0d3f2109a81"
+    },
+    {
+      "ruta": "memoria/sesiones/SES-048.md",
+      "sha256": "f95ddf1b788e731c3da335522f2df6140476607926c7fc0e9cfb654cd40dbd4a"
     },
     {
       "ruta": "openspec/changes/archive/.gitkeep",
@@ -753,6 +757,26 @@
       "sha256": "34fcd932e9542b28b08882cca2afc64f0b06a6bcae68e91f6b9a7d251bd9784c"
     },
     {
+      "ruta": "openspec/changes/home-servicios-desplegable-movil/.openspec.yaml",
+      "sha256": "54c2a6955b514abf783374521da3b6364c1d6b221970ad9faa7124a7e1124528"
+    },
+    {
+      "ruta": "openspec/changes/home-servicios-desplegable-movil/design.md",
+      "sha256": "a26ef98796324ee7e18cdedc24aef26c0f40a617dac5d8181afdab358c0e5262"
+    },
+    {
+      "ruta": "openspec/changes/home-servicios-desplegable-movil/proposal.md",
+      "sha256": "db936495c8f3b5e8ff946d9dc77bfa82534ded7c514e408733ed36c70ea020e4"
+    },
+    {
+      "ruta": "openspec/changes/home-servicios-desplegable-movil/specs/home-servicios/spec.md",
+      "sha256": "fb64a721f2dcbccbd947156c8212a05c3630f2522e4b740a9cdab3257628c94c"
+    },
+    {
+      "ruta": "openspec/changes/home-servicios-desplegable-movil/tasks.md",
+      "sha256": "6882a75fd6cc236684a9257b1b41f8b78de8f237e3c770f0e66cfc1a9e275c34"
+    },
+    {
       "ruta": "openspec/changes/home-servicios-mascara-estirado/.openspec.yaml",
       "sha256": "dc276ca1f5af9fc6062b02d4253186f254288dcf61711e1a8ec3573e8587440a"
     },
@@ -954,7 +978,7 @@
     },
     {
       "ruta": "src/features/home/servicios/Servicios.module.css",
-      "sha256": "2e643590e0f9bacd5405fd5f7d8da1ac591708ae435442cbd4c0d2c0ecca132c"
+      "sha256": "d2d8289b07ec6f4e94b5428f64c253606261349b2ddca0654922bc4a6d7ab248"
     },
     {
       "ruta": "src/features/products/provisional/Provisional.astro",
@@ -1001,5 +1025,5 @@
       "sha256": "98e1484cb0954ac7306a850cdbf03c8140e2fd32e65fa6c213b19343dfdc6d43"
     }
   ],
-  "huella": "4f041d61ac9eaaa5e8083789f1a0bf475d76e60220eb6547e549e6769fb8d50c"
+  "huella": "51454677a827d0816d71b007f96ddc4e2e7c36c931b45acd1e25d7c2cdc3397f"
 }

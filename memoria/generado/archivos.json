@@ -323,8 +323,8 @@
     {
       "ruta": "memoria/estado.json",
       "tipo": "archivo",
-      "bytes": 14206,
-      "sha256": "19c3a93c693ab37e5e58378af59cfa0959bdc3c1c0819f5dc071037f20b3821a"
+      "bytes": 14743,
+      "sha256": "1b050d06742dd6018d658f07d98945cdebe94d2cded465545b02f384161c5404"
     },
     {
       "ruta": "memoria/herramientas.md",
@@ -371,8 +371,8 @@
     {
       "ruta": "memoria/revision.json",
       "tipo": "archivo",
-      "bytes": 40331,
-      "sha256": "5f27570828b961a946d0d53373c9fe1326b9aecc7fc577f1566563b0e8897750"
+      "bytes": 41070,
+      "sha256": "7ba7dd5e4c7fb8bb7f2665754715507009e5e262fb3531ddd70e48349a48db46"
     },
     {
       "ruta": "memoria/roadmap.md",
@@ -673,6 +673,12 @@
       "tipo": "archivo",
       "bytes": 3639,
       "sha256": "b9e671e66949949fa75c87301428d03840f753f8b41890c8ca6bf0d3f2109a81"
+    },
+    {
+      "ruta": "memoria/sesiones/SES-048.md",
+      "tipo": "archivo",
+      "bytes": 3993,
+      "sha256": "f95ddf1b788e731c3da335522f2df6140476607926c7fc0e9cfb654cd40dbd4a"
     },
     {
       "ruta": "openspec/changes/archive/.gitkeep",
@@ -1137,6 +1143,36 @@
       "sha256": "34fcd932e9542b28b08882cca2afc64f0b06a6bcae68e91f6b9a7d251bd9784c"
     },
     {
+      "ruta": "openspec/changes/home-servicios-desplegable-movil/.openspec.yaml",
+      "tipo": "archivo",
+      "bytes": 40,
+      "sha256": "54c2a6955b514abf783374521da3b6364c1d6b221970ad9faa7124a7e1124528"
+    },
+    {
+      "ruta": "openspec/changes/home-servicios-desplegable-movil/design.md",
+      "tipo": "archivo",
+      "bytes": 3141,
+      "sha256": "a26ef98796324ee7e18cdedc24aef26c0f40a617dac5d8181afdab358c0e5262"
+    },
+    {
+      "ruta": "openspec/changes/home-servicios-desplegable-movil/proposal.md",
+      "tipo": "archivo",
+      "bytes": 1436,
+      "sha256": "db936495c8f3b5e8ff946d9dc77bfa82534ded7c514e408733ed36c70ea020e4"
+    },
+    {
+      "ruta": "openspec/changes/home-servicios-desplegable-movil/specs/home-servicios/spec.md",
+      "tipo": "archivo",
+      "bytes": 1749,
+      "sha256": "fb64a721f2dcbccbd947156c8212a05c3630f2522e4b740a9cdab3257628c94c"
+    },
+    {
+      "ruta": "openspec/changes/home-servicios-desplegable-movil/tasks.md",
+      "tipo": "archivo",
+      "bytes": 2055,
+      "sha256": "6882a75fd6cc236684a9257b1b41f8b78de8f237e3c770f0e66cfc1a9e275c34"
+    },
+    {
       "ruta": "openspec/changes/home-servicios-mascara-estirado/.openspec.yaml",
       "tipo": "archivo",
       "bytes": 40,
@@ -1583,8 +1619,8 @@
     {
       "ruta": "src/features/home/servicios/Servicios.module.css",
       "tipo": "archivo",
-      "bytes": 10755,
-      "sha256": "2e643590e0f9bacd5405fd5f7d8da1ac591708ae435442cbd4c0d2c0ecca132c"
+      "bytes": 10877,
+      "sha256": "d2d8289b07ec6f4e94b5428f64c253606261349b2ddca0654922bc4a6d7ab248"
     },
     {
       "ruta": "src/features/products/provisional/Provisional.astro",
