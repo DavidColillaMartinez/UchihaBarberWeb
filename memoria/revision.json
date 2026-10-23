@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "relevo": "memoria/sesiones/SES-037.md",
-  "resumen": "Contrastadas la capacidad transversal video-reproduccion (inicio autónomo, silencio, bucle y en línea, movimiento reducido) recién consolidada, el delta actualizado de home-cabecera, el código del bloque de acceso a Productos (autoplay nativo con reintento pegado a la carga y retirada con movimiento reducido), los cuatro videos del compilado y la enmienda a la pauta del delta abierto home-acceso-productos; contrastados relevo, estado, bloques, mapa y tareas del cambio archivado. Corrección del destello del nav publicada tal como se verificó en SES-034. Sin revisión visual en hardware real: la comprobación móvil queda para el responsable.",
+  "relevo": "memoria/sesiones/SES-038.md",
+  "resumen": "Revisión del cambio de color del fondo del bloque de acceso a Productos aplicado por el responsable: el fondo pasa de negro plano a un degradado linear-gradient(30deg, #757575 0%, #000000 42%) que introduce un gris medio como único color de la sección. Verificado en navegador real a 1440x900 que el bloque sigue midiendo exactamente 900 px y que no hay errores de consola; contraste del texto blanco sobre el degradado calculado sobre su geometría real: 5,3:1 en la zona más clara bajo la última letra del titular (texto grande) y fondo negro prácticamente puro, 21:1, bajo la descripción y la llamada. El degradado queda registrado como excepción dirigida al compromiso de evitar degradados decorativos por su función de luz y profundidad. Documentación conciliada en la delta home-acceso-productos, el diseño técnico, PRODUCT.md, el bloque de memoria y los relevos SES-035 y SES-038. Detector de Impeccable sin hallazgos, build y formato correctos, cambio OpenSpec válido. Pendiente de aceptación visual del responsable, del material oficial de vídeo y de la redacción definitiva del texto.",
   "alcance": "codigo-y-documentacion-no-aprobacion-visual",
   "archivos": [
     {
@@ -174,7 +174,7 @@
     },
     {
       "ruta": "PRODUCT.md",
-      "sha256": "819559268728f0af56d43a6a037c322b2b27110a5ff5fc93b6cacdbdbf4cffda"
+      "sha256": "a2a89ae9cec1d9b0a05597cf0f8d20568871485e40573990248cc6c876f5775e"
     },
     {
       "ruta": "README.md",
@@ -194,7 +194,7 @@
     },
     {
       "ruta": "memoria/bloques.json",
-      "sha256": "f4c1d736c73f0c601ef25cdccc2df9d09a2870451f2169be18c36aa23a116c34"
+      "sha256": "96307c410ed43831a0a5b58a256c0ff2ca0daa169321d8a5b566dab3f7c32808"
     },
     {
       "ruta": "memoria/cierre.md",
@@ -214,7 +214,7 @@
     },
     {
       "ruta": "memoria/estado.json",
-      "sha256": "0d27e00062382a8f8ccff3187eed72e8f34323e15d8d81ed48ee25464fc8492f"
+      "sha256": "e413053561e80d723a020403540c9a05fdbae4c3ad4262f2829c708bb1fb8cc6"
     },
     {
       "ruta": "memoria/herramientas.md",
@@ -394,7 +394,7 @@
     },
     {
       "ruta": "memoria/sesiones/SES-035.md",
-      "sha256": "e52dfbf724b5a30503e8f179722d223e670573465b47e343664f86a5697a3add"
+      "sha256": "5f217d8ad6202ea20bd2233ad4338958118a5b43434e4f08da24b5e4e55241c2"
     },
     {
       "ruta": "memoria/sesiones/SES-036.md",
@@ -403,6 +403,10 @@
     {
       "ruta": "memoria/sesiones/SES-037.md",
       "sha256": "517135c94c696382383cf1ae6f6a0275467a6f68444a967116da747f06b02028"
+    },
+    {
+      "ruta": "memoria/sesiones/SES-038.md",
+      "sha256": "37eed18929c1a8e57543cc27f78b044437bf85cebfcdf8d5ffe5a4db40625301"
     },
     {
       "ruta": "openspec/changes/archive/.gitkeep",
@@ -630,7 +634,7 @@
     },
     {
       "ruta": "openspec/changes/home-acceso-productos/design.md",
-      "sha256": "92683697f03cabc66fe0aa3565409c9d4e41ee813ddb9e5337aa5b531b5313be"
+      "sha256": "5231210bf8237e77836efa0a5d1721579bbd14f869c01d16356c7267c444e28d"
     },
     {
       "ruta": "openspec/changes/home-acceso-productos/proposal.md",
@@ -638,7 +642,7 @@
     },
     {
       "ruta": "openspec/changes/home-acceso-productos/specs/home-acceso-productos/spec.md",
-      "sha256": "29f98f79b67b7a8b1cdc7eb86665260fc08394869fd278b53605cdbcaa461216"
+      "sha256": "4313c7b4805fcea25f546cfdf6eef9c9bbe3880cc3ebb08dbcbc0ab16a54c815"
     },
     {
       "ruta": "openspec/changes/home-acceso-productos/tasks.md",
@@ -818,7 +822,7 @@
     },
     {
       "ruta": "src/features/home/acceso-productos/AccesoProductos.module.css",
-      "sha256": "715547db1a239e95807154ca765f7c7244a2c18a83638dab9bba00217a798e01"
+      "sha256": "2a98727ee84c070e72e96eceaf2e5c80efcc3269b840451e4a06fc0d6d8abede"
     },
     {
       "ruta": "src/features/home/acceso-productos/acceso-productos.ts",
@@ -909,5 +913,5 @@
       "sha256": "98e1484cb0954ac7306a850cdbf03c8140e2fd32e65fa6c213b19343dfdc6d43"
     }
   ],
-  "huella": "2acaf1373dfb90a75f5b34476dda2f04fe72381a259c8b7ba5bfe343eef95b99"
+  "huella": "180fcd40d802f75e5cd9ffc3ebaaee934cea3ebf4ed0df14e654ba1dd78d6b51"
 }

@@ -15,7 +15,8 @@
   --avance-palabra: 6.4667;
   display: grid;
   grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
-  background: var(--color-fg);
+  background: linear-gradient(30deg, #757575 0%, #000000 42%);
+  /*var(--color-fg);*/
   color: var(--color-bg);
 }
 

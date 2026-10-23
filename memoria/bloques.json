@@ -120,7 +120,10 @@
       "fase": "UB-004",
       "estado": "provisional",
       "rutas": ["src/features/home/acceso-productos/"],
-      "specs": ["openspec/specs/home-skeleton/spec.md", "openspec/specs/video-reproduccion/spec.md"],
+      "specs": [
+        "openspec/specs/home-skeleton/spec.md",
+        "openspec/specs/video-reproduccion/spec.md"
+      ],
       "cambios": [
         "openspec/changes/home-acceso-productos/proposal.md",
         "openspec/changes/home-acceso-productos/specs/home-acceso-productos/spec.md"
@@ -128,6 +131,7 @@
       "aceptacion": [],
       "pendientes": [
         "Aceptación visual del responsable pendiente.",
+        "Fondo con degradado (excepción dirigida al compromiso de evitar degradados decorativos) pendiente de aceptación visual (SES-038).",
         "Vídeo demo (CorteDePelo1) pendiente del material oficial de productos.",
         "Texto de la descripción demo pendiente de la redacción definitiva.",
         "Autoplay real comprobado en móvil pendiente de revisión del responsable (SES-037).",

@@ -6,12 +6,17 @@ Bloque de acceso a Productos de la portada de Uchiha Barber: presenta la identid
 
 ### Requirement: Composición de contraste del bloque
 
-La sección SHALL ocupar el lugar acordado en la portada, entre la Galería y las Opiniones, y SHALL presentarse como un bloque oscuro de una pantalla: fondo negro, texto blanco y una división aproximada de 40 % de contenido a la izquierda y 60 % de vídeo a la derecha. El vídeo SHALL presentarse dentro de su mitad, con margen sobre el negro del bloque, sin marcos, tarjetas, bordes ni sombras. La sección SHALL ocupar como mínimo la altura del viewport y su contenido SHALL poder crecer sin recortarse.
+La sección SHALL ocupar el lugar acordado en la portada, entre la Galería y las Opiniones, y SHALL presentarse como un bloque oscuro de una pantalla: fondo en degradado que pasa de un gris medio al negro, texto blanco y una división aproximada de 40 % de contenido a la izquierda y 60 % de vídeo a la derecha. El texto SHALL conservar contraste suficiente sobre el degradado. El vídeo SHALL presentarse dentro de su mitad, con margen sobre el fondo del bloque, sin marcos, tarjetas, bordes ni sombras. La sección SHALL ocupar como mínimo la altura del viewport y su contenido SHALL poder crecer sin recortarse.
 
 #### Scenario: Bloque en el recorrido de la portada
 
 - **WHEN** se recorre la portada hasta el bloque de acceso a Productos
-- **THEN** aparece después de la Galería y antes de las Opiniones, con fondo negro y su contenido a la izquierda y el vídeo a la derecha
+- **THEN** aparece después de la Galería y antes de las Opiniones, con fondo oscuro en degradado y su contenido a la izquierda y el vídeo a la derecha
+
+#### Scenario: Legibilidad sobre el degradado
+
+- **WHEN** se revisa el bloque con el degradado aplicado
+- **THEN** el titular, la descripción y la llamada se leen con contraste suficiente en toda la superficie que los sostiene
 
 #### Scenario: Altura del bloque
 

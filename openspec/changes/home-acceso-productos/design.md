@@ -94,6 +94,9 @@ Tras la primera entrega, el responsable ajustó la composición y esa versión e
 - La descripción y la llamada «Conócelos» quedan centradas en su columna (`margin: auto` en la celda y `text-align: center` en la descripción).
 - El vídeo deja de llenar su mitad a sangre: se presenta dentro de ella, al 90 % de ancho y alto y con un margen superior del 5 %, de modo que el negro del bloque lo rodea sin marcos, bordes ni sombras.
 - Se retira la nota de provisionalidad del bloque.
+- El fondo del bloque deja de ser negro plano y pasa a un degradado `linear-gradient(30deg, #757575 0%, #000000 42%)`: la luz cae desde el ángulo inferior izquierdo y se apaga hacia el extremo superior derecho, de modo que el titular y el vídeo se apoyen en una superficie con volumen en lugar de sobre un plano.
+
+El degradado introduce el único color de la sección, un gris medio, y es una excepción dirigida a la recomendación de evitar degradados decorativos: aquí cumple una función de luz y profundidad sobre el bloque, no de adorno. El texto blanco mantiene contraste holgado en toda la superficie: en la zona más clara (esquina inferior izquierda, bajo la última letra del titular) ronda 5,3:1, y en la zona donde se apoya la descripción y la llamada el fondo ya es negro prácticamente puro.
 
 El código no se ha vuelto a tocar desde entonces; estos retoques conviven con el resto de decisiones técnicas de este documento.
 
