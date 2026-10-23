@@ -84,6 +84,13 @@ El fondo de la Galería SHALL fundirse del blanco al negro en aproximadamente un
 - **THEN** una franja de degradado en su borde superior mezcla el blanco de Servicios con el color actual del fondo, sin un corte abrupto y sin desenfocar contenido ni alterar alturas, snap o carrusel
 - **AND** mientras el fondo sea blanco la unión es completamente blanca, sin sombra ni franja gris visible, también sin JavaScript y con movimiento reducido
 
+#### Scenario: Unión suave con Productos durante el cambio de fondo
+
+- **WHEN** el fondo de Galería vuelve al blanco o se oscurece
+- **THEN** una franja de degradado inferior mezcla su color actual con el negro superior de Productos, sin desenfocar contenido ni alterar alturas, snap o carrusel
+- **AND** sobre negro la franja resulta indistinguible del fondo; sobre blanco se muestra la transición al negro, también sin JavaScript y con movimiento reducido
+- **AND** la franja superior de unión con Servicios conserva su comportamiento independiente
+
 ### Requirement: Reproducción contenida de los vídeos
 
 Los vídeos de la tira SHALL reproducirse solo mientras la sección está en pantalla, silenciados, en bucle y sin capturar el foco, limitándose a los paneles cercanos al hueco visible (con margen de precarga); el resto SHALL permanecer pausado. Con movimiento reducido SHALL permanecer pausados, mostrándose el primer fotograma de los clips para que la tira estática no quede vacía.

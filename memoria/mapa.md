@@ -1,5 +1,9 @@
 # Mapa del proyecto
 
+SES-043: segunda imagen de fondo en `Galeria.module.css`, negro/transparente en el borde inferior, de la misma altura que la superior. Mezcla Galería blanca con Productos negro y resulta indistinguible cuando Galería está negra; sin modificar Productos ni la unión superior con Servicios. Sin rutas nuevas; pendiente de aceptación visual.
+
+SES-042: ajuste local de `Galeria.module.css`, degradado superior blanco/transparente de `clamp(2rem, 6svh, 4rem)` que mezcla la junta con Servicios al oscurecerse el fondo existente. Blanco uniforme antes y después del fundido; sin nuevas rutas, capas sobre contenido ni cambios de scroll. Pendiente de aceptación visual.
+
 Corrección visual SES-041 en el CSS Module de acceso a Sessions: franja de mezcla que cruza la junta con Productos, degradado con negro reducido, descripción Semibold Italic centrada respecto al h2 y eje horizontal del botón entre columnas, conservando altura. Sin nuevas rutas ni cambios de código en Productos.
 
 ## Estado implementado (Sessions: SES-040; base Git 3faee8e)

@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "relevo": "memoria/sesiones/SES-041.md",
-  "resumen": "Revisado snapshot exacto de publicación: Sessions y continuidad, con Productos y Galería byte a byte iguales a HEAD. Excluidos ajustes concurrentes de Galería también en documentos compartidos, sin modificar el trabajo local. Aceptación visual y archivo pendientes.",
+  "relevo": "memoria/sesiones/SES-043.md",
+  "resumen": "Revisión del árbol exacto preparado para publicación de la unión Galería–Productos, excluidos los ajustes locales ajenos de AccesoProductos.module.css. Contrastados CSS con ambas juntas, home-galeria, PRODUCT, mapa, bloques y relevo; comportamiento comprobado previamente en Chromium escritorio/móvil, ida/vuelta, movimiento reducido y sin JS. El negro superior de Productos versionado se conserva y no cambia la compatibilidad de la unión. Build y validación de spec correctos. Aceptación visual pendiente; publicación autorizada expresamente.",
   "alcance": "codigo-y-documentacion-no-aprobacion-visual",
   "archivos": [
     {
@@ -174,7 +174,7 @@
     },
     {
       "ruta": "PRODUCT.md",
-      "sha256": "3d578a68ba097e4ca2993bb5ce61c289c7ccfcefbbc6669ee65a1c2d654001e0"
+      "sha256": "b6820059b06101bdf35b3979cb7dee4108e9771a60312d2ec9bb85916b2b484b"
     },
     {
       "ruta": "README.md",
@@ -194,7 +194,7 @@
     },
     {
       "ruta": "memoria/bloques.json",
-      "sha256": "5e8451b89176eb84efb550251c38dcf0b93540c267db975f43606dbc9ec49037"
+      "sha256": "8561d85507b55116e245828068b2ca74382aa36f6d920a7ac1edd17870f8c297"
     },
     {
       "ruta": "memoria/cierre.md",
@@ -214,7 +214,7 @@
     },
     {
       "ruta": "memoria/estado.json",
-      "sha256": "39df4225603287f018b63ba8d8151be35e306816288aad918d2ba7c562846d1e"
+      "sha256": "0b68eddf4ecc0017502dea84aa759689a404515e265e8d9cf701fc50d760cbb6"
     },
     {
       "ruta": "memoria/herramientas.md",
@@ -226,7 +226,7 @@
     },
     {
       "ruta": "memoria/mapa.md",
-      "sha256": "c3666ff3dc0f53fa3886cce0d55316509b9d4c1e002f0c266f2fad4c22591f52"
+      "sha256": "3f7d2dfe93466eac7816c8aab84da85d799438d1b76d2b247ff18bd6527a315d"
     },
     {
       "ruta": "memoria/primer-commit.md",
@@ -419,6 +419,14 @@
     {
       "ruta": "memoria/sesiones/SES-041.md",
       "sha256": "0d1854bdffedbcf8e03dcce513de5c44a0b292cec3aede2335e2496c85cf30d2"
+    },
+    {
+      "ruta": "memoria/sesiones/SES-042.md",
+      "sha256": "eb2e7f561425838c337944a81a03f42ecac988aa44920018d84b58b7f84a6c02"
+    },
+    {
+      "ruta": "memoria/sesiones/SES-043.md",
+      "sha256": "a19cdba69837f751bf20e3290663c7882094da697ef8c2cbd16910ecb192588d"
     },
     {
       "ruta": "openspec/changes/archive/.gitkeep",
@@ -762,7 +770,7 @@
     },
     {
       "ruta": "openspec/specs/home-galeria/spec.md",
-      "sha256": "29cf4ef17f1c1608d5070c8ce2a8461c702534de9306d829348729efbd9a0a4a"
+      "sha256": "26021d7e166500790e420ac377a093a60cce4f6d570ca31025bdf92207df7baa"
     },
     {
       "ruta": "openspec/specs/home-intro/spec.md",
@@ -894,7 +902,7 @@
     },
     {
       "ruta": "src/features/home/galeria/Galeria.module.css",
-      "sha256": "5cc864ecf93ed178819b23c84b9674db38c81ce81ec384870e71919db6db3e15"
+      "sha256": "67f931d507b655e50b127e52efccfa153d33ef7ed06952298889ea259a15b87c"
     },
     {
       "ruta": "src/features/home/informacion/Informacion.astro",
@@ -977,5 +985,5 @@
       "sha256": "98e1484cb0954ac7306a850cdbf03c8140e2fd32e65fa6c213b19343dfdc6d43"
     }
   ],
-  "huella": "22fdbb67b47249981832356a4eb971ae38d6f5a4009682dd175d3b9af87dba19"
+  "huella": "12a4b4ad063fa42b69b0f6fbd935fe6abe67de8f3c704860a2858d619fce9b44"
 }

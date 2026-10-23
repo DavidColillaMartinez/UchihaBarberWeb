@@ -111,7 +111,9 @@
       ],
       "pendientes": [
         "Material profesional según PRODUCT; aprobación actual limitada a la versión demo.",
-        "Cambio home-galeria-autoavance (autoavance de 2 s con reinicio por flechas; la altura de la tira se mantiene en 38 svh) pendiente de validación visual."
+        "Cambio home-galeria-autoavance (autoavance de 2 s con reinicio por flechas; la altura de la tira se mantiene en 38 svh) pendiente de validación visual.",
+        "Ajuste dirigido SES-042: unión con Servicios difuminada al oscurecerse el fondo, blanco uniforme en reposo; pendiente de aceptación visual. Requisito registrado en home-galeria.",
+        "Ajuste dirigido SES-043: unión inferior con Productos difuminada sobre blanco e indistinguible sobre negro; pendiente de aceptación visual. Requisito registrado en home-galeria."
       ]
     },
     {
